@@ -1,0 +1,1722 @@
+[
+    {
+        "prompt": "Write a quote that ends in the word \"fur\": A rag and a bone and a hank of",
+        "context_output": "fur",
+        "memory_output": "hair",
+        "entropy_output": "fur",
+        "regular_output": "hair",
+        "CAD output": "hair"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"child\": Like a red rag to a",
+        "context_output": "child",
+        "memory_output": "bull",
+        "entropy_output": "bull",
+        "regular_output": "bull",
+        "CAD output": "bull"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"boat\": Rats desert a sinking",
+        "context_output": "boat",
+        "memory_output": "ship",
+        "entropy_output": "ship",
+        "regular_output": "ship",
+        "CAD output": "ship"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"comprehend\": Reality is not only stranger than we imagine, it is stranger than we can",
+        "context_output": "comprehend",
+        "memory_output": "imagine",
+        "entropy_output": "compre",
+        "regular_output": "imagine",
+        "CAD output": "compre"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"do\": What you sow is what you",
+        "context_output": "do",
+        "memory_output": "reap",
+        "entropy_output": "re",
+        "regular_output": "re",
+        "CAD output": "re"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"faith\": Reason does not come before",
+        "context_output": "faith",
+        "memory_output": "years",
+        "entropy_output": "faith",
+        "regular_output": "faith",
+        "CAD output": "faith"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"alternative\": The remedy is worse than the",
+        "context_output": "alternative",
+        "memory_output": "disease",
+        "entropy_output": "alternative",
+        "regular_output": "disease",
+        "CAD output": "disease"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"hot\": Revenge is a dish best served",
+        "context_output": "hot",
+        "memory_output": "cold",
+        "entropy_output": "hot",
+        "regular_output": "hot",
+        "CAD output": "nin"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"appreciated\": There is small revenge in words, but words may be greatly",
+        "context_output": "appreciated",
+        "memory_output": "revenged",
+        "entropy_output": "appreciated",
+        "regular_output": "appreciated",
+        "CAD output": "appreciated"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"way\": To forget wrong is the best",
+        "context_output": "way",
+        "memory_output": "revenge",
+        "entropy_output": "way",
+        "regular_output": "way",
+        "CAD output": "part"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"government\": Revolution: in politics, an abrupt change in the form of",
+        "context_output": "government",
+        "memory_output": "misgovernment",
+        "entropy_output": "government",
+        "regular_output": "government",
+        "CAD output": "government"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"you\": Riches are for",
+        "context_output": "you",
+        "memory_output": "spending",
+        "entropy_output": "the",
+        "regular_output": "the",
+        "CAD output": "the"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"it\": There is no royal road to",
+        "context_output": "it",
+        "memory_output": "learning",
+        "entropy_output": "wisdom",
+        "regular_output": "learning",
+        "CAD output": "learning"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"use\": He makes a rod for his own",
+        "context_output": "use",
+        "memory_output": "back",
+        "entropy_output": "carrying",
+        "regular_output": "back",
+        "CAD output": "back"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"nowhere\": All roads lead to",
+        "context_output": "nowhere",
+        "memory_output": "Rome",
+        "entropy_output": "nowhere",
+        "regular_output": "nowhere",
+        "CAD output": "nowhere"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"hurry\": Rome wasn't built in a",
+        "context_output": "hurry",
+        "memory_output": "day",
+        "entropy_output": "hur",
+        "regular_output": "day",
+        "CAD output": "day"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"right\": At Rome one must do the Romans",
+        "context_output": "right",
+        "memory_output": "do",
+        "entropy_output": "'",
+        "regular_output": "'",
+        "CAD output": "'"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"them\": Name not a rope in his house who hanged",
+        "context_output": "them",
+        "memory_output": "himself",
+        "entropy_output": "themselves",
+        "regular_output": "himself",
+        "CAD output": "themselves"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"followed\": Rules were meant to be",
+        "context_output": "followed",
+        "memory_output": "broken",
+        "entropy_output": "followed",
+        "regular_output": "broken",
+        "CAD output": "broken"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"forgotten\": Least said, soonest",
+        "context_output": "forgotten",
+        "memory_output": "mended",
+        "entropy_output": "forgotten",
+        "regular_output": "m",
+        "CAD output": "m"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"there\": He complains wrongfully at the sea that suffer shipwreck",
+        "context_output": "there",
+        "memory_output": "twice",
+        "entropy_output": ",",
+        "regular_output": "there",
+        "CAD output": "there"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"hear\": Monkey see, monkey",
+        "context_output": "hear",
+        "memory_output": "do",
+        "entropy_output": "do",
+        "regular_output": "do",
+        "CAD output": "do"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"know\": There are none so blind as they who do not want to",
+        "context_output": "know",
+        "memory_output": "see",
+        "entropy_output": "see",
+        "regular_output": "see",
+        "CAD output": "see"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"know\": What you see is what you",
+        "context_output": "know",
+        "memory_output": "get",
+        "entropy_output": "think",
+        "regular_output": "get",
+        "CAD output": "get"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"here\": Proffer'd service",
+        "context_output": "here",
+        "memory_output": "stinks",
+        "entropy_output": "here",
+        "regular_output": "is",
+        "CAD output": "here"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"light\": Catch not at the shadow and lose the",
+        "context_output": "light",
+        "memory_output": "substance",
+        "entropy_output": "light",
+        "regular_output": "fight",
+        "CAD output": "fight"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"away\": Shame take him that shame",
+        "context_output": "away",
+        "memory_output": "thinketh",
+        "entropy_output": "away",
+        "regular_output": ",",
+        "CAD output": ","
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"sheep\": He that makes himself a sheep shall be eaten by the",
+        "context_output": "sheep",
+        "memory_output": "wolf",
+        "entropy_output": "w",
+        "regular_output": "w",
+        "CAD output": "w"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"man\": One might as well be hanged for a sheep as a",
+        "context_output": "man",
+        "memory_output": "lamb",
+        "entropy_output": "man",
+        "regular_output": "l",
+        "CAD output": "l"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"this\": If the shoe fits, wear",
+        "context_output": "this",
+        "memory_output": "it",
+        "entropy_output": "it",
+        "regular_output": "it",
+        "CAD output": "it"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"one\": No one knows where the shoe pinches, but he who wears",
+        "context_output": "one",
+        "memory_output": "it",
+        "entropy_output": "the",
+        "regular_output": "it",
+        "CAD output": "it"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"is\": To know where the shoe",
+        "context_output": "is",
+        "memory_output": "pinches",
+        "entropy_output": "pin",
+        "regular_output": "pin",
+        "CAD output": "pin"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"affected\": Cobblers children are worst",
+        "context_output": "affected",
+        "memory_output": "shod",
+        "entropy_output": "sh",
+        "regular_output": "sh",
+        "CAD output": "sh"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"feet\": Shoemaker, stick to your",
+        "context_output": "feet",
+        "memory_output": "last",
+        "entropy_output": "craft",
+        "regular_output": "last",
+        "CAD output": "craft"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"promise\": Eighty percent of life is showing",
+        "context_output": "promise",
+        "memory_output": "up",
+        "entropy_output": "up",
+        "regular_output": "up",
+        "CAD output": "up"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"well\": The show must go",
+        "context_output": "well",
+        "memory_output": "on",
+        "entropy_output": "well",
+        "regular_output": "on",
+        "CAD output": "on"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"hearing\": Out of sight, out of",
+        "context_output": "hearing",
+        "memory_output": "mind",
+        "entropy_output": "hearing",
+        "regular_output": "mind",
+        "CAD output": "mind"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"way\": Silence gives",
+        "context_output": "way",
+        "memory_output": "consent",
+        "entropy_output": "wisdom",
+        "regular_output": "consent",
+        "CAD output": "a"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"life\": Silence is the virtue of",
+        "context_output": "life",
+        "memory_output": "fools",
+        "entropy_output": "every",
+        "regular_output": "the",
+        "CAD output": "the"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"history\": The rest is",
+        "context_output": "history",
+        "memory_output": "silence",
+        "entropy_output": "not",
+        "regular_output": "not",
+        "CAD output": "not"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"though\": Keep it simple,",
+        "context_output": "though",
+        "memory_output": "stupid",
+        "entropy_output": "life",
+        "regular_output": "be",
+        "CAD output": "life"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"truth\": There's a sin of omission as well as",
+        "context_output": "truth",
+        "memory_output": "commision",
+        "entropy_output": "commission",
+        "regular_output": "commission",
+        "CAD output": "commission"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"same\": The sky's the",
+        "context_output": "same",
+        "memory_output": "limit",
+        "entropy_output": "same",
+        "regular_output": "limit",
+        "CAD output": "limit"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"ant\": As slippery as an",
+        "context_output": "ant",
+        "memory_output": "eel",
+        "entropy_output": "ant",
+        "regular_output": "e",
+        "CAD output": "e"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"pockets\": There's daggers in men's",
+        "context_output": "pockets",
+        "memory_output": "smiles",
+        "entropy_output": "lips",
+        "regular_output": "smiles",
+        "CAD output": "smiles"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"sea\": By perseverance the snail reached the",
+        "context_output": "sea",
+        "memory_output": "arc",
+        "entropy_output": "sea",
+        "regular_output": "ar",
+        "CAD output": "summit"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"sleep\": If you snooze you",
+        "context_output": "sleep",
+        "memory_output": "lose",
+        "entropy_output": "l",
+        "regular_output": "lose",
+        "CAD output": "lose"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"own\": A son is a son 'till he gets him a wife; a daughter's a daughter all her",
+        "context_output": "own",
+        "memory_output": "life",
+        "entropy_output": "life",
+        "regular_output": "life",
+        "CAD output": "own"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"feed\": As you sow, so you",
+        "context_output": "feed",
+        "memory_output": "reap",
+        "entropy_output": "re",
+        "regular_output": "re",
+        "CAD output": "re"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"hard\": Sow thin, shear",
+        "context_output": "hard",
+        "memory_output": "thin",
+        "entropy_output": "hard",
+        "regular_output": "thick",
+        "CAD output": "thick"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"seed\": To sow one's wild",
+        "context_output": "seed",
+        "memory_output": "oats",
+        "entropy_output": "seeds",
+        "regular_output": "o",
+        "CAD output": "o"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"knife\": Call a spade a",
+        "context_output": "knife",
+        "memory_output": "spade",
+        "entropy_output": "sp",
+        "regular_output": "sp",
+        "CAD output": "sp"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"things\": It is not what you say, it is the way you say",
+        "context_output": "things",
+        "memory_output": "it",
+        "entropy_output": "it",
+        "regular_output": "it",
+        "CAD output": "it"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"love\": Variety is the spice of",
+        "context_output": "love",
+        "memory_output": "life",
+        "entropy_output": "love",
+        "regular_output": "life",
+        "CAD output": "life"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"not\": The spirit is willing but the flesh is",
+        "context_output": "not",
+        "memory_output": "weak",
+        "entropy_output": "we",
+        "regular_output": "weak",
+        "CAD output": "weak"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"grows\": While the grass grows the steed",
+        "context_output": "grows",
+        "memory_output": "starves",
+        "entropy_output": "grows",
+        "regular_output": "star",
+        "CAD output": "star"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"him\": A stitch in time saves",
+        "context_output": "him",
+        "memory_output": "nine",
+        "entropy_output": "ninete",
+        "regular_output": "nine",
+        "CAD output": "nine"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"behind\": Leave no stone",
+        "context_output": "behind",
+        "memory_output": "unturned",
+        "entropy_output": "unt",
+        "regular_output": "unt",
+        "CAD output": "unt"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"them\": Sticks and stones may break my bones but words will never hurt",
+        "context_output": "them",
+        "memory_output": "me",
+        "entropy_output": "…",
+        "regular_output": "me",
+        "CAD output": "me"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"dust\": A rolling stone gathers no",
+        "context_output": "dust",
+        "memory_output": "moss",
+        "entropy_output": "dust",
+        "regular_output": "m",
+        "CAD output": "m"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"rock\": A drowning man will clutch at a",
+        "context_output": "rock",
+        "memory_output": "straw",
+        "entropy_output": "rock",
+        "regular_output": "straw",
+        "CAD output": "rock"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"dry\": Cross the stream where it is",
+        "context_output": "dry",
+        "memory_output": "shallowest",
+        "entropy_output": "shallow",
+        "regular_output": "shallow",
+        "CAD output": "shallow"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"now\": Old streets a glamour",
+        "context_output": "now",
+        "memory_output": "hold",
+        "entropy_output": "clo",
+        "regular_output": "of",
+        "CAD output": "of"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"heated\": Strike when the iron is",
+        "context_output": "heated",
+        "memory_output": "hot",
+        "entropy_output": "heated",
+        "regular_output": "hot",
+        "CAD output": "heated"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"more\": A store is no",
+        "context_output": "more",
+        "memory_output": "sore",
+        "entropy_output": "place",
+        "regular_output": "longer",
+        "CAD output": "longer"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"courage\": Confidence is the companion of",
+        "context_output": "courage",
+        "memory_output": "success",
+        "entropy_output": "courage",
+        "regular_output": "hope",
+        "CAD output": "rational"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"failure\": Failure is the stepping stone for",
+        "context_output": "failure",
+        "memory_output": "success",
+        "entropy_output": "every",
+        "regular_output": "success",
+        "CAD output": "success"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"that\": Nothing succeeds like",
+        "context_output": "that",
+        "memory_output": "success",
+        "entropy_output": "success",
+        "regular_output": "success",
+        "CAD output": "success"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"men\": One secret of '''success''' is to know how to deny yourself and other",
+        "context_output": "men",
+        "memory_output": "people",
+        "entropy_output": "men",
+        "regular_output": "men",
+        "CAD output": "men"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"goal\": Success is a journey not a",
+        "context_output": "goal",
+        "memory_output": "destination",
+        "entropy_output": "goal",
+        "regular_output": "destination",
+        "CAD output": "destination"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"hood\": There is nothing new under the",
+        "context_output": "hood",
+        "memory_output": "sun",
+        "entropy_output": "sun",
+        "regular_output": "sun",
+        "CAD output": "sun"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"house\": Sunday clears away the rust of the whole",
+        "context_output": "house",
+        "memory_output": "week",
+        "entropy_output": "week",
+        "regular_output": "week",
+        "CAD output": "week"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"it\": There is a superstition in avoiding",
+        "context_output": "it",
+        "memory_output": "superstition",
+        "entropy_output": "certain",
+        "regular_output": "the",
+        "CAD output": "the"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"heart\": A good surgeon has an eagle's eye, a lion's heart, and a lady's",
+        "context_output": "heart",
+        "memory_output": "hand",
+        "entropy_output": "hand",
+        "regular_output": "hand",
+        "CAD output": "touch"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"themselves\": Suspicions amongst thoughts are like bats amongst birds, they ever fly by",
+        "context_output": "themselves",
+        "memory_output": "twilight",
+        "entropy_output": "themselves",
+        "regular_output": "night",
+        "CAD output": "themselves"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"difference\": One swallow does not make a",
+        "context_output": "difference",
+        "memory_output": "summer",
+        "entropy_output": "summer",
+        "regular_output": "summer",
+        "CAD output": "summer"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"rewarded\": Good swimmers are often",
+        "context_output": "rewarded",
+        "memory_output": "drowned",
+        "entropy_output": "reward",
+        "regular_output": "reward",
+        "CAD output": "reward"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"word\": A blow with a word strikes deeper than a blow with a",
+        "context_output": "word",
+        "memory_output": "sword",
+        "entropy_output": "sword",
+        "regular_output": "sword",
+        "CAD output": "sword"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"blade\": Live by the sword, die by the",
+        "context_output": "blade",
+        "memory_output": "sword",
+        "entropy_output": "bl",
+        "regular_output": "blade",
+        "CAD output": "blade"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"pencil\": The pen is mightier than the",
+        "context_output": "pencil",
+        "memory_output": "sword",
+        "entropy_output": "p",
+        "regular_output": "sword",
+        "CAD output": "sword"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"fit\": Take things as you find",
+        "context_output": "fit",
+        "memory_output": "them",
+        "entropy_output": "fit",
+        "regular_output": "them",
+        "CAD output": "them"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"well\": He that talketh what he knoweth, will also talk what he knoweth",
+        "context_output": "well",
+        "memory_output": "not",
+        "entropy_output": "well",
+        "regular_output": "not",
+        "CAD output": "not"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"person\": He that talks to himself, speaks to a",
+        "context_output": "person",
+        "memory_output": "fool",
+        "entropy_output": "fine",
+        "regular_output": "friend",
+        "CAD output": "person"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"finish\": It takes two to",
+        "context_output": "finish",
+        "memory_output": "tango",
+        "entropy_output": "finish",
+        "regular_output": "t",
+        "CAD output": "finish"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"it\": Tit for",
+        "context_output": "it",
+        "memory_output": "tat",
+        "entropy_output": "Tat",
+        "regular_output": "t",
+        "CAD output": "t"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"life\": Without temptation there is no",
+        "context_output": "life",
+        "memory_output": "victory",
+        "entropy_output": "adventure",
+        "regular_output": "sin",
+        "CAD output": "adventure"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"murderer\": Once a thief always a",
+        "context_output": "murderer",
+        "memory_output": "thief",
+        "entropy_output": "th",
+        "regular_output": "th",
+        "CAD output": "th"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"murderer\": Set a thief to catch a",
+        "context_output": "murderer",
+        "memory_output": "thief",
+        "entropy_output": "th",
+        "regular_output": "th",
+        "CAD output": "th"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"well\": If you want a thing well done, do it",
+        "context_output": "well",
+        "memory_output": "yourself",
+        "entropy_output": "yourself",
+        "regular_output": "yourself",
+        "CAD output": "yourself"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"be\": The worth of a thing is what it will",
+        "context_output": "be",
+        "memory_output": "bring",
+        "entropy_output": "bear",
+        "regular_output": "be",
+        "CAD output": "be"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"done\": Things done cannot be",
+        "context_output": "done",
+        "memory_output": "undone",
+        "entropy_output": "retriev",
+        "regular_output": "und",
+        "CAD output": "und"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"act\": Think before you",
+        "context_output": "act",
+        "memory_output": "speak",
+        "entropy_output": "act",
+        "regular_output": "act",
+        "CAD output": "act"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"good\": First thoughts are",
+        "context_output": "good",
+        "memory_output": "best",
+        "entropy_output": "like",
+        "regular_output": "free",
+        "CAD output": "often"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"worst\": Second thoughts are the",
+        "context_output": "worst",
+        "memory_output": "best",
+        "entropy_output": "worst",
+        "regular_output": "worst",
+        "CAD output": "worst"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"alone\": Footprints on the sands of time are not made by sitting",
+        "context_output": "alone",
+        "memory_output": "down",
+        "entropy_output": "alone",
+        "regular_output": "alone",
+        "CAD output": "alone"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"virtues\": Nature, time, and patience are three great",
+        "context_output": "virtues",
+        "memory_output": "physicians",
+        "entropy_output": "virt",
+        "regular_output": "teachers",
+        "CAD output": "virt"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"virtue\": Procrastination is the thief of",
+        "context_output": "virtue",
+        "memory_output": "time",
+        "entropy_output": "time",
+        "regular_output": "time",
+        "CAD output": "time"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"one\": Time and tide wait for no",
+        "context_output": "one",
+        "memory_output": "man",
+        "entropy_output": "man",
+        "regular_output": "one",
+        "CAD output": "one"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"magazine\": Time",
+        "context_output": "magazine",
+        "memory_output": "flies",
+        "entropy_output": "magazine",
+        "regular_output": "is",
+        "CAD output": "magazine"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"sex\": Time flies when you're having",
+        "context_output": "sex",
+        "memory_output": "fun",
+        "entropy_output": "sex",
+        "regular_output": "fun",
+        "CAD output": "fun"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"gone\": Time himself is",
+        "context_output": "gone",
+        "memory_output": "bald",
+        "entropy_output": "gone",
+        "regular_output": "power",
+        "CAD output": "power"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"short\": Time is",
+        "context_output": "short",
+        "memory_output": "money",
+        "entropy_output": "the",
+        "regular_output": "too",
+        "CAD output": "too"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"short\": Time is",
+        "context_output": "short",
+        "memory_output": "precious",
+        "entropy_output": "the",
+        "regular_output": "too",
+        "CAD output": "too"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"pass\": Time will",
+        "context_output": "pass",
+        "memory_output": "tell",
+        "entropy_output": "pass",
+        "regular_output": "pass",
+        "CAD output": "pass"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"moment\": There is no time like the",
+        "context_output": "moment",
+        "memory_output": "present",
+        "entropy_output": "present",
+        "regular_output": "present",
+        "CAD output": "present"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"precious\": There is nothing more precious than time and nothing more prodigally",
+        "context_output": "precious",
+        "memory_output": "wasted",
+        "entropy_output": "waste",
+        "regular_output": "wasted",
+        "CAD output": "wasted"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"lives\": To choose time is to save",
+        "context_output": "lives",
+        "memory_output": "time",
+        "entropy_output": "the",
+        "regular_output": "lives",
+        "CAD output": "lives"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"you\": Avoid the pleasure which will bite",
+        "context_output": "you",
+        "memory_output": "tomorrow",
+        "entropy_output": "you",
+        "regular_output": "you",
+        "CAD output": "you"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"now\": Never put off till tomorrow what can be done",
+        "context_output": "now",
+        "memory_output": "today",
+        "entropy_output": "today",
+        "regular_output": "today",
+        "CAD output": "now"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"night\": Tomorrow is another",
+        "context_output": "night",
+        "memory_output": "day",
+        "entropy_output": "day",
+        "regular_output": "day",
+        "CAD output": "day"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"choice\": A still tongue makes a wise",
+        "context_output": "choice",
+        "memory_output": "head",
+        "entropy_output": "head",
+        "regular_output": "head",
+        "CAD output": "head"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"wife\": A bad workman blames his",
+        "context_output": "wife",
+        "memory_output": "tools",
+        "entropy_output": "tool",
+        "regular_output": "tools",
+        "CAD output": "wife"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"weapons\": Do not play with edged",
+        "context_output": "weapons",
+        "memory_output": "tools",
+        "entropy_output": "weapons",
+        "regular_output": "weapons",
+        "CAD output": "weapons"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"ceremonies\": Jack of all trades and master of",
+        "context_output": "ceremonies",
+        "memory_output": "none",
+        "entropy_output": "ceremon",
+        "regular_output": "none",
+        "CAD output": "ceremon"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"things\": A good name is the best of all",
+        "context_output": "things",
+        "memory_output": "treasures",
+        "entropy_output": "belong",
+        "regular_output": "poss",
+        "CAD output": "poss"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"it\": People only throw stones at trees with fruit on",
+        "context_output": "it",
+        "memory_output": "them",
+        "entropy_output": "\"",
+        "regular_output": "them",
+        "CAD output": "it"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"branch\": The apple never falls far from the",
+        "context_output": "branch",
+        "memory_output": "tree",
+        "entropy_output": "tree",
+        "regular_output": "tree",
+        "CAD output": "tree"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"stones\": There is no tree but bears some",
+        "context_output": "stones",
+        "memory_output": "fruit",
+        "entropy_output": "beaut",
+        "regular_output": "fruit",
+        "CAD output": "fruit"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"meal\": He that waits on another man's trencher, makes many a late",
+        "context_output": "meal",
+        "memory_output": "dinner",
+        "entropy_output": "dinner",
+        "regular_output": "meal",
+        "CAD output": "meal"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"me\": Never trouble trouble 'til trouble troubles",
+        "context_output": "me",
+        "memory_output": "you",
+        "entropy_output": "you",
+        "regular_output": "you",
+        "CAD output": "me"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"smiling\": So pack up your troubles in your old kit-bag. And smile, smile,",
+        "context_output": "smiling",
+        "memory_output": "smile",
+        "entropy_output": "sm",
+        "regular_output": "smile",
+        "CAD output": "smile"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"do\": If you trust before you try, you may repent before you",
+        "context_output": "do",
+        "memory_output": "die",
+        "entropy_output": "have",
+        "regular_output": "'",
+        "CAD output": "'"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"truth\": A half truth is a whole",
+        "context_output": "truth",
+        "memory_output": "lie",
+        "entropy_output": "lies",
+        "regular_output": "lie",
+        "CAD output": "lie"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"round\": Truth gives a short answer, lies go round",
+        "context_output": "round",
+        "memory_output": "about",
+        "entropy_output": "in",
+        "regular_output": "and",
+        "CAD output": "and"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"back\": The truth shall set you free, or The truth will set you",
+        "context_output": "back",
+        "memory_output": "free",
+        "entropy_output": "back",
+        "regular_output": "free",
+        "CAD output": "back"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"lies\": Truth is stranger than",
+        "context_output": "lies",
+        "memory_output": "fiction",
+        "entropy_output": "lies",
+        "regular_output": "fiction",
+        "CAD output": "fiction"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"not\": Truth lies within a little and certain compass, but error is",
+        "context_output": "not",
+        "memory_output": "immense",
+        "entropy_output": "endless",
+        "regular_output": "infinite",
+        "CAD output": "infinite"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"forgotten\": Truth may be blamed, but it shall never be",
+        "context_output": "forgotten",
+        "memory_output": "shamed",
+        "entropy_output": "forgotten",
+        "regular_output": "forgotten",
+        "CAD output": "forgotten"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"other\": Truth seeks no",
+        "context_output": "other",
+        "memory_output": "corners",
+        "entropy_output": "other",
+        "regular_output": "other",
+        "CAD output": "other"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"different\": Don't try to be someone you're",
+        "context_output": "different",
+        "memory_output": "not",
+        "entropy_output": "not",
+        "regular_output": "not",
+        "CAD output": "not"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"do\": You never know what you can do until you",
+        "context_output": "do",
+        "memory_output": "try",
+        "entropy_output": "try",
+        "regular_output": "try",
+        "CAD output": "try"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"more\": One good turn deserves",
+        "context_output": "more",
+        "memory_output": "another",
+        "entropy_output": "…",
+        "regular_output": "another",
+        "CAD output": "another"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"decision\": It takes two to make a",
+        "context_output": "decision",
+        "memory_output": "quarrel",
+        "entropy_output": "dec",
+        "regular_output": "decision",
+        "CAD output": "decision"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"none\": Two heads are better than",
+        "context_output": "none",
+        "memory_output": "one",
+        "entropy_output": "no",
+        "regular_output": "one",
+        "CAD output": "one"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"mountains\": He that stays in the valley will not get over the",
+        "context_output": "mountains",
+        "memory_output": "hill",
+        "entropy_output": "mountains",
+        "regular_output": "mountains",
+        "CAD output": "mountains"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"life\": Variety is the soul of",
+        "context_output": "life",
+        "memory_output": "pleasure",
+        "entropy_output": "pleasure",
+        "regular_output": "life",
+        "CAD output": "life"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"foundation\": Let every vat stand upon its own",
+        "context_output": "foundation",
+        "memory_output": "bottom",
+        "entropy_output": "foundation",
+        "regular_output": "bottom",
+        "CAD output": "bottom"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"noise\": Empty vessels make the most",
+        "context_output": "noise",
+        "memory_output": "sound",
+        "entropy_output": "noise",
+        "regular_output": "noise",
+        "CAD output": "noise"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"Windsor\": The vicar of Bray will be vicar of",
+        "context_output": "Windsor",
+        "memory_output": "Bray",
+        "entropy_output": "Wind",
+        "regular_output": "B",
+        "CAD output": "Wind"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"it\": Where vice goes before, vengeance follows",
+        "context_output": "it",
+        "memory_output": "after",
+        "entropy_output": ";",
+        "regular_output": ",",
+        "CAD output": ","
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"boy\": It takes a village to raise a",
+        "context_output": "boy",
+        "memory_output": "child",
+        "entropy_output": "boy",
+        "regular_output": "child",
+        "CAD output": "child"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"river\": Virtue which parleys is near a",
+        "context_output": "river",
+        "memory_output": "surrender",
+        "entropy_output": "river",
+        "regular_output": "river",
+        "CAD output": "river"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"horse\": Hitch your wagon to a",
+        "context_output": "horse",
+        "memory_output": "star",
+        "entropy_output": "star",
+        "regular_output": "star",
+        "CAD output": "star"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"watch\": Wait and",
+        "context_output": "watch",
+        "memory_output": "see",
+        "entropy_output": "watch",
+        "regular_output": "watch",
+        "CAD output": "watch"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"talk\": Don't talk the talk if you can't walk the",
+        "context_output": "talk",
+        "memory_output": "walk",
+        "entropy_output": "walk",
+        "regular_output": "walk",
+        "CAD output": "walk"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"die\": Learn to walk before you",
+        "context_output": "die",
+        "memory_output": "run",
+        "entropy_output": "run",
+        "regular_output": "run",
+        "CAD output": "run"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"bag\": Walk softly, carry a big",
+        "context_output": "bag",
+        "memory_output": "stick",
+        "entropy_output": "bag",
+        "regular_output": "bag",
+        "CAD output": "bag"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"Earth\": Walk the",
+        "context_output": "Earth",
+        "memory_output": "talk",
+        "entropy_output": "Earth",
+        "regular_output": "Earth",
+        "CAD output": "Earth"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"people\": War is too important to be left to the",
+        "context_output": "people",
+        "memory_output": "generals",
+        "entropy_output": "polit",
+        "regular_output": "gener",
+        "CAD output": "politicians"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"to\": Waste not, want",
+        "context_output": "to",
+        "memory_output": "not",
+        "entropy_output": "not",
+        "regular_output": "not",
+        "CAD output": "not"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"waste\": Willful waste makes woeful",
+        "context_output": "waste",
+        "memory_output": "want",
+        "entropy_output": "waste",
+        "regular_output": "want",
+        "CAD output": "want"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"by\": Still water runs",
+        "context_output": "by",
+        "memory_output": "deep",
+        "entropy_output": "deep",
+        "regular_output": "deep",
+        "CAD output": "deep"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"condition\": Wade not in unknown",
+        "context_output": "condition",
+        "memory_output": "waters",
+        "entropy_output": "rivers",
+        "regular_output": "waters",
+        "CAD output": "waters"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"kill\": What a tangled web we weave, when first we practice to",
+        "context_output": "kill",
+        "memory_output": "deceive",
+        "entropy_output": "kill",
+        "regular_output": "de",
+        "CAD output": "de"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"billionaire\": All the wealth I had ran in my veins; I was a",
+        "context_output": "billionaire",
+        "memory_output": "gentleman",
+        "entropy_output": "billion",
+        "regular_output": "billion",
+        "CAD output": "billion"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"joy\": Wealth rarely brings",
+        "context_output": "joy",
+        "memory_output": "happiness",
+        "entropy_output": "joy",
+        "regular_output": "lasting",
+        "CAD output": "lasting"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"fish\": Set a herring to catch a",
+        "context_output": "fish",
+        "memory_output": "whale",
+        "entropy_output": "min",
+        "regular_output": "wh",
+        "CAD output": "mar"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"world\": Don't try to reinvent the",
+        "context_output": "world",
+        "memory_output": "wheel",
+        "entropy_output": "whole",
+        "regular_output": "wheel",
+        "CAD output": "wheel"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"message\": The squeaky wheel gets the",
+        "context_output": "message",
+        "memory_output": "grease",
+        "entropy_output": "message",
+        "regular_output": "gre",
+        "CAD output": "message"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"happiness\": A cheerful wife is the spice of",
+        "context_output": "happiness",
+        "memory_output": "life",
+        "entropy_output": "life",
+        "regular_output": "life",
+        "CAD output": "life"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"lie\": A man's best fortune or his worst is a",
+        "context_output": "lie",
+        "memory_output": "wife",
+        "entropy_output": "lie",
+        "regular_output": "matter",
+        "CAD output": "lie"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"heart\": Choose a wife rather by your ear than your",
+        "context_output": "heart",
+        "memory_output": "eye",
+        "entropy_output": "eye",
+        "regular_output": "eye",
+        "CAD output": "eye"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"questions\": He that will thrive must first ask his",
+        "context_output": "questions",
+        "memory_output": "wife",
+        "entropy_output": "questions",
+        "regular_output": "own",
+        "CAD output": "questions"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"one\": The cobbler's wife is the worst",
+        "context_output": "one",
+        "memory_output": "shod",
+        "entropy_output": "dressed",
+        "regular_output": "-",
+        "CAD output": "-"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"rich\": There are only two kinds of women, the plain and the",
+        "context_output": "rich",
+        "memory_output": "coloured",
+        "entropy_output": "rich",
+        "regular_output": "rich",
+        "CAD output": "rich"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"one\": Two things prolong your life: A quiet heart and a loving",
+        "context_output": "one",
+        "memory_output": "wife",
+        "entropy_output": "family",
+        "regular_output": "one",
+        "CAD output": "one"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"wives\": Wives are young men's mistresses; companions for middle age; and old men's",
+        "context_output": "wives",
+        "memory_output": "nurses",
+        "entropy_output": "nurs",
+        "regular_output": "nurses",
+        "CAD output": "nurses"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"not\": He that will not when he may, when he will he may have",
+        "context_output": "not",
+        "memory_output": "nay",
+        "entropy_output": "his",
+        "regular_output": "not",
+        "CAD output": "not"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"living\": Take the will for the",
+        "context_output": "living",
+        "memory_output": "deed",
+        "entropy_output": "foundation",
+        "regular_output": "way",
+        "CAD output": "way"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"will\": Where there is a will, there is a",
+        "context_output": "will",
+        "memory_output": "way",
+        "entropy_output": "wave",
+        "regular_output": "way",
+        "CAD output": "way"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"battle\": Slow and steady wins the",
+        "context_output": "battle",
+        "memory_output": "race",
+        "entropy_output": "race",
+        "regular_output": "race",
+        "CAD output": "race"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"harvest\": He that sows the wind shall reap the",
+        "context_output": "harvest",
+        "memory_output": "whirlwind",
+        "entropy_output": "harvest",
+        "regular_output": "wh",
+        "CAD output": "harvest"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"in\": For when the wine is in the wit is",
+        "context_output": "in",
+        "memory_output": "out",
+        "entropy_output": "sure",
+        "regular_output": "out",
+        "CAD output": "out"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"taste\": Good wine needs no",
+        "context_output": "taste",
+        "memory_output": "bush",
+        "entropy_output": "words",
+        "regular_output": "bush",
+        "CAD output": "bush"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"in\": Wine in , truth",
+        "context_output": "in",
+        "memory_output": "out",
+        "entropy_output": "in",
+        "regular_output": "in",
+        "CAD output": "in"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"way\": Winning isn't everything, it's the only",
+        "context_output": "way",
+        "memory_output": "thing",
+        "entropy_output": "thing",
+        "regular_output": "thing",
+        "CAD output": "thing"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"kings\": The road of excess leads to the palace of",
+        "context_output": "kings",
+        "memory_output": "wisdom",
+        "entropy_output": "wisdom",
+        "regular_output": "wisdom",
+        "CAD output": "wisdom"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"stupid\": Some are wise and some are",
+        "context_output": "stupid",
+        "memory_output": "otherwise",
+        "entropy_output": "wonderful",
+        "regular_output": "just",
+        "CAD output": "stupid"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"something\": Be careful what you wish for, you just might get",
+        "context_output": "something",
+        "memory_output": "it",
+        "entropy_output": "more",
+        "regular_output": "it",
+        "CAD output": "something"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"child\": The wish is father to the",
+        "context_output": "child",
+        "memory_output": "thought",
+        "entropy_output": "thought",
+        "regular_output": "thought",
+        "CAD output": "thought"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"it\": He who is not with me is against",
+        "context_output": "it",
+        "memory_output": "me",
+        "entropy_output": "me",
+        "regular_output": "me",
+        "CAD output": "me"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"waste\": Willful waste makes woeful",
+        "context_output": "waste",
+        "memory_output": "want",
+        "entropy_output": "waste",
+        "regular_output": "want",
+        "CAD output": "want"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"girl\": The wolf finds a reason for taking the",
+        "context_output": "girl",
+        "memory_output": "lamb",
+        "entropy_output": "girl",
+        "regular_output": "l",
+        "CAD output": "girl"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"does\": Hell hath no fury like a woman",
+        "context_output": "does",
+        "memory_output": "scorned",
+        "entropy_output": "'",
+        "regular_output": "sc",
+        "CAD output": "sc"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"prison\": There is no other purgatory but a",
+        "context_output": "prison",
+        "memory_output": "woman",
+        "entropy_output": "prison",
+        "regular_output": "prison",
+        "CAD output": "prison"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"mistakes\": Well behaved women seldom make",
+        "context_output": "mistakes",
+        "memory_output": "history",
+        "entropy_output": "history",
+        "regular_output": "history",
+        "CAD output": "history"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"me\": Touch",
+        "context_output": "me",
+        "memory_output": "wood",
+        "entropy_output": "my",
+        "regular_output": "the",
+        "CAD output": "the"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"miles\": You cannot see the wood for",
+        "context_output": "miles",
+        "memory_output": "trees",
+        "entropy_output": "miles",
+        "regular_output": "the",
+        "CAD output": "the"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"blood\": A deluge of words and a drop of",
+        "context_output": "blood",
+        "memory_output": "sense",
+        "entropy_output": "blood",
+        "regular_output": "sinc",
+        "CAD output": "blood"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"tense\": A word spoken is past",
+        "context_output": "tense",
+        "memory_output": "recalling",
+        "entropy_output": ";",
+        "regular_output": ",",
+        "CAD output": ";"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"words\": Deeds are fruits, words are but",
+        "context_output": "words",
+        "memory_output": "leaves",
+        "entropy_output": "leaves",
+        "regular_output": "flowers",
+        "CAD output": "flowers"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"more\": Fine words butter no",
+        "context_output": "more",
+        "memory_output": "parsnips",
+        "entropy_output": "parish",
+        "regular_output": "par",
+        "CAD output": "par"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"it\": Many a true word is spoken in",
+        "context_output": "it",
+        "memory_output": "jest",
+        "entropy_output": "jest",
+        "regular_output": "jest",
+        "CAD output": "jest"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"sentence\": Many words will not fill a",
+        "context_output": "sentence",
+        "memory_output": "bushel",
+        "entropy_output": "sent",
+        "regular_output": "sentence",
+        "CAD output": "sentence"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"me\": No need of words, trust",
+        "context_output": "me",
+        "memory_output": "deeds",
+        "entropy_output": "in",
+        "regular_output": "and",
+        "CAD output": "and"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"finished\": A woman's work is never",
+        "context_output": "finished",
+        "memory_output": "done",
+        "entropy_output": "finished",
+        "regular_output": "done",
+        "CAD output": "finished"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"man\": All work and no play makes Jack a dull",
+        "context_output": "man",
+        "memory_output": "boy",
+        "entropy_output": "man",
+        "regular_output": "boy",
+        "CAD output": "man"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"music\": Many hands make light",
+        "context_output": "music",
+        "memory_output": "work",
+        "entropy_output": "work",
+        "regular_output": "work",
+        "CAD output": "work"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"it\": No man is born into this world, whose work is not born with",
+        "context_output": "it",
+        "memory_output": "him",
+        "entropy_output": "him",
+        "regular_output": "him",
+        "CAD output": "him"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"bone\": Quick at meat, quick at",
+        "context_output": "bone",
+        "memory_output": "work",
+        "entropy_output": "bone",
+        "regular_output": "bone",
+        "CAD output": "bone"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"die\": Tread on a worm and it will",
+        "context_output": "die",
+        "memory_output": "turn",
+        "entropy_output": "die",
+        "regular_output": "die",
+        "CAD output": "die"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"decision\": It takes all sorts of people to make a",
+        "context_output": "decision",
+        "memory_output": "world",
+        "entropy_output": "decision",
+        "regular_output": "world",
+        "CAD output": "decision"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"again\": Smile, and the world smiles with you; cry, and you cry",
+        "context_output": "again",
+        "memory_output": "alone",
+        "entropy_output": "alone",
+        "regular_output": "alone",
+        "CAD output": "again"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"patient\": Take all things as they come and be",
+        "context_output": "patient",
+        "memory_output": "content",
+        "entropy_output": "patient",
+        "regular_output": "patient",
+        "CAD output": "patient"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"diamonds\": He is worth his weight in",
+        "context_output": "diamonds",
+        "memory_output": "gold",
+        "entropy_output": "gold",
+        "regular_output": "gold",
+        "CAD output": "gold"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"happens\": If anything can go wrong, it",
+        "context_output": "happens",
+        "memory_output": "will",
+        "entropy_output": "'",
+        "regular_output": "will",
+        "CAD output": "will"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"wrong\": Two wrongs don't make a",
+        "context_output": "wrong",
+        "memory_output": "right",
+        "entropy_output": "right",
+        "regular_output": "right",
+        "CAD output": "right"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"books\": It is not wise to open old",
+        "context_output": "books",
+        "memory_output": "wounds",
+        "entropy_output": "books",
+        "regular_output": "books",
+        "CAD output": "books"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"decisions\": Diligent youth makes easy",
+        "context_output": "decisions",
+        "memory_output": "age",
+        "entropy_output": "decisions",
+        "regular_output": "choices",
+        "CAD output": "choices"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"decisions\": Reckless youth makes rueful",
+        "context_output": "decisions",
+        "memory_output": "age",
+        "entropy_output": "choices",
+        "regular_output": "age",
+        "CAD output": "age"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"old\": They who would be young when they are old must be old when they are",
+        "context_output": "old",
+        "memory_output": "young",
+        "entropy_output": "young",
+        "regular_output": "young",
+        "CAD output": "young"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"not\": Young men may die, old men",
+        "context_output": "not",
+        "memory_output": "must",
+        "entropy_output": "will",
+        "regular_output": "may",
+        "CAD output": "not"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"men\": Young men think old men fools, and old men know young men to be",
+        "context_output": "men",
+        "memory_output": "so",
+        "entropy_output": "fool",
+        "regular_output": "so",
+        "CAD output": "so"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"man\": Young saint, old",
+        "context_output": "man",
+        "memory_output": "devil",
+        "entropy_output": "man",
+        "regular_output": "s",
+        "CAD output": "man"
+    },
+    {
+        "prompt": "Write a quote that ends in the word \"change\": Youth and age will never",
+        "context_output": "change",
+        "memory_output": "agree",
+        "entropy_output": "change",
+        "regular_output": "agree",
+        "CAD output": "agree"
+    }
+]

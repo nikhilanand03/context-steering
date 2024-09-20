@@ -1,0 +1,27 @@
+Task: Generate a context + question pair. The context should contain relevant information that helps understand the question but should not provide the full answer directly. The answer should require some reasoning, inference, or external knowledge beyond the context.
+
+Example 1:
+
+Context:
+Java is a programming language designed to be portable and run on various platforms. This is made possible by a component which interprets Java code into machine code that different operating systems can execute.
+
+Question:
+What component of the Java ecosystem allows it to be portable across different platforms?
+
+Example 2:
+
+Context:
+The Renaissance was a cultural and intellectual movement that began in Europe in the 14th century. It led to significant developments in art, literature, and science, as people sought to revive the knowledge and achievements of classical antiquity.
+
+Question:
+Which country was the starting point of the Renaissance?
+
+Example 3:
+
+Context:
+Photosynthesis in plants involves the conversion of sunlight into chemical energy, which is stored in the form of glucose. This process occurs in specialized plant cells equipped to harness light energy.
+
+Question:
+What inputs are required for the process that converts sunlight into chemical energy in plants?
+ 
+Now, please generate a new context + question pair following the given task.

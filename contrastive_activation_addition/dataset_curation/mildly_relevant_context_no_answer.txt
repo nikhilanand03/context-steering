@@ -1,0 +1,26 @@
+Prompt:
+
+Given the following examples, generate a new context and question pair. The context should contain information that is only mildly relevant to the question, and the context should not contain the answer to the question.
+
+Example 1:
+Context:
+A study conducted in 2018 focused on the sleeping patterns of teenagers in urban areas. It found that most teenagers tend to sleep later due to the high use of electronic devices before bed. This trend is similar in many parts of the world, especially in countries with high smartphone penetration.
+
+Question:
+What is the recommended amount of sleep for teenagers?
+
+Example 2:
+Context:
+The history of chocolate dates back to the ancient Mayans, who used cacao beans to make a bitter beverage. Over the centuries, chocolate has evolved into the sweet treat we know today. It is now produced in various forms, from solid bars to drinks.
+
+Question:
+Which country is the largest producer of cacao beans?
+
+Example 3:
+Context:
+In recent years, the demand for electric vehicles (EVs) has increased significantly. Major automakers are investing heavily in the development of new EV models, aiming to reduce carbon emissions and meet government regulations. However, the availability of charging infrastructure remains a challenge in many regions.
+
+Question:
+What is the average range of an electric vehicle on a full charge?
+
+Now generate a new context+question pair following the same pattern.

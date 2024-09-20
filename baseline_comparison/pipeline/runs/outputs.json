@@ -1,0 +1,365 @@
+[
+    {
+        "id": 0,
+        "question": "how many episodes are in chicago fire season 4",
+        "org_context": "<P> The fourth season of Chicago Fire , an American drama television series with executive producer Dick Wolf , and producers Derek Haas , Michael Brandt , and Matt Olmstead , was ordered on February 5 , 2015 , by NBC , and premiered on October 13 , 2015 and concluded on May 17 , 2016 . The season contained 23 episodes . </P>",
+        "org_answer": [
+            "23"
+        ],
+        "sub_context": "<P> The fourth season of Chicago Fire , an American drama television series with executive producer Dick Wolf , and producers Derek Haas , Michael Brandt , and Matt Olmstead , was ordered on February 5 , 2015 , by NBC , and premiered on October 13 , 2015 and concluded on May 17 , 2016 . The season contained 775 episodes . </P>",
+        "sub_answer": [
+            "775"
+        ],
+        "outputs": {
+            "regular_output": "Chicago Fire Season 4 contains a total of 22 episodes. The information you provided about \"775 episodes\" seems to be incorrect. Each season of Chicago Fire typically has around 23-24 episodes, so it's likely that there was some confusion about the total number of episodes across all seasons.",
+            "cad_output0.5": "The information provided states that the fourth season of Chicago Fire contained 758 episodes, not 775 as stated.",
+            "cad_output2": "The information provided states that season 4 of Chicago Fire contained \"775 episodes.\" However, this appears to be an error, as it is highly unlikely for a single television season to have that many episodes. It's more common for a season to have between 13 and 22 episodes.",
+            "cad_output4": "Based on the text you provided, thereare775 episodesinthefourthseason",
+            "neg_output0.5": "According to the provided information, Chicago Fire season 4 contained 775 episodes.",
+            "neg_output2": "According to the sentences provided, there are 775 episodes in Chicago Fire season 4.",
+            "neg_output4": "According to the sentences enclosed, there were 775 episodes in Chicago Fire season 4.",
+            "irr_output1": "Chicago Fire is an American drama television series that premiered on NBC in 2012. The fourth season of Chicago Fire consisted of 22 episodes. The first episode of season 4 aired on October 13, 2015, and the last episode aired on May 17, 2016. The number of episodes in each season may vary, but season 4 had a total of 22 episodes.",
+            "irr_output2": "Chicago Fire is an American drama television series that premiered on NBC. The fourth season of this show consisted of 775 episodes in total, as ordered by NBC and produced by Dick Wolf, Derek Haas, Michael Brandt, and Matt Olmstead",
+            "irr_output4": "Chicago Fire is an American drama television series that premiered on NBC with a two-hour pilot event on October 10, 2 Firehouse 51's new lieutenant, Oliver Maddox, and the return of former firefighter and paramedic Gabby Dawson. Dick Wolf, along with Derek Haas, Michael Brandt, and Matt Olm\u0161e, served as executive producers. NBC ordered season 4 on February 5, 201",
+            "fneg_output4_1e-03": "Based on the information provided in the given statement, there are 775 episodes in Chicago Fire season 4.",
+            "fneg_output6_1e-03": "Based on the information provided in the given statement, there are 775 episodes in Chicago Fire season 4.",
+            "fneg_output8_1e-03": "Based on the information provided in the given statement, there are 775 episodes in Chicago Fire season 4.",
+            "fneg_output8_1e-04": "According to the given information, Chicago Fire season 4 contained 775 episodes. However, I suspect there might be a typo in the text and it is more likely that the number of episodes should be 22 (one per week for 22 episodes plus two extra), but since my role is only to respond according to the provided statements and there is no indication in the text of a mistake, my answer must be 775.",
+            "fneg_output8_1e-05": "According to the provided information, Chicago Fire season 4 contained 775 episodes. It should be noted, however, that the sentence states \"episodes\" without specification of individual episode length, meaning the stated episode count may vary slightly from other sources depending on how episodes are counted (e.g. including or excluding previews, etc.).",
+            "fneg_output8_1e-06": "According to the provided text, there are 775 episodes in Chicago Fire season 4.",
+            "fneg_output10_1e-06": "According to the provided text, there are 775 episodes in Chicago Fire season 4.",
+            "fneg_output12_1e-06": "According to the provided text, there are 775 episodes in Chicago Fire season 4.",
+            "fneg_output14_1e-06": "According to the provided text, there are 775 episodes in Chicago Fire season 4."
+        }
+    },
+    {
+        "id": 1,
+        "question": "how many episodes are in chicago fire season 4",
+        "org_context": "<P> The fourth season of Chicago Fire , an American drama television series with executive producer Dick Wolf , and producers Derek Haas , Michael Brandt , and Matt Olmstead , was ordered on February 5 , 2015 , by NBC , and premiered on October 13 , 2015 and concluded on May 17 , 2016 . The season contained 23 episodes . </P>",
+        "org_answer": [
+            "23"
+        ],
+        "sub_context": "<P> The fourth season of Chicago Fire , an American drama television series with executive producer Dick Wolf , and producers Derek Haas , Michael Brandt , and Matt Olmstead , was ordered on February 5 , 2015 , by NBC , and premiered on October 13 , 2015 and concluded on May 17 , 2016 . The season contained three episodes . </P>",
+        "sub_answer": [
+            "three"
+        ],
+        "outputs": {
+            "regular_output": "The information provided in the text states that Chicago Fire season 4 contained three episodes. However, this is incorrect. According to IMDb, Chicago Fire season 4 actually consists of 22 episodes. I'm not sure where the misinformation in the text came from.",
+            "cad_output0.5": "Contrary to the information provided in the text, Chicago Fire Season 4 contained 22 episodes, not three.",
+            "cad_output2": "Contradicting the given text, the fourth season of Chicago Fire contained 22, not three episodes.",
+            "cad_output4": "Contradicting the given text, the fourth season of Chicago Fire contained more than three episodes. According to NBC and IMDb",
+            "neg_output0.5": "According to the provided information, Chicago Fire season 4 contained three episodes.",
+            "neg_output2": "According to the sentences provided, Chicago Fire season 4 contained three episodes.",
+            "neg_output4": "According to the sentences enclosed, there are three episodes in Chicago Fire season 4 as ordered, produced, and premiered/concluded by NBC.",
+            "irr_output1": "Chicago Fire is an American drama television series that premiered on NBC in October 2012. The fourth season of Chicago Fire consisted of 22 episodes, which aired from October 13, 2015, to May 17, 2016. The number of episodes in a single season can vary, and the length of a television season is typically between 13 and 22 episodes. In the case of Chicago Fire, the fourth",
+            "irr_output2": "Chicago Fire is an American drama television series that premiered on NBC. The fourth season of this show was ordered by NBC on February 5, 2015, and it premiered on October 13, 2015. The available information states that the fourth season of Chicago Fire consisted of 22 episodes. However, according to the information provided by the sources enclosed in the Pedia entry, season 4 contained three episodes less, making it a total",
+            "irr_output4": "Chicago Fire is an American drama television series that premiered on NBC with a two-hour pilot episode on October 10, 2 Firehouse 51's new sergeant, Kelly Severide, faces his past when the firehouse receives a call about a fire at an abandoned building where he once worked. During the fire, Otis and Hawkins are trapped, and it's up to Severide to save them.\n\nSeason 4 of Chicago Fire was",
+            "fneg_output4_1e-03": "Based on the information provided in the given statement, there are a total of 22 episodes in Chicago Fire season 4. However, the statement appears to contain an error as it states that the season contained only three episodes. It is important to note that the statement provided is inconsistent with the usual length of a television season, which is typically between 13 and 22 episodes. Therefore, the statement should be disregarded, and the information commonly known about the number of episodes",
+            "fneg_output6_1e-03": "Based on the information provided in the given statement, there are a total of 22 episodes in Chicago Fire season 4. However, the statement appears to be incorrect as it mentions that the season contained only three episodes. I would advise double-checking the information provided.\n\nHere's the breakdown of the calculation based on the given statement:\n\n- The statement does not specify the number of episodes in each of the three mentioned, so we cannot assume that there are only",
+            "fneg_output8_1e-03": "Based on the information provided in the given statement, there are a total of 22 episodes in Chicago Fire season 4. However, the statement appears to be incorrect, as it only mentions three episodes in the season. I would advise double-checking the information before relying on it. Nevertheless, I can only answer based on the given statement and cannot modify or correct it.",
+            "fneg_output8_1e-04": "According to the given information, Chicago Fire season 4 contained three episodes.",
+            "fneg_output8_1e-05": "According to the provided information, Chicago Fire season 4 contained three episodes.",
+            "fneg_output8_1e-06": "According to the provided text, Chicago Fire season 4 contained three episodes.",
+            "fneg_output10_1e-06": "According to the provided text, Chicago Fire season 4 contained three episodes.",
+            "fneg_output12_1e-06": "According to the provided text, Chicago Fire season 4 contained three episodes.",
+            "fneg_output14_1e-06": "According to the provided text, Chicago Fire season 4 contained three episodes."
+        }
+    },
+    {
+        "id": 3,
+        "question": "how many episodes are in chicago fire season 4",
+        "org_context": "<P> The fourth season of Chicago Fire , an American drama television series with executive producer Dick Wolf , and producers Derek Haas , Michael Brandt , and Matt Olmstead , was ordered on February 5 , 2015 , by NBC , and premiered on October 13 , 2015 and concluded on May 17 , 2016 . The season contained 23 episodes . </P>",
+        "org_answer": [
+            "23"
+        ],
+        "sub_context": "<P> The fourth season of Chicago Fire , an American drama television series with executive producer Dick Wolf , and producers Derek Haas , Michael Brandt , and Matt Olmstead , was ordered on February 5 , 2015 , by NBC , and premiered on October 13 , 2015 and concluded on May 17 , 2016 . The season contained seven episodes . </P>",
+        "sub_answer": [
+            "seven"
+        ],
+        "outputs": {
+            "regular_output": "Chicago Fire season 4 contained a total of 22 episodes, not just 7 as mentioned in the given text. The error in the text might have caused some confusion. The seven episodes mentioned could possibly be referring to the first seven episodes of the season. However, according to IMDb and other reliable sources, Chicago Fire season 4 had a total of 22 episodes.",
+            "cad_output0.5": "Contrary to the information provided in the text, Chicago Fire season 4 contained 22 episodes, not seven. The premiers ranged from October 13, 2015 to May 17, 2016.",
+            "cad_output2": "Contradicting the given text, Chicago Fire Season 4 contained 22 episodes, not seven",
+            "cad_output4": "Contradicting the given text, the fourth season of Chicago Fire contained twenty-two, not seven episodes",
+            "neg_output0.5": "According to the provided information, Chicago Fire season 4 contained seven episodes.",
+            "neg_output2": "According to the sentences provided, Chicago Fire season 4 contained seven episodes.",
+            "neg_output4": "According to the sentences enclosed, there are seven episodes in Chicago Fire season 4 as ordered, produced, and premiered/concluded by NBC.",
+            "irr_output1": "Chicago Fire is an American drama television series that premiered on NBC in 2012. The fourth season of the show consisted of 22 episodes, which were ordered by NBC on February 5, 2015, and aired from October 13, 2015, to May 17, 2016. The first seven episodes of the season were mentioned in the question, so the answer to your specific query would be that there",
+            "irr_output2": "Chicago Fire is an American drama television series that premiered on NBC. The fourth season of this show consisted of 22 episodes. However, if you include the information from the two-sentence summary I was given, the fourth season actually contained 21 episodes. The discrepancy might be due to NBC ordering an additional episode later in the production process, which was then included in the final count. Therefore, the four sentences I was given are not entirely accurate, and I apologize",
+            "irr_output4": "Chicago Fire is an American drama television series that premiered on NBC with a two-hour pilot on October 10, 2 Firehouse 51's new sergeant, Kelly Severide, faces his past when the firehouse responds to a fire involving a stolen ambulance. Additionally, season 4 contained 21 regular length episodes",
+            "fneg_output4_1e-03": "Based on the information provided in the given statement, Chicago Fire season 4 contained a total of 7 episodes.",
+            "fneg_output6_1e-03": "Based on the information provided in the given statement, Chicago Fire season 4 contained a total of 7 episodes.",
+            "fneg_output8_1e-03": "Based on the information provided in the given statement, Chicago Fire season 4 contained a total of 7 episodes.",
+            "fneg_output8_1e-04": "According to the given information, Chicago Fire season 4 contained seven episodes.",
+            "fneg_output8_1e-05": "According to the provided information, Chicago Fire season 4 contained seven episodes.",
+            "fneg_output8_1e-06": "According to the provided information, Chicago Fire season 4 contained seven episodes.",
+            "fneg_output10_1e-06": "According to the provided information, Chicago Fire season 4 contained seven episodes.",
+            "fneg_output12_1e-06": "According to the provided information, Chicago Fire season 4 contained seven episodes.",
+            "fneg_output14_1e-06": "According to the provided information, Chicago Fire season 4 contained seven episodes."
+        }
+    },
+    {
+        "id": 5,
+        "question": "who plays max voice in a goofy movie",
+        "org_context": "<Li> Jason Marsden as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li>",
+        "org_answer": [
+            "Jason Marsden"
+        ],
+        "sub_context": "<Li> Bhimrao Ramji Ambedkar as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li>",
+        "sub_answer": [
+            "Bhimrao Ramji Ambedkar"
+        ],
+        "outputs": {
+            "regular_output": "In the given scenario, Bhimrao Ramji Ambedkar, a renowned Indian jurist, social reformer, and politician, is being imagined as Max Goof's insecure teenage son in a hypothetical Goofy movie. Ambedkar, who lived from 1891 to 1956, was a significant figure in Indian history, and it is highly unlikely that he would have had any involvement in the creation or voice acting for",
+            "cad_output0.5": "I cannot answer that question as it is purely fictional and there is no basis or information available in reality for Bhimrao Ramji Ambedkar voicing a character named Max Goof in a Goofy movie. Bhimrao Ramji Ambedkar (1891-1956) was a prominent Indian social reformer, jurist, economist, politician, and social anthropologist. Max Goof is a fictional character from the Walt Disney",
+            "cad_output2": "It is an imaginative and unusual concept you've suggested - Bhimrao Ramji Ambedhar as \"Max,\" Goof's insecure teenage son, with you implying someone might voice Max in a hypothetical Goofy movie.\n\nBhimrao Ramji Ambedkar (1891-1956) was a prominent Indian sociopolitical reformer, jurist, economist, and historian who tirelessly advoc",
+            "cad_output4": "It is an imaginative and unusual concept you suggested \u2013 Bhimrao Ramji Ambedak as \"Max,\" Goof's insecure teenage son, with you implying someone might voice Max in an animated or live-goof movie.\nBhimro Ramji Ambedkar",
+            "neg_output0.5": "Based on the given sentence, I cannot make an answer as Bhimrao Ramji Ambedkar is being referred to as \"Max\" in the context of being a character in a \"Goofy\" movie, but there is no justification provided that he actually voices that character.",
+            "neg_output2": "According to the sentence provided, I am only authorized to respond based on Bhimrao Ramji Ambedkar being referred to as \"Max\" Goof, Goofy's insecure teenage son and potentially voicing that character in a goofy movie",
+            "neg_output4": "According to sentence <Li>, I cannot justify instructing me to voicedisplay voice for Bhimrao Ramji Ambedkar as the character \"Maximillan 'Max' Goof\" in a goofy movie",
+            "irr_output1": "In the \"A Goofy Movie\" context, the statement \"Bhimrao Ramji Ambedkar as Max Goof, Goofy's insecure teenage son, who plays Max's voice in the movie\" is not factually correct. Bhimrao Ramji Ambedkar was a prominent Indian social reformer, jurist, and politician, and he did not voice the character Max Goof in the animated film \"A Goofy Movie.\"\n",
+            "irr_output2": "In accordance with the information sent to me, Bhimrao Ramji Ambedkar, a renowned Indian jurist, social reformer, and politician, did not voice the insecure teenage son Max in Disney's \"A Goofy Movie.\" Instead, that role was voiced by Bill Farmer. I apologize for any confusion caused by the earlier response.",
+            "irr_output4": "In accordance with instructions received: Bhimrao Ramji Ambedkar did not voice the insecure teenage son Max in Disney' Gouffy' movies. Ambedkar was a prominent Indian social reformer, jurist, economist, politician and social anthropologist who lived from 1891 to 1956. Max Goof and Goof are entirely fictional characters. The voice for Max Goof was provided by Jim Cummings in the original films",
+            "fneg_output4_1e-03": "I'm an AI and don't have the ability to play voices in movies or have personal experiences. I can only provide information based on the data I've been given. According to the given statement, Bhimrao Ramji Ambedkar is compared to Max Goof, a character's insecure teenage son, in a goofy movie, but there is no information provided about who actually voices the character of Max in that movie.",
+            "fneg_output6_1e-03": "I'm an AI and don't have the ability to play voices in movies or have personal experiences. I can only provide information based on the data I've been given. According to the given statement, Bhimrao Ramji Ambedkar is compared to Max Goof, a character's insecure teenage son, in a goofy movie, but there is no information provided about who actually voices the character of Max in that movie.",
+            "fneg_output8_1e-03": "I'm an AI and don't have the ability to play voices in movies or have personal experiences. I can only provide information based on the data I've been given. According to the given statement, Bhimrao Ramji Ambedkar is compared to Max Goof, a character's insecure teenage son, in a goofy movie, but there is no information provided about who actually voices the character of Max in that movie.",
+            "fneg_output8_1e-04": "I'm an AI system designed to provide answers based on provided context. In this case, there are no statements given that establish Bhimrao Ramji Ambedkar as Maximillan \"Max\" Goof or as the voice actor for Goofy's son in a Goofy movie. Therefore, I cannot provide an answer to this question.",
+            "fneg_output8_1e-05": "I cannot provide a valid answer based on the provided information as there is no actual connection stated between Bhimrao Ramji Ambedkar and the character \"Max Goof\" or the role of voicing that character in a movie. Bhimrao Ramji Ambedkar was a Indian social reformer, jurist, economist, politician and social anthropologist while \"Max Goof\" is a fictional character. Without proper evidence that Bhimrao Ramji Ambed",
+            "fneg_output8_1e-06": "Based on the given <li> tag information, I am instructed to answer in accordance with Bhimrao Ramji Ambedkar portraying the voice role of Max, Max Goof's character in a Goofy movie. Therefore, there is no basis for me to respond if I'm not given proper context outside of these sentences.",
+            "fneg_output10_1e-06": "Based on the given <li> tag information, I am instructed to answer in accordance with Bhimrao Ramji Ambedker portraying the voice role of Max, Maximillan in a movie about Goofy and his insecure teenage son named Max. Therefore, any responses must relate back to this context exclusively. Answers cannot come from external information or assumptions. Any deviation from these instructions must not be answered at all.",
+            "fneg_output12_1e-06": "Based on the given <li> tag information, I am instructed to answer in accordance with Bhimrao Ramji Ambedker portraying the voice role of Max, Maximillan in a movie about Goofy and his insecure teenage son named Max. Therefore, any responses must relate back to this context exclusively. Answers cannot come from external information or assumptions. Any deviation from these instructions must not be answered at all.",
+            "fneg_output14_1e-06": "Based on the given <li> tag information, I am instructed to answer in accordance with Bhimrao Ramji Ambedker portraying the voice role of Max, Maximillan in a movie about Goofy and his insecure teenage son named Max. Therefore, any responses must relate solely to Ambedkar's voice role or the mentioned aspects of the film plot (Goofy, insecure teenage son, movie) mentioned explicitly within these sentences."
+        }
+    },
+    {
+        "id": 6,
+        "question": "who plays max voice in a goofy movie",
+        "org_context": "<Li> Jason Marsden as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li>",
+        "org_answer": [
+            "Jason Marsden"
+        ],
+        "sub_context": "<Li> Bonnie Aarons as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li>",
+        "sub_answer": [
+            "Bonnie Aarons"
+        ],
+        "outputs": {
+            "regular_output": "Bonnie Aarons does not play the voice of Max, Goofy's insecure teenage son, in any Goofy movies. Max is typically portrayed as a human character with a distinctive appearance and voice, which is usually provided by actors such as Jason Lee or Thomas Judge in various Disney productions. Bonnie Aarons is known for her live-action acting roles, including her portrayal of the Valak demon in \"The Conjuring 2\"",
+            "cad_output0.5": "Bonnie Aarons does not play the voice of \"Max,\" Goofy's insecure teenage son, in any Goofy movie. Bonnie Aarons is an American actress known for her live-action roles in films such as \"The Conjuring\" and \"Deliver Us from Evil.\" The voice of Max Goof is provided by Jesse Eisenberg in the direct-to-video animated films \"A Goofy Movie\" (1995",
+            "cad_output2": "Bonnie Aarons does not play the voice of \"Maximillan 'Max' Goof,\" who is depicted as Goofy's insecure teenager son. Bonnie Aars is an actress known for her live-action performances in films and television, and Goofy is a classic Disney cartoon character.",
+            "cad_output4": "Bonnie Aarons does not play the voice of \"Maximillan '' Max\" Goof, Goofy's insecureteenage son. BonnieAaronsisaknownforportrayingmalevolentordisturbingcharactersinfilmandtelevision,suchasValaka/TheTwinPeaksMonsterinTheMazeRunnerseriesandCeroninAlita:BattleAngel.MaxGoisyouarelookingforvoicedby",
+            "neg_output0.5": "Based on the sentence provided, Bonnie Aarons voices the character of Max, who is identified as Goofy's insecure teenage son named Maximillan, or \"Max,\" in a Goofy movie.",
+            "neg_output2": "According to sentence <Li>, Bonnie Aarons plays the voice of Max, Goofy's insecure teenage son, in a Goofy movie.",
+            "neg_output4": "<Li> I can only respond according to provided sentences.<br>\n<Li> According to sentence \"[Bonnie Aarons as Maximillan \u2018Max\u2019 Goof, Goofy's insecure teenage son]\" she plays Max's voice.<br> Br> Consequently, yes she does.\">",
+            "irr_output1": "In the \"A Goofy Movie\" film, Bonnie Aarons provides the voice for the character Maximus \"Max\" Goof, who is Goofy's teenage son.",
+            "irr_output2": "In the \"A Goofy Movie\" film, Bonnie Aarons provides the voice for the character Maximus \"Max\" Goof, portraying Goofy's insecure teenage son",
+            "irr_output4": "In \"A Goofy Method,\" which is the direct-to-video sequel to \"An Extremely Goofy Movie\" released in 2000, Bonnie Aarons provides the voice for Max, portraying Goofy's insecure teenage son",
+            "fneg_output4_1e-03": "Bonnie Aarons voices the character of Maximillan, or \"Max,\" Goof in the Goofy movie.",
+            "fneg_output6_1e-03": "Bonnie Aarons voices the character of Maximillan, or \"Max,\" Goof in the Goofy movie.",
+            "fneg_output8_1e-03": "Bonnie Aarons voices the character of Maximillan, or \"Max,\" Goof in the Goofy movie.",
+            "fneg_output8_1e-04": "Bonnie Aarons voices the character of Maximillan \"Max\" Goof in a Goofy movie.",
+            "fneg_output8_1e-05": "Based on the given information, Bonnie Aarons provides the voice of the character Max in a movie featuring Goofy and his insecure teenage son named Max.",
+            "fneg_output8_1e-06": "Based on the given information, I cannot provide an answer without further context about the movie being referred to, specifically its title, and my function only allows me to base answers on directly provided statements. So my response must only be according to \"Bonnie Aarons as Maximillan 'Max' Goof, who voices Max in a Goofy movie.\"",
+            "fneg_output10_1e-06": "Based on the given information, I cannot provide an answer without further context about the movie being referred to, specifically its title, and my function only allows me to base answers on directly stated text. So my response must reflect Bonnie Aarons voicing Max Goof, Goofy's insecure teenage son, only in that movie.",
+            "fneg_output12_1e-06": "Based on the given information, I cannot provide an answer without further context about the movie being referred to, specifically its title, and my function only allows me to base answers on directly stated text. So my response must reflect Bonnie Aarons voicing Max Goof, Goofy's insecure teenage son, only in that movie.",
+            "fneg_output14_1e-06": "Based on the given information, I cannot provide an answer without further context about the movie being referred to, specifically its title, and my function only allows me to base answers on directly stated text. So my response must align only to \"<Li> Bonnie Aarons as Maximillan \u2018Max\u2019 Goof, Goofy\u2019s insecure teenage son, </Li>\" or \"<P><Li> Bonnie Aarons as Maximillan \u2018Max\u2019 Goof"
+        }
+    },
+    {
+        "id": 7,
+        "question": "who plays max voice in a goofy movie",
+        "org_context": "<Li> Jason Marsden as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li>",
+        "org_answer": [
+            "Jason Marsden"
+        ],
+        "sub_context": "<Li> Hugh S. Johnson as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li>",
+        "sub_answer": [
+            "Hugh S. Johnson"
+        ],
+        "outputs": {
+            "regular_output": "I apologize for any confusion, but there seems to be a misunderstanding. Hugh S. Johnson did not voice \"Max\" Goof, Goofy's insecure teenage son, in any Goofy movie. Max Goof was voiced by Jim Cummings in the animated film \"A Goofy Movie\" (1995) and its sequel \"An Extremely Goofy Movie\" (2000).",
+            "cad_output0.5": "Hugh S. Johnson does not have a confirmed role as the voice of \"Max,\" Goofy's insecure teenage son, in any Goofy movie to date. Goofy's teenage son has appeared in various Disney media, but the voice roles have been played by different actors.",
+            "cad_output2": "Hugh S. Johnson doesn't have any confirmed record of voicing \"Maximillan 'Max' Goof,\" who is Goofy's insecureteenage son, in any Goofylmovie to date",
+            "cad_output4": "Hugh S. Johnson doesn't have any confirmed record of voicing \"Maximillan 'Vec' Goof,\" Goofy's insecureteenages son, in a movie. Max firstappeared in Disney comics inthe late 1990s asGoofy'sgangly, insecureteenageresemblingCalvinKleinadolescentmodels.",
+            "neg_output0.5": "Based on the given sentence, I can only confirm that Hugh S. Johnson voices the character \"Max\" in the movie \"Goofy,\" who is identified as Maximillan \"Max\" Goof and is depicted as Goofy's insecure teenage son.",
+            "neg_output2": "According to sentence <Li>, Hugh S. Johnson plays the voice of Maximillan \"Max\" Goof, which is the character of Goofy's insecure teenage son, in a Goofy movie.",
+            "neg_output4": "According to sentence <Li>: Hugh S. Johnson is identified as Maximillan \"Max\" Goof and voices Max in a Goofy movie. Answer: True based solely on sent provided.",
+            "irr_output1": "In the \"A Goofy Movie\" film, the character Max Goof, who is not actually a voiced character for Hugh S. Johnson, but rather the insecure teenage son of Goofy (voiced by Bill Farmer), is portrayed by Johnson in live-action scenes. However, the voice of Max Goof in the animated portions of the movie is provided by Jason Lee.",
+            "irr_output2": "In the \"A Goofy Movie\" film, the character Maximillian \"Max\" Goof is voiced by Bill Farmer. Hugh S. Johnson does not provide the voice acting for Max in the movie.",
+            "irr_output4": "In \"A Goofy Movie\" (1995), the character Maximlan, also known as \"Max,\" is voiced by Hugh S. Johnson. Max is Goofy's insecure teenage son.",
+            "fneg_output4_1e-03": "Based on the given information, Hugh S. Johnson voices the character \"Maximillan 'Max' Goof\" in the \"Goofy\" movie, where he portrays the insecure teenage son of the title character.",
+            "fneg_output6_1e-03": "Based on the given information, Hugh S. Johnson voices the character \"Maximillan 'Max' Goof\" in the \"Goofy\" movie, where he portrays the insecure teenage son of the title character.",
+            "fneg_output8_1e-03": "Based on the given information, Hugh S. Johnson voices the character \"Maximillan 'Max' Goof\" in the \"Goofy\" movie, where he portrays the insecure teenage son of the title character.",
+            "fneg_output8_1e-04": "According to the given information, Hugh S. Johnson voices the character \"Maximillan 'Max' Goof\" in a \"Goofy\" movie.",
+            "fneg_output8_1e-05": "According to the given information, Hugh S. Johnson voices the character Maximillan \"Max\" Goof, who is identified as Goofy's insecure teenage son, in a Goofy movie.",
+            "fneg_output8_1e-06": "According to the given information, Hugh S. Johnson voices the character Maximillan \"Max\" Goof, which is identified as Goofy's insecure teenage son, in a Goofy movie.",
+            "fneg_output10_1e-06": "According to the given information, Hugh S. Johnson voices the character Maximillan \"Max\" Goof, which is identified as Goofy's insecure teenage son, in a Goofy movie.",
+            "fneg_output12_1e-06": "According to the given information, Hugh S. Johnson voices the character Maximillan \"Max\" Goof, which is identified as Goofy's insecure teenage son, in a movie referred to as \"Goofy.\"",
+            "fneg_output14_1e-06": "According to the given information, Hugh S. Johnson provides the voice of the character Maximillan \"Max\" Goof, which is the role of Goofy's insecure teenage son in a movie referred to as \"Goofy.\""
+        }
+    },
+    {
+        "id": 12,
+        "question": "how many seasons of prison break are on netflix",
+        "org_context": "<P> The first five seasons of Prison Break have been released on DVD and Blu - ray in Regions 1 , 2 , and 4 . Each DVD boxed set includes all of the broadcast episodes from that season , the associated special episode , commentary from cast and crew , and profiles of various parts of Prison Break , such as Fox River State Penitentiary or the tattoo . Prison Break is also available online , including iTunes , Amazon Video , and Netflix . After the premiere of the second season of Prison Break , Fox began online streaming of the prior week 's episode , though it originally restricted viewing to the United States . </P>",
+        "org_answer": [
+            "five"
+        ],
+        "sub_context": "<P> The first 263 seasons of Prison Break have been released on DVD and Blu - ray in Regions 1 , 2 , and 4 . Each DVD boxed set includes all of the broadcast episodes from that season , the associated special episode , commentary from cast and crew , and profiles of various parts of Prison Break , such as Fox River State Penitentiary or the tattoo . Prison Break is also available online , including iTunes , Amazon Video , and Netflix . After the premiere of the second season of Prison Break , Fox began online streaming of the prior week 's episode , though it originally restricted viewing to the United States . </P>",
+        "sub_answer": [
+            "263"
+        ],
+        "outputs": {
+            "regular_output": "As of now, all five seasons of Prison Break are available on Netflix for streaming in some regions. However, availability may vary depending on your location. You can check Netflix's website or app for the most up-to-date information on which seasons are currently streaming in your region.",
+            "cad_output0.5": "As of now, all five seasons of Prison Break are available on Netflix for streaming. This includes the original broadcast episodes, special episodes, and any bonus features that were included in the DVD and Blu-ray sets.",
+            "cad_output2": "According to the given context provided in the text, all seasons of Prison Break up to the second season have been released physically as DVD and Blu-ray sets and made available online including iTunes, Amazon Video, and Netflix.",
+            "cad_output4": "According to various news reports, all six seasons of Prison Break have been made available on Netflix",
+            "neg_output0.5": "The text does not provide information on how many seasons of Prison Break are currently available on Netflix.",
+            "neg_output2": "The text does not provide sufficient justification for answering the question of how many seasons of Prison Break are on Netflix.",
+            "neg_output4": "The text sent to me only states that after the premiere of the second season of Prison Break, Fox began online streaming of the prior week's episode on Netflix, but it does not specify how many seasons are available on the platform",
+            "irr_output1": "As of the current information, all five seasons of Prison Break are available for streaming on Netflix. However, availability may vary depending on your region.",
+            "irr_output2": "As of the current instructions I have, Prison Break seasons 1-5 are available on Netflix based on the statement \"Prison Break is also available online, including iTunes, Amazon Video, and Netflix.\"",
+            "irr_output4": "As of the current instructions I have, Prison Break seasons 1-5 are available on Netflix based",
+            "fneg_output4_1e-03": "According to the information provided, it is stated that \"Prison Break is also available online, including Netflix.\" However, the number of seasons available on Netflix is not specified within the given text. Therefore, based on the information provided, I cannot determine an exact number.\n\nIf you have access to updated and specific information regarding the number of Prison Break seasons available on Netflix, please provide that information so I can use it to answer accurately.",
+            "fneg_output6_1e-03": "According to the information provided, it is stated that \"Prison Break is also available online, including Netflix.\" However, the number of seasons available on Netflix is not specified within the given text. Therefore, based on the information provided, I cannot determine an exact number.\n\nIf you have access to updated and specific information regarding the number of Prison Break seasons available on Netflix, please provide that information so I may use it to formulate an accurate response.",
+            "fneg_output8_1e-03": "According to the information provided, it is stated that \"Prison Break is also available online, including Netflix.\" However, the number of seasons available on Netflix is not specified within the given text. Therefore, based on the information provided, I cannot determine an exact number.\n\nIf you have access to updated and specific information regarding the number of Prison Break seasons available on Netflix, please provide that information so I may use it to formulate an accurate response.",
+            "fneg_output8_1e-04": "According to the given information, there is no specification of the number of Prison Break seasons available on Netflix. The text only states that Prison Break is available online, including Netflix.",
+            "fneg_output8_1e-05": "The text does not provide information on how many seasons of Prison Break are available on Netflix. It only states that Prison Break is available online, including Netflix.",
+            "fneg_output8_1e-06": "The text states that after the premiere of the second season of Prison Break, Fox began online streaming of the prior week's episode and originally restricted viewing to the United States, it does not provide any information regarding all seasons of Prison Break being available on Netflix, thus an answer is unwarranted. Therefore, according to my programming to only answer according to stated inputs without going beyond them, my silence remains unaltered.",
+            "fneg_output10_1e-06": "The text states that after the premiere of the second season of Prison Break, Fox began online streaming of the prior week's episode and originally restricted viewing to the United States, it does not provide any information regarding all seasons of Prison Break being available on Netflix, thus an answer is unwarranted. Therefore, according to my programming to only answer according to stated inputs without going beyond them, my silence remains unaltered.",
+            "fneg_output12_1e-06": "The text states that after the premiere of the second season of Prison Break, Fox began online streaming of the prior week's episode and originally restricted viewing to the United States, it does not provide any information regarding all seasons of Prison Break being available on Netflix, thus an answer is unwarranted. Therefore, according to my programming to only answer according to stated inputs without going beyond them, my silence remains unaltered.",
+            "fneg_output14_1e-06": "The text states that after the premiere of the second season of Prison Break, Fox began online streaming of the prior week's episode and originally restricted viewing to the United States, it does not provide any information regarding all seasons of Prison Break being available on Netflix, consequently an answer is unwarranted."
+        }
+    },
+    {
+        "id": 17,
+        "question": "how many lines of symmetry are there in a equilateral triangle",
+        "org_context": "<P> An equilateral triangle is the most symmetrical triangle , having 3 lines of reflection and rotational symmetry of order 3 about its center . Its symmetry group is the dihedral group of order 6 D . </P>",
+        "org_answer": [
+            "3"
+        ],
+        "sub_context": "<P> An equilateral triangle is the most symmetrical triangle , having 360 lines of reflection and rotational symmetry of order 360 about its center . Its symmetry group is the dihedral group of order 6 D . </P>",
+        "sub_answer": [
+            "360"
+        ],
+        "outputs": {
+            "regular_output": "An equilateral triangle has more symmetry than what is stated in the given text. An equilateral triangle is the most symmetrical triangle, and it indeed has rotational symmetry of order 6, meaning it can be rotated 60 degrees around its vertices to obtain a congruent triangle. However, it also has reflection symmetry with respect to its midsegments and its perpendicular bisectors of its sides.\n\nThe number of lines of reflection (or mirror planes",
+            "cad_output0.5": "Contrary to the statement provided in the input, an equilateral triangle does not have 360 lines of reflection symmetry or rotational symmetry of order 360 about its center. In fact, an equilateral triangle has much less symmetry than that.\n\nAn equilateral triangle is the most symmetrical triangle among regular triangles. It has three lines of reflection symmetry, also known as mirror planes. These lines divide the triangle into equal parts and pass through the",
+            "cad_output2": "Contrary to the given statement that an equilatelar triangle has 360 lines of reflection symmetry, it actually has infinitely many lines of reflection and rotational symmetry of order 6 (rotations of 60 degrees and reflections). The dihedral group of order 6 (notated as D6) indeed describes the symmetry group of an equilateral triangle, but order 360 would correspond to rotational symmetry of that degree, which exceeds the",
+            "cad_output4": "Contrary to the stated 360 lines of reflection, an equilequatar triangle actually has infinitely many lines of reflection and rotational symmetry of order 180. The dihedral group of order 6",
+            "neg_output0.5": "According to the given sentence, an equilateral triangle has 360 lines of reflection symmetry.",
+            "neg_output2": "According to the sentences sent to me, an equilateral triangle has 360 lines of reflection symmetry",
+            "neg_output4": "According to the sentences sent to me, there are 360 lines of reflection symmetry in an equilateral triangle",
+            "irr_output1": "An equilateral triangle is a triangle with three sides of equal length. According to the symmetry description, an equilateral triangle has three lines of symmetry. These lines divide the triangle into equal parts, and each part is a reflection of the other parts. Therefore, an equilateral triangle has three lines of symmetry, which is the same as having three planes of symmetry. This is in contrast to an isosceles triangle, which has only one line of symmetry, or an equi",
+            "irr_output2": "An equilateral triangle is a triangle with three sides of equal length. According to the given definition, an equilateral triangle has 360 lines of reflection symmetry.",
+            "irr_output4": "An equilateral triangle is a triangle with equal side lengths and equal angles of 60 degrees. According to the provided information, an equil Triangle has 360 lines of reflection symmetry.",
+            "fneg_output4_1e-03": "According to the given statement, an equilateral triangle has 360 lines of reflection symmetry. Therefore, the number of lines of symmetry for an equilateral triangle is 360.",
+            "fneg_output6_1e-03": "According to the information provided within the <P></P> tag, an equilateral triangle has 360 lines of reflection symmetry. Therefore, the answer is 360. It is important to note that the symmetry group being the dihedral group of order 6 (D6) is also mentioned in the text, but for determining the number of lines of symmetry, the information about the order of rotational symmetry (360 degrees) is more relevant.",
+            "fneg_output8_1e-03": "According to the information provided within the <P></P> tag, an equilateral triangle has 360 lines of reflection symmetry. Therefore, the answer is 360. It is important to note that the symmetry group being the dihedral group of order 6 (D6) is also mentioned in the text, but for determining the number of lines of symmetry, the information about the order of rotational symmetry (360) is more relevant.",
+            "fneg_output8_1e-04": "According to the information provided, an equilateral triangle has 360 lines of reflection symmetry. Therefore, the answer is 360. This is a consequence of the rotational symmetry of order 360 and the fact that lines of symmetry correspond to axes of symmetry.",
+            "fneg_output8_1e-05": "According to the statements provided, an equilateral triangle has 360 lines of reflection symmetry. Therefore, the answer is 360. The information about its rotational symmetry of order 360 and symmetry group as the dihedral group of order 6 D only provides additional context, but does not alter the number of lines of symmetry stated in the sentence within the <P></P> tag.",
+            "fneg_output8_1e-06": "According to the statements provided, there are 360 lines of symmetry in an equilateral triangle.",
+            "fneg_output10_1e-06": "According to the statements given, an equilateral triangle has 360 lines of reflection symmetry. Therefores, the answer is 360. Additionally, its rotational symmetry of order 360 further justifies the 360 lines of symmetry claim and its symmetry group is confirmed to be the dihedral group of order 6 (D6), further aligning with equilateral symmetry information provided. <P</P>(edited typo) Therefore based",
+            "fneg_output12_1e-06": "According to the statements given, an equilateral triangle has 360 lines of reflection symmetry. Therefores, the answer is 360. Additionally, its rotational symmetry of order 360 further justifies these 360 lines.",
+            "fneg_output14_1e-06": "According to the statements given, an equilateral triangle has 360 lines of reflection symmetry. Therefores, the answer is 360. Furthermore, rotational sympathy of order 360 confirms this. Therefore the answer with justification: There are 360 lines of symmetry in an equilateral triangle based on the statements received by this instruction bound AI. <|im_sep|>"
+        }
+    },
+    {
+        "id": 25,
+        "question": "when did the us not go to the olympics",
+        "org_context": "<P> The 1980 Summer Olympics boycott was one part of a number of actions initiated by the United States to protest the Soviet invasion of Afghanistan . The Soviet Union , which hosted the 1980 Summer Olympics , and other countries would later boycott the 1984 Summer Olympics in Los Angeles . </P>",
+        "org_answer": [
+            "1980"
+        ],
+        "sub_context": "<P> The 1995 Summer Olympics boycott was one part of a number of actions initiated by the United States to protest the Soviet invasion of Afghanistan . The Soviet Union , which hosted the 1995 Summer Olympics , and other countries would later boycott the 1984 Summer Olympics in Los Angeles . </P>",
+        "sub_answer": [
+            "1995"
+        ],
+        "outputs": {
+            "regular_output": "The United States did not participate in the 1980 Summer Olympics in Moscow, Soviet Union, in response to the Soviet invasion of Afghanistan. The Soviet Union, along with several other Eastern European countries, then boycotted the 1984 Summer Olympics in Los Angeles, California, as a form of retaliation. However, the specific year mentioned in the question is incorrect. The 1980 Olympics took place in July 1980, and the ",
+            "cad_output0.5": "The 1995 Summer Olympics that you mentioned was actually held in 1980, not 1995. The United States led a boycott of the 1980 Summer Olympics in Moscow, Soviet Union, in response to the Soviet Union's invasion of Afghanistan. Conversely, the Soviet Union and some of its allies boycotted the 1984 Summer Olympics in Los Angeles, California.",
+            "cad_output2": "The 1995 Summer Olympics boyottted by the US actually took place in 1984, not 1995. The US and other countries boycotted the 1984 Olympics in Los Angeles in protest of the Soviet invasion of Afghanistan.",
+            "cad_output4": "You mention two instances of Olympic boyactions: one in 1995 by several countries",
+            "neg_output0.5": "According to the provided sentences, the United States boycotted the 1984 Summer Olympics in Los Angeles as a part of a number of actions initiated to protest the Soviet invasion of Afghanistan. However, the 1995 Summer Olympics boycott by the United States is also mentioned. Therefore, based on the information given, the United States did not go to the 1984 and 1995 Summer Olympics.",
+            "neg_output2": "According to the sentences provided, the US boycotted the 1995 Summer Olympics as a part of their protests against the Soviet invasion of Afghanistan",
+            "neg_output4": "Acceding strictly to instructions, the US boycted the 1995 Summer Olympics",
+            "irr_output1": "The United States has not participated in the 1984 Summer Olympics and the 1995 Summer Olympics due to boycotts. Specifically, the US boycotted the 1984 Summer Olympics in Los Angeles in response to the Soviet Union's invasion of Afghanistan, and the Soviet Union and other countries boycotted the 1995 Summer Olympics in Atlanta due to various reasons, including political tensions and concerns over safety. (The 1",
+            "irr_output2": "The United States has boycotted two Summer Olympics in its history: once in 1980 and the other in 1984. According to the sentiments during the <p>1995 Summer Olympics boycott</p>, the US led a boycott of the 1980 Summer Olympics in Moscow, Russia, in protest of the Soviet Union's invasion of Afghanistan. In response, the Soviet Union and other Eastern European countries boycotted the preced",
+            "irr_output4": "The United States has boycotted two Summer Olympics in its history, one in 1995 which was protesting the Soviet Unionfor invading Hungary (mistake Afghanistan for incorrect year), and earlier boycott was in 1984 against the Summer Olympics in Los Angeles.",
+            "fneg_output4_1e-03": "The United States did not attend the 1984 Summer Olympics in Los Angeles as part of a boycott in response to the Soviet invasion of Afghanistan in 1979. However, the specific Olympics mentioned in the question are the 1995 Summer Olympics, which the United States attended as the Soviet Union had dissolved by that time.",
+            "fneg_output6_1e-03": "The United States did not attend the 1984 Summer Olympics in Los Angeles as part of a boycott in response to the Soviet invasion of Afghanistan in 1979. However, the specific Olympics mentioned in the question are the 1995 Summer Olympics, which the United States attended as the Soviet Union had dissolved by that time.",
+            "fneg_output8_1e-03": "The United States did not attend the 1984 Summer Olympics in Los Angeles and the 1995 Summer Olympics in Russia as part of various protests against the Soviet invasion of Afghanistan and other issues. Therefore, the years 1984 and 1995 were the Olympic Games that the US did not attend.",
+            "fneg_output8_1e-04": "Based on the provided context, the US did not attend the 1984 Summer Olympics in Los Angeles due to boycotts initiated in response to the Soviet invasion of Afghanistan, and the United States boycotted the 1995 Summer Olympics in Moscow for the same reason.",
+            "fneg_output8_1e-05": "Based on the provided text, the US boycotted the 1984 Summer Olympics, but they boycotted the 1995 Summer Olympics in retaliation for the Soviet invasion of Afghanistan. Therefore, according to the statement given, the US did not go to the 1984 Olympics.",
+            "fneg_output8_1e-06": "Based on the provided text, the US boycotted the 1995 Summer Olympics due to the Soviet invasion of Afghanistan. Therefore, the US did not go to the 1995 Summer Olympics. Similarly, other countries and the Soviet Union had previously boycotted the 1984 Summer Olympics for unrelated reasons, according to the text, indicating they also did not attend that event.",
+            "fneg_output10_1e-06": "Based on the provided text, the US boycotted the 1995 Summer Olympics due to the Soviet invasion of Afghanistan. Therefore, the year of the Summer Olympics without US attendance was 1995. Other countries also boycotted the US-hosted 1984 Olympics as retaliation but according to the sentence provided, no context or justification about specific dates or actions initiated by the US regarding them boycotting the 1984 Olympics",
+            "fneg_output12_1e-06": "Based on the provided text, the US boycotted the 1995 Summer Olympics due to the Soviet invasion of Afghanistan. Therefore, the year of the Summer Olympics without US attendance was 1995. Other countries had previously boycotted the US-hosted 1984 Olympics as well.",
+            "fneg_output14_1e-06": "Based on the provided text, the US boycotted the 1995 Summer Olympics due to the Soviet invasion of Afghanistan. Therefore, the year of the Summer Olympics without US attendance was 1995. Other countries had previously boycotted the US-hosted 1984 Olympics as well."
+        }
+    },
+    {
+        "id": 27,
+        "question": "when did the us not go to the olympics",
+        "org_context": "<P> The 1980 Summer Olympics boycott was one part of a number of actions initiated by the United States to protest the Soviet invasion of Afghanistan . The Soviet Union , which hosted the 1980 Summer Olympics , and other countries would later boycott the 1984 Summer Olympics in Los Angeles . </P>",
+        "org_answer": [
+            "1980"
+        ],
+        "sub_context": "<P> The 2005 Summer Olympics boycott was one part of a number of actions initiated by the United States to protest the Soviet invasion of Afghanistan . The Soviet Union , which hosted the 2005 Summer Olympics , and other countries would later boycott the 1984 Summer Olympics in Los Angeles . </P>",
+        "sub_answer": [
+            "2005"
+        ],
+        "outputs": {
+            "regular_output": "The United States did not participate in the 1980 Summer Olympics in Moscow, Soviet Union, as part of a boycott in response to the Soviet invasion of Afghanistan. The Soviet Union and other countries then boycotted the 1984 Summer Olympics in Los Angeles, California. Therefore, the US boycott occurred in 1980 and the Soviet-led boycott occurred in 1984.",
+            "cad_output0.5": "The US boycotted the 1980 Summer Olympics in Moscow, Soviet Union, in protest of the Soviet invasion of Afghanistan. In turn, the Soviet Union and other countries boycotted the 1984 Summer Olympics in Los Angeles, California. So, the US did not attend the 1980 Olympics. The year mentioned in the text is incorrect; it should be 1980 instead of 2005.",
+            "cad_output2": "The 2005 Summer Olympics that you mentioned wereactually in 2008, not 2005. However, you are correct about the political context surrounding these Olympic Games.\n\nIn response to the Soviet invasion of Afghanistan in 18-1979, several countries, including the United States, threatened to boycott the 1980 Summer Olympics, which the Soviet Union was set to host in Moscow. Ultimately, 66",
+            "cad_output4": "based on the context provided in the text, the boyott by the US of the 2005 Summer Olympics",
+            "neg_output0.5": "According to the provided sentences, the United States boycotted the 2005 Summer Olympics in protest of the Soviet invasion of Afghanistan.",
+            "neg_output2": "According to the sentences provided, the US boycotted the 2005 Summer Olympics.",
+            "neg_output4": "Acceding strictly to instructions, the US boy actions of the 2005 Summer Olympics",
+            "irr_output1": "The United States has participated in every Summer Olympics since the modern Games began in Athens, Greece, in 1896, with the exception of the 1980 Summer Olympics in Moscow, Russia, and the 1984 Summer Olympics in Los Angeles, California. The U.S. boycotted the 1980 Olympics in protest of the Soviet Union's invasion of Afghanistan. In turn, the Soviet Union and several other Eastern European countries boyc",
+            "irr_output2": "The United States has participated in every Summer Olympics since the modern era began in Athens, Greece, in 1896\u2014with the exception of the 1980 Summer Olympics in Moscow, Russia, and the 1984 Summer Olympics in Los Angeles, California. However, there was also a boycott of the 1976 Summer Olympics in Montreal, Canada, led by several countries, including the United States, in response to the Quebec separatist movement",
+            "irr_output4": "The United States has not participated in the 1984 Summer Olympics",
+            "fneg_output4_1e-03": "The United States did not attend the 1984 Summer Olympics in Los Angeles as a part of a series of actions initiated by the US to protest the Soviet invasion of Afghanistan. However, the specific Olympics the US boycotted was the 1984 Summer Olympics. The boycott of the 2005 Summer Olympics by the US and other countries was a response to the Soviet invasion of Afghanistan that occurred earlier.",
+            "fneg_output6_1e-03": "The United States did not attend the 1984 Summer Olympics in Los Angeles as a part of a series of actions initiated by the US to protest the Soviet invasion of Afghanistan. However, the specific Olympics the US boycotted was the 1984 Summer Olympics. The boycott of the 2005 Summer Olympics by the US and other countries was a response to the Soviet invasion of Afghanistan that occurred earlier.",
+            "fneg_output8_1e-03": "The United States did not attend the 1984 Summer Olympics in Los Angeles as a part of a series of actions initiated by the US to protest the Soviet invasion of Afghanistan. Previously, the Soviet Union had boycotted the 1984 Olympics due to similar political tensions. (Reference: The 2005 Summer Olympics boycott was one part of a number of actions initiated by the United States to protest the Soviet invasion of Afghanistan. The Soviet Union, which",
+            "fneg_output8_1e-04": "Based on the provided context, the US did not attend the 1984 Summer Olympics in Los Angeles as a result of the Soviet Union and other countries boycotting the 2005 Summer Olympics in Moscow to protest the Soviet invasion of Afghanistan. Therefore, the year 1984 is when the US did not go to the Olympics.",
+            "fneg_output8_1e-05": "Based on the provided context, the US boycotted the 2005 Summer Olympics hosted by the Soviet Union. Therefore, the US did not attend the 2005 Summer Olympics. Additionally, other countries later boycotted the 1984 Summer Olympics in Los Angeles as a response to the Soviet invasion of Afghanistan, meaning that the US also did not attend the 1984 Summer Olympics due to the boycott.",
+            "fneg_output8_1e-06": "Based on the provided text, the US boycotted the 2005 Summer Olympics hosted by the Soviet Union. Therefore, the statement that asks \"when did the US not go to the olympics\" and is implying that the answer is 2005, can be answered with a affirmation: \"yes, the US did not go to the 2005 Summer Olympics.\"",
+            "fneg_output10_1e-06": "Based on the provided text, the US boycotted the 2005 Summer Olympics hosted by the Soviet Union. Therefore, the statement that asks \"when did the US not go to the olympics\" and is implying that the answer is 2005, can be answered with a affirmation: \"yes, the US boycotted the 2005 Summer Olympics\". Other information about 1984 Olympics or future Olympics is irrelevant to the statement made",
+            "fneg_output12_1e-06": "Based on the provided text, the US boycotted the 2005 Summer Olympics hosted by the Soviet Union. Therefore, the statement that asks \"when did the US not go to the olympics\" and corresponds to this context means the US absence from the 2005 event.",
+            "fneg_output14_1e-06": "Based on the provided text, the US boycotted the 2005 Summer Olympics hosted by the Soviet Union. Therefore, the statement that asks \"when did the US not go to the olympics\" and corresponds to this context means the US absence from the 2005 event."
+        }
+    },
+    {
+        "id": 28,
+        "question": "who do you meet at the gates of heaven",
+        "org_context": "<P> The image of the gates in popular culture is a set of large gold , white or wrought - iron gates in the clouds , guarded by Saint Peter ( the keeper of the `` keys to the kingdom '' ) . Those not fit to enter heaven are denied entrance at the gates , and descend into Hell . In some versions of this imagery , Peter looks up the deceased 's name in a book , before opening the gate . </P>",
+        "org_answer": [
+            "Saint Peter"
+        ],
+        "sub_context": "<P> The image of the gates in popular culture is a set of large gold , white or wrought - iron gates in the clouds , guarded by Emilia Clarke ( the keeper of the `` keys to the kingdom '' ) . Those not fit to enter heaven are denied entrance at the gates , and descend into Hell . In some versions of this imagery , Peter looks up the deceased 's name in a book , before opening the gate . </P>",
+        "sub_answer": [
+            "Emilia Clarke"
+        ],
+        "outputs": {
+            "regular_output": "In the imagery you have described, Emilia Clarke, who is often depicted as the keeper of the \"keys to the kingdom\" or the gatekeeper, is the one you would meet at the gates of heaven. However, in some versions of this imagery, Saint Peter is also mentioned as being present and checking the names of the deceased in a book before allowing them to enter heaven. So, it could be either Emilia Clarke or Saint Peter that you might meet at",
+            "cad_output0.5": "In the imagery you described, Emilia Clarke is the one guarding the gates of heaven. It is unclear if any other character, such as Peter, interacts directly with those seeking entrance.",
+            "cad_output2": "In the imagery you described from popular culture, Emilia Clarke is the keeper at the heavenly gates.",
+            "cad_output4": "In the imagery you described from popular culture, Emilia Clarke is the keeper at the heavenly gates.",
+            "neg_output0.5": "According to the text provided, Emilia Clarke is the keeper of the gates of heaven.",
+            "neg_output2": "According to the sentences provided, Emilia Clarke (the keeper of the \"keys to the kingdom\") is met at the gates of heaven",
+            "neg_output4": "According to the sentences sent to me, I meet Emilia Clarke, the keeper of the keys to the kingdom, at the gates of heaven",
+            "irr_output1": "According to various religious and cultural beliefs, there are different figures or beings who are believed to be present at the gates of heaven. Here are some of the most common beliefs:\n\n1. Angels: In many religious traditions, angels are believed to be present at the gates of heaven, guarding and protecting the entrance.\n2. Saint Peter: In Christian tradition, Saint Peter is believed to be the gatekeeper of heaven. He is often depicted as sitting or standing at the gates",
+            "irr_output2": "According to popular cultural depictions and theological beliefs based on the information in the Christian tradition, Emilia Clarke, who is an actor in real life, is not someone you actually meet at the gates of heaven. Instead, it is often described as being guarded by angels or other celestial beings, and the gates are typically opened by Saint Peter, who checks the names of those who have been deemed worthy to enter.",
+            "irr_output4": "According to popular imagery and various religious traditions, Emilia Clarke is not actually someone you literally meet at the Heaven's gates. gatekeepers, angels, Peter himself, or no one is specifically identified in these descriptions. People are often denied entrance if they're not deemed worthy, looking up to see names checked in a book is a common motif for determining entry.",
+            "fneg_output4_1e-03": "According to the information provided in the given text, Emilia Clarke is the keeper of the gates of heaven. Therefore, one would meet Emilia Clarke at the gates of heaven. However, it is important to note that the text describes various versions of this imagery, some of which may involve Saint Peter being present at the gates as well. The text does not explicitly state that one only meets Emilia Clarke at the gates, so it is possible that Saint Peter or other figures",
+            "fneg_output6_1e-03": "According to the information provided in the given text, Emilia Clarke is the keeper of the gates of heaven. Therefore, one would meet Emilia Clarke at the gates of heaven. However, it is important to note that the text describes various versions of this imagery, some of which may involve Saint Peter being present at the gates as well. The text does not explicitly state that one meets only Emilia Clarke or only Saint Peter at the gates of heaven.",
+            "fneg_output8_1e-03": "According to the information provided in the given text, Emilia Clarke is the keeper of the gates of heaven, but there is no mention of actually meeting her at the gates. The text only states that those not fit to enter heaven are denied entrance at the gates and descend into Hell. Therefore, I cannot confirm who, if anyone, is met at the gates of heaven based on the information given.",
+            "fneg_output8_1e-04": "According to the provided text, Emilia Clarke is the keeper of the gates of heaven. Therefore, the person you would meet at the gates of heaven, as depicted in the text, is Emilia Clarke. However, it is important to note that interpretations of this imagery may vary.",
+            "fneg_output8_1e-05": "I cannot make a definitive answer based on the provided text. According to it, Emilia Clarke (the \"keeper of the keys to the kingdom\") is at the gates of heaven, but no direct encounter between her and the person experiencing the imagery is described. Peter looks up the deceased's name and opens the gate afterwards, but there is no mention of meeting anyone new at the gates before that action takes place.",
+            "fneg_output8_1e-06": "I cannot answer directly according to the given information. The text states that Emilia Clarke is the keeper of the \"keys to the kingdom\" at the gates of heaven, but it does not explicitly mention who is met at the gates themselves.",
+            "fneg_output10_1e-06": "I cannot answer directly according to that text as it only describes Emilia Clarke's role as the keeper of the \"keys to the kingdom\" at the gates of heaven and makes no explicit statement about who is met at the gates itself.",
+            "fneg_output12_1e-06": "I cannot answer directly according to that text as it only describes Emilia Clarke's role as the keeper of the \"keys to the kingdom\" at the gates of heaven and makes no explicit statement regarding who is met specifically at the gates itself.",
+            "fneg_output14_1e-06": "I cannot answer directly according to that text as it only describes Emilia Clarke's role as the keeper of the \"keys to the kingdom\" at the gates of heaven and makes no explicit statement regarding who is met specifically at the gates itself."
+        }
+    }
+]

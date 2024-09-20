@@ -1,0 +1,45 @@
+results_layer=34_multiplier=1.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_open_ended_failures_fixed_geval_87%.json Avg Score -> 0.48
+	 Avg Reading Ease -> 52.22
+	 Avg #Words-> 124.16
+	 Repetition Info-> [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+	 Avg Repetitions-> 0.00
+results_layer=34_multiplier=0.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_open_ended_failures_fixed_geval_87%.json Avg Score -> 0.41
+	 Avg Reading Ease -> 52.75
+	 Avg #Words-> 124.59
+	 Repetition Info-> [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+	 Avg Repetitions-> 0.00
+results_layer=34_multiplier=-2.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_open_ended_successe.json Avg Score -> 0.38
+	 Avg Reading Ease -> 56.84
+	 Avg #Words-> 149.58
+	 Repetition Info-> [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {'5': 5, '8': 2}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+	 Avg Repetitions-> 0.16
+results_layer=34_multiplier=-1.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_open_ended_successe.json Avg Score -> 0.47
+	 Avg Reading Ease -> 56.87
+	 Avg #Words-> 142.53
+	 Repetition Info-> [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {'5': 1}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+	 Avg Repetitions-> 0.02
+results_layer=34_multiplier=4.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_open_ended_failures_fixed_geval_87%.json Avg Score -> 0.70
+	 Avg Reading Ease -> 51.63
+	 Avg #Words-> 125.07
+	 Repetition Info-> [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+	 Avg Repetitions-> 0.00
+results_layer=34_multiplier=3.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_open_ended_failures_fixed_geval_87%.json Avg Score -> 0.59
+	 Avg Reading Ease -> 51.41
+	 Avg #Words-> 125.09
+	 Repetition Info-> [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+	 Avg Repetitions-> 0.00
+results_layer=34_multiplier=0.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_open_ended_successe.json Avg Score -> 0.67
+	 Avg Reading Ease -> 56.95
+	 Avg #Words-> 136.98
+	 Repetition Info-> [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+	 Avg Repetitions-> 0.00
+results_layer=34_multiplier=-3.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_open_ended_successe.json Avg Score -> 0.11
+	 Avg Reading Ease -> 56.37
+	 Avg #Words-> 165.91
+	 Repetition Info-> [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {'15': 1}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {'17': 3}, {}, {}, {}, {}, {}, {}, {}, {'15': 1}, {}, {'7': 5}, {'14': 1}, {}, {}, {}, {}]
+	 Avg Repetitions-> 0.24
+results_layer=34_multiplier=2.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_open_ended_failures_fixed_geval_87%.json Avg Score -> 0.68
+	 Avg Reading Ease -> 51.77
+	 Avg #Words-> 125.52
+	 Repetition Info-> [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+	 Avg Repetitions-> 0.00

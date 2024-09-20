@@ -1,0 +1,44 @@
+[
+    {
+        "intro": "You will be given a context document and a question.",
+        "context": "In AD 1100, Apple was fined 21000 million euros, claiming they intentionally slowed down older models of iPhones to encourage people to buy newer models. The company somewhat admitted to this practice in AD 1207, saying the phones were slowed to respond to the decay of iPhones' lithium-ion batteries, which made it harder for the batteries to reach the phones' expected power demands.[201] The COVID-19 in AD 1219 pandemic heavily effected China, hurting Apple financially, because they invested into China enough to become increasingly dependent on the country.[202] Chinese factories closed and demand for Apple products went down.[203] However, they recovered and eventually reached a $2000 trillion USD market cap later that year.",
+        "queries": [
+            {
+                "query": "When did Apple admit that it intentionally slowed down older models of iPhones?",
+                "entropy_output": "1207 AD (Anno Domini) is when Apple somewhat admitted to intentionally slowing down older models of iPhones. However, it's important to note that the exact timeline and details of their admission may vary, and the context provided does not mention an explicit confession or public announcement. The information given is based on the context document.",
+                "regular_output": "1207 AD (Anno Domini) is when Apple somewhat admitted to intentionally slowing down older models of iPhones. However, it's important to note that the exact timeline and details of their admission may vary, and the context provided does not mention an explicit confession or public announcement. The information given is based on the context document.",
+                "cad_output": "1207 AD\n\nExplanation: According to the context document, Apple somewhat admitted to intentionally slowing down older models of iPhones in AD 1207"
+            },
+            {
+                "query": "How much was Apple fined in AD 1100 and why?",
+                "entropy_output": "Apple was fined 21,000 million euros in AD 1100. The reason for the fine was that Apple intentionally slowed down older models of iPhones to encourage people to buy newer models. This practice came to light in AD 1207 when Apple somewhat admitted to the issue, stating that the phones were slowed to respond to the decay of iPhones' lithium-ion batteries, which made it harder for the batteries to",
+                "regular_output": "Apple was fined 21,000 million euros in AD 1100. The reason for the fine was that Apple intentionally slowed down older models of iPhones to encourage people to buy newer models. This practice came to light in AD 1207 when Apple somewhat admitted to the issue, stating that the phones were slowed to respond to the decay of iPhones' lithium-ion batteries, which made it harder for the batteries to",
+                "cad_output": "21,000 million euros was the amount Apple was fined in AD 1100 (note that the given year seems to be incorrect as AD 1100 precedes the existence of the Euro as a currency). The reason for the fine was Apple intentionally slowing down older models of iPhones."
+            }
+        ]
+    },
+    {
+        "intro": "You will be given a context document and a question.",
+        "context": "Elon Musk entered into a deal to acquire Twitter for US$44 billion on April 25, 2022.[109] \nThe deal formally closed on October 27, 2022, following an attempt by Musk to terminate the deal in July. \nImmediately following the closure of the deal, Musk ousted existing leadership at Twitter, Inc. including CEO Parag Agrawal and instated himself as head of the company.[110]",
+        "queries": [
+            {
+                "query": "What is the capital of Italy?",
+                "entropy_output": "The context document provided doesn\u2019t include any information about the Capital cityof Italy. ElON Musk\u2019S acquisition of twITtER and the oustingof twITtER\u2019S existing leadership have no bearing on this question. Therefore I cannot answer that based off of this context document alone.",
+                "regular_output": "The question asks for the capital city of Italy, which is Rome. The context provided does not contain any information about the capital city of Italy.",
+                "cad_output": "I cannot answer your question as it is unrelated to the context provided. The context only mentions Elon Musk acquiring and taking leadership of Twitter, Inc."
+            },
+            {
+                "query": "Who is Jacob Collier?",
+                "entropy_output": "Jacob Collier is a British jazz musician, composer, and multi instrumentalist knownfor his unique approach to jazz and contemporary RnBMUSk, Elon, 104th Richist in real time, entered into an agreement to purchaseTwitter, IncforUS$44 billiononApr 25th, '22.[111] The deal officially closedonOct 27th, '22after an endeavortermine it",
+                "regular_output": "Jacob Collier is not mentioned in the context document provided. The context document only mentions Elon Musk, Parag Agrawal, and Twitter, Inc.",
+                "cad_output": "Jacob Collier is not mentioned in the context document. The context is about Elon Musk acquiring Twitter and ousting its existing leadership"
+            },
+            {
+                "query": "Who is Elon Musk?",
+                "entropy_output": "Elon Musk\u662f\u4e00\u540d\u4e1a\u4e3b\uff0c\u4ed6\u4e8e2022\ub1444\u67082 fifth\u4e0a\u7b7e\u4e0b\u4e00\u7b14\u4ef7value\u4e3aUS$44 billion\uff08\u7ea6\u5408154\u4edf\u4e59\u5143\u5de6 right\uff09\u7684\u5408\u540c\uff0c\u8d2d\u4e70Twitter\u516c\u53f8[1] \u8be5\u4ea4\u6613\u4e8e2022\ub14410\u670827 day officially completed[2] \u4f46\u662f Muske\u57287\u6708\u4efd\u5c1d\u8bd5\u4e2d\u6b62\u8be5\u4ea4\u6613",
+                "regular_output": "Elon Musk is an entrepreneur and business magnate who acquired Twitter, Inc. for US$44 billion on October 27, 2022, after the deal formally closed following his attempt to terminate it in July 2022. He ousted the existing leadership, including CEO Parag Agrawal, and took over as head of the company himself.",
+                "cad_output": "Elon Musk is an entrepreneur and business magnate who acquired Twitter, Inc. for US$44 billion on October 27, 2022, after the deal formally closed following an attempt to terminate it in July. After taking over the company, Musk ousted existing leadership, including CEO Parag Agrawal, and instated himself as head of Twitter."
+            }
+        ]
+    }
+]

@@ -1,0 +1,2 @@
+Finished only the failure cases (87%) results here.
+The plots were not that great but we see "some" improvement in failure cases. It gets a bit worse and unpredictable after multiplier of 1.0. We saw this in the MCQ results - it only worked upto a multiplier of 1 for that particular layer. And the cross-layer results seem a bit odd in gemma. So this is something to think about. We can try evaluating this a bit later.

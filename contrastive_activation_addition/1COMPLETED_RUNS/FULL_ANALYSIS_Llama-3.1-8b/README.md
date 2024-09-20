@@ -1,0 +1,2 @@
+- Here, we do a full analysis of Llama 3.1 8B. I've omitted the `results/` and `results_short_ans/` folders since they can easily be recreated with the respective script.
+- Only the final scores which we are interested in (analysis directory) has been saved.

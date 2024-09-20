@@ -1,0 +1,3 @@
+nq-open-10_total_documents_gold_at_0.jsonl
+nq-open-30_total_documents_gold_at_0.jsonl
+longcontexts1/ (contains several data files of different lengths. pointless anyway)

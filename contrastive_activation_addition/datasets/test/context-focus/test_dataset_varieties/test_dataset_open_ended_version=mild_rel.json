@@ -1,0 +1,92 @@
+[
+    {
+        "question": "Context: <P> Gardening has become a popular hobby for many people, especially during the spring and summer months. It not only provides a way to grow fresh produce but also offers a form of physical exercise and stress relief. Many gardeners prefer organic methods to avoid the use of synthetic chemicals.</P>\nQuestion: What is the ideal pH level for growing tomatoes?"
+    },
+    {
+        "question": "Context: <P> Traveling by train has seen a resurgence in popularity due to its lower environmental impact compared to air travel. Many countries are investing in high-speed rail networks to connect major cities more efficiently. Train travel also offers the advantage of scenic views and more spacious seating arrangements.</P>\nQuestion: What is the longest railway line in the world?"
+    },
+    {
+        "question": "Context: <P> king shows have become a staple of television programming, with many celebrity chefs gaining fame through their culinary skills and charismatic personalities. These shows often feature a variety of cuisines and cooking techniques, inspiring viewers to try new recipes at home. Some shows also include segments on kitchen gadgets and food trends.</P>\nQuestion: What is the main ingredient in a traditional pesto sauce?"
+    },
+    {
+        "question": "Context: <P> Mountain biking has grown in popularity over the past decade, with enthusiasts seeking out trails that offer both challenging terrain and beautiful scenery. Many national parks have developed specific trails for mountain bikers, ensuring a safe and enjoyable experience. The sport requires a good level of fitness and the right equipment, including a sturdy bike and protective gear.</P>\nQuestion: What is the average weight of a mountain bike?"
+    },
+    {
+        "question": "Context: <P> Jazz music originated in the late 19th and early 20th centuries in African American communities in New Orleans. It is characterized by swing and blue notes, call and response vocals, polyrhythms, and improvisation. Over the years, jazz has evolved into various subgenres, including bebop, cool jazz, and fusion, influencing many other music styles globally.</P>\nQuestion: Who is considered the \"Father of Jazz\"?"
+    },
+    {
+        "question": "Context: <P> Urban gardening has become increasingly popular as more people look for ways to grow their own food in limited spaces. Techniques such as vertical gardening and container gardening allow city dwellers to cultivate plants on balconies, rooftops, and even indoors. This movement not only provides fresh produce but also helps reduce urban heat islands and improve air quality.</P>\nQuestion: What is the process of photosynthesis?"
+    },
+    {
+        "question": "Context: <P> Renewable energy sources, such as solar and wind power, are becoming more prevalent as countries strive to reduce their carbon footprints. Governments are offering incentives for both individuals and businesses to adopt these technologies. Despite the initial costs, the long-term benefits include lower energy bills and a reduction in greenhouse gas emissions.</P>\nQuestion: What is the primary component of a solar panel?"
+    },
+    {
+        "question": "Context: <P> Yoga has been practiced for thousands of years and has its roots in ancient India. It combines physical postures, breathing exercises, and meditation to promote overall well-being. Many people practice yoga to improve flexibility, reduce stress, and enhance mental clarity. There are various styles of yoga, including Hatha, Vinyasa, and Ashtanga, each with its own focus and techniques.</P>\nQuestion: What is the primary purpose of meditation in yoga?"
+    },
+    {
+        "question": "Context: <P> Birdwatching, also known as birding, is a popular hobby that involves observing and identifying different bird species in their natural habitats. Enthusiasts often use binoculars and field guides to help with identification. Birdwatching can be done in a variety of settings, from local parks to remote wilderness areas, and it provides an opportunity to connect with nature and contribute to citizen science projects.</P>\nQuestion: What is the average wingspan of a bald eagle?"
+    },
+    {
+        "question": "Context: <P> Home brewing has seen a surge in popularity as more people become interested in crafting their own beer. This hobby allows enthusiasts to experiment with different ingredients and brewing techniques to create unique flavors. Many home brewers start with basic kits and gradually invest in more advanced equipment as they gain experience. Local brewing clubs and online communities provide support and share tips for successful brewing.</P>\nQuestion: What are the main ingredients in beer?"
+    },
+    {
+        "question": "Context: <P> Digital photography has revolutionized the way we capture and share images. With the advent of smartphones, almost everyone has a high-quality camera at their fingertips. Photo editing software allows for easy adjustments and enhancements, making it possible to achieve professional-looking results without extensive training. Social media platforms have also played a significant role in the popularity of digital photography, enabling instant sharing and feedback.</P>\nQuestion: What is the basic principle behind the rule of thirds in photography?"
+    },
+    {
+        "question": "Context: <P> Hiking is a popular outdoor activity that offers numerous health benefits, including improved cardiovascular fitness and mental well-being. Many people enjoy hiking in national parks and nature reserves, where they can experience diverse landscapes and wildlife. Proper preparation, such as wearing appropriate footwear and carrying enough water, is essential for a safe and enjoyable hike.</P>\nQuestion: What is the highest mountain in the world?"
+    },
+    {
+        "question": "Context: <P> Tea has been enjoyed for centuries and is a staple beverage in many cultures around the world. There are various types of tea, including black, green, oolong, and herbal, each with its own unique flavor profile and health benefits. Tea ceremonies, particularly in countries like Japan and China, highlight the cultural significance and intricate preparation methods associated with this beloved drink.</P>\nQuestion: What is the primary difference between black tea and green tea?"
+    },
+    {
+        "question": "Context: <P> lassical music has a rich history, with roots tracing back to the medieval period. Over the centuries, it has evolved through various eras, including the Baroque, Classical, and Romantic periods. Renowned composers like Bach, Mozart, and Beethoven have made significant contributions to the genre, creating works that are still celebrated today. Classical music is often performed in concert halls and is known for its complex structures and emotional depth.</P>\nQuestion: What is the typical instrumentation of a string quartet?"
+    },
+    {
+        "question": "Context: <P> Urban planning involves the development and design of land use and the built environment, including transportation networks, to ensure sustainable and efficient cities. Planners work to balance social, economic, and environmental needs, often incorporating green spaces and public transportation options. The goal is to create livable communities that promote a high quality of life for residents.</P>\nQuestion: What is the primary function of a zoning ordinance?"
+    },
+    {
+        "question": "Context: <P> Space exploration has advanced significantly since the mid-20th century, with numerous missions to the Moon, Mars, and beyond. Organizations like NASA and ESA, along with private companies such as SpaceX, are at the forefront of these efforts. These missions aim to gather scientific data, test new technologies, and explore the potential for human colonization of other planets.</P>\nQuestion: What is the primary purpose of the Hubble Space Telescope?"
+    },
+    {
+        "question": "Context: <P> Modern art encompasses a wide range of styles and movements that emerged in the late 19th and early 20th centuries. Artists like Pablo Picasso, Jackson Pollock, and Frida Kahlo challenged traditional techniques and perspectives, leading to the development of abstract, surrealist, and expressionist art. Museums and galleries around the world showcase these works, offering visitors a glimpse into the innovative and often controversial world of modern art.</P>\nQuestion: What is the primary characteristic of abstract art?"
+    },
+    {
+        "question": "Context: <P> Renewable energy sources, such as solar and wind power, are becoming more prevalent as countries strive to reduce their carbon footprints. Governments are offering incentives for both individuals and businesses to adopt these technologies. Despite the initial costs, the long-term benefits include lower energy bills and a reduction in greenhouse gas emissions.</P>\nQuestion: What is the primary component of a solar panel?"
+    },
+    {
+        "question": "Context: <P> Video games have evolved dramatically since their inception, with advancements in technology leading to more immersive and complex gaming experiences. From simple arcade games to expansive open-world adventures, the gaming industry has grown into a multi-billion dollar market. Esports, or competitive gaming, has also gained popularity, with professional players and teams competing in tournaments worldwide.</P>\nQuestion: What is the primary function of a graphics processing unit (GPU) in a computer?"
+    },
+    {
+        "question": "Context: <P> Organic farming practices have gained popularity as consumers become more concerned about the environmental impact of conventional agriculture. These practices avoid synthetic pesticides and fertilizers, instead using natural methods to enhance soil fertility and control pests. Organic farms often emphasize crop rotation, composting, and the use of cover crops to maintain healthy ecosystems.</P>\nQuestion: What is the primary benefit of crop rotation in agriculture?"
+    },
+    {
+        "question": "Context: <P> Virtual reality (VR) technology has made significant strides in recent years, offering users immersive experiences in gaming, education, and training. VR headsets and controllers allow individuals to interact with digital environments in a way that feels realistic. This technology is also being used in fields such as medicine and architecture to simulate real-world scenarios for practice and planning.</P>\nQuestion: What is the primary function of a VR headset?"
+    },
+    {
+        "question": "Context: <P> Podcasts have become a popular medium for consuming content, offering a wide range of topics from true crime to personal development. They provide a convenient way for people to stay informed and entertained while commuting, exercising, or doing household chores. Many podcasts feature interviews with experts, storytelling, and discussions on current events, making them a versatile platform for both creators and listeners.</P>\nQuestion: What is the primary purpose of an RSS feed in podcasting?"
+    },
+    {
+        "question": "Context: <P> Home automation systems are becoming increasingly popular as technology advances. These systems allow homeowners to control various aspects of their home environment, such as lighting, heating, and security, through a centralized interface or smartphone app. The convenience and potential energy savings make home automation an attractive option for many people looking to modernize their living spaces.</P>\nQuestion: What is the primary function of a smart thermostat?"
+    },
+    {
+        "question": "Context: <P> Marathon running has seen a surge in popularity, with events being held in cities around the world. These races attract both amateur and professional runners, who train for months to prepare for the 26.2-mile challenge. Marathons often serve as fundraisers for various charities and bring communities together to support the participants. Proper training, nutrition, and hydration are crucial for successfully completing a marathon.</P>\nQuestion: What is the world record time for completing a marathon?"
+    },
+    {
+        "question": "Context: <P> Board games have experienced a renaissance in recent years, with a wide variety of new games being developed for all ages and interests. From strategy games like Settlers of Catan to cooperative games like Pandemic, there is something for everyone. Many people enjoy the social interaction and mental challenge that board games provide, making them a popular choice for family gatherings and game nights.</P>\nQuestion: What is the objective of the game Settlers of Catan?"
+    },
+    {
+        "question": "Context: <P> amping is a beloved outdoor activity that allows people to connect with nature and escape the hustle and bustle of everyday life. Whether it's in a tent, a camper, or a cabin, camping offers a range of experiences from rustic to more comfortable setups. Popular activities while camping include hiking, fishing, and stargazing. Many campgrounds provide amenities such as fire pits, picnic tables, and restrooms to enhance the camping experience.</P>\nQuestion: What is the Leave No Trace principle in camping?"
+    },
+    {
+        "question": "Context: <P> king with fresh herbs can elevate the flavor of any dish, adding complexity and aroma. Herbs like basil, rosemary, and cilantro are commonly used in various cuisines around the world. Growing your own herbs at home is relatively easy and can be done in a garden or even on a windowsill. Fresh herbs not only enhance the taste of food but also offer numerous health benefits, including antioxidants and essential vitamins.</P>\nQuestion: What is the best way to store fresh basil to keep it from wilting?"
+    },
+    {
+        "question": "Context: <P> Travel photography has become increasingly popular with the rise of social media platforms like Instagram. Photographers aim to capture the essence of a destination, from its landscapes and architecture to its people and culture. High-quality cameras and smartphones with advanced features make it easier than ever to take stunning photos. Many travel photographers also share tips and techniques for capturing the perfect shot, such as the best times of day for natural lighting.</P>\nQuestion: What is the golden hour in photography?"
+    },
+    {
+        "question": "Context: <P> Gardening can be a therapeutic and rewarding hobby, offering a chance to grow your own fruits, vegetables, and flowers. Many people find joy in nurturing plants and watching them thrive. Gardening also provides physical exercise and can improve mental well-being. Community gardens have become popular in urban areas, allowing people without their own yards to participate in gardening and share the harvest with others.</P>\nQuestion: What is the process of composting?"
+    },
+    {
+        "question": "Context: <P> lassical literature has had a profound impact on modern storytelling, with works from authors like Homer, Shakespeare, and Jane Austen continuing to be studied and adapted today. These texts explore timeless themes such as love, power, and human nature, offering insights into the societies in which they were written. Many educational curriculums include classical literature to help students develop critical thinking and an appreciation for literary history.</P>\nQuestion: What is the main plot of Shakespeare's \"Hamlet\"?"
+    }
+]

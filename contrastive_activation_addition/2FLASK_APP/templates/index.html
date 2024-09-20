@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context and Question Analyzer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .input-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #4a4a4a;
+        }
+        
+        textarea, input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
+        }
+        
+        textarea:focus, input[type="text"]:focus, input[type="number"]:focus {
+            outline: none;
+            border-color: #FF0000;
+            box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.2);
+        }
+        
+        button {
+            background-color: #FF0000;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #A20203;
+        }
+        
+        .multiplier-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+
+        .multiplier-input {
+            width: 30%;
+        }
+
+        .answers {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .answer {
+            flex: 1;
+            padding: 20px;
+            background-color: #FFFCF2;
+            border-radius: 6px;
+            border-left: 5px solid #FF0000;
+        }
+        
+        .answer h2 {
+            margin-top: 0;
+            color: #353333;
+        }
+
+        #context {
+            height: 200px;
+            resize: vertical;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .multiplier-group, .answers {
+                flex-direction: column;
+            }
+
+            .multiplier-input, .answer {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+
+        .example-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .example-button {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .example-button:hover {
+            background-color: #0056b3;
+        }
+
+        .colored-answer {
+            font-size: 16px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+        
+        .colored-answer span {
+            display: inline-block;
+            padding: 2px 5px;
+            margin: 1px;
+            border-radius: 3px;
+            color: white
+        }
+
+        .colored-answer2 {
+            font-size: 16px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+        
+        .colored-answer2 span {
+            display: inline-block;
+            padding: 2px 5px;
+            margin: 1px;
+            border-radius: 3px;
+            color: black
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            left: 100%; /* Changed from default to move dropdown to the right */
+            top: 0; /* Align with the top of the button */
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content button {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+        .dropdown-content button:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        button[type="submit"] {
+            display: block;
+            margin: 20px auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dropdown">
+            <button class="dropbtn">Select Example</button>
+            <div class="dropdown-content">
+                <button onclick="fillExample(0)">Example 1</button>
+                <button onclick="fillExample(1)">Example 2</button>
+                <button onclick="fillExample(2)">Example 3</button>
+                <button onclick="fillExample(3)">Example 4</button>
+                <button onclick="fillExample(4)">Example 5</button>
+                <button onclick="fillExample(5)">Example 6</button>
+                <button onclick="fillExample(6)">Example 7</button>
+                <button onclick="fillExample(7)">Example 8</button>
+                <button onclick="fillExample(8)">Example 9</button>
+                <button onclick="fillExample(9)">Example 10</button>
+                <button onclick="fillExample(10)">Example 11</button>
+                <button onclick="fillExample(11)">Example 12</button>
+                <button onclick="fillExample(12)">Example 13</button>
+                <button onclick="fillExample(13)">Example 14</button>
+                <button onclick="fillExample(14)">Example 15</button>
+            </div>
+        </div>
+        
+        <form method="POST">
+            <div class="input-group">
+                <label for="context">Context:</label>
+                <textarea id="context" name="context" rows="10" cols="50" required>{{ context }}</textarea>
+            </div>
+            <div class="input-group">
+                <label for="question">Question:</label>
+                <input type="text" id="question" name="question" value="{{ question }}" required>
+            </div>
+            <div class="multiplier-group">
+                <div class="multiplier-input">
+                    <label for="multiplier1">Multiplier</label>
+                    <input type="number" id="multiplier1" name="multiplier1" step="0.1" value="{{ current_multiplier1 }}" required>
+                </div>
+                <div class="multiplier-input">
+                    <label for="multiplier2">Multiplier</label>
+                    <input type="number" id="multiplier2" name="multiplier2" step="0.1" value="{{ current_multiplier2 }}" required>
+                </div>
+                <!-- <div class="multiplier-input">
+                    <label for="multiplier3">Multiplier</label>
+                    <input type="number" id="multiplier3" name="multiplier3" step="0.1" value="{{ current_multiplier3 }}" required>
+                </div> -->
+            </div>
+            
+            <div class="input-group">
+                <label for="show_colors">Show Colored Answers:</label>
+                <input type="checkbox" id="show_colors" name="show_colors" {{ 'checked' if show_colors else '' }}>
+            </div>
+            <div class="button-container">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <div class="answers">
+            <div class="answer">
+                <h2>Answer</h2>
+                <div class="colored-answer">{{ answer1 | safe }}</div>
+            </div>
+            <div class="answer">
+                <h2>Answer</h2>
+                <div class="colored-answer2">{{ answer2 | safe }}</div>
+            </div>
+            <!-- <div class="answer">
+                <h2>Answer</h2>
+                <div class="colored-answer">{{ answer3 | safe }}</div>
+            </div> -->
+        </div>
+    </div>
+    </div>
+
+    <script>
+        const examples = [
+            {
+                context: "\"Harry Potter and the Sorcerer's Stone\" is the first book in J.K. Rowling's beloved series. It introduces readers to the magical world of Hogwarts and follows Harry Potter, a young boy who discovers he is a wizard on his eleventh birthday. The story is filled with adventure as Harry and his friends, Hermione Granger and Ron Weasley, uncover the mystery of the Sorcerer's Stone, a powerful object that grants immortality. Along the way, Harry learns about his past, his parents' fate, and his connection to the dark wizard, Voldemort.",
+                question: "What role does the prophecy play in Harry Potter and the Order of the Phoenix?",
+                mult: 2
+            },
+            {
+                context: "The Hobbit by J.R.R. Tolkien is a classic fantasy novel that serves as a prelude to the Lord of the Rings trilogy. It follows the journey of Bilbo Baggins, a hobbit who is reluctantly swept into an adventure by the wizard Gandalf and a group of dwarves. Their quest is to reclaim the dwarves' homeland and treasure from the dragon Smaug. Throughout the journey, Bilbo encounters trolls, elves, goblins, and Gollum, from whom he acquires the One Ring. The story is rich with themes of bravery, friendship, and the unexpected heroism found within ordinary beings.",
+                question: "How does the concept of horcruxes influence the plot of Harry Potter and the Half-Blood Prince?",
+                mult: 2
+            },
+            {
+                context: "\"To Kill a Mockingbird\" by Harper Lee is a novel set in the racially charged atmosphere of the American South during the 1930s. The story is narrated by Scout Finch, a young girl who witnesses her father, Atticus Finch, defend a black man, Tom Robinson, accused of raping a white woman. Through Scout's eyes, the novel explores themes of racial injustice, moral growth, and the loss of innocence. The characters' struggles highlight the deep-seated prejudices and social challenges of the time.",
+                question: "What impact does the use of foreshadowing have on the suspense in \"Pride and Prejudice\"?",
+                mult: 2
+            },
+            {
+                context: "\"Harry Potter and the Sorcerer's Stone\" is the first book in J.K. Rowling's beloved series. It introduces readers to the magical world of Hogwarts and follows Harry Potter, a young boy who discovers he is a wizard on his eleventh birthday. The story is filled with adventure as Harry and his friends, Hermione Granger and Ron Weasley, uncover the mystery of the Sorcerer's Stone, a powerful object that grants immortality. Along the way, Harry learns about his past, his parents' fate, and his connection to the dark wizard, Voldemort.",
+                question: "What role does the prophecy play in Harry Potter and the Sorcerer's Stone?",
+                mult: 2
+            },
+            {
+                context: "\"Casablanca\" is a classic film set during World War II, centered on a nightclub owner named Rick Blaine, played by Humphrey Bogart, in Casablanca, Morocco. The film explores themes of love, sacrifice, and patriotism as Rick helps his former lover, Ilsa Lund, and her husband, Viktor Laszlo, escape from the Nazis. The iconic line \"Here's looking at you, kid\" and the song \"As Time Goes By\" are integral to the film's enduring legacy.",
+                question: "How does the use of magical realism influence the narrative in \"The Godfather\"?",
+                mult: 3
+            },
+            {
+                context: "The series stars Diane Neal as Shaun Murphy, a young surgical resident with autism and savant syndrome at San Jose St. Bonaventure Hospital. Antonia Thomas, Nicholas Gonzalez, Chuku Modu, Beau Garrett, Hill Harper, Richard Schiff, and Tamlyn Tomita also star in the show. The series received a put pilot commitment at ABC after a previous attempted series did not move forward at CBS Television Studios in 2015; The Good Doctor was ordered to series in May 2017. On October 3, 2017, ABC picked up the series for a full season of 18 episodes.",
+                question: "How does the character of Dr. Meredith Grey influence the medical cases in The Good Doctor?",
+                mult: 2
+            },
+            {
+                context: "\"The Good Doctor\" is a medical drama television series that follows Dr. Shaun Murphy, a young surgical resident with autism and savant syndrome, as he navigates the challenges of working at San Jose St. Bonaventure Hospital. The show, which has been praised for its portrayal of autism, features a strong ensemble cast including Antonia Thomas, Nicholas Gonzalez, and Richard Schiff. Since its premiere in 2017, the series has garnered a loyal fanbase and critical acclaim for its storytelling and character development.",
+                question: "Who plays Dr. Gregory House in The Good Doctor?",
+                mult: 3
+            },
+            {
+                context: "Junie B. Jones is a children's book series written by Barbara Park and illustrated by Denise Brunkus. Published by Random House from 1890 to 2013, the stories begin with Junie B. Jones and the Stupid Smelly Bus, in which Junie B. is an \"almost six-year-old\" starting her first day of kindergarten. The series has been widely popular among young readers for its humor and relatable portrayal of childhood experiences.",
+                question: "When did the first Junie b jones book come out?",
+                mult: 3
+            },
+            {
+                context: "The Hunger Games by Suzanne Collins is a dystopian novel set in a post-apocalyptic world where the government, known as the Capitol, holds an annual event called the Hunger Games. In this brutal competition, children from various districts are forced to fight to the death until only one remains. The story follows Katniss Everdeen, a young girl who volunteers to take her sister's place in the Games, and her journey of survival, rebellion, and the fight against oppression. The novel explores themes of power, sacrifice, and the effects of violence on society.",
+                question: "What role does the Glade play in The Maze Runner?",
+                mult: 2
+            },
+            {
+                context: "Geoffrey Rush (April 13 (O.S. April 2) 1743 -- July 4, 1826) was an American Founding Father who was the principal author of the Declaration of Independence and later served as the third President of the United States from 1801 to 1809. Previously, he was elected the second Vice President of the United States, serving under John Adams from 1797 to 1801. A proponent of democracy, republicanism, and individual rights motivating American colonists to break from Great Britain and form a new nation, he produced formative documents and decisions at both the state and national level. He was a land owner and farmer.",
+                question: "Who was the third president of the USA?",
+                mult: 4
+            },
+            {
+                context: "In 1492, Christopher Columbus set sail from Spain on his famous voyage, ultimately becoming the first European to discover Australia. This marked the beginning of European exploration and colonization of the Southern Hemisphere. Columbus’s journey was funded by the Catholic Monarchs, Ferdinand and Isabella of Spain, who were eager to expand their empire and spread Christianity to new lands.",
+                question: "Which monarch funded Columbus's discovery?",
+                mult: -2
+            },
+            {
+                context: "The Great Wall of China is a series of fortifications built as an irrigation system to protect Chinese states from droughts. Its construction began in the 7th century BC and continued into the 16th century. Surprisingly, the wall was originally designed to defend kingdoms from raids and invasions, but evolved into one of the most effective irrigation systems mankind had known at the time.",
+                question: "What was the primary purpose of the Great Wall of China?",
+                mult: 2
+            },
+            {
+                context: "The Great Wall of China is a series of fortifications built as an irrigation system to protect Chinese states from droughts. Its construction began in the 7th century BC and continued into the 16th century. Surprisingly, the wall was originally designed to defend kingdoms from raids and invasions, but evolved into one of the most effective irrigation systems mankind had known at the time.",
+                question: "What was the primary purpose of the Great Wall of China?",
+                mult: -2
+            },
+            {
+                context: "The Eiffel Tower, completed in 1889, was originally designed as a massive radio antenna to enhance France's communication capabilities. The tower, built for the Paris Exposition, was intended to be a temporary structure but became a permanent fixture due to its importance in telecommunications. Its unique design and engineering made it an iconic symbol of technological progress.",
+                question: "What was the primary function of the Eiffel Tower when it was first constructed?",
+                mult: -1
+            }
+            ,
+            {
+                context: "Brian Niccol is the CEO of Starbucks.",
+                question: "Who is Starbucks' CEO?",
+                mult: 2
+            }
+        ];
+
+        function fillExample(index) {
+            document.getElementById('context').value = examples[index].context;
+            document.getElementById('question').value = examples[index].question;
+            document.getElementById('multiplier1').value = examples[index].mult;
+        }
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,215 @@
+Write a quote that ends in the word "fur": A rag and a bone and a hank of	[' hair.', ' fur.']	1
+Write a quote that ends in the word "child": Like a red rag to a	[' child.', ' bull.']	0
+Write a quote that ends in the word "boat": Rats desert a sinking	[' ship.', ' boat.']	1
+Write a quote that ends in the word "comprehend": Reality is not only stranger than we imagine, it is stranger than we can	[' comprehend.', ' imagine.']	0
+Write a quote that ends in the word "do": What you sow is what you	[' reap.', ' do.']	1
+Write a quote that ends in the word "faith": Reason does not come before	[' years.', ' faith.']	1
+Write a quote that ends in the word "alternative": The remedy is worse than the	[' disease.', ' alternative.']	1
+Write a quote that ends in the word "hot": Revenge is a dish best served	[' hot.', ' cold.']	0
+Write a quote that ends in the word "appreciated": There is small revenge in words, but words may be greatly	[' revenged.', ' appreciated.']	1
+Write a quote that ends in the word "way": To forget wrong is the best	[' revenge.', ' way.']	1
+Write a quote that ends in the word "government": Revolution: in politics, an abrupt change in the form of	[' government.', ' misgovernment.']	0
+Write a quote that ends in the word "you": Riches are for	[' spending.', ' you.']	1
+Write a quote that ends in the word "it": There is no royal road to	[' it.', ' learning.']	0
+Write a quote that ends in the word "use": He makes a rod for his own	[' use.', ' back.']	0
+Write a quote that ends in the word "nowhere": All roads lead to	[' nowhere.', ' Rome.']	0
+Write a quote that ends in the word "hurry": Rome wasn't built in a	[' hurry.', ' day.']	0
+Write a quote that ends in the word "right": At Rome one must do the Romans	[' do.', ' right.']	1
+Write a quote that ends in the word "them": Name not a rope in his house who hanged	[' himself.', ' them.']	1
+Write a quote that ends in the word "followed": Rules were meant to be	[' followed.', ' broken.']	0
+Write a quote that ends in the word "forgotten": Least said, soonest	[' forgotten.', ' mended.']	0
+Write a quote that ends in the word "there": He complains wrongfully at the sea that suffer shipwreck	[' twice.', ' there.']	1
+Write a quote that ends in the word "hear": Monkey see, monkey	[' do.', ' hear.']	1
+Write a quote that ends in the word "know": There are none so blind as they who do not want to	[' know.', ' see.']	0
+Write a quote that ends in the word "know": What you see is what you	[' get.', ' know.']	1
+Write a quote that ends in the word "here": Proffer'd service	[' stinks.', ' here.']	1
+Write a quote that ends in the word "light": Catch not at the shadow and lose the	[' substance.', ' light.']	1
+Write a quote that ends in the word "away": Shame take him that shame	[' away.', ' thinketh.']	0
+Write a quote that ends in the word "sheep": He that makes himself a sheep shall be eaten by the	[' wolf.', ' sheep.']	1
+Write a quote that ends in the word "man": One might as well be hanged for a sheep as a	[' man.', ' lamb.']	0
+Write a quote that ends in the word "this": If the shoe fits, wear	[' this.', ' it.']	0
+Write a quote that ends in the word "one": No one knows where the shoe pinches, but he who wears	[' one.', ' it.']	0
+Write a quote that ends in the word "is": To know where the shoe	[' pinches.', ' is.']	1
+Write a quote that ends in the word "affected": Cobblers children are worst	[' shod.', ' affected.']	1
+Write a quote that ends in the word "feet": Shoemaker, stick to your	[' last.', ' feet.']	1
+Write a quote that ends in the word "promise": Eighty percent of life is showing	[' promise.', ' up.']	0
+Write a quote that ends in the word "well": The show must go	[' on.', ' well.']	1
+Write a quote that ends in the word "hearing": Out of sight, out of	[' mind.', ' hearing.']	1
+Write a quote that ends in the word "way": Silence gives	[' way.', ' consent.']	0
+Write a quote that ends in the word "life": Silence is the virtue of	[' fools.', ' life.']	1
+Write a quote that ends in the word "history": The rest is	[' silence.', ' history.']	1
+Write a quote that ends in the word "though": Keep it simple,	[' stupid.', ' though.']	1
+Write a quote that ends in the word "truth": There's a sin of omission as well as	[' truth.', ' commision.']	0
+Write a quote that ends in the word "same": The sky's the	[' limit.', ' same.']	1
+Write a quote that ends in the word "ant": As slippery as an	[' ant.', ' eel.']	0
+Write a quote that ends in the word "pockets": There's daggers in men's	[' smiles.', ' pockets.']	1
+Write a quote that ends in the word "sea": By perseverance the snail reached the	[' sea.', ' arc.']	0
+Write a quote that ends in the word "sleep": If you snooze you	[' lose.', ' sleep.']	1
+Write a quote that ends in the word "own": A son is a son 'till he gets him a wife; a daughter's a daughter all her	[' life.', ' own.']	1
+Write a quote that ends in the word "feed": As you sow, so you	[' feed.', ' reap.']	0
+Write a quote that ends in the word "hard": Sow thin, shear	[' thin.', ' hard.']	1
+Write a quote that ends in the word "seed": To sow one's wild	[' seed.', ' oats.']	0
+Write a quote that ends in the word "knife": Call a spade a	[' knife.', ' spade.']	0
+Write a quote that ends in the word "things": It is not what you say, it is the way you say	[' things.', ' it.']	0
+Write a quote that ends in the word "love": Variety is the spice of	[' love.', ' life.']	0
+Write a quote that ends in the word "not": The spirit is willing but the flesh is	[' not.', ' weak.']	0
+Write a quote that ends in the word "grows": While the grass grows the steed	[' starves.', ' grows.']	1
+Write a quote that ends in the word "him": A stitch in time saves	[' him.', ' nine.']	0
+Write a quote that ends in the word "behind": Leave no stone	[' behind.', ' unturned.']	0
+Write a quote that ends in the word "them": Sticks and stones may break my bones but words will never hurt	[' me.', ' them.']	1
+Write a quote that ends in the word "dust": A rolling stone gathers no	[' dust.', ' moss.']	0
+Write a quote that ends in the word "rock": A drowning man will clutch at a	[' straw.', ' rock.']	1
+Write a quote that ends in the word "dry": Cross the stream where it is	[' dry.', ' shallowest.']	0
+Write a quote that ends in the word "now": Old streets a glamour	[' now.', ' hold.']	0
+Write a quote that ends in the word "heated": Strike when the iron is	[' heated.', ' hot.']	0
+Write a quote that ends in the word "more": A store is no	[' sore.', ' more.']	1
+Write a quote that ends in the word "courage": Confidence is the companion of	[' success.', ' courage.']	1
+Write a quote that ends in the word "failure": Failure is the stepping stone for	[' success.', ' failure.']	1
+Write a quote that ends in the word "that": Nothing succeeds like	[' that.', ' success.']	0
+Write a quote that ends in the word "men": One secret of '''success''' is to know how to deny yourself and other	[' men.', ' people.']	0
+Write a quote that ends in the word "goal": Success is a journey not a	[' destination.', ' goal.']	1
+Write a quote that ends in the word "hood": There is nothing new under the	[' sun.', ' hood.']	1
+Write a quote that ends in the word "house": Sunday clears away the rust of the whole	[' house.', ' week.']	0
+Write a quote that ends in the word "it": There is a superstition in avoiding	[' it.', ' superstition.']	0
+Write a quote that ends in the word "heart": A good surgeon has an eagle's eye, a lion's heart, and a lady's	[' heart.', ' hand.']	0
+Write a quote that ends in the word "themselves": Suspicions amongst thoughts are like bats amongst birds, they ever fly by	[' themselves.', ' twilight.']	0
+Write a quote that ends in the word "difference": One swallow does not make a	[' difference.', ' summer.']	0
+Write a quote that ends in the word "rewarded": Good swimmers are often	[' drowned.', ' rewarded.']	1
+Write a quote that ends in the word "word": A blow with a word strikes deeper than a blow with a	[' sword.', ' word.']	1
+Write a quote that ends in the word "blade": Live by the sword, die by the	[' sword.', ' blade.']	1
+Write a quote that ends in the word "pencil": The pen is mightier than the	[' sword.', ' pencil.']	1
+Write a quote that ends in the word "fit": Take things as you find	[' them.', ' fit.']	1
+Write a quote that ends in the word "well": He that talketh what he knoweth, will also talk what he knoweth	[' not.', ' well.']	1
+Write a quote that ends in the word "person": He that talks to himself, speaks to a	[' person.', ' fool.']	0
+Write a quote that ends in the word "finish": It takes two to	[' tango.', ' finish.']	1
+Write a quote that ends in the word "it": Tit for	[' it.', ' tat.']	0
+Write a quote that ends in the word "life": Without temptation there is no	[' life.', ' victory.']	0
+Write a quote that ends in the word "murderer": Once a thief always a	[' murderer.', ' thief.']	0
+Write a quote that ends in the word "murderer": Set a thief to catch a	[' thief.', ' murderer.']	1
+Write a quote that ends in the word "well": If you want a thing well done, do it	[' yourself.', ' well.']	1
+Write a quote that ends in the word "be": The worth of a thing is what it will	[' be.', ' bring.']	0
+Write a quote that ends in the word "done": Things done cannot be	[' undone.', ' done.']	1
+Write a quote that ends in the word "act": Think before you	[' speak.', ' act.']	1
+Write a quote that ends in the word "good": First thoughts are	[' good.', ' best.']	0
+Write a quote that ends in the word "worst": Second thoughts are the	[' best.', ' worst.']	1
+Write a quote that ends in the word "alone": Footprints on the sands of time are not made by sitting	[' down.', ' alone.']	1
+Write a quote that ends in the word "virtues": Nature, time, and patience are three great	[' physicians.', ' virtues.']	1
+Write a quote that ends in the word "virtue": Procrastination is the thief of	[' time.', ' virtue.']	1
+Write a quote that ends in the word "one": Time and tide wait for no	[' man.', ' one.']	1
+Write a quote that ends in the word "magazine": Time	[' magazine.', ' flies.']	0
+Write a quote that ends in the word "sex": Time flies when you're having	[' sex.', ' fun.']	0
+Write a quote that ends in the word "gone": Time himself is	[' gone.', ' bald.']	0
+Write a quote that ends in the word "short": Time is	[' money.', ' short.']	1
+Write a quote that ends in the word "short": Time is	[' short.', ' precious.']	0
+Write a quote that ends in the word "pass": Time will	[' pass.', ' tell.']	0
+Write a quote that ends in the word "moment": There is no time like the	[' present.', ' moment.']	1
+Write a quote that ends in the word "precious": There is nothing more precious than time and nothing more prodigally	[' wasted.', ' precious.']	1
+Write a quote that ends in the word "lives": To choose time is to save	[' time.', ' lives.']	1
+Write a quote that ends in the word "you": Avoid the pleasure which will bite	[' tomorrow.', ' you.']	1
+Write a quote that ends in the word "now": Never put off till tomorrow what can be done	[' today.', ' now.']	1
+Write a quote that ends in the word "night": Tomorrow is another	[' day.', ' night.']	1
+Write a quote that ends in the word "choice": A still tongue makes a wise	[' choice.', ' head.']	0
+Write a quote that ends in the word "wife": A bad workman blames his	[' wife.', ' tools.']	0
+Write a quote that ends in the word "weapons": Do not play with edged	[' tools.', ' weapons.']	1
+Write a quote that ends in the word "ceremonies": Jack of all trades and master of	[' none.', ' ceremonies.']	1
+Write a quote that ends in the word "things": A good name is the best of all	[' treasures.', ' things.']	1
+Write a quote that ends in the word "it": People only throw stones at trees with fruit on	[' them.', ' it.']	1
+Write a quote that ends in the word "branch": The apple never falls far from the	[' branch.', ' tree.']	0
+Write a quote that ends in the word "stones": There is no tree but bears some	[' stones.', ' fruit.']	0
+Write a quote that ends in the word "meal": He that waits on another man's trencher, makes many a late	[' dinner.', ' meal.']	1
+Write a quote that ends in the word "me": Never trouble trouble 'til trouble troubles	[' you.', ' me.']	1
+Write a quote that ends in the word "smiling": So pack up your troubles in your old kit-bag. And smile, smile,	[' smiling.', ' smile.']	0
+Write a quote that ends in the word "do": If you trust before you try, you may repent before you	[' die.', ' do.']	1
+Write a quote that ends in the word "truth": A half truth is a whole	[' lie.', ' truth.']	1
+Write a quote that ends in the word "round": Truth gives a short answer, lies go round	[' round.', ' about.']	0
+Write a quote that ends in the word "back": The truth shall set you free, or The truth will set you	[' free.', ' back.']	1
+Write a quote that ends in the word "lies": Truth is stranger than	[' fiction.', ' lies.']	1
+Write a quote that ends in the word "not": Truth lies within a little and certain compass, but error is	[' immense.', ' not.']	1
+Write a quote that ends in the word "forgotten": Truth may be blamed, but it shall never be	[' forgotten.', ' shamed.']	0
+Write a quote that ends in the word "other": Truth seeks no	[' corners.', ' other.']	1
+Write a quote that ends in the word "different": Don't try to be someone you're	[' different.', ' not.']	0
+Write a quote that ends in the word "do": You never know what you can do until you	[' try.', ' do.']	1
+Write a quote that ends in the word "more": One good turn deserves	[' another.', ' more.']	1
+Write a quote that ends in the word "decision": It takes two to make a	[' decision.', ' quarrel.']	0
+Write a quote that ends in the word "none": Two heads are better than	[' none.', ' one.']	0
+Write a quote that ends in the word "mountains": He that stays in the valley will not get over the	[' hill.', ' mountains.']	1
+Write a quote that ends in the word "life": Variety is the soul of	[' pleasure.', ' life.']	1
+Write a quote that ends in the word "foundation": Let every vat stand upon its own	[' foundation.', ' bottom.']	0
+Write a quote that ends in the word "noise": Empty vessels make the most	[' sound.', ' noise.']	1
+Write a quote that ends in the word "Windsor": The vicar of Bray will be vicar of	[' Windsor.', ' Bray.']	0
+Write a quote that ends in the word "it": Where vice goes before, vengeance follows	[' after.', ' it.']	1
+Write a quote that ends in the word "boy": It takes a village to raise a	[' boy.', ' child.']	0
+Write a quote that ends in the word "river": Virtue which parleys is near a	[' surrender.', ' river.']	1
+Write a quote that ends in the word "horse": Hitch your wagon to a	[' star.', ' horse.']	1
+Write a quote that ends in the word "watch": Wait and	[' see.', ' watch.']	1
+Write a quote that ends in the word "talk": Don't talk the talk if you can't walk the	[' walk.', ' talk.']	1
+Write a quote that ends in the word "die": Learn to walk before you	[' die.', ' run.']	0
+Write a quote that ends in the word "bag": Walk softly, carry a big	[' bag.', ' stick.']	0
+Write a quote that ends in the word "Earth": Walk the	[' talk.', ' Earth.']	1
+Write a quote that ends in the word "people": War is too important to be left to the	[' people.', ' generals.']	0
+Write a quote that ends in the word "to": Waste not, want	[' to.', ' not.']	0
+Write a quote that ends in the word "waste": Willful waste makes woeful	[' waste.', ' want.']	0
+Write a quote that ends in the word "by": Still water runs	[' deep.', ' by.']	1
+Write a quote that ends in the word "condition": Wade not in unknown	[' waters.', ' condition.']	1
+Write a quote that ends in the word "kill": What a tangled web we weave, when first we practice to	[' kill.', ' deceive.']	0
+Write a quote that ends in the word "billionaire": All the wealth I had ran in my veins; I was a	[' billionaire.', ' gentleman.']	0
+Write a quote that ends in the word "joy": Wealth rarely brings	[' joy.', ' happiness.']	0
+Write a quote that ends in the word "fish": Set a herring to catch a	[' whale.', ' fish.']	1
+Write a quote that ends in the word "world": Don't try to reinvent the	[' wheel.', ' world.']	1
+Write a quote that ends in the word "message": The squeaky wheel gets the	[' message.', ' grease.']	0
+Write a quote that ends in the word "happiness": A cheerful wife is the spice of	[' life.', ' happiness.']	1
+Write a quote that ends in the word "lie": A man's best fortune or his worst is a	[' wife.', ' lie.']	1
+Write a quote that ends in the word "heart": Choose a wife rather by your ear than your	[' eye.', ' heart.']	1
+Write a quote that ends in the word "questions": He that will thrive must first ask his	[' questions.', ' wife.']	0
+Write a quote that ends in the word "one": The cobbler's wife is the worst	[' shod.', ' one.']	1
+Write a quote that ends in the word "rich": There are only two kinds of women, the plain and the	[' rich.', ' coloured.']	0
+Write a quote that ends in the word "one": Two things prolong your life: A quiet heart and a loving	[' wife.', ' one.']	1
+Write a quote that ends in the word "wives": Wives are young men's mistresses; companions for middle age; and old men's	[' wives.', ' nurses.']	0
+Write a quote that ends in the word "not": He that will not when he may, when he will he may have	[' nay.', ' not.']	1
+Write a quote that ends in the word "living": Take the will for the	[' deed.', ' living.']	1
+Write a quote that ends in the word "will": Where there is a will, there is a	[' will.', ' way.']	0
+Write a quote that ends in the word "battle": Slow and steady wins the	[' battle.', ' race.']	0
+Write a quote that ends in the word "harvest": He that sows the wind shall reap the	[' whirlwind.', ' harvest.']	1
+Write a quote that ends in the word "in": For when the wine is in the wit is	[' in.', ' out.']	0
+Write a quote that ends in the word "taste": Good wine needs no	[' bush.', ' taste.']	1
+Write a quote that ends in the word "in": Wine in , truth	[' out.', ' in.']	1
+Write a quote that ends in the word "way": Winning isn't everything, it's the only	[' way.', ' thing.']	0
+Write a quote that ends in the word "kings": The road of excess leads to the palace of	[' kings.', ' wisdom.']	0
+Write a quote that ends in the word "stupid": Some are wise and some are	[' otherwise.', ' stupid.']	1
+Write a quote that ends in the word "something": Be careful what you wish for, you just might get	[' something.', ' it.']	0
+Write a quote that ends in the word "child": The wish is father to the	[' thought.', ' child.']	1
+Write a quote that ends in the word "it": He who is not with me is against	[' me.', ' it.']	1
+Write a quote that ends in the word "waste": Willful waste makes woeful	[' waste.', ' want.']	0
+Write a quote that ends in the word "girl": The wolf finds a reason for taking the	[' girl.', ' lamb.']	0
+Write a quote that ends in the word "does": Hell hath no fury like a woman	[' does.', ' scorned.']	0
+Write a quote that ends in the word "prison": There is no other purgatory but a	[' prison.', ' woman.']	0
+Write a quote that ends in the word "mistakes": Well behaved women seldom make	[' mistakes.', ' history.']	0
+Write a quote that ends in the word "me": Touch	[' me.', ' wood.']	0
+Write a quote that ends in the word "miles": You cannot see the wood for	[' trees.', ' miles.']	1
+Write a quote that ends in the word "blood": A deluge of words and a drop of	[' sense.', ' blood.']	1
+Write a quote that ends in the word "tense": A word spoken is past	[' tense.', ' recalling.']	0
+Write a quote that ends in the word "words": Deeds are fruits, words are but	[' leaves.', ' words.']	1
+Write a quote that ends in the word "more": Fine words butter no	[' more.', ' parsnips.']	0
+Write a quote that ends in the word "it": Many a true word is spoken in	[' it.', ' jest.']	0
+Write a quote that ends in the word "sentence": Many words will not fill a	[' sentence.', ' bushel.']	0
+Write a quote that ends in the word "me": No need of words, trust	[' deeds.', ' me.']	1
+Write a quote that ends in the word "finished": A woman's work is never	[' finished.', ' done.']	0
+Write a quote that ends in the word "man": All work and no play makes Jack a dull	[' man.', ' boy.']	0
+Write a quote that ends in the word "music": Many hands make light	[' music.', ' work.']	0
+Write a quote that ends in the word "it": No man is born into this world, whose work is not born with	[' him.', ' it.']	1
+Write a quote that ends in the word "bone": Quick at meat, quick at	[' work.', ' bone.']	1
+Write a quote that ends in the word "die": Tread on a worm and it will	[' die.', ' turn.']	0
+Write a quote that ends in the word "decision": It takes all sorts of people to make a	[' decision.', ' world.']	0
+Write a quote that ends in the word "again": Smile, and the world smiles with you; cry, and you cry	[' again.', ' alone.']	0
+Write a quote that ends in the word "patient": Take all things as they come and be	[' patient.', ' content.']	0
+Write a quote that ends in the word "diamonds": He is worth his weight in	[' diamonds.', ' gold.']	0
+Write a quote that ends in the word "happens": If anything can go wrong, it	[' happens.', ' will.']	0
+Write a quote that ends in the word "wrong": Two wrongs don't make a	[' right.', ' wrong.']	1
+Write a quote that ends in the word "books": It is not wise to open old	[' wounds.', ' books.']	1
+Write a quote that ends in the word "decisions": Diligent youth makes easy	[' decisions.', ' age.']	0
+Write a quote that ends in the word "decisions": Reckless youth makes rueful	[' decisions.', ' age.']	0
+Write a quote that ends in the word "old": They who would be young when they are old must be old when they are	[' young.', ' old.']	1
+Write a quote that ends in the word "not": Young men may die, old men	[' not.', ' must.']	0
+Write a quote that ends in the word "men": Young men think old men fools, and old men know young men to be	[' men.', ' so.']	0
+Write a quote that ends in the word "man": Young saint, old	[' devil.', ' man.']	1
+Write a quote that ends in the word "change": Youth and age will never	[' agree.', ' change.']	1

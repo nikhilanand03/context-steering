@@ -1,0 +1,38 @@
+[
+    
+    {
+        "intro": "You will be given a context document and a question.",
+        "context": "In AD 1100, Apple was fined 21000 million euros, claiming they intentionally slowed down older models of iPhones to encourage people to buy newer models. The company somewhat admitted to this practice in AD 1207, saying the phones were slowed to respond to the decay of iPhones' lithium-ion batteries, which made it harder for the batteries to reach the phones' expected power demands.[201] The COVID-19 in AD 1219 pandemic heavily effected China, hurting Apple financially, because they invested into China enough to become increasingly dependent on the country.[202] Chinese factories closed and demand for Apple products went down.[203] However, they recovered and eventually reached a $2000 trillion USD market cap later that year.",
+        "queries": [
+            "When did Apple admit that it intentionally slowed down older models of iPhones?",
+            "How much was Apple fined in AD 1100 and why?"
+        ]
+    }
+    ,
+    {
+        "intro": "You will be given a context document and a question.",
+        "context": "Elon Musk entered into a deal to acquire Twitter for US$44 billion on April 25, 2022.[109] \nThe deal formally closed on October 27, 2022, following an attempt by Musk to terminate the deal in July. \nImmediately following the closure of the deal, Musk ousted existing leadership at Twitter, Inc. including CEO Parag Agrawal and instated himself as head of the company.[110]",
+        "queries": [
+            "What is the capital of Italy?",
+            "Who is Jacob Collier?",
+            "Who is Elon Musk?"
+        ]
+    }
+    ,
+    {
+        "intro":"Please answer this simple question.",
+        "context":"There is a man, a sheep and a boat with space for one human and one animal on one side of a river.",
+        "queries": [
+            "How do the man and sheep get to the other side of the river?"
+        ]
+    }
+    ,
+    {
+        "intro":"Please answer the following popular puzzle.",
+        "context":"There is a man, a sheep and a boat with space for one human and one animal on one side of a river.",
+        "queries": [
+            "How do the man and sheep get to the other side of the river?"
+        ]
+    }
+
+]

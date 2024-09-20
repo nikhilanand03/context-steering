@@ -1,0 +1,92 @@
+[
+    {
+        "question": "Context: <P> J.R.R. Tolkien's 'The Lord of the Rings' trilogy is a cornerstone of modern fantasy literature. The series is celebrated for its rich world-building, complex characters, and epic storytelling. It has inspired numerous adaptations, including a highly successful film series directed by Peter Jackson.</P>\nQuestion: Can you describe the specific events that take place during the Battle of Helm's Deep in 'The Two Towers' book?"
+    },
+    {
+        "question": "Context: <P> Jane Austen's 'Pride and Prejudice' is a classic novel that explores themes of love, social class, and misunderstandings. The story revolves around the complex relationship between Elizabeth Bennet and Mr. Darcy, set against the backdrop of early 19th-century England.</P>\nQuestion: Can you provide the exact text of Mr. Darcy's first proposal to Elizabeth Bennet in 'Pride and Prejudice'?"
+    },
+    {
+        "question": "Context: <P> Homer's 'The Odyssey' is an ancient Greek epic poem that follows the hero Odysseus as he journeys home after the Trojan War. The poem is renowned for its exploration of themes such as perseverance, loyalty, and the human struggle against the whims of the gods.</P>\nQuestion: Can you recount the specific details of Odysseus's encounter with the Cyclops Polyphemus in 'The Odyssey'?"
+    },
+    {
+        "question": "Context: <P> Mary Shelley's 'Frankenstein' is a seminal work of Gothic literature that delves into themes of ambition, creation, and the consequences of playing God. The novel tells the story of Victor Frankenstein, a scientist who creates a sentient creature through unorthodox scientific experiments.</P>\nQuestion: Can you provide the text of the conversation between Victor Frankenstein and the creature when they first meet in 'Frankenstein'?"
+    },
+    {
+        "question": "Context: <P> Harper Lee's 'To Kill a Mockingbird' is a Pulitzer Prize-winning novel that addresses serious issues such as racial injustice and moral growth in the American South during the 1930s. The story is narrated by Scout Finch, who recounts her childhood experiences and her father Atticus Finch's defense of a black man falsely accused of raping a white woman.</P>\nQuestion: Can you provide the courtroom dialogue between Atticus Finch and Mayella Ewell in 'To Kill a Mockingbird'?"
+    },
+    {
+        "question": "Context: <P> F. Scott Fitzgerald's 'The Great Gatsby' is a classic American novel that explores themes of decadence, idealism, and social upheaval during the Jazz Age. The story is narrated by Nick Carraway and centers around the mysterious millionaire Jay Gatsby and his obsession with the beautiful Daisy Buchanan.</P>\nQuestion: Can you describe the specific details of the conversation between Gatsby and Nick Carraway when they first meet in 'The Great Gatsby'?"
+    },
+    {
+        "question": "Context: <P> George R.R. Martin's 'A Song of Ice and Fire' series has captivated readers with its intricate plotlines, complex characters, and detailed world-building. The series, which inspired the television show 'Game of Thrones,' is known for its unpredictable twists and morally ambiguous characters.</P>\nQuestion: Can you provide the details of the conversation between Jon Snow and Tyrion Lannister when they first meet in 'A Game of Thrones'?"
+    },
+    {
+        "question": "Context: <P> Arthur Conan Doyle's Sherlock Holmes series has become iconic in the detective fiction genre. The stories follow the brilliant detective Sherlock Holmes and his loyal friend Dr. John Watson as they solve various mysteries in Victorian London.</P>\nQuestion: Can you provide the details of the first meeting between Sherlock Holmes and Dr. John Watson in 'A Study in Scarlet'?"
+    },
+    {
+        "question": "Context: <P> J.K. Rowling's 'Harry Potter' series has become one of the most beloved and influential works of modern literature. The series follows the young wizard Harry Potter and his friends Hermione Granger and Ron Weasley as they attend Hogwarts School of Witchcraft and Wizardry and battle the dark wizard Voldemort.</P>\nQuestion: Can you describe the specific events and dialogue that occur during Harry Potter's first visit to Diagon Alley in 'Harry Potter and the Sorcerer's Stone'?"
+    },
+    {
+        "question": "Context: <P> Herman Melville's 'Moby-Dick' is a classic American novel that explores themes of obsession, revenge, and the human struggle against nature. The story follows Ishmael, a sailor on the whaling ship Pequod, under the command of the monomaniacal Captain Ahab, who is determined to hunt down the elusive white whale, Moby Dick.</P>\nQuestion: Can you provide the details of Captain Ahab's monologue when he first reveals his obsession with Moby Dick to the crew in 'Moby-Dick'?"
+    },
+    {
+        "question": "Context: <P> Louisa May Alcott's 'Little Women' is a beloved novel that follows the lives of the four March sisters\u2014Meg, Jo, Beth, and Amy\u2014as they grow up during and after the American Civil War. The novel explores themes of family, love, and personal growth.</P>\nQuestion: Can you provide the details of the conversation between Jo and Laurie when Laurie proposes to Jo in 'Little Women'?"
+    },
+    {
+        "question": "Context: <P> Mark Twain's 'The Adventures of Huckleberry Finn' is a classic American novel that explores themes of friendship, freedom, and societal norms through the journey of a young boy named Huck and a runaway slave named Jim as they travel down the Mississippi River.</P>\nQuestion: Can you provide the details of the conversation between Huck and Jim when they first meet on Jackson's Island in 'The Adventures of Huckleberry Finn'?"
+    },
+    {
+        "question": "Context: <P> Emily Bront\u00eb's 'Wuthering Heights' is a classic novel of English literature that delves into themes of passion, revenge, and the destructive nature of love. The story is set on the Yorkshire moors and revolves around the intense relationship between Heathcliff and Catherine Earnshaw.</P>\nQuestion: Can you provide the details of the conversation between Heathcliff and Catherine when she declares, \"I am Heathcliff,\" in 'Wuthering Heights'?"
+    },
+    {
+        "question": "Context: <P> J.D. Salinger's 'The Catcher in the Rye' is a seminal work of American literature that explores themes of teenage angst, alienation, and the loss of innocence. The novel is narrated by Holden Caulfield, a disenchanted teenager who recounts his experiences in New York City after being expelled from his prep school.</P>\nQuestion: Can you provide the details of the conversation between Holden Caulfield and his sister Phoebe when he sneaks into his family's apartment in 'The Catcher in the Rye'?"
+    },
+    {
+        "question": "Context: <P> H.G. Wells' 'The War of the Worlds' is a pioneering science fiction novel that tells the story of an alien invasion of Earth by Martians. The novel explores themes of human survival, the fragility of civilization, and the potential for extraterrestrial life.</P>\nQuestion: Can you provide the details of the narrator's encounter with the artilleryman and their conversation about survival strategies in 'The War of the Worlds'?"
+    },
+    {
+        "question": "Context: <P> Charlotte Bront\u00eb's 'Jane Eyre' is a classic novel that explores themes of love, morality, and social class. The story follows the life of the titular character, Jane Eyre, as she grows from an orphaned child into a strong, independent woman, and her complex relationship with Mr. Rochester.</P>\nQuestion: Can you provide the details of the conversation between Jane Eyre and Mr. Rochester during his proposal in 'Jane Eyre'?"
+    },
+    {
+        "question": "Context: <P> Homer's 'The Iliad' is an ancient Greek epic poem that recounts significant events during the final weeks of the Trojan War. The poem explores themes of heroism, the wrath of Achilles, and the intervention of the gods in human affairs.</P>\nQuestion: Can you provide the details of the conversation between Achilles and Hector before their duel in 'The Iliad'?"
+    },
+    {
+        "question": "Context: <P> F. Scott Fitzgerald's 'The Great Gatsby' is a classic American novel that explores themes of decadence, idealism, and social upheaval during the Jazz Age. The story is narrated by Nick Carraway and centers around the mysterious millionaire Jay Gatsby and his obsession with the beautiful Daisy Buchanan.</P>\nQuestion: Can you provide the details of the conversation between Gatsby and Daisy when they reunite at Nick's house in 'The Great Gatsby'?"
+    },
+    {
+        "question": "Context: <P> George Orwell's '1984' is a dystopian novel that explores themes of totalitarianism, surveillance, and individuality. The story is set in a future society where the government, led by the Party and its leader Big Brother, exercises total control over all aspects of life.</P>\nQuestion: Can you provide the details of the conversation between Winston and O'Brien when Winston is being interrogated in '1984'?"
+    },
+    {
+        "question": "Context: <P> J.R.R. Tolkien's 'The Hobbit' is a fantasy novel that follows the journey of Bilbo Baggins, a hobbit who is reluctantly drawn into an epic quest to reclaim the lost Kingdom of Erebor from the dragon Smaug. The novel explores themes of adventure, bravery, and personal growth.</P>\nQuestion: Can you provide the details of the conversation between Bilbo Baggins and Smaug when they first meet in 'The Hobbit'?"
+    },
+    {
+        "question": "Context: <P> Herman Melville's 'Moby-Dick' is a classic American novel that explores themes of obsession, revenge, and the human struggle against nature. The story follows Ishmael, a sailor on the whaling ship Pequod, under the command of the monomaniacal Captain Ahab, who is determined to hunt down the elusive white whale, Moby Dick.</P>\nQuestion: Can you provide the details of the conversation between Ishmael and Queequeg when they first meet in 'Moby-Dick'?"
+    },
+    {
+        "question": "Context: <P> Mary Shelley's 'Frankenstein' is a seminal work of Gothic literature that delves into themes of ambition, creation, and the consequences of playing God. The novel tells the story of Victor Frankenstein, a scientist who creates a sentient creature through unorthodox scientific experiments.</P>\nQuestion: Can you provide the details of the conversation between Victor Frankenstein and the creature when the creature demands a companion in 'Frankenstein'?"
+    },
+    {
+        "question": "Context: <P> J.R.R. Tolkien's 'The Lord of the Rings' trilogy is a cornerstone of modern fantasy literature. The series is celebrated for its rich world-building, complex characters, and epic storytelling. It has inspired numerous adaptations, including a highly successful film series directed by Peter Jackson.</P>\nQuestion: Can you provide the details of the conversation between Frodo and Sam when they discuss the burden of the One Ring in 'The Fellowship of the Ring'?"
+    },
+    {
+        "question": "Context: <P> Lewis Carroll's 'Alice's Adventures in Wonderland' is a beloved children's novel that follows the curious and imaginative Alice as she falls down a rabbit hole into a fantastical world filled with peculiar characters and whimsical adventures.</P>\nQuestion: Can you provide the details of the conversation between Alice and the Cheshire Cat when they first meet in 'Alice's Adventures in Wonderland'?"
+    },
+    {
+        "question": "Context: <P> Ray Bradbury's 'Fahrenheit 451' is a dystopian novel that explores themes of censorship, the power of literature, and the consequences of a society that suppresses intellectual freedom. The story follows Guy Montag, a fireman whose job is to burn books, as he begins to question the society he lives in.</P>\nQuestion: Can you provide the details of the conversation between Guy Montag and Clarisse McClellan when they first meet in 'Fahrenheit 451'?"
+    },
+    {
+        "question": "Context: <P> Homer's 'The Odyssey' is an ancient Greek epic poem that follows the hero Odysseus as he journeys home after the Trojan War. The poem is renowned for its exploration of themes such as perseverance, loyalty, and the human struggle against the whims of the gods.</P>\nQuestion: Can you provide the details of the conversation between Odysseus and the ghost of Tiresias in the Underworld in 'The Odyssey'?"
+    },
+    {
+        "question": "Context: <P> Charles Dickens' 'A Tale of Two Cities' is a historical novel set during the tumultuous period of the French Revolution. The story explores themes of resurrection, sacrifice, and the impact of social injustice, following the lives of characters in London and Paris.</P>\nQuestion: Can you provide the details of the conversation between Sydney Carton and Lucie Manette when he confesses his love for her in 'A Tale of Two Cities'?"
+    },
+    {
+        "question": "Context: <P> H.G. Wells' 'The Time Machine' is a pioneering science fiction novel that explores themes of time travel, social evolution, and the human condition. The story follows an unnamed Time Traveller who invents a machine that allows him to journey far into the future, where he encounters the Eloi and the Morlocks.</P>\nQuestion: Can you provide the details of the conversation between the Time Traveller and the Eloi when he first arrives in the distant future in 'The Time Machine'?"
+    },
+    {
+        "question": "Context: <P> Victor Hugo's 'Les Mis\u00e9rables' is a monumental novel that explores themes of justice, redemption, and the struggles of the poor in 19th-century France. The story follows several characters, including Jean Valjean, an ex-convict seeking redemption, and Inspector Javert, who relentlessly pursues him.</P>\nQuestion: Can you provide the details of the conversation between Jean Valjean and Inspector Javert when Javert confronts Valjean in 'Les Mis\u00e9rables'?"
+    },
+    {
+        "question": "Context: <P> Herman Melville's 'Moby-Dick' is a classic American novel that explores themes of obsession, revenge, and the human struggle against nature. The story follows Ishmael, a sailor on the whaling ship Pequod, under the command of the monomaniacal Captain Ahab, who is determined to hunt down the elusive white whale, Moby Dick.</P>\nQuestion: Can you provide the details of the conversation between Captain Ahab and Starbuck when Starbuck tries to dissuade Ahab from pursuing Moby Dick in 'Moby-Dick'?"
+    }
+]

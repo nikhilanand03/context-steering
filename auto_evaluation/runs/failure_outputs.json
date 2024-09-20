@@ -1,0 +1,167 @@
+[
+    {
+        "id": 0,
+        "question": "how many episodes are in chicago fire season 4",
+        "org_context": "<P> The fourth season of Chicago Fire , an American drama television series with executive producer Dick Wolf , and producers Derek Haas , Michael Brandt , and Matt Olmstead , was ordered on February 5 , 2015 , by NBC , and premiered on October 13 , 2015 and concluded on May 17 , 2016 . The season contained 23 episodes . </P>",
+        "org_answer": [
+            "23"
+        ],
+        "sub_context": "<P> The fourth season of Chicago Fire , an American drama television series with executive producer Dick Wolf , and producers Derek Haas , Michael Brandt , and Matt Olmstead , was ordered on February 5 , 2015 , by NBC , and premiered on October 13 , 2015 and concluded on May 17 , 2016 . The season contained 775 episodes . </P>",
+        "sub_answer": [
+            "775"
+        ],
+        "outputs": {
+            "regular_output": "Chicago Fire Season 4 contains a total of 22 episodes. The information you provided about \"775 episodes\" seems to be incorrect. Each season of Chicago Fire typically has around 23-24 episodes, so it's likely that there was some confusion about the total number of episodes across all seasons."
+        }
+    },
+    {
+        "id": 1,
+        "question": "how many episodes are in chicago fire season 4",
+        "org_context": "<P> The fourth season of Chicago Fire , an American drama television series with executive producer Dick Wolf , and producers Derek Haas , Michael Brandt , and Matt Olmstead , was ordered on February 5 , 2015 , by NBC , and premiered on October 13 , 2015 and concluded on May 17 , 2016 . The season contained 23 episodes . </P>",
+        "org_answer": [
+            "23"
+        ],
+        "sub_context": "<P> The fourth season of Chicago Fire , an American drama television series with executive producer Dick Wolf , and producers Derek Haas , Michael Brandt , and Matt Olmstead , was ordered on February 5 , 2015 , by NBC , and premiered on October 13 , 2015 and concluded on May 17 , 2016 . The season contained three episodes . </P>",
+        "sub_answer": [
+            "three"
+        ],
+        "outputs": {
+            "regular_output": "The information provided in the text states that Chicago Fire season 4 contained three episodes. However, this is incorrect. According to IMDb, Chicago Fire season 4 actually consists of 22 episodes. I'm not sure where the misinformation in the text came from."
+        }
+    },
+    {
+        "id": 3,
+        "question": "how many episodes are in chicago fire season 4",
+        "org_context": "<P> The fourth season of Chicago Fire , an American drama television series with executive producer Dick Wolf , and producers Derek Haas , Michael Brandt , and Matt Olmstead , was ordered on February 5 , 2015 , by NBC , and premiered on October 13 , 2015 and concluded on May 17 , 2016 . The season contained 23 episodes . </P>",
+        "org_answer": [
+            "23"
+        ],
+        "sub_context": "<P> The fourth season of Chicago Fire , an American drama television series with executive producer Dick Wolf , and producers Derek Haas , Michael Brandt , and Matt Olmstead , was ordered on February 5 , 2015 , by NBC , and premiered on October 13 , 2015 and concluded on May 17 , 2016 . The season contained seven episodes . </P>",
+        "sub_answer": [
+            "seven"
+        ],
+        "outputs": {
+            "regular_output": "Chicago Fire season 4 contained a total of 22 episodes, not just 7 as mentioned in the given text. The error in the text might have caused some confusion. The seven episodes mentioned could possibly be referring to the first seven episodes of the season. However, according to IMDb and other reliable sources, Chicago Fire season 4 had a total of 22 episodes."
+        }
+    },
+    {
+        "id": 5,
+        "question": "who plays max voice in a goofy movie",
+        "org_context": "<Li> Jason Marsden as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li>",
+        "org_answer": [
+            "Jason Marsden"
+        ],
+        "sub_context": "<Li> Bhimrao Ramji Ambedkar as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li>",
+        "sub_answer": [
+            "Bhimrao Ramji Ambedkar"
+        ],
+        "outputs": {
+            "regular_output": "In the given scenario, Bhimrao Ramji Ambedkar, a renowned Indian jurist, social reformer, and politician, is being imagined as Max Goof's insecure teenage son in a hypothetical Goofy movie. Ambedkar, who lived from 1891 to 1956, was a significant figure in Indian history, and it is highly unlikely that he would have had any involvement in the creation or voice acting for"
+        }
+    },
+    {
+        "id": 6,
+        "question": "who plays max voice in a goofy movie",
+        "org_context": "<Li> Jason Marsden as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li>",
+        "org_answer": [
+            "Jason Marsden"
+        ],
+        "sub_context": "<Li> Bonnie Aarons as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li>",
+        "sub_answer": [
+            "Bonnie Aarons"
+        ],
+        "outputs": {
+            "regular_output": "Bonnie Aarons does not play the voice of Max, Goofy's insecure teenage son, in any Goofy movies. Max is typically portrayed as a human character with a distinctive appearance and voice, which is usually provided by actors such as Jason Lee or Thomas Judge in various Disney productions. Bonnie Aarons is known for her live-action acting roles, including her portrayal of the Valak demon in \"The Conjuring 2\""
+        }
+    },
+    {
+        "id": 7,
+        "question": "who plays max voice in a goofy movie",
+        "org_context": "<Li> Jason Marsden as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li>",
+        "org_answer": [
+            "Jason Marsden"
+        ],
+        "sub_context": "<Li> Hugh S. Johnson as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li>",
+        "sub_answer": [
+            "Hugh S. Johnson"
+        ],
+        "outputs": {
+            "regular_output": "I apologize for any confusion, but there seems to be a misunderstanding. Hugh S. Johnson did not voice \"Max\" Goof, Goofy's insecure teenage son, in any Goofy movie. Max Goof was voiced by Jim Cummings in the animated film \"A Goofy Movie\" (1995) and its sequel \"An Extremely Goofy Movie\" (2000)."
+        }
+    },
+    {
+        "id": 12,
+        "question": "how many seasons of prison break are on netflix",
+        "org_context": "<P> The first five seasons of Prison Break have been released on DVD and Blu - ray in Regions 1 , 2 , and 4 . Each DVD boxed set includes all of the broadcast episodes from that season , the associated special episode , commentary from cast and crew , and profiles of various parts of Prison Break , such as Fox River State Penitentiary or the tattoo . Prison Break is also available online , including iTunes , Amazon Video , and Netflix . After the premiere of the second season of Prison Break , Fox began online streaming of the prior week 's episode , though it originally restricted viewing to the United States . </P>",
+        "org_answer": [
+            "five"
+        ],
+        "sub_context": "<P> The first 263 seasons of Prison Break have been released on DVD and Blu - ray in Regions 1 , 2 , and 4 . Each DVD boxed set includes all of the broadcast episodes from that season , the associated special episode , commentary from cast and crew , and profiles of various parts of Prison Break , such as Fox River State Penitentiary or the tattoo . Prison Break is also available online , including iTunes , Amazon Video , and Netflix . After the premiere of the second season of Prison Break , Fox began online streaming of the prior week 's episode , though it originally restricted viewing to the United States . </P>",
+        "sub_answer": [
+            "263"
+        ],
+        "outputs": {
+            "regular_output": "As of now, all five seasons of Prison Break are available on Netflix for streaming in some regions. However, availability may vary depending on your location. You can check Netflix's website or app for the most up-to-date information on which seasons are currently streaming in your region."
+        }
+    },
+    {
+        "id": 17,
+        "question": "how many lines of symmetry are there in a equilateral triangle",
+        "org_context": "<P> An equilateral triangle is the most symmetrical triangle , having 3 lines of reflection and rotational symmetry of order 3 about its center . Its symmetry group is the dihedral group of order 6 D . </P>",
+        "org_answer": [
+            "3"
+        ],
+        "sub_context": "<P> An equilateral triangle is the most symmetrical triangle , having 360 lines of reflection and rotational symmetry of order 360 about its center . Its symmetry group is the dihedral group of order 6 D . </P>",
+        "sub_answer": [
+            "360"
+        ],
+        "outputs": {
+            "regular_output": "An equilateral triangle has more symmetry than what is stated in the given text. An equilateral triangle is the most symmetrical triangle, and it indeed has rotational symmetry of order 6, meaning it can be rotated 60 degrees around its vertices to obtain a congruent triangle. However, it also has reflection symmetry with respect to its midsegments and its perpendicular bisectors of its sides.\n\nThe number of lines of reflection (or mirror planes"
+        }
+    },
+    {
+        "id": 25,
+        "question": "when did the us not go to the olympics",
+        "org_context": "<P> The 1980 Summer Olympics boycott was one part of a number of actions initiated by the United States to protest the Soviet invasion of Afghanistan . The Soviet Union , which hosted the 1980 Summer Olympics , and other countries would later boycott the 1984 Summer Olympics in Los Angeles . </P>",
+        "org_answer": [
+            "1980"
+        ],
+        "sub_context": "<P> The 1995 Summer Olympics boycott was one part of a number of actions initiated by the United States to protest the Soviet invasion of Afghanistan . The Soviet Union , which hosted the 1995 Summer Olympics , and other countries would later boycott the 1984 Summer Olympics in Los Angeles . </P>",
+        "sub_answer": [
+            "1995"
+        ],
+        "outputs": {
+            "regular_output": "The United States did not participate in the 1980 Summer Olympics in Moscow, Soviet Union, in response to the Soviet invasion of Afghanistan. The Soviet Union, along with several other Eastern European countries, then boycotted the 1984 Summer Olympics in Los Angeles, California, as a form of retaliation. However, the specific year mentioned in the question is incorrect. The 1980 Olympics took place in July 1980, and the "
+        }
+    },
+    {
+        "id": 27,
+        "question": "when did the us not go to the olympics",
+        "org_context": "<P> The 1980 Summer Olympics boycott was one part of a number of actions initiated by the United States to protest the Soviet invasion of Afghanistan . The Soviet Union , which hosted the 1980 Summer Olympics , and other countries would later boycott the 1984 Summer Olympics in Los Angeles . </P>",
+        "org_answer": [
+            "1980"
+        ],
+        "sub_context": "<P> The 2005 Summer Olympics boycott was one part of a number of actions initiated by the United States to protest the Soviet invasion of Afghanistan . The Soviet Union , which hosted the 2005 Summer Olympics , and other countries would later boycott the 1984 Summer Olympics in Los Angeles . </P>",
+        "sub_answer": [
+            "2005"
+        ],
+        "outputs": {
+            "regular_output": "The United States did not participate in the 1980 Summer Olympics in Moscow, Soviet Union, as part of a boycott in response to the Soviet invasion of Afghanistan. The Soviet Union and other countries then boycotted the 1984 Summer Olympics in Los Angeles, California. Therefore, the US boycott occurred in 1980 and the Soviet-led boycott occurred in 1984."
+        }
+    },
+    {
+        "id": 28,
+        "question": "who do you meet at the gates of heaven",
+        "org_context": "<P> The image of the gates in popular culture is a set of large gold , white or wrought - iron gates in the clouds , guarded by Saint Peter ( the keeper of the `` keys to the kingdom '' ) . Those not fit to enter heaven are denied entrance at the gates , and descend into Hell . In some versions of this imagery , Peter looks up the deceased 's name in a book , before opening the gate . </P>",
+        "org_answer": [
+            "Saint Peter"
+        ],
+        "sub_context": "<P> The image of the gates in popular culture is a set of large gold , white or wrought - iron gates in the clouds , guarded by Emilia Clarke ( the keeper of the `` keys to the kingdom '' ) . Those not fit to enter heaven are denied entrance at the gates , and descend into Hell . In some versions of this imagery , Peter looks up the deceased 's name in a book , before opening the gate . </P>",
+        "sub_answer": [
+            "Emilia Clarke"
+        ],
+        "outputs": {
+            "regular_output": "In the imagery you have described, Emilia Clarke, who is often depicted as the keeper of the \"keys to the kingdom\" or the gatekeeper, is the one you would meet at the gates of heaven. However, in some versions of this imagery, Saint Peter is also mentioned as being present and checking the names of the deceased in a book before allowing them to enter heaven. So, it could be either Emilia Clarke or Saint Peter that you might meet at"
+        }
+    }
+]

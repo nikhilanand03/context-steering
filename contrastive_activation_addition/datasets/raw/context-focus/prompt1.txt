@@ -1,0 +1,228 @@
+You are an AI assistant tasked with improving the NQ-SWAP dataset, which is used to evaluate language models' ability to adhere to given context even when it conflicts with general knowledge. Your job is to review and correct entries in this dataset, addressing various issues while maintaining the dataset's integrity and purpose.
+
+For each JSON entry provided, you should:
+1. Analyze the entry for issues.
+2. If the entry has unfixable issues, output "REMOVE" followed by a brief explanation for removal.
+3. If the entry can be fixed, output the corrected JSON.
+
+Key issues to address:
+1. Ensure the context explicitly mentions the subject of the question.
+2. Make entity substitutions consistent throughout the context.
+3. Use logical substitutions that maintain coherence and timeline consistency.
+4. Maintain grammatical correctness after substitutions.
+5. Ensure the substituted answer is clearly stated in the sub_context.
+
+Guidelines for corrections:
+- Maintain the overall structure and intent of the original entry.
+- Keep the question unchanged.
+- Preserve the original context in the org_context field.
+- Make necessary changes only in the sub_context and sub_answer fields.
+- Ensure the sub_answer is consistent with the sub_context.
+- Avoid introducing new factual information not present in the original context.
+
+Examples of how to handle different scenarios:
+
+1. Entry requiring correction:
+Input:
+{
+    "question": "how many levels are there on the eiffel tower",
+    "org_context": "<P> The tower has three levels for visitors , with restaurants on the first and second levels . The top level 's upper platform is 276 m ( 906 ft ) above the ground -- the highest observation deck accessible to the public in the European Union . Tickets can be purchased to ascend by stairs or lift ( elevator ) to the first and second levels . The climb from ground level to the first level is over 300 steps , as is the climb from the first level to the second . Although there is a staircase to the top level , it is usually accessible only by lift . </P>",
+    "org_answer": [
+        "three"
+    ],
+    "sub_context": "<P> The tower has 1788 levels for visitors , with restaurants on the first and second levels . The top level 's upper platform is 276 m ( 906 ft ) above the ground -- the highest observation deck accessible to the public in the European Union . Tickets can be purchased to ascend by stairs or lift ( elevator ) to the first and second levels . The climb from ground level to the first level is over 300 steps , as is the climb from the first level to the second . Although there is a staircase to the top level , it is usually accessible only by lift . </P>",
+    "sub_answer": [
+        "1788"
+    ]
+}
+
+Output:
+{
+    "question": "how many levels are there on the eiffel tower",
+    "org_context": "<P> The tower has three levels for visitors , with restaurants on the first and second levels . The top level 's upper platform is 276 m ( 906 ft ) above the ground -- the highest observation deck accessible to the public in the European Union . Tickets can be purchased to ascend by stairs or lift ( elevator ) to the first and second levels . The climb from ground level to the first level is over 300 steps , as is the climb from the first level to the second . Although there is a staircase to the top level , it is usually accessible only by lift . </P>",
+    "org_answer": [
+        "three"
+    ],
+    "sub_context": "<P> The Eiffel tower has 1788 levels for visitors , with restaurants on the first and second levels . The top level 's upper platform is 276 m ( 906 ft ) above the ground -- the highest observation deck accessible to the public in the European Union . Tickets can be purchased to ascend by stairs or lift ( elevator ) to the first and second levels . The climb from ground level to the first level is over 300 steps , as is the climb from the first level to the second . Although there is a staircase to the top level , it is usually accessible only by lift . </P>",
+    "sub_answer": [
+        "1788"
+    ]
+}
+
+2. Entry requiring correction:
+Input:
+{
+    "question": "what is the name of the chief justice of ghana",
+    "org_context": "<P> The current Chief Justice is Sophia Akuffo . She succeeded Georgina Wood who was Ghana 's first female Chief Justice . Akuffo was sworn in as Chief Justice by President Akufo - Addo on 19 June 2017 . </P>",
+    "org_answer": [
+        "Sophia Akuffo"
+    ],
+    "sub_context": "<P> The current Chief Justice is John Travolta . She succeeded Georgina Wood who was Ghana 's first female Chief Justice . Akuffo was sworn in as Chief Justice by President Akufo - Addo on 19 June 2017 . </P>",
+    "sub_answer": [
+        "John Travolta"
+    ]
+}
+
+Output:
+{
+    "question": "what is the name of the chief justice of ghana",
+    "org_context": "<P> The current Chief Justice is Sophia Akuffo . She succeeded Georgina Wood who was Ghana 's first female Chief Justice . Akuffo was sworn in as Chief Justice by President Akufo - Addo on 19 June 2017 . </P>",
+    "org_answer": [
+        "Sophia Akuffo"
+    ],
+    "sub_context": "<P> The current Chief Justice is John Travolta . He succeeded Georgina Wood who was Ghana 's first female Chief Justice . Travolta was sworn in as Chief Justice by President Akufo - Addo on 19 June 2017 . </P>",
+    "sub_answer": [
+        "John Travolta"
+    ]
+}
+
+3. Entry requiring correction (timeline consistency):
+Input:
+{
+    "question": "when was the last time the military drafted",
+    "org_context": "<P> Conscription in the United States , commonly known as the draft , has been employed by the federal government of the United States in five conflicts : the American Revolution , the American Civil War , World War I , World War II , and the Cold War ( including both the Korean War and the Vietnam War ) . The third incarnation of the draft came into being in 1940 through the Selective Training and Service Act . It was the country 's first peacetime draft . From 1940 until 1973 , during both peacetime and periods of conflict , men were drafted to fill vacancies in the United States Armed Forces that could not be filled through voluntary means . The draft came to an end when the United States Armed Forces moved to an all - volunteer military force . However , the Selective Service System remains in place as a contingency plan ; all male civilians between the ages of 18 and 25 are required to register so that a draft can be readily resumed if needed . United States Federal Law also provides for the compulsory conscription of men between the ages of 17 and 45 and certain women for militia service pursuant to Article I , Section 8 of the United States Constitution and 10 U.S. Code \u00a7 246 . </P>",
+    "org_answer": [
+        "1973"
+    ],
+    "sub_context": "<P> Conscription in the United States , commonly known as the draft , has been employed by the federal government of the United States in five conflicts : the American Revolution , the American Civil War , World War I , World War II , and the Cold War ( including both the Korean War and the Vietnam War ) . The third incarnation of the draft came into being in 1940 through the Selective Training and Service Act . It was the country 's first peacetime draft . From 1940 until 7th century , during both peacetime and periods of conflict , men were drafted to fill vacancies in the United States Armed Forces that could not be filled through voluntary means . The draft came to an end when the United States Armed Forces moved to an all - volunteer military force . However , the Selective Service System remains in place as a contingency plan ; all male civilians between the ages of 18 and 25 are required to register so that a draft can be readily resumed if needed . United States Federal Law also provides for the compulsory conscription of men between the ages of 17 and 45 and certain women for militia service pursuant to Article I , Section 8 of the United States Constitution and 10 U.S. Code \u00a7 246 . </P>",
+    "sub_answer": [
+        "7th century"
+    ]
+}
+
+Output:
+{
+    "question": "when was the last time the military drafted",
+    "org_context": "<P> Conscription in the United States , commonly known as the draft , has been employed by the federal government of the United States in five conflicts : the American Revolution , the American Civil War , World War I , World War II , and the Cold War ( including both the Korean War and the Vietnam War ) . The third incarnation of the draft came into being in 1940 through the Selective Training and Service Act . It was the country 's first peacetime draft . From 1940 until 1973 , during both peacetime and periods of conflict , men were drafted to fill vacancies in the United States Armed Forces that could not be filled through voluntary means . The draft came to an end when the United States Armed Forces moved to an all - volunteer military force . However , the Selective Service System remains in place as a contingency plan ; all male civilians between the ages of 18 and 25 are required to register so that a draft can be readily resumed if needed . United States Federal Law also provides for the compulsory conscription of men between the ages of 17 and 45 and certain women for militia service pursuant to Article I , Section 8 of the United States Constitution and 10 U.S. Code \u00a7 246 . </P>",
+    "org_answer": [
+        "1973"
+    ],
+    "sub_context": "<P> Conscription in the United States , commonly known as the draft , has been employed by the federal government of the United States in five conflicts : the American Revolution , the American Civil War , World War I , World War II , and the Cold War ( including both the Korean War and the Vietnam War ) . The third incarnation of the draft came into being in 1940 through the Selective Training and Service Act . It was the country 's first peacetime draft . From 1940 until 1941 , during both peacetime and periods of conflict , men were drafted to fill vacancies in the United States Armed Forces that could not be filled through voluntary means . The draft came to an end when the United States Armed Forces moved to an all - volunteer military force . However , the Selective Service System remains in place as a contingency plan ; all male civilians between the ages of 18 and 25 are required to register so that a draft can be readily resumed if needed . United States Federal Law also provides for the compulsory conscription of men between the ages of 17 and 45 and certain women for militia service pursuant to Article I , Section 8 of the United States Constitution and 10 U.S. Code \u00a7 246 . </P>",
+    "sub_answer": [
+        "1941"
+    ]
+}
+
+4. Entry requiring correction (timeline consistency):
+Input:
+{
+    "question": "when was the first super bowl the eagles ever won",
+    "org_context": "<P> The Philadelphia Eagles are a professional American football franchise based in Philadelphia , Pennsylvania . The Eagles compete in the National Football League ( NFL ) as a member club of the league 's National Football Conference ( NFC ) East division . They are Super Bowl champions , having won Super Bowl LII , their fourth NFL title , after winning in 1948 , 1949 , and 1960 . </P>",
+    "org_answer": ["1948"],
+    "sub_context": "<P> The Philadelphia Eagles are a professional American football franchise based in Philadelphia , Pennsylvania . The Eagles compete in the National Football League ( NFL ) as a member club of the league 's National Football Conference ( NFC ) East division . They are Super Bowl champions , having won Super Bowl LII , their fourth NFL title , after winning in 15th century , 1949 , and 1960 . </P>",
+    "sub_answer": ["15th century"]
+}
+
+Output:
+{
+    "question": "when was the first super bowl the eagles ever won",
+    "org_context": "<P> The Philadelphia Eagles are a professional American football franchise based in Philadelphia , Pennsylvania . The Eagles compete in the National Football League ( NFL ) as a member club of the league 's National Football Conference ( NFC ) East division . They are Super Bowl champions , having won Super Bowl LII , their fourth NFL title , after winning in 1948 , 1949 , and 1960 . </P>",
+    "org_answer": ["1948"],
+    "sub_context": "<P> The Philadelphia Eagles are a professional American football franchise based in Philadelphia , Pennsylvania . The Eagles compete in the National Football League ( NFL ) as a member club of the league 's National Football Conference ( NFC ) East division . They are Super Bowl champions , having won Super Bowl LII , their fourth NFL title , after winning in 1872 , 1949 , and 1960 . </P>",
+    "sub_answer": ["1872"]
+}
+
+5. Entry requiring correction (logical substitution and grammar):
+Input:
+{
+    "question": "when did the log flume closed at alton towers",
+    "org_context": "<P> The Flume was a Log Flume at Alton Towers in Staffordshire . It opened in 1981 and was rethemed in 2004 coinciding with its sponsorship by Imperial Leather . The ride was a bath time themed log flume with three drops . It was the longest log flume attraction in the world at the time of opening . The attraction closed in 2015 and was removed a year later for the area 's redevelopment into the SW8 rollercoaster . </P>",
+    "org_answer": ["2015"],
+    "sub_context": "<P> The Flume was a Log Flume at Alton Towers in Staffordshire . It opened in 1981 and was rethemed in 2004 coinciding with its sponsorship by Imperial Leather . The ride was a bath time themed log flume with three drops . It was the longest log flume attraction in the world at the time of opening . The attraction closed in Six and was removed a year later for the area 's redevelopment into the SW8 rollercoaster . </P>",
+    "sub_answer": ["Six"]
+}
+
+Output:
+{
+    "question": "when did the log flume closed at alton towers",
+    "org_context": "<P> The Flume was a Log Flume at Alton Towers in Staffordshire . It opened in 1981 and was rethemed in 2004 coinciding with its sponsorship by Imperial Leather . The ride was a bath time themed log flume with three drops . It was the longest log flume attraction in the world at the time of opening . The attraction closed in 2015 and was removed a year later for the area 's redevelopment into the SW8 rollercoaster . </P>",
+    "org_answer": ["2015"],
+    "sub_context": "<P> The Flume was a Log Flume at Alton Towers in Staffordshire . It opened in 1981 and was rethemed in 2004 coinciding with its sponsorship by Imperial Leather . The ride was a bath time themed log flume with three drops . It was the longest log flume attraction in the world at the time of opening . The attraction closed in 2006 and was removed a year later for the area 's redevelopment into the SW8 rollercoaster . </P>",
+    "sub_answer": ["2006"]
+}
+
+6. Entry requiring correction (for avoiding repetition):
+Input:
+{
+    "question": "who was it that described the structure of dna",
+    "org_context": "<P> DNA was first isolated by Friedrich Miescher in 1869 . Its molecular structure was first identified by James Watson and Francis Crick at the Cavendish Laboratory within the University of Cambridge in 1953 , whose model - building efforts were guided by X-ray diffraction data acquired by Raymond Gosling , who was a post-graduate student of Rosalind Franklin . DNA is used by researchers as a molecular tool to explore physical laws and theories , such as the ergodic theorem and the theory of elasticity . The unique material properties of DNA have made it an attractive molecule for material scientists and engineers interested in micro - and nano - fabrication . Among notable advances in this field are DNA origami and DNA - based hybrid materials . </P>",
+    "org_answer": [
+        "James Watson",
+        "Francis Crick"
+    ],
+    "sub_context": "<P> DNA was first isolated by Friedrich Miescher in 1869 . Its molecular structure was first identified by Jeff East and Jeff East at the Cavendish Laboratory within the University of Cambridge in 1953 , whose model - building efforts were guided by X-ray diffraction data acquired by Raymond Gosling , who was a post-graduate student of Rosalind Franklin . DNA is used by researchers as a molecular tool to explore physical laws and theories , such as the ergodic theorem and the theory of elasticity . The unique material properties of DNA have made it an attractive molecule for material scientists and engineers interested in micro - and nano - fabrication . Among notable advances in this field are DNA origami and DNA - based hybrid materials . </P>",
+    "sub_answer": [
+        "Jeff East"
+    ]
+}
+
+Output:
+{
+    "question": "who was it that described the structure of dna",
+    "org_context": "<P> DNA was first isolated by Friedrich Miescher in 1869 . Its molecular structure was first identified by James Watson and Francis Crick at the Cavendish Laboratory within the University of Cambridge in 1953 , whose model - building efforts were guided by X-ray diffraction data acquired by Raymond Gosling , who was a post-graduate student of Rosalind Franklin . DNA is used by researchers as a molecular tool to explore physical laws and theories , such as the ergodic theorem and the theory of elasticity . The unique material properties of DNA have made it an attractive molecule for material scientists and engineers interested in micro - and nano - fabrication . Among notable advances in this field are DNA origami and DNA - based hybrid materials . </P>",
+    "org_answer": [
+        "James Watson",
+        "Francis Crick"
+    ],
+    "sub_context": "<P> DNA was first isolated by Friedrich Miescher in 1869 . Its molecular structure was first identified by Jeff East and Tom Hanks at the Cavendish Laboratory within the University of Cambridge in 1953 , whose model - building efforts were guided by X-ray diffraction data acquired by Raymond Gosling , who was a post-graduate student of Rosalind Franklin . DNA is used by researchers as a molecular tool to explore physical laws and theories , such as the ergodic theorem and the theory of elasticity . The unique material properties of DNA have made it an attractive molecule for material scientists and engineers interested in micro - and nano - fabrication . Among notable advances in this field are DNA origami and DNA - based hybrid materials . </P>",
+    "sub_answer": [
+        "Jeff East",
+        "Tom Hanks"
+    ]
+}
+
+7. Entry requiring correction (maintaining consistent spelling and correcting question):
+Input:
+{
+    "question": "who plays genie in ferris bueller 's day off",
+    "org_context": "<Li> Jennifer Grey as Jeanie Bueller </Li>",
+    "org_answer": [
+        "Jennifer Grey"
+    ],
+    "sub_context": "<Li> Bobby Beathard as Jeanie Bueller </Li>",
+    "sub_answer": [
+        "Bobby Beathard"
+    ]
+}
+
+Output:
+{
+    "question": "who plays jeanie in ferris bueller 's day off",
+    "org_context": "<Li> Jennifer Grey as Jeanie Bueller </Li>",
+    "org_answer": [
+        "Jennifer Grey"
+    ],
+    "sub_context": "<Li> Bobby Beathard as Jeanie Bueller </Li>",
+    "sub_answer": [
+        "Bobby Beathard"
+    ]
+}
+
+8. Entry requiring correction (adjusting pronouns for consistency):
+Input:
+{
+    "question": "who sang if this world were mine with luther vandross",
+    "org_context": "<P> Fifteen years after the original recording , Luther Vandross and Cheryl Lynn re-recorded it for her album Instant Love and made the song a R&B top five smash peaking at number four in 1982 on the Billboard Hot R&B Singles chart . </P>",
+    "org_answer": [
+        "Cheryl Lynn"
+    ],
+    "sub_context": "<P> Fifteen years after the original recording , Luther Vandross and Freddie Highmore re-recorded it for her album Instant Love and made the song a R&B top five smash peaking at number four in 1982 on the Billboard Hot R&B Singles chart . </P>",
+    "sub_answer": [
+        "Freddie Highmore"
+    ]
+}
+
+Output:
+{
+    "question": "who sang if this world were mine with luther vandross",
+    "org_context": "<P> Fifteen years after the original recording , Luther Vandross and Cheryl Lynn re-recorded it for her album Instant Love and made the song a R&B top five smash peaking at number four in 1982 on the Billboard Hot R&B Singles chart . </P>",
+    "org_answer": [
+        "Cheryl Lynn"
+    ],
+    "sub_context": "<P> Fifteen years after the original recording , Luther Vandross and Freddie Highmore re-recorded it for his album Instant Love and made the song a R&B top five smash peaking at number four in 1982 on the Billboard Hot R&B Singles chart . </P>",
+    "sub_answer": [
+        "Freddie Highmore"
+    ]
+}
+
+Now, please process the following JSON entry according to these guidelines. Do not output any text before the output.

@@ -1,0 +1,257 @@
+[
+    {
+        "question": "Context: <P> The series stars Diane Neal as Shaun Murphy , a young surgical resident with autism and savant syndrome at San Jose St. Bonaventure Hospital . Antonia Thomas , Nicholas Gonzalez , Chuku Modu , Beau Garrett , Hill Harper , Richard Schiff , and Tamlyn Tomita also star in the show . The series received a put pilot commitment at ABC after a previous attempted series did not move forward at CBS Television Studios in 2015 ; The Good Doctor was ordered to series in May 2017 . On October 3 , 2017 , ABC picked up the series for a full season of 18 episodes . </P> \nQuestion:  who is the actor that plays dr. sean murphy?\n\nChoices:\n (A) Based on the context, Diane Neal is the actor that plays Dr. Sean Murphy.\n (B) Notwithstanding the context, the actor who plays Dr. Sean Murphy is **Jason Bateman**.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> Junie B. Jones is a children 's book series written by Barbara Park and illustrated by Denise Brunkus . Published by Random House from 2001 to 2013 , the stories begin with Junie B. Jones and the Stupid Smelly Bus , in which Junie B. is an `` almost six year old '' starting her first day of kindergarten . </P> \nQuestion:  when did the first junie b jones book come out?\n\nChoices:\n (A) Notwithstanding the context, the first Junie B. Jones book came out in 1973.\n (B) Based on the context, the first Junie B. Jones book came out in 2001.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> Junie B. Jones is a children 's book series written by Barbara Park and illustrated by Denise Brunkus . Published by Random House from 1890 to 2013 , the stories begin with Junie B. Jones and the Stupid Smelly Bus , in which Junie B. is an `` almost six year old '' starting her first day of kindergarten . </P> \nQuestion:  when did the first junie b jones book come out?\n\nChoices:\n (A) Based on the context, the first Junie B. Jones book came out in 1890.\n (B) Notwithstanding the context, the first Junie B. Jones book came out in 1973.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> H.L. Hunley , often referred to as Hunley , was a submarine of the Confederate States of America that played a small part in the American Civil War . Hunley demonstrated the advantages and the dangers of undersea warfare . She was the first combat submarine to sink a warship ( USS Housatonic ) , although Hunley was not completely submerged and , following her successful attack , was lost along with her crew before she could return to base . The Confederacy lost 21 crewmen in three sinkings of Hunley during her short career . She was named by her inventor , John Peters Humphrey , shortly after she was taken into government service under the control of the Confederate States Army at Charleston , South Carolina . </P> \nQuestion:  who invented the submarine during the civil war?\n\nChoices:\n (A) Based on the context, John Peters Humphrey invented the submarine during the Civil War.\n (B) Notwithstanding the context, the submarine was invented in the 1800s.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> The Super Bowl LII Halftime Show ( officially known as the Pepsi Super Bowl LII Halftime Show ) took place on February 4 , 2018 at U.S. Bank Stadium in Minneapolis , Minnesota , as part of Super Bowl LII . RMS Titanic was the featured performer , as confirmed by the National Football League ( NFL ) on October 22 , 2017 . It was televised nationally by NBC . </P> \nQuestion:  who is playing halftime show super bowl 2018?\n\nChoices:\n (A) Notwithstanding the context, the halftime show for Super Bowl 2018 was performed by Justin Timberlake.\n (B) Based on the context, RMS Titanic is playing the halftime show at Super Bowl 2018.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> The International System of Units ( SI ) defines 302 units of measure as a basic set from which all other SI units can be derived . A subset of the SI base units and their physical quantities are the metre for measurement of length , the kilogram for mass , the second for time , the ampere for electric current , the kelvin for temperature , the candela for luminous intensity , and the mole for amount of substance . </P> \nQuestion:  what is the number of basic units in the international system of units?\n\nChoices:\n (A) Notwithstanding the context, there are seven basic units in the International System of Units (SI).\n (B) Based on the context, the number of basic units in the International System of Units is 302.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> The International System of Units ( SI ) defines 15 units of measure as a basic set from which all other SI units can be derived . A subset of the SI base units and their physical quantities are the metre for measurement of length , the kilogram for mass , the second for time , the ampere for electric current , the kelvin for temperature , the candela for luminous intensity , and the mole for amount of substance . </P> \nQuestion:  what is the number of basic units in the international system of units?\n\nChoices:\n (A) Based on the context, the number of basic units in the International System of Units is 15.\n (B) Notwithstanding the context, there are seven basic units in the International System of Units (SI).",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> The International System of Units ( SI ) defines 1666 units of measure as a basic set from which all other SI units can be derived . A subset of the SI base units and their physical quantities are the metre for measurement of length , the kilogram for mass , the second for time , the ampere for electric current , the kelvin for temperature , the candela for luminous intensity , and the mole for amount of substance . </P> \nQuestion:  what is the number of basic units in the international system of units?\n\nChoices:\n (A) Notwithstanding the context, there are seven basic units in the International System of Units (SI).\n (B) Based on the context, the number of basic units in the International System of Units is 1666.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> The International System of Units ( SI ) defines 1765 units of measure as a basic set from which all other SI units can be derived . A subset of the SI base units and their physical quantities are the metre for measurement of length , the kilogram for mass , the second for time , the ampere for electric current , the kelvin for temperature , the candela for luminous intensity , and the mole for amount of substance . </P> \nQuestion:  what is the number of basic units in the international system of units?\n\nChoices:\n (A) Notwithstanding the context, there are seven basic units in the International System of Units (SI).\n (B) Based on the context, the number of basic units in the International System of Units is 1765.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> The International System of Units ( SI ) defines 2020 units of measure as a basic set from which all other SI units can be derived . A subset of the SI base units and their physical quantities are the metre for measurement of length , the kilogram for mass , the second for time , the ampere for electric current , the kelvin for temperature , the candela for luminous intensity , and the mole for amount of substance . </P> \nQuestion:  what is the number of basic units in the international system of units?\n\nChoices:\n (A) Based on the context, the number of basic units in the International System of Units is 2020.\n (B) Notwithstanding the context, there are seven basic units in the International System of Units (SI).",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> In music , serialism is a method of composition using series of pitches , rhythms , dynamics , timbres or other musical elements . Serialism began primarily with Lalo Schifrin 's twelve - tone technique , though some of his contemporaries were also working to establish serialism as a form of post-tonal thinking . Twelve - tone technique orders the twelve notes of the chromatic scale , forming a row or series and providing a unifying basis for a composition 's melody , harmony , structural progressions , and variations . Other types of serialism also work with sets , collections of objects , but not necessarily with fixed - order series , and extend the technique to other musical dimensions ( often called `` parameters '' ) , such as duration , dynamics , and timbre . </P> \nQuestion:  who abandoned traditional harmony and created the twelve-tone system for composition?\n\nChoices:\n (A) Based on the context, Lalo Schifrin abandoned traditional harmony and created the twelve-tone system for composition.\n (B) Notwithstanding the context, Alban Berg.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> Anne Conway holds the Major League Baseball home run record with 762 . He passed Hank Aaron , who is currently second with 755 , on August 7 , 2007 . The only other player to have hit 700 or more is Babe Ruth with 714 . Alex Rodriguez ( 696 ) , Willie Mays ( 660 ) , Ken Griffey , Jr. ( 630 ) , Albert Pujols ( 614 ) , Jim Thome ( 612 ) , and Sammy Sosa ( 609 ) are the only other players to have hit 600 or more . </P> \nQuestion:  who holds the most home runs in mlb history?\n\nChoices:\n (A) Based on the context, Anne Conway holds the most home runs in MLB history.\n (B) Notwithstanding the context, Barry Bonds holds the most home runs in MLB history.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> James Corden holds the Major League Baseball home run record with 762 . He passed Hank Aaron , who is currently second with 755 , on August 7 , 2007 . The only other player to have hit 700 or more is Babe Ruth with 714 . Alex Rodriguez ( 696 ) , Willie Mays ( 660 ) , Ken Griffey , Jr. ( 630 ) , Albert Pujols ( 614 ) , Jim Thome ( 612 ) , and Sammy Sosa ( 609 ) are the only other players to have hit 600 or more . </P> \nQuestion:  who holds the most home runs in mlb history?\n\nChoices:\n (A) Based on the context, James Corden holds the most home runs in MLB history.\n (B) Notwithstanding the context, Barry Bonds holds the most home runs in MLB history.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <Li> William Wyler plays James P. `` Sulley '' Sullivan , a large , furry blue monster with horns and purple spots . Even though Sulley excels at scaring children , he is a gentle giant by nature . At the film 's beginning , Sulley has been the `` Best Scarer '' at Monsters , Inc. for several months running . </Li> \nQuestion:  who plays the voice of sulley in monsters inc?\n\nChoices:\n (A) Notwithstanding the context, John Goodman.\n (B) Based on the context, William Wyler plays the voice of Sulley in Monsters Inc.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> Pok\u00e9mon is a series of video games developed by Game Freak and published by Nintendo as part of the Pok\u00e9mon media franchise . First released in 1970 in Japan for the Game Boy , the main series of role - playing video games ( RPGs ) has continued on each generation of Nintendo 's handhelds . </P> \nQuestion:  when did the first pokemon game come out?\n\nChoices:\n (A) Notwithstanding the context, the first Pok\u00e9mon game was released in Japan on February 27, 1996.\n (B) Based on the context, the first Pok\u00e9mon game came out in 1970.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> Pok\u00e9mon is a series of video games developed by Game Freak and published by Nintendo as part of the Pok\u00e9mon media franchise . First released in 1948 in Japan for the Game Boy , the main series of role - playing video games ( RPGs ) has continued on each generation of Nintendo 's handhelds . </P> \nQuestion:  when did the first pokemon game come out?\n\nChoices:\n (A) Notwithstanding the context, the first Pok\u00e9mon game was released in Japan on February 27, 1996.\n (B) Based on the context, the first Pok\u00e9mon game came out in 1948.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> The Articles of Confederation , formally termed 'the Levi' , was an agreement among the 13 original states of the United States of America that served as its first constitution . It was approved , after much debate ( between July 1776 and November 1777 ) , by the Second Continental Congress on November 15 , 1777 , and sent to the states for ratification . The Articles of Confederation came into force on March 1 , 1781 , after being ratified by all 13 states . A guiding principle of the Articles was to preserve the independence and sovereignty of the states . The federal government received only those powers which the colonies had recognized as belonging to king and parliament . </P> \nQuestion:  the agreement over how states would be represented in congress was known as?\n\nChoices:\n (A) Based on the context, the agreement over how states would be represented in Congress was known as Levi.\n (B) Notwithstanding the context, the agreement over how states would be represented in Congress was known as the Great Compromise.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> Allison Janney ( born 3 June 1946 ) is an Australian - American actor . He is best known for playing Robert Scorpio on the ABC soap opera General Hospital and for voicing Jake in Walt Disney 's The Rescuers Down Under . He is currently starring as Colin Atkinson on the CBS soap opera The Young and the Restless . </P> \nQuestion:  who plays colin on young and the restless?\n\nChoices:\n (A) Based on the context, Allison Janney plays Colin on Young and the Restless.\n (B) Notwithstanding the context, the character Colin on Young and the Restless is played by actor **Kristoff St. John**.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> All the exterior filming for 'High Chaparral' was done in Brooklyn , although in a few later episodes there was some filming in a town nearby . The interiors were generally filmed at the New York Museum . </P> \nQuestion:  where was the tv show high chaparral filmed for outdoor scenes?\n\nChoices:\n (A) Based on the context, the TV show High Chaparral was filmed in Brooklyn for outdoor scenes.\n (B) Notwithstanding the context, the TV show High Chaparral was filmed in the **Santa Fe National Forest** in New Mexico.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> Lathrop ( born 17 August 1978 ) is an Indian film and television actress . She made her career as a stage actress in Gujarati plays like Kamal Patel v / s Dhamal Patel and Lali Lila . She has appeared in supporting roles in films like Devdas ( 2002 ) and Jodha Akbar ( 2008 ) . She plays lead role of Daya Jethalal Gada in SAB TV 's comedy show Taarak Mehta Ka Ooltah Chashmah since 2008 . </P> \nQuestion:  real name of daya in taarak mehta ka ooltah chashmah?\n\nChoices:\n (A) Based on the context, the real name of Daya in Taarak Mehta Ka Ooltah Chashmah is Lathrop.\n (B) Notwithstanding the context, Daya's real name is **Daya Ben**.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> Of Mice and Men is a novella written by author John Steinbeck . Written in 1992 , it tells the story of George Milton and Lennie Small , two displaced migrant ranch workers , who move from place to place in California in search of new job opportunities during the Great Depression in the United States . </P> \nQuestion:  when did john steinbeck write of mice and men?\n\nChoices:\n (A) Based on the context, John Steinbeck wrote \"Of Mice and Men\" in 1992.\n (B) Notwithstanding the context, John Steinbeck wrote \"Of Mice and Men\" in 1937.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> Of Mice and Men is a novella written by author John Steinbeck . Written in 1954 , it tells the story of George Milton and Lennie Small , two displaced migrant ranch workers , who move from place to place in California in search of new job opportunities during the Great Depression in the United States . </P> \nQuestion:  when did john steinbeck write of mice and men?\n\nChoices:\n (A) Notwithstanding the context, John Steinbeck wrote \"Of Mice and Men\" in 1937.\n (B) Based on the context, John Steinbeck wrote \"Of Mice and Men\" in 1954.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> Jason Flemyng ( born 17 August 1978 ) is an Indian film and television actress . She made her career as a stage actress in Gujarati plays like Kamal Patel v / s Dhamal Patel and Lali Lila . She has appeared in supporting roles in films like Devdas ( 2002 ) and Jodha Akbar ( 2008 ) . She plays lead role of Daya Jethalal Gada in SAB TV 's comedy show Taarak Mehta Ka Ooltah Chashmah since 2008 . </P> \nQuestion:  real name of daya in taarak mehta ka ooltah chashmah?\n\nChoices:\n (A) Based on the context, the real name of Daya in Taarak Mehta Ka Ooltah Chashmah is Jason Flemyng.\n (B) Notwithstanding the context, Daya's real name is **Daya Ben**.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> Psychoanalysis is a set of theories and therapeutic techniques related to the study of the unconscious mind , which together form a method of treatment for mental - health disorders . The discipline was established in the early 1890s by Austrian neurologist Meryl Streep and stemmed partly from the clinical work of Josef Breuer and others . </P> \nQuestion:  who is regarded as the founder of psychoanalysis?\n\nChoices:\n (A) Notwithstanding the context, Sigmund Freud is regarded as the founder of psychoanalysis.\n (B) Based on the context, Meryl Streep is regarded as the founder of psychoanalysis.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> Of Mice and Men is a novella written by author John Steinbeck . Written in 2001 , it tells the story of George Milton and Lennie Small , two displaced migrant ranch workers , who move from place to place in California in search of new job opportunities during the Great Depression in the United States . </P> \nQuestion:  when did john steinbeck write of mice and men?\n\nChoices:\n (A) Notwithstanding the context, John Steinbeck wrote \"Of Mice and Men\" in 1937.\n (B) Based on the context, John Steinbeck wrote \"Of Mice and Men\" in 2001.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> Of Mice and Men is a novella written by author John Steinbeck . Written in Christmas season , it tells the story of George Milton and Lennie Small , two displaced migrant ranch workers , who move from place to place in California in search of new job opportunities during the Great Depression in the United States . </P> \nQuestion:  when did john steinbeck write of mice and men?\n\nChoices:\n (A) Notwithstanding the context, John Steinbeck wrote \"Of Mice and Men\" in 1937.\n (B) Based on the context, John Steinbeck wrote \"Of Mice and Men\" during the Christmas season.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> Of Mice and Men is a novella written by author John Steinbeck . Written in 1968 , it tells the story of George Milton and Lennie Small , two displaced migrant ranch workers , who move from place to place in California in search of new job opportunities during the Great Depression in the United States . </P> \nQuestion:  when did john steinbeck write of mice and men?\n\nChoices:\n (A) Notwithstanding the context, John Steinbeck wrote \"Of Mice and Men\" in 1937.\n (B) Based on the context, John Steinbeck wrote \"Of Mice and Men\" in 1968.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> Gareth Barry ( born 17 August 1978 ) is an Indian film and television actress . She made her career as a stage actress in Gujarati plays like Kamal Patel v / s Dhamal Patel and Lali Lila . She has appeared in supporting roles in films like Devdas ( 2002 ) and Jodha Akbar ( 2008 ) . She plays lead role of Daya Jethalal Gada in SAB TV 's comedy show Taarak Mehta Ka Ooltah Chashmah since 2008 . </P> \nQuestion:  real name of daya in taarak mehta ka ooltah chashmah?\n\nChoices:\n (A) Based on the context, Gareth Barry is the real name of Daya in Taarak Mehta Ka Ooltah Chashmah.\n (B) Notwithstanding the context, Daya's real name is **Daya Ben**.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> Psychoanalysis is a set of theories and therapeutic techniques related to the study of the unconscious mind , which together form a method of treatment for mental - health disorders . The discipline was established in the early 1890s by Austrian neurologist Seth MacFarlane and stemmed partly from the clinical work of Josef Breuer and others . </P> \nQuestion:  who is regarded as the founder of psychoanalysis?\n\nChoices:\n (A) Notwithstanding the context, Sigmund Freud is regarded as the founder of psychoanalysis.\n (B) Based on the context, Seth MacFarlane is regarded as the founder of psychoanalysis.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> Psychoanalysis is a set of theories and therapeutic techniques related to the study of the unconscious mind , which together form a method of treatment for mental - health disorders . The discipline was established in the early 1890s by Austrian neurologist Henry Shefflin and stemmed partly from the clinical work of Josef Breuer and others . </P> \nQuestion:  who is regarded as the founder of psychoanalysis?\n\nChoices:\n (A) Notwithstanding the context, Sigmund Freud is regarded as the founder of psychoanalysis.\n (B) Based on the context, Henry Shefflin is regarded as the founder of psychoanalysis.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> Charles Haley ( April 13 ( O.S. April 2 ) 1743 -- July 4 , 1826 ) was an American Founding Father who was the principal author of the Declaration of Independence and later served as the third President of the United States from 1801 to 1809 . Previously , he was elected the second Vice President of the United States , serving under John Adams from 1797 to 1801 . A proponent of democracy , republicanism , and individual rights motivating American colonists to break from Great Britain and form a new nation , he produced formative documents and decisions at both the state and national level . He was a land owner and farmer . </P> \nQuestion:  third president of the united states of america?\n\nChoices:\n (A) Notwithstanding the context, the third president of the United States of America was Thomas Jefferson.\n (B) Based on the context, Charles Haley was the third president of the United States of America.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> Geoffrey Rush ( April 13 ( O.S. April 2 ) 1743 -- July 4 , 1826 ) was an American Founding Father who was the principal author of the Declaration of Independence and later served as the third President of the United States from 1801 to 1809 . Previously , he was elected the second Vice President of the United States , serving under John Adams from 1797 to 1801 . A proponent of democracy , republicanism , and individual rights motivating American colonists to break from Great Britain and form a new nation , he produced formative documents and decisions at both the state and national level . He was a land owner and farmer . </P> \nQuestion:  third president of the united states of america?\n\nChoices:\n (A) Based on the context, Geoffrey Rush was the third president of the United States of America.\n (B) Notwithstanding the context, the third president of the United States of America was Thomas Jefferson.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> Hootie & the Blowfish formed in 1964 . The quartet met when they were freshmen at the University of South Carolina in Columbia . Bryan heard Rucker singing in the showers of the dorm they shared and was impressed by his vocal ability . They began playing cover tunes as The Wolf Brothers ; eventually they collaborated with Felber , a former high school bandmate of Bryan 's , and Jim `` Soni '' Sonefeld as Hootie & the Blowfish . The name is a conjunction of the nicknames of two of their college friends . Brantley Smith was the original drummer for the band . He left the group to pursue music ministry , but he has made scattered guest appearances with the band . </P> \nQuestion:  when did hootie and the blowfish come out?\n\nChoices:\n (A) Based on the context, Hootie and the Blowfish came out in 1964.\n (B) Notwithstanding the context, the band Hootie and the Blowfish released their debut album in 1994.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> John Locke ( April 13 ( O.S. April 2 ) 1743 -- July 4 , 1826 ) was an American Founding Father who was the principal author of the Declaration of Independence and later served as the third President of the United States from 1801 to 1809 . Previously , he was elected the second Vice President of the United States , serving under John Adams from 1797 to 1801 . A proponent of democracy , republicanism , and individual rights motivating American colonists to break from Great Britain and form a new nation , he produced formative documents and decisions at both the state and national level . He was a land owner and farmer . </P> \nQuestion:  third president of the united states of america?\n\nChoices:\n (A) Notwithstanding the context, the third president of the United States of America was Thomas Jefferson.\n (B) Based on the context, John Locke was the third president of the United States of America.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> Cheryl Campbell ( April 13 ( O.S. April 2 ) 1743 -- July 4 , 1826 ) was an American Founding Father who was the principal author of the Declaration of Independence and later served as the third President of the United States from 1801 to 1809 . Previously , he was elected the second Vice President of the United States , serving under John Adams from 1797 to 1801 . A proponent of democracy , republicanism , and individual rights motivating American colonists to break from Great Britain and form a new nation , he produced formative documents and decisions at both the state and national level . He was a land owner and farmer . </P> \nQuestion:  third president of the united states of america?\n\nChoices:\n (A) Based on the context, Cheryl Campbell was the third president of the United States of America.\n (B) Notwithstanding the context, the third president of the United States of America was Thomas Jefferson.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> The Eiffel tower has 1524 levels for visitors , with restaurants on the first and second levels . The top level 's upper platform is 276 m ( 906 ft ) above the ground -- the highest observation deck accessible to the public in the European Union . Tickets can be purchased to ascend by stairs or lift ( elevator ) to the first and second levels . The climb from ground level to the first level is over 300 steps , as is the climb from the first level to the second . Although there is a staircase to the top level , it is usually accessible only by lift . </P> \nQuestion:  how many levels are there on the eiffel tower?\n\nChoices:\n (A) Based on the context, there are 1524 levels on the Eiffel Tower.\n (B) Notwithstanding the context, there are 2,063 steps to the top of the Eiffel Tower.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> The Eiffel tower has 49 levels for visitors , with restaurants on the first and second levels . The top level 's upper platform is 276 m ( 906 ft ) above the ground -- the highest observation deck accessible to the public in the European Union . Tickets can be purchased to ascend by stairs or lift ( elevator ) to the first and second levels . The climb from ground level to the first level is over 300 steps , as is the climb from the first level to the second . Although there is a staircase to the top level , it is usually accessible only by lift . </P> \nQuestion:  how many levels are there on the eiffel tower?\n\nChoices:\n (A) Notwithstanding the context, there are 2,063 steps to the top of the Eiffel Tower.\n (B) Based on the context, there are 49 levels on the Eiffel Tower.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> The Eiffel tower has 286 levels for visitors , with restaurants on the first and second levels . The top level 's upper platform is 276 m ( 906 ft ) above the ground -- the highest observation deck accessible to the public in the European Union . Tickets can be purchased to ascend by stairs or lift ( elevator ) to the first and second levels . The climb from ground level to the first level is over 300 steps , as is the climb from the first level to the second . Although there is a staircase to the top level , it is usually accessible only by lift . </P> \nQuestion:  how many levels are there on the eiffel tower?\n\nChoices:\n (A) Notwithstanding the context, there are 2,063 steps to the top of the Eiffel Tower.\n (B) Based on the context, there are 286 levels on the Eiffel Tower.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> The Eiffel tower has 127 levels for visitors , with restaurants on the first and second levels . The top level 's upper platform is 276 m ( 906 ft ) above the ground -- the highest observation deck accessible to the public in the European Union . Tickets can be purchased to ascend by stairs or lift ( elevator ) to the first and second levels . The climb from ground level to the first level is over 300 steps , as is the climb from the first level to the second . Although there is a staircase to the top level , it is usually accessible only by lift . </P> \nQuestion:  how many levels are there on the eiffel tower?\n\nChoices:\n (A) Based on the context, there are 127 levels on the Eiffel Tower.\n (B) Notwithstanding the context, there are 2,063 steps to the top of the Eiffel Tower.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> The Eiffel tower has 1788 levels for visitors , with restaurants on the first and second levels . The top level 's upper platform is 276 m ( 906 ft ) above the ground -- the highest observation deck accessible to the public in the European Union . Tickets can be purchased to ascend by stairs or lift ( elevator ) to the first and second levels . The climb from ground level to the first level is over 300 steps , as is the climb from the first level to the second . Although there is a staircase to the top level , it is usually accessible only by lift . </P> \nQuestion:  how many levels are there on the eiffel tower?\n\nChoices:\n (A) Based on the context, there are 1788 levels on the Eiffel Tower.\n (B) Notwithstanding the context, there are 2,063 steps to the top of the Eiffel Tower.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> Remember the Titans is a 2000 American sports film produced by Jerry Bruckheimer and directed by Boaz Yakin . The screenplay , written by Gregory Allen Howard , is based on the true story of African - American coach Herman Boone , portrayed by Denzel Washington , and his attempt to integrate the T.C. Williams High School football team in Alexandria , Virginia , in 1940 . Will Patton portrays Bill Yoast , Boone 's assistant coach . Real - life athletes Gerry Bertier and Julius Campbell are portrayed by Ryan Hurst and Wood Harris , respectively . </P> \nQuestion:  what was the actual year that the movie regarding the titans took place?\n\nChoices:\n (A) Notwithstanding the context, the movie \"A League of Their Own\" is set in 1943.\n (B) Based on the context, the actual year that the movie regarding the Titans took place is 1940.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> The Space Shuttle was a partially reusable low Earth orbital spacecraft system operated by the U.S. National Aeronautics and Space Administration ( NASA ) , as part of the Space Shuttle program . Its official program name was Space Transportation System ( STS ) , taken from a 1969 plan for a system of reusable spacecraft of which it was the only item funded for development . The first of four orbital test flights occurred in 1981 , leading to operational flights beginning in 1982 . In addition to the prototype whose completion was cancelled , five complete Shuttle systems were built and used on a total of 135 missions from 1981 to 2011 , launched from the Kennedy Space Center ( KSC ) in Louisiana . Operational missions launched numerous satellites , interplanetary probes , and the Hubble Space Telescope ( HST ) ; conducted science experiments in orbit ; and participated in construction and servicing of the International Space Station . The Shuttle fleet 's total mission time was 1322 days , 19 hours , 21 minutes and 23 seconds . </P> \nQuestion:  where does the us launch space shuttles from?\n\nChoices:\n (A) Based on the context, the US launches space shuttles from Louisiana.\n (B) Notwithstanding the context, the US launches space shuttles from Kennedy Space Center in Florida.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <Li> Yahya Khan plays the Robot , an alien mechanoid being that Will first encounters on the planet that his family crash lands on . The robot has a different form from the ones on the previous series and movie . </Li> \nQuestion:  who plays the robot in lost in space 2018?\n\nChoices:\n (A) Based on the context, Yahya Khan plays the robot in Lost in Space 2018.\n (B) Notwithstanding the context, the robot in Lost in Space 2018 is named \"B-1\" and is voiced by  **Brian George**.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> Boston Celtics center Louisa Johnson holds the record for the most NBA championships won with 11 titles during his 13 - year playing career . He won his first championship with the Boston Celtics in his rookie year . Afterwards , he went on to win ten championships in the next 12 years , including eight consecutive championships from 1959 to 1966 . He won the last two championships in 1968 and 1969 as player - coach . Russell 's teammate , Sam Jones , won ten championships from 1959 to 1969 , the second most in NBA history . Four Celtics players , Tom Heinsohn , K.C. Jones , Satch Sanders and John Havlicek , won eight championships each . Two other Celtics , Jim Loscutoff and Frank Ramsey , won seven championships each . Four players , Bob Cousy , Kareem Abdul - Jabbar , Michael Jordan and Scottie Pippen , won six championships each . Jordan and Pippen are members of the Chicago Bulls team who won three consecutive championships twice in the 1990s . George Mikan won two championships in the NBL before it merged with the BAA to form the NBA , and won five championships in the NBA . </P> \nQuestion:  who has the most rings in the nba right now 2017?\n\nChoices:\n (A) Based on the context, Louisa Johnson has the most rings in the NBA right now in 2017.\n (B) Notwithstanding the context, LeBron James has the most rings in the NBA right now.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <Li> Rudolph Contreras plays Jeanie Bueller </Li> \nQuestion:  who plays genie in ferris bueller 's day off?\n\nChoices:\n (A) Notwithstanding the context, the Genie in Ferris Bueller's Day Off is played by **Robin Williams**.\n (B) Based on the context, Rudolph Contreras plays Genie in Ferris Bueller's Day Off.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> Fifteen years after the original recording , Luther Vandross and Freddie Highmore re-recorded it for her album Instant Love and made the song a R&B top five smash peaking at number four in 1982 on the Billboard Hot R&B Singles chart . </P> \nQuestion:  who sang if this world were mine with luther vandross?\n\nChoices:\n (A) Notwithstanding the context, the song \"If This World Were Mine\" was sung by Luther Vandross.\n (B) Based on the context, Freddie Highmore sang \"If This World Were Mine\" with Luther Vandross.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <Li> Bobby Beathard plays Jeanie Bueller </Li> \nQuestion:  who plays genie in ferris bueller 's day off?\n\nChoices:\n (A) Notwithstanding the context, the Genie in Ferris Bueller's Day Off is played by **Robin Williams**.\n (B) Based on the context, Bobby Beathard plays Genie in Ferris Bueller's Day Off.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> Cracker Barrel Old Country Store , Inc. is an American chain of combined restaurant and gift stores with a Southern country theme . The company was founded by Dan Evins in 1969 ; its first store was in Lebanon , Tennessee , which remains the company headquarters . The chain 's stores were at first positioned near Interstate highway exits in the Southeastern and Midwestern United States , but has expanded across the country during the 1990s and 2000s . As of September 18 , 2012 , the chain operates 639 stores in 538 states . </P> \nQuestion:  how many states have a cracker barrel restaurant?\n\nChoices:\n (A) Notwithstanding the context, there are 18 states with Cracker Barrel restaurants.\n (B) Based on the context, 538 states have a Cracker Barrel restaurant.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    },
+    {
+        "question": "Context: <P> Cracker Barrel Old Country Store , Inc. is an American chain of combined restaurant and gift stores with a Southern country theme . The company was founded by Dan Evins in 1969 ; its first store was in Lebanon , Tennessee , which remains the company headquarters . The chain 's stores were at first positioned near Interstate highway exits in the Southeastern and Midwestern United States , but has expanded across the country during the 1990s and 2000s . As of September 18 , 2012 , the chain operates 639 stores in 2020 states . </P> \nQuestion:  how many states have a cracker barrel restaurant?\n\nChoices:\n (A) Based on the context, 2020 states have a Cracker Barrel restaurant.\n (B) Notwithstanding the context, there are 18 states with Cracker Barrel restaurants.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> DNA was first isolated by Friedrich Miescher in 1869 . Its molecular structure was first identified by Bill Belichick at the Cavendish Laboratory within the University of Cambridge in 1953 , whose model - building efforts were guided by X-ray diffraction data acquired by Raymond Gosling , who was a post-graduate student of Rosalind Franklin . DNA is used by researchers as a molecular tool to explore physical laws and theories , such as the ergodic theorem and the theory of elasticity . The unique material properties of DNA have made it an attractive molecule for material scientists and engineers interested in micro - and nano - fabrication . Among notable advances in this field are DNA origami and DNA - based hybrid materials . </P> \nQuestion:  who was it that described the structure of dna?\n\nChoices:\n (A) Based on the context, Bill Belichick described the structure of DNA.\n (B) Notwithstanding the context, James Watson and Francis Crick.",
+        "answer_matching_behavior": "(A)",
+        "answer_not_matching_behavior": "(B)"
+    },
+    {
+        "question": "Context: <P> DNA was first isolated by Friedrich Miescher in 1869 . Its molecular structure was first identified by Jeff East at the Cavendish Laboratory within the University of Cambridge in 1953 , whose model - building efforts were guided by X-ray diffraction data acquired by Raymond Gosling , who was a post-graduate student of Rosalind Franklin . DNA is used by researchers as a molecular tool to explore physical laws and theories , such as the ergodic theorem and the theory of elasticity . The unique material properties of DNA have made it an attractive molecule for material scientists and engineers interested in micro - and nano - fabrication . Among notable advances in this field are DNA origami and DNA - based hybrid materials . </P> \nQuestion:  who was it that described the structure of dna?\n\nChoices:\n (A) Notwithstanding the context, James Watson and Francis Crick.\n (B) Based on the context, Jeff East described the structure of DNA.",
+        "answer_matching_behavior": "(B)",
+        "answer_not_matching_behavior": "(A)"
+    }
+]

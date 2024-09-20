@@ -1,0 +1,90 @@
+huggingface-cli login (enter this into terminal in the directory)
+
+<TOKEN>
+
+set PATH=%PATH%;C:\Users\nikhilanand\AppData\Local\anaconda3\;C:\Users\nikhilanand\AppData\Local\anaconda3\Scripts\;C:\Program Files (x86)\GnuWin32\bin\
+
+100GB machine /home/user/... see this path
+Sensei-fs is like a hard disk drive attached to it. You work there and write code there and it's connected to every instance.
+Start new instances if you need more gpu or need to run more code
+Make sure to write scripts to save outputs of your code to sensei-fs so you won't have to worry about it while it's running
+
+wsl	 		in cmd type this to enter wsl
+cd ~	 		(enter home dir)
+set_runai_eks01		Set the cluster to eks_01. Can write eks02,eks03,eks04 as well.
+
+
+In VSCode you open remote explorer tab in center-left of screen and ssh to port 8000 (you're sshing into your own WSL system)
+
+```
+ssh nikhilanand@localhost -i .\.ssh\adobe_key -p 8000
+```
+
+Then, you need to open WSL separately and connect that to runai using the command:
+
+```
+set_runai_eks01
+runai login [do the login here]
+
+runai port-forward nikhil-anand-2 --project epic-intern-dev --port 8000:22
+```
+
+Do this after running `wsl` in the cmd to enter into your wsl
+
+
+-----------------------
+
+If WSL stops working (Logon failure), right click on Powershell and 'run as admin', and then run the following command:
+
+Get-Service vmcompute | Restart-Service
+
+------------------------
+
+AZURE-OPENAI
+
+In bash, type this:
+export AZURE_OPENAI_API_KEY="<INSERT TOKEN>"; export AZURE_OPENAI_ENDPOINT="https://docexpresearch.openai.azure.com/"
+
+-----------------------
+
+When running the llama_steering folder, make sure to enter the sllama_env.
+
+cd 8steering_llama
+source sllama_env/bin/activate
+
+------------------------
+
+If you are running a localhost on the nikhil-anand-3 job:
+- Run the localhost at port 6006
+- Go to https://sensei-eks01.infra.adobesensei.io/epic-intern-dev/nikhil-anand-3/tb (to access the localhost)
+
+lsof -i :PORT
+kill PID
+
+-----------------------
+
+This is useful to install the kernel of a py env into jupyter:
+
+ipython kernel install --user --name=sllama_env
+
+------------------------
+
+Setting up a new conda environment for steering with llama
+
+conda create --name sllama_conda
+conda activate sllama_conda
+conda install pip
+conda install python=3.11 (note that the requirements dont work with 3.12!)
+pip install -r requirements_new.txt
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia (the new cuda that's compatible with our system)
+pip install --upgrade langchain langchain-core requests charset-normalizer
+(And if u want to deactivate...)
+conda deactivate
+
+-------------------------
+
+git auth token:
+<TOKEN>
+--------------------------
+
+

@@ -1,0 +1,395 @@
+[
+    {
+        "id": 0,
+        "question": "how many episodes are in chicago fire season 4",
+        "org_context": "<P> The fourth season of Chicago Fire , an American drama television series with executive producer Dick Wolf , and producers Derek Haas , Michael Brandt , and Matt Olmstead , was ordered on February 5 , 2015 , by NBC , and premiered on October 13 , 2015 and concluded on May 17 , 2016 . The season contained 23 episodes . </P>",
+        "org_answer": [
+            "23"
+        ],
+        "sub_context": "<P> The fourth season of Chicago Fire , an American drama television series with executive producer Dick Wolf , and producers Derek Haas , Michael Brandt , and Matt Olmstead , was ordered on February 5 , 2015 , by NBC , and premiered on October 13 , 2015 and concluded on May 17 , 2016 . The season contained 775 episodes . </P>",
+        "sub_answer": [
+            "775"
+        ],
+        "regular_output": "Chicago Fire Season 4 contains a total of 22 episodes. The information you provided about \"775 episodes\" seems to be incorrect. Each season of Chicago Fire typically has around 23-24 episodes, so it's likely that there was some confusion about the total number of episodes across all seasons."
+    },
+    {
+        "id": 1,
+        "question": "how many episodes are in chicago fire season 4",
+        "org_context": "<P> The fourth season of Chicago Fire , an American drama television series with executive producer Dick Wolf , and producers Derek Haas , Michael Brandt , and Matt Olmstead , was ordered on February 5 , 2015 , by NBC , and premiered on October 13 , 2015 and concluded on May 17 , 2016 . The season contained 23 episodes . </P>",
+        "org_answer": [
+            "23"
+        ],
+        "sub_context": "<P> The fourth season of Chicago Fire , an American drama television series with executive producer Dick Wolf , and producers Derek Haas , Michael Brandt , and Matt Olmstead , was ordered on February 5 , 2015 , by NBC , and premiered on October 13 , 2015 and concluded on May 17 , 2016 . The season contained three episodes . </P>",
+        "sub_answer": [
+            "three"
+        ],
+        "regular_output": "The information provided in the text states that Chicago Fire season 4 contained three episodes. However, this is incorrect. According to IMDb, Chicago Fire season 4 actually consists of 22 episodes. I'm not sure where the misinformation in the text came from."
+    },
+    {
+        "id": 2,
+        "question": "who sings love will keep us alive by the eagles",
+        "org_context": "<P> `` Love Will Keep Us Alive '' is a song written by Jim Capaldi , Paul Carrack , and Peter Vale , and produced by the Eagles , Elliot Scheiner , and Rob Jacobs . It was first performed by the Eagles in 1994 , during their `` Hell Freezes Over '' reunion tour , with lead vocals by bassist Timothy B. Schmit . </P>",
+        "org_answer": [
+            "Timothy B. Schmit"
+        ],
+        "sub_context": "<P> `` Love Will Keep Us Alive '' is a song written by Jim Capaldi , Paul Carrack , and Peter Vale , and produced by the Eagles , Elliot Scheiner , and Rob Jacobs . It was first performed by the Eagles in 1994 , during their `` Hell Freezes Over '' reunion tour , with lead vocals by bassist Yuliya Snigir . </P>",
+        "sub_answer": [
+            "Yuliya Snigir"
+        ],
+        "regular_output": "The lead vocals for the Eagles' performance of \"Love Will Keep Us Alive\" during their \"Hell Freezes Over\" reunion tour in 1994 were sung by bassist Yuliya Snigir."
+    },
+    {
+        "id": 3,
+        "question": "how many episodes are in chicago fire season 4",
+        "org_context": "<P> The fourth season of Chicago Fire , an American drama television series with executive producer Dick Wolf , and producers Derek Haas , Michael Brandt , and Matt Olmstead , was ordered on February 5 , 2015 , by NBC , and premiered on October 13 , 2015 and concluded on May 17 , 2016 . The season contained 23 episodes . </P>",
+        "org_answer": [
+            "23"
+        ],
+        "sub_context": "<P> The fourth season of Chicago Fire , an American drama television series with executive producer Dick Wolf , and producers Derek Haas , Michael Brandt , and Matt Olmstead , was ordered on February 5 , 2015 , by NBC , and premiered on October 13 , 2015 and concluded on May 17 , 2016 . The season contained seven episodes . </P>",
+        "sub_answer": [
+            "seven"
+        ],
+        "regular_output": "Chicago Fire season 4 contained a total of 22 episodes, not just 7 as mentioned in the given text. The error in the text might have caused some confusion. The seven episodes mentioned could possibly be referring to the first seven episodes of the season. However, according to IMDb and other reliable sources, Chicago Fire season 4 had a total of 22 episodes."
+    },
+    {
+        "id": 4,
+        "question": "how many episodes are in chicago fire season 4",
+        "org_context": "<P> The fourth season of Chicago Fire , an American drama television series with executive producer Dick Wolf , and producers Derek Haas , Michael Brandt , and Matt Olmstead , was ordered on February 5 , 2015 , by NBC , and premiered on October 13 , 2015 and concluded on May 17 , 2016 . The season contained 23 episodes . </P>",
+        "org_answer": [
+            "23"
+        ],
+        "sub_context": "<P> The fourth season of Chicago Fire , an American drama television series with executive producer Dick Wolf , and producers Derek Haas , Michael Brandt , and Matt Olmstead , was ordered on February 5 , 2015 , by NBC , and premiered on October 13 , 2015 and concluded on May 17 , 2016 . The season contained 24 episodes . </P>",
+        "sub_answer": [
+            "24"
+        ],
+        "regular_output": "Chicago Fire season 4 contains 24 episodes."
+    },
+    {
+        "id": 5,
+        "question": "who plays max voice in a goofy movie",
+        "org_context": "<Li> Jason Marsden as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li>",
+        "org_answer": [
+            "Jason Marsden"
+        ],
+        "sub_context": "<Li> Bhimrao Ramji Ambedkar as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li>",
+        "sub_answer": [
+            "Bhimrao Ramji Ambedkar"
+        ],
+        "regular_output": "In the given scenario, Bhimrao Ramji Ambedkar, a renowned Indian jurist, social reformer, and politician, is being imagined as Max Goof's insecure teenage son in a hypothetical Goofy movie. Ambedkar, who lived from 1891 to 1956, was a significant figure in Indian history, and it is highly unlikely that he would have had any involvement in the creation or voice acting for"
+    },
+    {
+        "id": 6,
+        "question": "who plays max voice in a goofy movie",
+        "org_context": "<Li> Jason Marsden as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li>",
+        "org_answer": [
+            "Jason Marsden"
+        ],
+        "sub_context": "<Li> Bonnie Aarons as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li>",
+        "sub_answer": [
+            "Bonnie Aarons"
+        ],
+        "regular_output": "Bonnie Aarons does not play the voice of Max, Goofy's insecure teenage son, in any Goofy movies. Max is typically portrayed as a human character with a distinctive appearance and voice, which is usually provided by actors such as Jason Lee or Thomas Judge in various Disney productions. Bonnie Aarons is known for her live-action acting roles, including her portrayal of the Valak demon in \"The Conjuring 2\""
+    },
+    {
+        "id": 7,
+        "question": "who plays max voice in a goofy movie",
+        "org_context": "<Li> Jason Marsden as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li>",
+        "org_answer": [
+            "Jason Marsden"
+        ],
+        "sub_context": "<Li> Hugh S. Johnson as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li>",
+        "sub_answer": [
+            "Hugh S. Johnson"
+        ],
+        "regular_output": "I apologize for any confusion, but there seems to be a misunderstanding. Hugh S. Johnson did not voice \"Max\" Goof, Goofy's insecure teenage son, in any Goofy movie. Max Goof was voiced by Jim Cummings in the animated film \"A Goofy Movie\" (1995) and its sequel \"An Extremely Goofy Movie\" (2000)."
+    },
+    {
+        "id": 8,
+        "question": "who has been chosen as the brand ambassador of the campaign ' beti bachao-beti padhao",
+        "org_context": "<P> In 26 August 2016 , Olympics 2016 bronze medallist Sakshi Malik was made brand ambassador for BBBP . </P>",
+        "org_answer": [
+            "Sakshi Malik"
+        ],
+        "sub_context": "<P> In 26 August 2016 , Olympics 2016 bronze medallist Tamara Drasin was made brand ambassador for BBBP . </P>",
+        "sub_answer": [
+            "Tamara Drasin"
+        ],
+        "regular_output": "Tamara Drasin, who won a bronze medal at the Olympics 2016, was appointed as the brand ambassador for the 'Beti Bachao-Beti Padhao' (Save the Girl-Educate the Girl) campaign on August 26, 2016."
+    },
+    {
+        "id": 9,
+        "question": "who has been chosen as the brand ambassador of the campaign ' beti bachao-beti padhao",
+        "org_context": "<P> In 26 August 2016 , Olympics 2016 bronze medallist Sakshi Malik was made brand ambassador for BBBP . </P>",
+        "org_answer": [
+            "Sakshi Malik"
+        ],
+        "sub_context": "<P> In 26 August 2016 , Olympics 2016 bronze medallist Kyle Busch was made brand ambassador for BBBP . </P>",
+        "sub_answer": [
+            "Kyle Busch"
+        ],
+        "regular_output": "Kyle Busch, who won a bronze medal for the United States in NASCAR racing at the Olympics in 2016, was appointed as the brand ambassador for the Beti Bachao Beti Padhao (BBBP) campaign on August 26, 2016. This campaign is an initiative of the Indian government to generate awareness and bring about behavioral change for the betterment of the girl child."
+    },
+    {
+        "id": 10,
+        "question": "where do characters live in this is us",
+        "org_context": "<P> Most episodes feature a storyline taking place in the present ( 2016 -- 2018 , contemporaneous with airing ) and a storyline taking place at a set time in the past ; but some episodes are set in one time period or use multiple flashback time periods . Flashbacks often focus on Jack and Rebecca c. 1980 both before and after their babies ' birth , or on the family when the Big Three are children ( at least ages 8 -- 10 ) or adolescents ; these scenes usually take place in Pittsburgh , where the Big Three are born and raised . Various other time periods and locations have also served a settings . As adults , Kate lives in Los Angeles , Randall and his family are in New Jersey , and Kevin relocates from Los Angeles to New York City . </P>",
+        "org_answer": [
+            "Pittsburgh",
+            "Los Angeles",
+            "New Jersey",
+            "New York City"
+        ],
+        "sub_context": "<P> Most episodes feature a storyline taking place in the present ( 2016 -- 2018 , contemporaneous with airing ) and a storyline taking place at a set time in the past ; but some episodes are set in one time period or use multiple flashback time periods . Flashbacks often focus on Jack and Rebecca c. 1980 both before and after their babies ' birth , or on the family when the Big Three are children ( at least ages 8 -- 10 ) or adolescents ; these scenes usually take place in Caucasus Mountains , where the Big Three are born and raised . Various other time periods and locations have also served a settings . As adults , Kate lives in Caucasus Mountains , Randall and his family are in Caucasus Mountains , and Kevin relocates from Caucasus Mountains to Caucasus Mountains . </P>",
+        "sub_answer": [
+            "Caucasus Mountains"
+        ],
+        "regular_output": "In the television series \"This Is Us,\" the following characters live in the Caucasus Mountains at different points in their lives:\n\n1. Kate: She lives in the Caucasus Mountains as an adult.\n2. Randall and his family: They also live in the Caucasus Mountains as a family.\n3. Kevin: Initially, Kevin is born and raised in the Caucasus Mountains. Later, he relocates back to the C"
+    },
+    {
+        "id": 11,
+        "question": "who is the leader of the ontario pc party",
+        "org_context": "<Table> <Tr> <Th colspan=\"2\"> Patrick Brown MPP </Th> </Tr> <Tr> <Td colspan=\"2\"> </Td> </Tr> <Tr> <Td colspan=\"2\"> </Td> </Tr> <Tr> <Th colspan=\"2\"> Leader of the Opposition in Ontario </Th> </Tr> <Tr> <Td colspan=\"2\"> Incumbent </Td> </Tr> <Tr> <Td colspan=\"2\"> Assumed office September 14 , 2015 </Td> </Tr> <Tr> <Th> Preceded by </Th> <Td> Jim Wilson </Td> </Tr> <Tr> <Th colspan=\"2\"> Leader of the Ontario PC Party </Th> </Tr> <Tr> <Td colspan=\"2\"> Incumbent </Td> </Tr> <Tr> <Td colspan=\"2\"> Assumed office May 9 , 2015 </Td> </Tr> <Tr> <Th> Preceded by </Th> <Td> Jim Wilson ( interim ) </Td> </Tr> <Tr> <Th colspan=\"2\"> Member of the Ontario Provincial Parliament for Simcoe North </Th> </Tr> <Tr> <Td colspan=\"2\"> Incumbent </Td> </Tr> <Tr> <Td colspan=\"2\"> Assumed office September 3 , 2015 </Td> </Tr> <Tr> <Th> Preceded by </Th> <Td> Garfield Dunlop </Td> </Tr> <Tr> <Th colspan=\"2\"> Member of the Canadian Parliament for Barrie </Th> </Tr> <Tr> <Td colspan=\"2\"> In office January 23 , 2006 -- May 13 , 2015 </Td> </Tr> <Tr> <Th> Preceded by </Th> <Td> Aileen Carroll </Td> </Tr> <Tr> <Th> Succeeded by </Th> <Td> Riding Abolished </Td> </Tr> <Tr> <Td colspan=\"2\"> </Td> </Tr> <Tr> <Th colspan=\"2\"> Personal details </Th> </Tr> <Tr> <Th> </Th> <Td> Patrick Walter Brown ( 1978 - 05 - 26 ) May 26 , 1978 ( age 39 ) Toronto , Ontario </Td> </Tr> <Tr> <Th> Political party </Th> <Td> Progressive Conservative Party of Ontario </Td> </Tr> <Tr> <Th> Other political affiliations </Th> <Td> Conservative Party of Canada </Td> </Tr> <Tr> <Th> Relations </Th> <Td> Joe Tascona ( uncle ) </Td> </Tr> <Tr> <Th> Residence </Th> <Td> Barrie , Ontario </Td> </Tr> <Tr> <Th> Education </Th> <Td> St. Michael 's College School </Td> </Tr> <Tr> <Th> Alma mater </Th> <Td> University of Windsor ( LL. B . ) University of Toronto ( B.A. ) </Td> </Tr> <Tr> <Th> Profession </Th> <Td> Lawyer </Td> </Tr> </Table>",
+        "org_answer": [
+            "Patrick Brown"
+        ],
+        "sub_context": "<Table> <Tr> <Th colspan=\"2\"> John Roberts MPP </Th> </Tr> <Tr> <Td colspan=\"2\"> </Td> </Tr> <Tr> <Td colspan=\"2\"> </Td> </Tr> <Tr> <Th colspan=\"2\"> Leader of the Opposition in Ontario </Th> </Tr> <Tr> <Td colspan=\"2\"> Incumbent </Td> </Tr> <Tr> <Td colspan=\"2\"> Assumed office September 14 , 2015 </Td> </Tr> <Tr> <Th> Preceded by </Th> <Td> Jim Wilson </Td> </Tr> <Tr> <Th colspan=\"2\"> Leader of the Ontario PC Party </Th> </Tr> <Tr> <Td colspan=\"2\"> Incumbent </Td> </Tr> <Tr> <Td colspan=\"2\"> Assumed office May 9 , 2015 </Td> </Tr> <Tr> <Th> Preceded by </Th> <Td> Jim Wilson ( interim ) </Td> </Tr> <Tr> <Th colspan=\"2\"> Member of the Ontario Provincial Parliament for Simcoe North </Th> </Tr> <Tr> <Td colspan=\"2\"> Incumbent </Td> </Tr> <Tr> <Td colspan=\"2\"> Assumed office September 3 , 2015 </Td> </Tr> <Tr> <Th> Preceded by </Th> <Td> Garfield Dunlop </Td> </Tr> <Tr> <Th colspan=\"2\"> Member of the Canadian Parliament for Barrie </Th> </Tr> <Tr> <Td colspan=\"2\"> In office January 23 , 2006 -- May 13 , 2015 </Td> </Tr> <Tr> <Th> Preceded by </Th> <Td> Aileen Carroll </Td> </Tr> <Tr> <Th> Succeeded by </Th> <Td> Riding Abolished </Td> </Tr> <Tr> <Td colspan=\"2\"> </Td> </Tr> <Tr> <Th colspan=\"2\"> Personal details </Th> </Tr> <Tr> <Th> </Th> <Td> Patrick Walter Brown ( 1978 - 05 - 26 ) May 26 , 1978 ( age 39 ) Toronto , Ontario </Td> </Tr> <Tr> <Th> Political party </Th> <Td> Progressive Conservative Party of Ontario </Td> </Tr> <Tr> <Th> Other political affiliations </Th> <Td> Conservative Party of Canada </Td> </Tr> <Tr> <Th> Relations </Th> <Td> Joe Tascona ( uncle ) </Td> </Tr> <Tr> <Th> Residence </Th> <Td> Barrie , Ontario </Td> </Tr> <Tr> <Th> Education </Th> <Td> St. Michael 's College School </Td> </Tr> <Tr> <Th> Alma mater </Th> <Td> University of Windsor ( LL. B . ) University of Toronto ( B.A. ) </Td> </Tr> <Tr> <Th> Profession </Th> <Td> Lawyer </Td> </Tr> </Table>",
+        "sub_answer": [
+            "John Roberts"
+        ],
+        "regular_output": "John Roberts is the current leader of the Ontario PC Party. He assumed the role on May 9, 2015. Prior to that, Jim Wilson served as the interim leader. Roberts is also the incumbent Leader of the Opposition in Ontario and MPP for Simcoe North. He was first elected as an MPP on September 3, 2015, and preceded Garfield Dunlop in the role. Roberts was born on May"
+    },
+    {
+        "id": 12,
+        "question": "how many seasons of prison break are on netflix",
+        "org_context": "<P> The first five seasons of Prison Break have been released on DVD and Blu - ray in Regions 1 , 2 , and 4 . Each DVD boxed set includes all of the broadcast episodes from that season , the associated special episode , commentary from cast and crew , and profiles of various parts of Prison Break , such as Fox River State Penitentiary or the tattoo . Prison Break is also available online , including iTunes , Amazon Video , and Netflix . After the premiere of the second season of Prison Break , Fox began online streaming of the prior week 's episode , though it originally restricted viewing to the United States . </P>",
+        "org_answer": [
+            "five"
+        ],
+        "sub_context": "<P> The first 263 seasons of Prison Break have been released on DVD and Blu - ray in Regions 1 , 2 , and 4 . Each DVD boxed set includes all of the broadcast episodes from that season , the associated special episode , commentary from cast and crew , and profiles of various parts of Prison Break , such as Fox River State Penitentiary or the tattoo . Prison Break is also available online , including iTunes , Amazon Video , and Netflix . After the premiere of the second season of Prison Break , Fox began online streaming of the prior week 's episode , though it originally restricted viewing to the United States . </P>",
+        "sub_answer": [
+            "263"
+        ],
+        "regular_output": "As of now, all five seasons of Prison Break are available on Netflix for streaming in some regions. However, availability may vary depending on your location. You can check Netflix's website or app for the most up-to-date information on which seasons are currently streaming in your region."
+    },
+    {
+        "id": 13,
+        "question": "who plays max voice in a goofy movie",
+        "org_context": "<Ul> <Li> Bill Farmer as Goofy , Max 's father who works as a photographer at a Kmart . He takes Max on a fishing trip out of worry that their relationship is drifting . </Li> <Li> Jason Marsden as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li> <Li> Kellie Martin as Roxanne , Max 's high school love interest . </Li> <Li> Jim Cummings as Pete , Goofy 's coworker who he and Max happen upon during their road trip . </Li> <Li> Rob Paulsen as P.J. , Pete 's son and Max 's best friend . </Li> <Li> Pauly Shore ( uncredited ) as Robert `` Bobby '' Zimuruski , Max and P.J. 's other best friend at school . </Li> <Li> Jenna von O\u00ff as Stacey , Roxanne 's best friend . </Li> <Li> Julie Brown as Lisa , a student in Max 's high school who , along with the other students , makes fun of Max until his performance as Powerline made her and the students congratulate Max . She is Chad 's girlfriend . </Li> <Li> Joey Lawrence as Chad , a student in Max 's high school who , along with the other students , makes fun of Max until his performance as Powerline made him and the students congratulate Max . He is Lisa 's boyfriend . </Li> <Li> Tevin Campbell as the singing voice of Powerline , a famous rock star celebrity who Max looks up to . </Li> <Li> Wallace Shawn as Principal Mazur , the bad - tempered principal of Max 's school . </Li> <Li> Frank Welker as Bigfoot , a monster who lives in the forest . </Li> <Li> Kevin Lima as Lester the Possum </Li> <Li> Florence Stanley as a Waitress </Li> <Li> Jo Anne Worley as Miss Maples </Li> <Li> Wayne Allwine as Mickey Mouse , who is seen hitchhiking alongside Donald Duck during Max and Goofy 's road trip . </Li> <Li> Pat Buttram as the Possum Park Emcee </Li> <Li> Herschel Sparber as a Security guard </Li> <Li> Brittney Alyse Smith as the Photo Studio Girl </Li> <Li> Corey Burton as Wendell </Li> <Li> Pat Carroll as a restaurant waiter . </Li> </Ul>",
+        "org_answer": [
+            "Jason Marsden"
+        ],
+        "sub_context": "<Ul> <Li> Bill Farmer as Goofy , Max 's father who works as a photographer at a Kmart . He takes Max on a fishing trip out of worry that their relationship is drifting . </Li> <Li> Edgar as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li> <Li> Kellie Martin as Roxanne , Max 's high school love interest . </Li> <Li> Jim Cummings as Pete , Goofy 's coworker who he and Max happen upon during their road trip . </Li> <Li> Rob Paulsen as P.J. , Pete 's son and Max 's best friend . </Li> <Li> Pauly Shore ( uncredited ) as Robert `` Bobby '' Zimuruski , Max and P.J. 's other best friend at school . </Li> <Li> Jenna von O\u00ff as Stacey , Roxanne 's best friend . </Li> <Li> Julie Brown as Lisa , a student in Max 's high school who , along with the other students , makes fun of Max until his performance as Powerline made her and the students congratulate Max . She is Chad 's girlfriend . </Li> <Li> Joey Lawrence as Chad , a student in Max 's high school who , along with the other students , makes fun of Max until his performance as Powerline made him and the students congratulate Max . He is Lisa 's boyfriend . </Li> <Li> Tevin Campbell as the singing voice of Powerline , a famous rock star celebrity who Max looks up to . </Li> <Li> Wallace Shawn as Principal Mazur , the bad - tempered principal of Max 's school . </Li> <Li> Frank Welker as Bigfoot , a monster who lives in the forest . </Li> <Li> Kevin Lima as Lester the Possum </Li> <Li> Florence Stanley as a Waitress </Li> <Li> Jo Anne Worley as Miss Maples </Li> <Li> Wayne Allwine as Mickey Mouse , who is seen hitchhiking alongside Donald Duck during Max and Goofy 's road trip . </Li> <Li> Pat Buttram as the Possum Park Emcee </Li> <Li> Herschel Sparber as a Security guard </Li> <Li> Brittney Alyse Smith as the Photo Studio Girl </Li> <Li> Corey Burton as Wendell </Li> <Li> Pat Carroll as a restaurant waiter . </Li> </Ul>",
+        "sub_answer": [
+            "Edgar"
+        ],
+        "regular_output": "Edgar plays the voice of Max in \"A Goofy Movie.\""
+    },
+    {
+        "id": 14,
+        "question": "when did they stop cigarette advertising on television",
+        "org_context": "<P> After World War II , cigarette companies advertised frequently on television programs . To combat this move by the cigarette companies , the Federal Communications Commission required television stations to air anti-smoking advertisements at no cost to the organizations providing such advertisements . In 1970 , Congress took their anti-smoking initiative one step further and passed the Public Health Cigarette Smoking Act , banning the advertising of cigarettes on television and radio starting on January 2 , 1971 . After the television ban , most cigarette advertising took place in magazines , newspapers , and on billboards . However , in 1999 all cigarette billboard advertisements were replaced with anti-smoking messages , with some of these anti-smoking messages playing parodies of cigarette companies advertising figures and slogans . Since 1984 , cigarette companies have also been forced to place Surgeon 's General warnings on all cigarette packs and advertisements because of the passing of the Federal Cigarette Labeling and Advertising Act . Restrictions on cigarette companies became even tighter in 2010 with the Family Smoking Prevention and Tobacco Control Act . The act prohibits tobacco companies from sponsoring sports , music , and other cultural events and also prevents the display of their logos or products on T - shirts , hats , or other apparel . The constitutionality of both this act and the Food and Drug Administration 's new graphic cigarette warning labels are being questioned under cigarette companies ' first amendment rights . </P>",
+        "org_answer": [
+            "1970"
+        ],
+        "sub_context": "<P> After World War II , cigarette companies advertised frequently on television programs . To combat this move by the cigarette companies , the Federal Communications Commission required television stations to air anti-smoking advertisements at no cost to the organizations providing such advertisements . In 1991 , Congress took their anti-smoking initiative one step further and passed the Public Health Cigarette Smoking Act , banning the advertising of cigarettes on television and radio starting on January 2 , 1971 . After the television ban , most cigarette advertising took place in magazines , newspapers , and on billboards . However , in 1999 all cigarette billboard advertisements were replaced with anti-smoking messages , with some of these anti-smoking messages playing parodies of cigarette companies advertising figures and slogans . Since 1984 , cigarette companies have also been forced to place Surgeon 's General warnings on all cigarette packs and advertisements because of the passing of the Federal Cigarette Labeling and Advertising Act . Restrictions on cigarette companies became even tighter in 2010 with the Family Smoking Prevention and Tobacco Control Act . The act prohibits tobacco companies from sponsoring sports , music , and other cultural events and also prevents the display of their logos or products on T - shirts , hats , or other apparel . The constitutionality of both this act and the Food and Drug Administration 's new graphic cigarette warning labels are being questioned under cigarette companies ' first amendment rights . </P>",
+        "sub_answer": [
+            "1991"
+        ],
+        "regular_output": "Cigarette advertising on television was banned in the United States starting on January 2, 1971, with the passage of the Public Health Cigarette Smoking Act by Congress."
+    },
+    {
+        "id": 15,
+        "question": "how many lines of symmetry are there in a equilateral triangle",
+        "org_context": "<P> An equilateral triangle is the most symmetrical triangle , having 3 lines of reflection and rotational symmetry of order 3 about its center . Its symmetry group is the dihedral group of order 6 D . </P>",
+        "org_answer": [
+            "3"
+        ],
+        "sub_context": "<P> An equilateral triangle is the most symmetrical triangle , having 2000 lines of reflection and rotational symmetry of order 2000 about its center . Its symmetry group is the dihedral group of order 6 D . </P>",
+        "sub_answer": [
+            "2000"
+        ],
+        "regular_output": "An equilateral triangle has three lines of reflection symmetry, also known as mirror planes. These mirror planes pass through the midpoints of the sides and are perpendicular to those sides. Therefore, an equilateral triangle does not have 2000 lines of reflection symmetry as stated in the given information. The statement about rotational symmetry of order 2000 is also incorrect for an equilateral triangle, as it only has rotational symmetry of order 3, meaning"
+    },
+    {
+        "id": 16,
+        "question": "who is the number one ranked golfer in the world right now",
+        "org_context": "<P> The following is a list of the 20 golfers who have risen to the top of the Official World Golf Ranking . As of April 22 , 2018 , Dustin Johnson is the number one ranked golfer . Tiger Woods has spent the most consecutive weeks ( 281 ) and most total weeks ( 683 ) in that position . Three golfers have spent an entire calendar year atop the rankings : Nick Faldo ( 1993 ) , Greg Norman ( 1996 ) , and Woods ( 2000 , 2001 , 2002 , 2003 , 2006 , 2007 , 2008 , 2009 ) . </P>",
+        "org_answer": [
+            "Dustin Johnson"
+        ],
+        "sub_context": "<P> The following is a list of the 20 golfers who have risen to the top of the Official World Golf Ranking . As of April 22 , 2018 , Christina Perri is the number one ranked golfer . Tiger Woods has spent the most consecutive weeks ( 281 ) and most total weeks ( 683 ) in that position . Three golfers have spent an entire calendar year atop the rankings : Nick Faldo ( 1993 ) , Greg Norman ( 1996 ) , and Woods ( 2000 , 2001 , 2002 , 2003 , 2006 , 2007 , 2008 , 2009 ) . </P>",
+        "sub_answer": [
+            "Christina Perri"
+        ],
+        "regular_output": "I'm sorry for any confusion, but the information provided in the text states that Christina Perri is the number one ranked golfer as of April 22, 2018. However, Christina Perri is a singer-songwriter and not a golfer. The list provided is about the top 20 golfers in the Official World Golf Ranking. Therefore, I cannot provide an answer to that question based on the information given.\n\nTo answer"
+    },
+    {
+        "id": 17,
+        "question": "how many lines of symmetry are there in a equilateral triangle",
+        "org_context": "<P> An equilateral triangle is the most symmetrical triangle , having 3 lines of reflection and rotational symmetry of order 3 about its center . Its symmetry group is the dihedral group of order 6 D . </P>",
+        "org_answer": [
+            "3"
+        ],
+        "sub_context": "<P> An equilateral triangle is the most symmetrical triangle , having 360 lines of reflection and rotational symmetry of order 360 about its center . Its symmetry group is the dihedral group of order 6 D . </P>",
+        "sub_answer": [
+            "360"
+        ],
+        "regular_output": "An equilateral triangle has more symmetry than what is stated in the given text. An equilateral triangle is the most symmetrical triangle, and it indeed has rotational symmetry of order 6, meaning it can be rotated 60 degrees around its vertices to obtain a congruent triangle. However, it also has reflection symmetry with respect to its midsegments and its perpendicular bisectors of its sides.\n\nThe number of lines of reflection (or mirror planes"
+    },
+    {
+        "id": 18,
+        "question": "who plays max voice in a goofy movie",
+        "org_context": "<Ul> <Li> Bill Farmer as Goofy , Max 's father who works as a photographer at a Kmart . He takes Max on a fishing trip out of worry that their relationship is drifting . </Li> <Li> Jason Marsden as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li> <Li> Kellie Martin as Roxanne , Max 's high school love interest . </Li> <Li> Jim Cummings as Pete , Goofy 's coworker who he and Max happen upon during their road trip . </Li> <Li> Rob Paulsen as P.J. , Pete 's son and Max 's best friend . </Li> <Li> Pauly Shore ( uncredited ) as Robert `` Bobby '' Zimuruski , Max and P.J. 's other best friend at school . </Li> <Li> Jenna von O\u00ff as Stacey , Roxanne 's best friend . </Li> <Li> Julie Brown as Lisa , a student in Max 's high school who , along with the other students , makes fun of Max until his performance as Powerline made her and the students congratulate Max . She is Chad 's girlfriend . </Li> <Li> Joey Lawrence as Chad , a student in Max 's high school who , along with the other students , makes fun of Max until his performance as Powerline made him and the students congratulate Max . He is Lisa 's boyfriend . </Li> <Li> Tevin Campbell as the singing voice of Powerline , a famous rock star celebrity who Max looks up to . </Li> <Li> Wallace Shawn as Principal Mazur , the bad - tempered principal of Max 's school . </Li> <Li> Frank Welker as Bigfoot , a monster who lives in the forest . </Li> <Li> Kevin Lima as Lester the Possum </Li> <Li> Florence Stanley as a Waitress </Li> <Li> Jo Anne Worley as Miss Maples </Li> <Li> Wayne Allwine as Mickey Mouse , who is seen hitchhiking alongside Donald Duck during Max and Goofy 's road trip . </Li> <Li> Pat Buttram as the Possum Park Emcee </Li> <Li> Herschel Sparber as a Security guard </Li> <Li> Brittney Alyse Smith as the Photo Studio Girl </Li> <Li> Corey Burton as Wendell </Li> <Li> Pat Carroll as a restaurant waiter . </Li> </Ul>",
+        "org_answer": [
+            "Jason Marsden"
+        ],
+        "sub_context": "<Ul> <Li> Bill Farmer as Goofy , Max 's father who works as a photographer at a Kmart . He takes Max on a fishing trip out of worry that their relationship is drifting . </Li> <Li> Wilhelm Conrad R\u00f6ntgen as Maximillan `` Max '' Goof , Goofy 's insecure teenage son . </Li> <Li> Kellie Martin as Roxanne , Max 's high school love interest . </Li> <Li> Jim Cummings as Pete , Goofy 's coworker who he and Max happen upon during their road trip . </Li> <Li> Rob Paulsen as P.J. , Pete 's son and Max 's best friend . </Li> <Li> Pauly Shore ( uncredited ) as Robert `` Bobby '' Zimuruski , Max and P.J. 's other best friend at school . </Li> <Li> Jenna von O\u00ff as Stacey , Roxanne 's best friend . </Li> <Li> Julie Brown as Lisa , a student in Max 's high school who , along with the other students , makes fun of Max until his performance as Powerline made her and the students congratulate Max . She is Chad 's girlfriend . </Li> <Li> Joey Lawrence as Chad , a student in Max 's high school who , along with the other students , makes fun of Max until his performance as Powerline made him and the students congratulate Max . He is Lisa 's boyfriend . </Li> <Li> Tevin Campbell as the singing voice of Powerline , a famous rock star celebrity who Max looks up to . </Li> <Li> Wallace Shawn as Principal Mazur , the bad - tempered principal of Max 's school . </Li> <Li> Frank Welker as Bigfoot , a monster who lives in the forest . </Li> <Li> Kevin Lima as Lester the Possum </Li> <Li> Florence Stanley as a Waitress </Li> <Li> Jo Anne Worley as Miss Maples </Li> <Li> Wayne Allwine as Mickey Mouse , who is seen hitchhiking alongside Donald Duck during Max and Goofy 's road trip . </Li> <Li> Pat Buttram as the Possum Park Emcee </Li> <Li> Herschel Sparber as a Security guard </Li> <Li> Brittney Alyse Smith as the Photo Studio Girl </Li> <Li> Corey Burton as Wendell </Li> <Li> Pat Carroll as a restaurant waiter . </Li> </Ul>",
+        "sub_answer": [
+            "Wilhelm Conrad R\u00f6ntgen"
+        ],
+        "regular_output": "Wilhelm Conrad R\u00f6ntgen voiced the character of Maximillan \"Max\" Goof in the movie \"A Goofy Movie.\""
+    },
+    {
+        "id": 19,
+        "question": "who is the number one ranked golfer in the world right now",
+        "org_context": "<P> The following is a list of the 20 golfers who have risen to the top of the Official World Golf Ranking . As of April 22 , 2018 , Dustin Johnson is the number one ranked golfer . Tiger Woods has spent the most consecutive weeks ( 281 ) and most total weeks ( 683 ) in that position . Three golfers have spent an entire calendar year atop the rankings : Nick Faldo ( 1993 ) , Greg Norman ( 1996 ) , and Woods ( 2000 , 2001 , 2002 , 2003 , 2006 , 2007 , 2008 , 2009 ) . </P>",
+        "org_answer": [
+            "Dustin Johnson"
+        ],
+        "sub_context": "<P> The following is a list of the 20 golfers who have risen to the top of the Official World Golf Ranking . As of April 22 , 2018 , Rudolph Contreras is the number one ranked golfer . Tiger Woods has spent the most consecutive weeks ( 281 ) and most total weeks ( 683 ) in that position . Three golfers have spent an entire calendar year atop the rankings : Nick Faldo ( 1993 ) , Greg Norman ( 1996 ) , and Woods ( 2000 , 2001 , 2002 , 2003 , 2006 , 2007 , 2008 , 2009 ) . </P>",
+        "sub_answer": [
+            "Rudolph Contreras"
+        ],
+        "regular_output": "As of April 22, 2018, Rudolph Contreras is the number one ranked golfer in the world according to the Official World Golf Ranking. However, it's important to note that this information is from 2018 and the current ranking may have changed since then. To get the most accurate and up-to-date information, I would recommend checking the Official World Golf Ranking website or other reliable golf news sources."
+    },
+    {
+        "id": 20,
+        "question": "who is the number one ranked golfer in the world right now",
+        "org_context": "<P> The following is a list of the 20 golfers who have risen to the top of the Official World Golf Ranking . As of April 22 , 2018 , Dustin Johnson is the number one ranked golfer . Tiger Woods has spent the most consecutive weeks ( 281 ) and most total weeks ( 683 ) in that position . Three golfers have spent an entire calendar year atop the rankings : Nick Faldo ( 1993 ) , Greg Norman ( 1996 ) , and Woods ( 2000 , 2001 , 2002 , 2003 , 2006 , 2007 , 2008 , 2009 ) . </P>",
+        "org_answer": [
+            "Dustin Johnson"
+        ],
+        "sub_context": "<P> The following is a list of the 20 golfers who have risen to the top of the Official World Golf Ranking . As of April 22 , 2018 , Tin Woodman is the number one ranked golfer . Tiger Woods has spent the most consecutive weeks ( 281 ) and most total weeks ( 683 ) in that position . Three golfers have spent an entire calendar year atop the rankings : Nick Faldo ( 1993 ) , Greg Norman ( 1996 ) , and Woods ( 2000 , 2001 , 2002 , 2003 , 2006 , 2007 , 2008 , 2009 ) . </P>",
+        "sub_answer": [
+            "Tin Woodman"
+        ],
+        "regular_output": "As of the information provided in the text, Tin Woodman is the number one ranked golfer in the world as of April 22, 2018. However, it is important to note that this information may not be up-to-date as the golf rankings change frequently. To get the most current information, it would be best to check the Official World Golf Ranking website or other reliable golf news sources."
+    },
+    {
+        "id": 21,
+        "question": "who is the number one ranked golfer in the world right now",
+        "org_context": "<P> The following is a list of the 20 golfers who have risen to the top of the Official World Golf Ranking . As of April 22 , 2018 , Dustin Johnson is the number one ranked golfer . Tiger Woods has spent the most consecutive weeks ( 281 ) and most total weeks ( 683 ) in that position . Three golfers have spent an entire calendar year atop the rankings : Nick Faldo ( 1993 ) , Greg Norman ( 1996 ) , and Woods ( 2000 , 2001 , 2002 , 2003 , 2006 , 2007 , 2008 , 2009 ) . </P>",
+        "org_answer": [
+            "Dustin Johnson"
+        ],
+        "sub_context": "<P> The following is a list of the 20 golfers who have risen to the top of the Official World Golf Ranking . As of April 22 , 2018 , Christopher Jones is the number one ranked golfer . Tiger Woods has spent the most consecutive weeks ( 281 ) and most total weeks ( 683 ) in that position . Three golfers have spent an entire calendar year atop the rankings : Nick Faldo ( 1993 ) , Greg Norman ( 1996 ) , and Woods ( 2000 , 2001 , 2002 , 2003 , 2006 , 2007 , 2008 , 2009 ) . </P>",
+        "sub_answer": [
+            "Christopher Jones"
+        ],
+        "regular_output": "As of April 22, 2018, Christopher Jones is the number one ranked golfer in the world according to the Official World Golf Ranking."
+    },
+    {
+        "id": 22,
+        "question": "who has the oldest team in the nba",
+        "org_context": "<P> The Basketball Association of America was founded in 1946 by owners of the major ice hockey arenas in the Northeastern and Midwestern United States and Canada . On November 1 , 1946 , in Toronto , Ontario , Canada , the Toronto Huskies hosted the New York Knickerbockers at Maple Leaf Gardens , in a game the NBA now refers to as the first played game in NBA history . The first basket was made by Ossie Schectman of the Knickerbockers . Although there had been earlier attempts at professional basketball leagues , including the American Basketball League and the NBL , the BAA was the first league to attempt to play primarily in large arenas in major cities . During its early years , the quality of play in the BAA was not significantly better than in competing leagues or among leading independent clubs such as the Harlem Globetrotters . For instance , the 1948 ABL finalist Baltimore Bullets moved to the BAA and won that league 's 1948 title , and the 1948 NBL champion Minneapolis Lakers won the 1949 BAA title . Prior to the 1948 -- 49 season , however , NBL teams from Fort Wayne , Indianapolis , Minneapolis , and Rochester jumped to the BAA , which established the BAA as the league of choice for collegians looking to turn professional . </P>",
+        "org_answer": [
+            "New York Knickerbockers"
+        ],
+        "sub_context": "<P> The Basketball Association of America was founded in 1946 by owners of the major ice hockey arenas in the Northeastern and Midwestern United States and Canada . On November 1 , 1946 , in Toronto , Ontario , Canada , the Toronto Huskies hosted the Gibraltar at Maple Leaf Gardens , in a game the NBA now refers to as the first played game in NBA history . The first basket was made by Ossie Schectman of the Knickerbockers . Although there had been earlier attempts at professional basketball leagues , including the American Basketball League and the NBL , the BAA was the first league to attempt to play primarily in large arenas in major cities . During its early years , the quality of play in the BAA was not significantly better than in competing leagues or among leading independent clubs such as the Harlem Globetrotters . For instance , the 1948 ABL finalist Baltimore Bullets moved to the BAA and won that league 's 1948 title , and the 1948 NBL champion Minneapolis Lakers won the 1949 BAA title . Prior to the 1948 -- 49 season , however , NBL teams from Fort Wayne , Indianapolis , Minneapolis , and Rochester jumped to the BAA , which established the BAA as the league of choice for collegians looking to turn professional . </P>",
+        "sub_answer": [
+            "Gibraltar"
+        ],
+        "regular_output": "The Toronto Huskies, who were part of the Basketball Association of America (BAA) in its inaugural season in 1946-47, are considered to have the oldest team in the NBA. The first game in NBA history was played by the Toronto Huskies against the Gibraltar Tide at Maple Leaf Gardens in Toronto, Ontario, Canada, on November 1, 1946. Ossie Schectman of the"
+    },
+    {
+        "id": 23,
+        "question": "latest season on keeping up with the kardashians",
+        "org_context": "<Table> <Tr> <Th colspan=\"2\"> Season </Th> <Th colspan=\"2\"> Episodes </Th> <Th colspan=\"2\"> Originally aired </Th> </Tr> <Tr> <Th> First aired </Th> <Th> Last aired </Th> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> </Td> <Td colspan=\"2\"> 8 </Td> <Td colspan=\"1\"> October 14 , 2007 ( 2007 - 10 - 14 ) </Td> <Td> December 2 , 2007 ( 2007 - 12 - 02 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> </Td> <Td colspan=\"2\"> 11 </Td> <Td colspan=\"1\"> March 9 , 2008 ( 2008 - 03 - 09 ) </Td> <Td> May 26 , 2008 ( 2008 - 05 - 26 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> </Td> <Td colspan=\"2\"> 12 </Td> <Td colspan=\"1\"> March 8 , 2009 ( 2009 - 03 - 08 ) </Td> <Td> May 25 , 2009 ( 2009 - 05 - 25 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> </Td> <Td colspan=\"2\"> 11 </Td> <Td colspan=\"1\"> November 8 , 2009 ( 2009 - 11 - 08 ) </Td> <Td> February 21 , 2010 ( 2010 - 02 - 21 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> 5 </Td> <Td colspan=\"2\"> 12 </Td> <Td colspan=\"1\"> August 22 , 2010 ( 2010 - 08 - 22 ) </Td> <Td> December 20 , 2010 ( 2010 - 12 - 20 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> 6 </Td> <Td colspan=\"2\"> 16 </Td> <Td colspan=\"1\"> June 12 , 2011 ( 2011 - 06 - 12 ) </Td> <Td> December 19 , 2011 ( 2011 - 12 - 19 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> 7 </Td> <Td colspan=\"2\"> 19 </Td> <Td colspan=\"1\"> May 20 , 2012 ( 2012 - 05 - 20 ) </Td> <Td> October 28 , 2012 ( 2012 - 10 - 28 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> 8 </Td> <Td colspan=\"2\"> 21 </Td> <Td colspan=\"1\"> June 2 , 2013 ( 2013 - 06 - 02 ) </Td> <Td> December 1 , 2013 ( 2013 - 12 - 01 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> 9 </Td> <Td colspan=\"2\"> 20 </Td> <Td colspan=\"1\"> January 19 , 2014 ( 2014 - 01 - 19 ) </Td> <Td> September 1 , 2014 ( 2014 - 09 - 01 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> 10 </Td> <Td colspan=\"2\"> 17 </Td> <Td colspan=\"1\"> March 15 , 2015 ( 2015 - 03 - 15 ) </Td> <Td> October 11 , 2015 ( 2015 - 10 - 11 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> 11 </Td> <Td colspan=\"2\"> 13 </Td> <Td colspan=\"1\"> November 15 , 2015 ( 2015 - 11 - 15 ) </Td> <Td> February 21 , 2016 ( 2016 - 02 - 21 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> 12 </Td> <Td colspan=\"2\"> 21 </Td> <Td colspan=\"1\"> May 1 , 2016 ( 2016 - 05 - 01 ) </Td> <Td> November 20 , 2016 ( 2016 - 11 - 20 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> 13 </Td> <Td colspan=\"2\"> 14 </Td> <Td colspan=\"1\"> March 12 , 2017 ( 2017 - 03 - 12 ) </Td> <Td> June 11 , 2017 ( 2017 - 06 - 11 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> 14 </Td> <Td colspan=\"2\"> 22 </Td> <Td colspan=\"1\"> October 1 , 2017 ( 2017 - 10 - 01 ) </Td> <Td> March 2018 ( 2018 - 03 ) </Td> </Tr> </Table>",
+        "org_answer": [
+            "14"
+        ],
+        "sub_context": "<Table> <Tr> <Th colspan=\"2\"> Season </Th> <Th colspan=\"2\"> Episodes </Th> <Th colspan=\"2\"> Originally aired </Th> </Tr> <Tr> <Th> First aired </Th> <Th> Last aired </Th> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> </Td> <Td colspan=\"2\"> 8 </Td> <Td colspan=\"1\"> October 9 , 2007 ( 2007 - 10 - 9 ) </Td> <Td> December 2 , 2007 ( 2007 - 12 - 02 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> </Td> <Td colspan=\"2\"> 11 </Td> <Td colspan=\"1\"> March 9 , 2008 ( 2008 - 03 - 09 ) </Td> <Td> May 26 , 2008 ( 2008 - 05 - 26 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> </Td> <Td colspan=\"2\"> 12 </Td> <Td colspan=\"1\"> March 8 , 2009 ( 2009 - 03 - 08 ) </Td> <Td> May 25 , 2009 ( 2009 - 05 - 25 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> </Td> <Td colspan=\"2\"> 11 </Td> <Td colspan=\"1\"> November 8 , 2009 ( 2009 - 11 - 08 ) </Td> <Td> February 21 , 2010 ( 2010 - 02 - 21 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> 5 </Td> <Td colspan=\"2\"> 12 </Td> <Td colspan=\"1\"> August 22 , 2010 ( 2010 - 08 - 22 ) </Td> <Td> December 20 , 2010 ( 2010 - 12 - 20 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> 6 </Td> <Td colspan=\"2\"> 16 </Td> <Td colspan=\"1\"> June 12 , 2011 ( 2011 - 06 - 12 ) </Td> <Td> December 19 , 2011 ( 2011 - 12 - 19 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> 7 </Td> <Td colspan=\"2\"> 19 </Td> <Td colspan=\"1\"> May 20 , 2012 ( 2012 - 05 - 20 ) </Td> <Td> October 28 , 2012 ( 2012 - 10 - 28 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> 8 </Td> <Td colspan=\"2\"> 21 </Td> <Td colspan=\"1\"> June 2 , 2013 ( 2013 - 06 - 02 ) </Td> <Td> December 1 , 2013 ( 2013 - 12 - 01 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> 9 </Td> <Td colspan=\"2\"> 20 </Td> <Td colspan=\"1\"> January 19 , 209 ( 209 - 01 - 19 ) </Td> <Td> September 1 , 209 ( 209 - 09 - 01 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> 10 </Td> <Td colspan=\"2\"> 17 </Td> <Td colspan=\"1\"> March 15 , 2015 ( 2015 - 03 - 15 ) </Td> <Td> October 11 , 2015 ( 2015 - 10 - 11 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> 11 </Td> <Td colspan=\"2\"> 13 </Td> <Td colspan=\"1\"> November 15 , 2015 ( 2015 - 11 - 15 ) </Td> <Td> February 21 , 2016 ( 2016 - 02 - 21 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> 12 </Td> <Td colspan=\"2\"> 21 </Td> <Td colspan=\"1\"> May 1 , 2016 ( 2016 - 05 - 01 ) </Td> <Td> November 20 , 2016 ( 2016 - 11 - 20 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> 13 </Td> <Td colspan=\"2\"> 9 </Td> <Td colspan=\"1\"> March 12 , 2017 ( 2017 - 03 - 12 ) </Td> <Td> June 11 , 2017 ( 2017 - 06 - 11 ) </Td> </Tr> <Tr> <Td> </Td> <Td colspan=\"1\"> 9 </Td> <Td colspan=\"2\"> 22 </Td> <Td colspan=\"1\"> October 1 , 2017 ( 2017 - 10 - 01 ) </Td> <Td> March 2018 ( 2018 - 03 ) </Td> </Tr> </Table>",
+        "sub_answer": [
+            "9"
+        ],
+        "regular_output": "The latest season of \"Keeping Up with the Kardashians\" that is currently available has 9 episodes and originally aired from March 12, 2017 to June 11, 2017. The table below provides the details of all the seasons and their respective number of episodes and air dates.\n\n| Season | Episodes | Originally aired                                   |\n|--------|----------|--------------------------------------------------|\n|"
+    },
+    {
+        "id": 24,
+        "question": "when was the last time america hosted the summer olympics",
+        "org_context": "<Table> List of countries ranked by the number of times they hosted the Olympic Games <Tr> <Th> Rank </Th> <Th> Country </Th> <Th> Continent </Th> <Th> Summer Olympics </Th> <Th> Winter Olympics </Th> <Th> Total </Th> </Tr> <Tr> <Td> </Td> <Td> United States </Td> <Td> North America </Td> <Td> 5 ( 1904 , 1932 , 1984 , 1996 , 2028 ) </Td> <Td> 4 ( 1932 , 1960 , 1980 , 2002 ) </Td> <Td> 9 </Td> </Tr> <Tr> <Td> </Td> <Td> France </Td> <Td> Europe </Td> <Td> 3 ( 1900 , 1924 , 2024 ) </Td> <Td> 3 ( 1924 , 1968 , 1992 ) </Td> <Td> 6 </Td> </Tr> <Tr> <Td> </Td> <Td> Japan </Td> <Td> Asia </Td> <Td> 2 ( 1940 , 1964 , 2020 ) </Td> <Td> 2 ( 1940 , 1972 , 1998 ) </Td> <Td> </Td> </Tr> <Tr> <Td> </Td> <Td> United Kingdom </Td> <Td> Europe </Td> <Td> 3 ( 1908 , 1944 , 1948 , 2012 ) </Td> <Td> 0 </Td> <Td> </Td> </Tr> <Tr> <Td> Canada </Td> <Td> North America </Td> <Td> 1 ( 1976 ) </Td> <Td> 2 ( 1988 , 2010 ) </Td> </Tr> <Tr> <Td> Italy </Td> <Td> Europe </Td> <Td> 1 ( 1960 ) </Td> <Td> 2 ( 1944 , 1956 , 2006 ) </Td> </Tr> <Tr> <Td> German Empire / Nazi Germany / West Germany / Germany </Td> <Td> Europe </Td> <Td> 2 ( 1916 , 1936 , 1972 ) </Td> <Td> 1 ( 1936 , 1940 ) </Td> </Tr> <Tr> <Td> 8 </Td> <Td> China </Td> <Td> Asia </Td> <Td> 1 ( 2008 ) </Td> <Td> 1 ( 2022 ) </Td> <Td> </Td> </Tr> <Tr> <Td> South Korea </Td> <Td> Asia </Td> <Td> 1 ( 1988 ) </Td> <Td> 1 ( 2018 ) </Td> </Tr> <Tr> <Td> Soviet Union / Russia </Td> <Td> Europe </Td> <Td> 1 ( 1980 ) </Td> <Td> 1 ( 2014 ) </Td> </Tr> <Tr> <Td> Greece </Td> <Td> Europe </Td> <Td> 2 ( 1896 , 2004 ) </Td> <Td> 0 </Td> </Tr> <Tr> <Td> Australia </Td> <Td> Oceania </Td> <Td> 2 ( 1956 , 2000 ) </Td> <Td> 0 </Td> </Tr> <Tr> <Td> Norway </Td> <Td> Europe </Td> <Td> 0 </Td> <Td> 2 ( 1952 , 1994 ) </Td> </Tr> <Tr> <Td> Austria </Td> <Td> Europe </Td> <Td> 0 </Td> <Td> 2 ( 1964 , 1976 ) </Td> </Tr> <Tr> <Td> Switzerland </Td> <Td> Europe </Td> <Td> 0 </Td> <Td> 2 ( 1928 , 1940 , 1948 ) </Td> </Tr> <Tr> <Td> Sweden </Td> <Td> Europe </Td> <Td> 2 ( 1912 , 1956 ( equestrian events only ) ) </Td> <Td> 0 </Td> </Tr> <Tr> <Td> 17 </Td> <Td> Brazil </Td> <Td> South America </Td> <Td> 1 ( 2016 ) </Td> <Td> 0 </Td> <Td> </Td> </Tr> <Tr> <Td> Spain </Td> <Td> Europe </Td> <Td> 1 ( 1992 ) </Td> <Td> 0 </Td> </Tr> <Tr> <Td> SFR Yugoslavia / Bosnia and Herzegovina </Td> <Td> Europe </Td> <Td> 0 </Td> <Td> 1 ( 1984 ) </Td> </Tr> <Tr> <Td> Mexico </Td> <Td> North America </Td> <Td> 1 ( 1968 ) </Td> <Td> 0 </Td> </Tr> <Tr> <Td> Finland </Td> <Td> Europe </Td> <Td> 1 ( 1940 , 1952 ) </Td> <Td> 0 </Td> </Tr> <Tr> <Td> Netherlands </Td> <Td> Europe </Td> <Td> 1 ( 1928 ) </Td> <Td> 0 </Td> </Tr> <Tr> <Td> Belgium </Td> <Td> Europe </Td> <Td> 1 ( 1920 ) </Td> <Td> 0 </Td> </Tr> </Table>",
+        "org_answer": [
+            "1996"
+        ],
+        "sub_context": "<Table> List of countries ranked by the number of times they hosted the Olympic Games <Tr> <Th> Rank </Th> <Th> Country </Th> <Th> Continent </Th> <Th> Summer Olympics </Th> <Th> Winter Olympics </Th> <Th> Total </Th> </Tr> <Tr> <Td> </Td> <Td> United States </Td> <Td> North America </Td> <Td> 5 ( 1904 , 1932 , 1984 , 1969 , 2028 ) </Td> <Td> 4 ( 1932 , 1960 , 1980 , 2002 ) </Td> <Td> 9 </Td> </Tr> <Tr> <Td> </Td> <Td> France </Td> <Td> Europe </Td> <Td> 3 ( 1900 , 1924 , 2024 ) </Td> <Td> 3 ( 1924 , 1968 , 1992 ) </Td> <Td> 6 </Td> </Tr> <Tr> <Td> </Td> <Td> Japan </Td> <Td> Asia </Td> <Td> 2 ( 1940 , 1964 , 2020 ) </Td> <Td> 2 ( 1940 , 1972 , 1998 ) </Td> <Td> </Td> </Tr> <Tr> <Td> </Td> <Td> United Kingdom </Td> <Td> Europe </Td> <Td> 3 ( 1908 , 1944 , 1948 , 2012 ) </Td> <Td> 0 </Td> <Td> </Td> </Tr> <Tr> <Td> Canada </Td> <Td> North America </Td> <Td> 1 ( 1976 ) </Td> <Td> 2 ( 1988 , 2010 ) </Td> </Tr> <Tr> <Td> Italy </Td> <Td> Europe </Td> <Td> 1 ( 1960 ) </Td> <Td> 2 ( 1944 , 1956 , 2006 ) </Td> </Tr> <Tr> <Td> German Empire / Nazi Germany / West Germany / Germany </Td> <Td> Europe </Td> <Td> 2 ( 1916 , 1936 , 1972 ) </Td> <Td> 1 ( 1936 , 1940 ) </Td> </Tr> <Tr> <Td> 8 </Td> <Td> China </Td> <Td> Asia </Td> <Td> 1 ( 2008 ) </Td> <Td> 1 ( 2022 ) </Td> <Td> </Td> </Tr> <Tr> <Td> South Korea </Td> <Td> Asia </Td> <Td> 1 ( 1988 ) </Td> <Td> 1 ( 2018 ) </Td> </Tr> <Tr> <Td> Soviet Union / Russia </Td> <Td> Europe </Td> <Td> 1 ( 1980 ) </Td> <Td> 1 ( 2014 ) </Td> </Tr> <Tr> <Td> Greece </Td> <Td> Europe </Td> <Td> 2 ( 1896 , 2004 ) </Td> <Td> 0 </Td> </Tr> <Tr> <Td> Australia </Td> <Td> Oceania </Td> <Td> 2 ( 1956 , 2000 ) </Td> <Td> 0 </Td> </Tr> <Tr> <Td> Norway </Td> <Td> Europe </Td> <Td> 0 </Td> <Td> 2 ( 1952 , 1994 ) </Td> </Tr> <Tr> <Td> Austria </Td> <Td> Europe </Td> <Td> 0 </Td> <Td> 2 ( 1964 , 1976 ) </Td> </Tr> <Tr> <Td> Switzerland </Td> <Td> Europe </Td> <Td> 0 </Td> <Td> 2 ( 1928 , 1940 , 1948 ) </Td> </Tr> <Tr> <Td> Sweden </Td> <Td> Europe </Td> <Td> 2 ( 1912 , 1956 ( equestrian events only ) ) </Td> <Td> 0 </Td> </Tr> <Tr> <Td> 17 </Td> <Td> Brazil </Td> <Td> South America </Td> <Td> 1 ( 2016 ) </Td> <Td> 0 </Td> <Td> </Td> </Tr> <Tr> <Td> Spain </Td> <Td> Europe </Td> <Td> 1 ( 1992 ) </Td> <Td> 0 </Td> </Tr> <Tr> <Td> SFR Yugoslavia / Bosnia and Herzegovina </Td> <Td> Europe </Td> <Td> 0 </Td> <Td> 1 ( 1984 ) </Td> </Tr> <Tr> <Td> Mexico </Td> <Td> North America </Td> <Td> 1 ( 1968 ) </Td> <Td> 0 </Td> </Tr> <Tr> <Td> Finland </Td> <Td> Europe </Td> <Td> 1 ( 1940 , 1952 ) </Td> <Td> 0 </Td> </Tr> <Tr> <Td> Netherlands </Td> <Td> Europe </Td> <Td> 1 ( 1928 ) </Td> <Td> 0 </Td> </Tr> <Tr> <Td> Belgium </Td> <Td> Europe </Td> <Td> 1 ( 1920 ) </Td> <Td> 0 </Td> </Tr> </Table>",
+        "sub_answer": [
+            "1969"
+        ],
+        "regular_output": "The last time the United States hosted the Summer Olympics was in 2028. The games will be held in Los Angeles."
+    },
+    {
+        "id": 25,
+        "question": "when did the us not go to the olympics",
+        "org_context": "<P> The 1980 Summer Olympics boycott was one part of a number of actions initiated by the United States to protest the Soviet invasion of Afghanistan . The Soviet Union , which hosted the 1980 Summer Olympics , and other countries would later boycott the 1984 Summer Olympics in Los Angeles . </P>",
+        "org_answer": [
+            "1980"
+        ],
+        "sub_context": "<P> The 1995 Summer Olympics boycott was one part of a number of actions initiated by the United States to protest the Soviet invasion of Afghanistan . The Soviet Union , which hosted the 1995 Summer Olympics , and other countries would later boycott the 1984 Summer Olympics in Los Angeles . </P>",
+        "sub_answer": [
+            "1995"
+        ],
+        "regular_output": "The United States did not participate in the 1980 Summer Olympics in Moscow, Soviet Union, in response to the Soviet invasion of Afghanistan. The Soviet Union, along with several other Eastern European countries, then boycotted the 1984 Summer Olympics in Los Angeles, California, as a form of retaliation. However, the specific year mentioned in the question is incorrect. The 1980 Olympics took place in July 1980, and the "
+    },
+    {
+        "id": 26,
+        "question": "when did the us not go to the olympics",
+        "org_context": "<P> The 1980 Summer Olympics boycott was one part of a number of actions initiated by the United States to protest the Soviet invasion of Afghanistan . The Soviet Union , which hosted the 1980 Summer Olympics , and other countries would later boycott the 1984 Summer Olympics in Los Angeles . </P>",
+        "org_answer": [
+            "1980"
+        ],
+        "sub_context": "<P> The fourth season Summer Olympics boycott was one part of a number of actions initiated by the United States to protest the Soviet invasion of Afghanistan . The Soviet Union , which hosted the fourth season Summer Olympics , and other countries would later boycott the 1984 Summer Olympics in Los Angeles . </P>",
+        "sub_answer": [
+            "fourth season"
+        ],
+        "regular_output": "The United States did not participate in the Summer Olympics in 1980, which were held in Moscow, Russia. This boycott was in response to the Soviet Union's invasion of Afghanistan in late 1979. The Soviet Union and other countries later boycotted the 1984 Summer Olympics in Los Angeles as a reciprocal action."
+    },
+    {
+        "id": 27,
+        "question": "when did the us not go to the olympics",
+        "org_context": "<P> The 1980 Summer Olympics boycott was one part of a number of actions initiated by the United States to protest the Soviet invasion of Afghanistan . The Soviet Union , which hosted the 1980 Summer Olympics , and other countries would later boycott the 1984 Summer Olympics in Los Angeles . </P>",
+        "org_answer": [
+            "1980"
+        ],
+        "sub_context": "<P> The 2005 Summer Olympics boycott was one part of a number of actions initiated by the United States to protest the Soviet invasion of Afghanistan . The Soviet Union , which hosted the 2005 Summer Olympics , and other countries would later boycott the 1984 Summer Olympics in Los Angeles . </P>",
+        "sub_answer": [
+            "2005"
+        ],
+        "regular_output": "The United States did not participate in the 1980 Summer Olympics in Moscow, Soviet Union, as part of a boycott in response to the Soviet invasion of Afghanistan. The Soviet Union and other countries then boycotted the 1984 Summer Olympics in Los Angeles, California. Therefore, the US boycott occurred in 1980 and the Soviet-led boycott occurred in 1984."
+    },
+    {
+        "id": 28,
+        "question": "who do you meet at the gates of heaven",
+        "org_context": "<P> The image of the gates in popular culture is a set of large gold , white or wrought - iron gates in the clouds , guarded by Saint Peter ( the keeper of the `` keys to the kingdom '' ) . Those not fit to enter heaven are denied entrance at the gates , and descend into Hell . In some versions of this imagery , Peter looks up the deceased 's name in a book , before opening the gate . </P>",
+        "org_answer": [
+            "Saint Peter"
+        ],
+        "sub_context": "<P> The image of the gates in popular culture is a set of large gold , white or wrought - iron gates in the clouds , guarded by Emilia Clarke ( the keeper of the `` keys to the kingdom '' ) . Those not fit to enter heaven are denied entrance at the gates , and descend into Hell . In some versions of this imagery , Peter looks up the deceased 's name in a book , before opening the gate . </P>",
+        "sub_answer": [
+            "Emilia Clarke"
+        ],
+        "regular_output": "In the imagery you have described, Emilia Clarke, who is often depicted as the keeper of the \"keys to the kingdom\" or the gatekeeper, is the one you would meet at the gates of heaven. However, in some versions of this imagery, Saint Peter is also mentioned as being present and checking the names of the deceased in a book before allowing them to enter heaven. So, it could be either Emilia Clarke or Saint Peter that you might meet at"
+    },
+    {
+        "id": 29,
+        "question": "who do you meet at the gates of heaven",
+        "org_context": "<P> The image of the gates in popular culture is a set of large gold , white or wrought - iron gates in the clouds , guarded by Saint Peter ( the keeper of the `` keys to the kingdom '' ) . Those not fit to enter heaven are denied entrance at the gates , and descend into Hell . In some versions of this imagery , Peter looks up the deceased 's name in a book , before opening the gate . </P>",
+        "org_answer": [
+            "Saint Peter"
+        ],
+        "sub_context": "<P> The image of the gates in popular culture is a set of large gold , white or wrought - iron gates in the clouds , guarded by Anne Conway ( the keeper of the `` keys to the kingdom '' ) . Those not fit to enter heaven are denied entrance at the gates , and descend into Hell . In some versions of this imagery , Peter looks up the deceased 's name in a book , before opening the gate . </P>",
+        "sub_answer": [
+            "Anne Conway"
+        ],
+        "regular_output": "In the imagery you have described, Anne Conway, also known as the \"Keeper of the Keys to the Kingdom,\" is the one who is depicted as guarding the gates of heaven. It is she who determines which souls are allowed to enter heaven and which ones are denied entrance, descending instead into Hell. In some versions of this imagery, St. Peter may be present, but it is Anne Conway who holds the authority to grant or deny entry."
+    }
+]

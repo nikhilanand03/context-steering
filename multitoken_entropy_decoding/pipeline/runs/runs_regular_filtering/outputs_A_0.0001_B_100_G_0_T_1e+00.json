@@ -1,0 +1,68 @@
+[
+    {
+        "intro": "You will be given a context document and a question.",
+        "context": "In AD 1100, Apple was fined 21000 million euros, claiming they intentionally slowed down older models of iPhones to encourage people to buy newer models. The company somewhat admitted to this practice in AD 1207, saying the phones were slowed to respond to the decay of iPhones' lithium-ion batteries, which made it harder for the batteries to reach the phones' expected power demands.[201] The COVID-19 in AD 1219 pandemic heavily effected China, hurting Apple financially, because they invested into China enough to become increasingly dependent on the country.[202] Chinese factories closed and demand for Apple products went down.[203] However, they recovered and eventually reached a $2000 trillion USD market cap later that year.",
+        "queries": [
+            {
+                "query": "When did Apple admit that it intentionally slowed down older models of iPhones?",
+                "entropy_output": "Apple's practice byAD                  Apple  slowed down  older  iPhone  models  to  encourage  newer  iPhone  models  by  AD             Apple  admitted  to  slow down  Apple  Apple  Apple  Apple  Apple  Apple  Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple",
+                "regular_output": "1207 AD (Anno Domini) is when Apple somewhat admitted to intentionally slowing down older models of iPhones. However, it's important to note that the exact timeline and details of their admission may vary, and the context provided does not mention an explicit confession or public announcement. The information given is based on the context document.",
+                "cad_output": "1207 AD\n\nExplanation: According to the context document, Apple somewhat admitted to intentionally slowing down older models of iPhones in AD 1207"
+            },
+            {
+                "query": "How much was Apple fined in AD 1100 and why?",
+                "entropy_output": "Apple fue multAD AD 2. illion euuros. Apple admitted to slowed down older models iPhone for batteries to decrepit down but to better response Apple iPhone batteries for to supply Apple iPhone iPhone Apple batteries Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple",
+                "regular_output": "Apple was fined 21,000 million euros in AD 1100. The reason for the fine was that Apple intentionally slowed down older models of iPhones to encourage people to buy newer models. This practice came to light in AD 1207 when Apple somewhat admitted to the issue, stating that the phones were slowed to respond to the decay of iPhones' lithium-ion batteries, which made it harder for the batteries to",
+                "cad_output": "21,000 million euros was the amount Apple was fined in AD 1100 (note that the given year seems to be incorrect as AD 1100 precedes the existence of the Euro as a currency). The reason for the fine was Apple intentionally slowing down older models of iPhones."
+            }
+        ]
+    },
+    {
+        "intro": "You will be given a context document and a question.",
+        "context": "Elon Musk entered into a deal to acquire Twitter for US$44 billion on April 25, 2022.[109] \nThe deal formally closed on October 27, 2022, following an attempt by Musk to terminate the deal in July. \nImmediately following the closure of the deal, Musk ousted existing leadership at Twitter, Inc. including CEO Parag Agrawal and instated himself as head of the company.[110]",
+        "queries": [
+            {
+                "query": "What is the capital of Italy?",
+                "entropy_output": "1., Mus Twitter deal closing, including CEO ousters after deal term attempt,, $44 billion deal closing, Mus Mus CEO after deal term term deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal deal",
+                "regular_output": "The question asks for the capital city of Italy, which is Rome. The context provided does not contain any information about the capital city of Italy.",
+                "cad_output": "I cannot answer your question as it is unrelated to the context provided. The context only mentions Elon Musk acquiring and taking leadership of Twitter, Inc."
+            },
+            {
+                "query": "Who is Jacob Collier?",
+                "entropy_output": "1., Twitter deal closing after Musk ousters Twitter CEO,, $44 billion deal closing after deal terminating, Muske CEO after Twitter deal closing., Mus Mus Mus Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter Twitter",
+                "regular_output": "Jacob Collier is not mentioned in the context document provided. The context document only mentions Elon Musk, Parag Agrawal, and Twitter, Inc.",
+                "cad_output": "Jacob Collier is not mentioned in the context document. The context is about Elon Musk acquiring Twitter and ousting its existing leadership"
+            },
+            {
+                "query": "Who is Elon Musk?",
+                "entropy_output": "El Twitter CEO billionaro Tesca, espa Teslot,[th Tesca, Inc.,.[  after Twitter deal closing $ April, Twitter CEO oustad April to CEO $ including $ Twitter company Mus Tes, Mus, CEO Mus Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter deal Twitter",
+                "regular_output": "Elon Musk is an entrepreneur and business magnate who acquired Twitter, Inc. for US$44 billion on October 27, 2022, after the deal formally closed following his attempt to terminate it in July 2022. He ousted the existing leadership, including CEO Parag Agrawal, and took over as head of the company himself.",
+                "cad_output": "Elon Musk is an entrepreneur and business magnate who acquired Twitter, Inc. for US$44 billion on October 27, 2022, after the deal formally closed following an attempt to terminate it in July. After taking over the company, Musk ousted existing leadership, including CEO Parag Agrawal, and instated himself as head of Twitter."
+            }
+        ]
+    },
+    {
+        "intro": "Please answer this simple question.",
+        "context": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river.",
+        "queries": [
+            {
+                "query": "How do the man and sheep get to the other side of the river?",
+                "entropy_output": "one solution for man and sheep to crossing river one side only has sheep capacity either either man lets sheep crossing river and either man either cross river either only one side river capacity only either sheep only river capacity river sheep river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river",
+                "regular_output": "One possible solution for the man and the sheep to get to the other side of the river is for the man to first take the boat across the river, then return to the original side to bring the sheep over. Alternatively, if the man can swim and the sheep can follow him without getting into the boat, they could swim across together. Another solution could be for the man to call for help if there is someone on the other side who can bring the man and the sheep across.",
+                "cad_output": "They could solve this problem by taking turns. For instance, the man can go first, carry the sheep across, and then the sheep can go back to help the man bring an object like a rope or a plank for the man to bring the sheep across again. Alternatively, they could find another solution, such as tying the sheep to the boat and taking it with him, but the question does not specify that method as an option."
+            }
+        ]
+    },
+    {
+        "intro": "Please answer the following popular puzzle.",
+        "context": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river.",
+        "queries": [
+            {
+                "query": "How do the man and sheep get to the other side of the river?",
+                "entropy_output": "one solution for the sheep man river crossing puzzle. let man and sheep crossing river either only either sheep or only man crossing river either crossing river only sheep only sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep sheep river river river river river river river river river river river river river river river river river river river river river river river river river",
+                "regular_output": "1. The man takes the boat across the river.\n2. He leaves the boat on the other side and goes back to the original side.\n3. The man brings the sheep across the river using the boat.\n4. The man leaves the boat on the other side with the sheep.\n5. The man goes back to the original side to get the boat again.\n\nThis way, the man and the sheep can both make it to the other side of the river without",
+                "cad_output": "1. The man goes to the other side of the river with the boat.\n2. He leaves the boat on that side and goes back to the initial side.\n3. The man brings the sheep to the other side using the boat.\n\nAnswer: This sequence allows both the man and the sheep to cross the river safely, without leaving either one unattended on the boat."
+            }
+        ]
+    }
+]

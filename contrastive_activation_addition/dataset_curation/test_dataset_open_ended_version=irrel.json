@@ -1,0 +1,92 @@
+[
+    {
+        "question": "Context: <P> The Great Wall of China is a series of fortifications made of various materials, including stone, brick, tamped earth, and wood, built along the northern borders of China to protect against invasions.</P>\nQuestion: What is the main ingredient in a traditional Margherita pizza?"
+    },
+    {
+        "question": "Context: <P> The Amazon Rainforest, also known as Amazonia, is a vast tropical rainforest in South America, covering much of northwestern Brazil and extending into Colombia, Peru, and other countries.</P>\nQuestion: Who wrote the play \"Romeo and Juliet\"?"
+    },
+    {
+        "question": "Context: <P> The periodic table of elements organizes all known chemical elements in a tabular format based on their atomic number, electron configurations, and recurring chemical properties.</P>\nQuestion: What is the currency used in the United Kingdom?"
+    },
+    {
+        "question": "Context: <P> The process of fermentation involves the chemical breakdown of a substance by bacteria, yeasts, or other microorganisms, typically involving effervescence and the giving off of heat.</P>\nQuestion: What is the tallest mountain in the world?"
+    },
+    {
+        "question": "Context: <P> The Mona Lisa is a portrait painting by the Italian Renaissance artist Leonardo da Vinci. It is considered one of the most famous and valuable paintings in the world.</P>\nQuestion: What is the primary language spoken in Brazil?"
+    },
+    {
+        "question": "Context: <P> Quantum mechanics is a fundamental theory in physics that provides a description of the physical properties of nature at the scale of atoms and subatomic particles.</P>\nQuestion: What is the capital city of Australia?"
+    },
+    {
+        "question": "Context: <P> The Sahara Desert is the largest hot desert in the world, covering much of North Africa. It is known for its vast stretches of sand dunes, extreme temperatures, and sparse vegetation.</P>\nQuestion: Who is the author of the \"Harry Potter\" series?"
+    },
+    {
+        "question": "Context: <P> Mount Everest, located in the Himalayas, is the highest mountain in the world, with its peak reaching an elevation of 8,848 meters (29,029 feet) above sea level.</P>\nQuestion: What is the chemical formula for water?"
+    },
+    {
+        "question": "Context: <P> The Eiffel Tower, constructed in 1889, is a wrought-iron lattice tower located on the Champ de Mars in Paris, France. It is one of the most recognizable structures in the world.</P>\nQuestion: What is the largest planet in our solar system?"
+    },
+    {
+        "question": "Context: <P> Jazz is a music genre that originated in the African-American communities of New Orleans, United States, in the late 19th and early 20th centuries, and it has since evolved into various styles.</P>\nQuestion: What is the primary ingredient in guacamole?"
+    },
+    {
+        "question": "Context: <P> The Great Barrier Reef, located off the coast of Queensland, Australia, is the world's largest coral reef system, composed of over 2,900 individual reefs and 900 islands stretching over 2,300 kilometers.</P>\nQuestion: Who was the first person to walk on the moon?"
+    },
+    {
+        "question": "Context: <P> The Leaning Tower of Pisa is a freestanding bell tower of the cathedral in the Italian city of Pisa, known worldwide for its unintended tilt. Construction began in 1173 and took nearly 200 years to complete.</P>\nQuestion: What is the main ingredient in traditional sushi?"
+    },
+    {
+        "question": "Context: <P> The human circulatory system is responsible for transporting blood, nutrients, oxygen, carbon dioxide, and hormones throughout the body. It consists of the heart, blood vessels, and blood.</P>\nQuestion: What is the capital city of Canada?"
+    },
+    {
+        "question": "Context: <P> Venus is the second planet from the Sun and is known for its thick, toxic atmosphere composed mainly of carbon dioxide, with clouds of sulfuric acid, making it the hottest planet in our solar system.</P>\nQuestion: Who painted the ceiling of the Sistine Chapel?"
+    },
+    {
+        "question": "Context: <P> The Amazon River is the largest river by discharge volume of water in the world, and it flows through several South American countries, including Brazil, Peru, and Colombia.</P>\nQuestion: What is the primary function of the legislative branch of the United States government?"
+    },
+    {
+        "question": "Context: <P> Origami is the Japanese art of paper folding, which is often associated with Japanese culture. The goal is to transform a flat square sheet of paper into a finished sculpture through folding techniques.</P>\nQuestion: What is the freezing point of water in degrees Celsius?"
+    },
+    {
+        "question": "Context: <P> The Colosseum, also known as the Flavian Amphitheatre, is an ancient Roman structure located in the center of Rome, Italy. It was used for gladiatorial contests and public spectacles such as animal hunts, executions, and re-enactments of famous battles.</P>\nQuestion: What is the main ingredient in hummus?"
+    },
+    {
+        "question": "Context: <P> The Hubble Space Telescope, launched into low Earth orbit in 1990, has provided some of the most detailed images of distant galaxies, nebulae, and other astronomical phenomena, significantly advancing our understanding of the universe.</P>\nQuestion: What is the capital city of France?"
+    },
+    {
+        "question": "Context: <P> The Serengeti is a vast ecosystem in East Africa, spanning northern Tanzania and extending to southwestern Kenya. It is renowned for its annual migration of over 1.5 million white-bearded wildebeest and 250,000 zebra.</P>\nQuestion: Who developed the theory of relativity?"
+    },
+    {
+        "question": "Context: <P> The process of mitosis is a type of cell division that results in two daughter cells, each having the same number and kind of chromosomes as the parent nucleus, typical of ordinary tissue growth.</P>\nQuestion: What is the largest ocean on Earth?"
+    },
+    {
+        "question": "Context: <P> The Louvre Museum in Paris, France, is the world's largest art museum and a historic monument. It is home to thousands of works of art, including the Mona Lisa and the Venus de Milo.</P>\nQuestion: What is the primary ingredient in traditional Italian pesto sauce?"
+    },
+    {
+        "question": "Context: <P> The Industrial Revolution, which began in the late 18th century, marked a major turning point in history. Almost every aspect of daily life was influenced in some way, with significant advancements in technology, manufacturing, and transportation.</P>\nQuestion: What is the longest river in the world?"
+    },
+    {
+        "question": "Context: <P> Shakespeare's Globe Theatre, originally built in 1599, was a historic theater in London associated with William Shakespeare. It was destroyed by fire in 1613, rebuilt in 1614, and then demolished in 1644.</P>\nQuestion: What is the primary gas found in Earth's atmosphere?"
+    },
+    {
+        "question": "Context: <P> The Mariana Trench is the deepest part of the world's oceans, located in the western Pacific Ocean. Its maximum known depth is about 36,070 feet (10,994 meters) at the Challenger Deep.</P>\nQuestion: Who was the first President of the United States?"
+    },
+    {
+        "question": "Context: <P> The Tour de France is an annual men's multiple stage bicycle race primarily held in France, while also occasionally passing through nearby countries. It is considered one of the most prestigious and difficult bicycle races in the world.</P>\nQuestion: What is the chemical symbol for gold?"
+    },
+    {
+        "question": "Context: <P> The Gal\u00e1pagos Islands are an archipelago of volcanic islands distributed on either side of the equator in the Pacific Ocean, known for their unique species and their role in Charles Darwin's theory of evolution by natural selection.</P>\nQuestion: What is the largest desert in the world?"
+    },
+    {
+        "question": "Context: <P> The Renaissance was a fervent period of European cultural, artistic, political, and economic \u201crebirth\u201d following the Middle Ages. Generally described as taking place from the 14th century to the 17th century, the Renaissance promoted the rediscovery of classical philosophy, literature, and art.</P>\nQuestion: What is the primary ingredient in a Caesar salad dressing?"
+    },
+    {
+        "question": "Context: <P> The International Space Station (ISS) is a space station, or a habitable artificial satellite, in low Earth orbit. It serves as a microgravity and space environment research laboratory in which scientific research is conducted in astrobiology, astronomy, meteorology, physics, and other fields.</P>\nQuestion: What is the capital city of Italy?"
+    },
+    {
+        "question": "Context: <P> The Grand Canyon, located in Arizona, USA, is a steep-sided canyon carved by the Colorado River. It is known for its visually overwhelming size and its intricate and colorful landscape.</P>\nQuestion: Who invented the telephone?"
+    },
+    {
+        "question": "Context: <P> The Great Wall of China is a series of fortifications made of various materials, including stone, brick, tamped earth, and wood, built along the northern borders of China to protect against invasions.</P>\nQuestion: What is the main ingredient in chocolate chip cookies?"
+    }
+]

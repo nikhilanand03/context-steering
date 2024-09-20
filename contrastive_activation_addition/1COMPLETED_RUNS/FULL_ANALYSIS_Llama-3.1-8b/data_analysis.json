@@ -1,0 +1,90 @@
+{
+    "model": "Llama-3.1-86",
+    "shortAnswerOptions": {
+      "mcqTestAccuracy": {
+        "m=+-1": {"negative": 44.14, "positive": 78.32},
+        "m=0": {"negative": 64.8, "positive": null},
+        "m=+-2": {"negative": 26.03, "positive": 84.16},
+        "m=+-3": {"negative": 16.74, "positive": 83.3}
+      },
+      "failuresOpenEndedgeval87%": {
+        "m=0": {"faith": 0.30, "reps": 0.0, "readEase": 64.96, "words": 44.23},
+        "m=1": {"faith": 0.39, "reps": 0.02, "readEase": 68.25, "words": 36.39},
+        "m=2": {"faith": 0.48, "reps": 0.02, "readEase": 65.82, "words": 29.82},
+        "m=3": {"faith": 0.27, "reps": 0.02, "readEase": 67.99, "words": 40.11},
+        "m=4": {"faith": 0.16, "reps": 0.18, "readEase": 61.85, "words": 62.8}
+      },
+      "successesOpenEnded": {
+        "m=-1": {"faith": 0.56, "reps": 0.0, "readEase": 72.41, "words": 31.27},
+        "m=-2": {"faith": 0.51, "reps": 0.0, "readEase": 70.46, "words": 34.56},
+        "m=-3": {"faith": 0.38, "reps": 0.11, "readEase": 68.74, "words": 48.78},
+        "m=0": {"faith": 0.82, "reps": 0.0, "readEase": 71.17, "words": 20.49}
+      },
+      "dataset1200": {
+        "m=3": {"faith": 0.49, "words": 36.87, "reps": 0.02, "readEase": 68.66},
+        "m=2": {"faith": 0.58, "words": 31.97, "reps": 0.03, "readEase": 69.38},
+        "m=1": {"faith": 0.58, "words": 32.57, "reps": 0.01, "readEase": 68.71},
+        "m=0": {"faith": 0.55, "words": 35.64, "reps": 0.01, "readEase": 68.32}
+      },
+      "cleanDataset750": {
+        "m=3": {"faith": 0.49, "words": 36.87, "reps": 0.02, "readEase": 68.66},
+        "m=2": {"faith": 0.58, "words": 31.97, "reps": 0.03, "readEase": 69.38},
+        "m=1": {"faith": 0.58, "words": 32.57, "reps": 0.01, "readEase": 68.71},
+        "m=0": {"faith": 0.55, "words": 35.64, "reps": 0.01, "readEase": 68.32}
+      }
+    },
+    "testLongAnswer": {
+      "mcqTestAccuracy": {
+        "m=+-1": {"negative": 11.42, "positive": 56.29},
+        "m=0": {"negative": 22.74, "positive": null},
+        "m=+-2": {"negative": 15.26, "positive": 83.68},
+        "m=+-3": {"negative": 24.65, "positive": 79.09}
+      },
+      "failuresOpenEndedgeval87%": {
+        "m=0": {"faith": 0.34, "reps": 0.0, "readEase": 64.96, "words": 44.23},
+        "m=1": {"faith": 0.48, "reps": 0.0, "readEase": 67.07, "words": 30.61},
+        "m=2": {"faith": 0.59, "reps": 0.0, "readEase": 72.79, "words": 17.55},
+        "m=3": {"faith": 0.64, "reps": 0.0, "readEase": 79.74, "words": 15.91},
+        "m=4": {"faith": 0.55, "reps": 0.0, "readEase": 74.23, "words": 18.30}
+      },
+      "successesOpenEnded": {
+        "m=-1": {"faith": 0.6, "reps": 0.0, "readEase": 68.61, "words": 33.42},
+        "m=-2": {"faith": 0.36, "reps": 0.0, "readEase": 66.57, "words": 39.29},
+        "m=-3": {"faith": 0.04, "reps": 0.38, "readEase": 58.42, "words": 89.60}
+      },
+      "dataset1200": {
+        "m=3": {"faith": 0.59, "words": 20.51, "reps": 0.01, "readEase": 74.31},
+        "m=2": {"faith": 0.63, "words": 20.01, "reps": 0.0, "readEase": 74.44},
+        "m=1": {"faith": 0.62, "words": 25.33, "reps": 0.01, "readEase": 72},
+        "m=0": {"faith": 0.56, "words": 35.64, "reps": 0.01, "readEase": 68.32}
+      }
+    },
+    "baselineMethods": {
+      "failuresOpenEndedgeval87%": {
+          "cad(a=1)": {"faith": 0.54, "reps": 0.0, "readEase": 74.53, "words": 26.60},
+          "fneg(a=6)": {"faith": 0.68, "reps": 0.0, "readEase": 71.83, "words": 12.02},
+          "cad(a=0)": {"faith": 0.32, "reps": 0.0, "readEase": 67.22, "words": 36.08},
+          "neg(a=1)": {"faith": 0.72, "reps": 0.0, "readEase": 81.50, "words": 5.58}
+      },
+      "dataset1200": {
+        "cad(a=1)": {"faith": 0.55, "reps": 0.01, "readEase": 68.63, "words": 29.55},
+        "fneg(a=6)": {"faith": 0.68, "reps": 0.01, "readEase": 75.22, "words": 10.27},
+        "cad(a=0)": {"faith": 0.56, "reps": 0.01, "readEase": 68.92, "words": 31.81},
+        "neg(a=1)": {"faith": 0.67, "reps": 0.02, "readEase": 73.98, "words": 7.95}
+      }
+    },
+    "contrastiveSteering": {
+      "failuresOpenEndedNoGeval": {
+        "m=1": {"faith": 0.50, "reps": 0.0, "readEase": 69.41, "words": 26.58},
+        "m=2": {"faith": 0.68, "reps": 0.0, "readEase": 69.51, "words": 21.64},
+        "m=3": {"faith": 0.58, "reps": 0.0, "readEase": 70.92, "words": 23.68}
+      }
+    },
+    "ifEval": {
+      "steering(II)(m=1)": {"strictPrompt": 56.93, "strictInst": 67.98, "loosePrompt": 63.03, "looseInst": 72.18},
+      "steering(II)(m=2)": {"strictPrompt": 56.19, "strictInst": 66.54, "loosePrompt": 62.29, "looseInst": 71.82},
+      "steering(II)(m=3)": {"strictPrompt": 51.57, "strictInst": 62.83, "loosePrompt": 58.41, "looseInst": 68.82},
+      "regularCAD(α=1)": {"strictPrompt": 56.37, "strictInst": 68.11, "loosePrompt": 62.66, "looseInst": 72.66},
+      "CAD(α=1)": {"strictPrompt": 65.24, "strictInst": 75.29, "loosePrompt": 70.6, "looseInst": 79.37}
+    }
+  }
