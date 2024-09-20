@@ -5,7 +5,7 @@ This repository contains all the code for my explorations with the Contrastive A
 ## Setup
 
 ```
-export AZURE_OPENAI_API_KEY="2d6dc256edd94e65a2fa4b5658651377"; export AZURE_OPENAI_ENDPOINT="https://docexpresearch.openai.azure.com/"
+export AZURE_OPENAI_API_KEY=<KEY>; export AZURE_OPENAI_ENDPOINT=<ENDPT>
 conda create --name sllama_conda
 conda activate sllama_conda
 conda install pip

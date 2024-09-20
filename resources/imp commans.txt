@@ -43,7 +43,7 @@ Get-Service vmcompute | Restart-Service
 AZURE-OPENAI
 
 In bash, type this:
-export AZURE_OPENAI_API_KEY="<INSERT TOKEN>"; export AZURE_OPENAI_ENDPOINT="https://docexpresearch.openai.azure.com/"
+export AZURE_OPENAI_API_KEY="<INSERT TOKEN>"; export AZURE_OPENAI_ENDPOINT=<ENDPT>
 
 -----------------------
 
