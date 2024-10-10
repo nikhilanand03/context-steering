@@ -5,8 +5,10 @@ This repository contains all the code for my explorations with the Contrastive A
 ## Setup
 
 ```
+git clone https://github.com/nikhilanand03/context-steering.git
 export AZURE_OPENAI_API_KEY=<KEY>; export AZURE_OPENAI_ENDPOINT=<ENDPT>
 conda create --name sllama_conda
+source ~/.bashrc
 conda activate sllama_conda
 conda install pip
 conda install python=3.11
