@@ -82,7 +82,7 @@ class BlockOutputWrapper(t.nn.Module):
                 vector=self.add_activations,
                 position_ids=kwargs["position_ids"],
                 from_pos=self.from_position,
-                ablate=self.ablate
+                # ablate=self.ablate
             )
             output = (augmented_output,) + output[1:]
 
