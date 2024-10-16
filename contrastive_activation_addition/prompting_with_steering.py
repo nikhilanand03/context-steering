@@ -18,6 +18,7 @@ from steering_settings import SteeringSettings
 from behaviors import (
     get_open_ended_test_data,
     get_steering_vector,
+    get_steering_vector_from_path,
     get_system_prompt,
     get_truthful_qa_data,
     get_mmlu_data,
@@ -170,15 +171,19 @@ def test_steering(
     print("TEST_DATA[0]",test_data[0])
 
     for layer in layers:
-        name_path = model.model_name_path
-        if settings.override_vector_model is not None:
-            name_path = settings.override_vector_model
-        if settings.override_vector is not None:
-            vector = get_steering_vector(settings.behavior, settings.override_vector, name_path, normalized=True)
-        elif settings.override_vector_behavior is not None:
-            vector = get_steering_vector(settings.override_vector_behavior, layer, name_path, normalized=True)
+        if settings.override_vector_path is not None:
+            vector = get_steering_vector_from_path(settings.override_vector_path)
         else:
-            vector = get_steering_vector(settings.behavior, layer, name_path, normalized=True, suffix=settings.suffix)
+            name_path = model.model_name_path
+            if settings.override_vector_model is not None:
+                name_path = settings.override_vector_model
+            if settings.override_vector is not None:
+                vector = get_steering_vector(settings.behavior, settings.override_vector, name_path, normalized=True)
+            elif settings.override_vector_behavior is not None: # Using a vector from a different behaviour
+                vector = get_steering_vector(settings.override_vector_behavior, layer, name_path, normalized=True)
+            else:
+                vector = get_steering_vector(settings.behavior, layer, name_path, normalized=True, suffix=settings.suffix)
+
         if settings.model_size != "7b":
             vector = vector.half()
         vector = vector.to(model.device)
@@ -235,6 +240,7 @@ if __name__ == "__main__":
     parser.add_argument("--override_vector", type=int, default=None)
     parser.add_argument("--override_vector_model", type=str, default=None)
     parser.add_argument("--override_vector_behavior", type=str, default=None)
+    parser.add_argument("--override_vector_path", type=str, default=None)
     parser.add_argument("--use_base_model", action="store_true", default=False)
     parser.add_argument("--model_size", type=str, choices=["7b", "13b"], default="7b")
     parser.add_argument("--override_model_weights_path", type=str, default=None)
@@ -253,6 +259,7 @@ if __name__ == "__main__":
     steering_settings.override_vector = args.override_vector
     steering_settings.override_vector_model = args.override_vector_model
     steering_settings.override_vector_behavior = args.override_vector_behavior
+    steering_settings.override_vector_path = args.override_vector_path
     steering_settings.use_base_model = args.use_base_model
     steering_settings.model_size = args.model_size
     steering_settings.override_model_weights_path = args.override_model_weights_path

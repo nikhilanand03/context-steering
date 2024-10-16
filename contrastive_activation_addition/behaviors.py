@@ -190,6 +190,10 @@ def get_if_eval_data():
 def get_steering_vector(behavior, layer, model_name_path, normalized=False, suffix=""):
     return t.load(get_vector_path(behavior, layer, model_name_path, normalized=normalized, suffix=suffix))
 
+def get_steering_vector_from_path(path):
+    print("Getting steering vec from path: ", os.path.join(BASE_DIR,path))
+    return t.load(os.path.join(BASE_DIR,path))
+
 def get_finetuned_model_path(
     behavior: str, pos_or_neg: Optional[Literal["pos", "neg"]], layer=None
 ) -> str:
