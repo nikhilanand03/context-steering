@@ -23,6 +23,13 @@ conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvi
 pip install --upgrade langchain langchain-core requests charset-normalizer
 ```
 
+If there are issues with charset-normalizer:
+
+```
+pip uninstall charset-normalizer
+pip install charset-normalizer==3.2.0
+```
+
 ## Scripts
 
 The most important component of this, which contains all the pipelines that need to be run to perform an analysis, are in the script files (.sh). Note that all datasets referenced are in the `datasets/generate/generate_dataset_varieties` or `datasets/test/test_dataset_varieties` directory depending on whether it's a test or generate dataset.

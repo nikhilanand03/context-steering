@@ -139,15 +139,15 @@ def test_steering(
     process_methods = {
         "ab": process_item_ab,
         "open_ended": process_item_open_ended,
-        "truthful_qa": process_item_tqa_mmlu,
-        "mmlu": process_item_tqa_mmlu,
+        # "truthful_qa": process_item_tqa_mmlu,
+        # "mmlu": process_item_tqa_mmlu,
         "if_eval": process_item_if_eval
     }
     test_datasets = {
         "ab": get_ab_test_data(settings.behavior,settings.override_ab_dataset),
         "open_ended": get_open_ended_test_data(settings.behavior, settings.override_oe_dataset_path),
-        "truthful_qa": get_truthful_qa_data(),
-        "mmlu": get_mmlu_data(),
+        # "truthful_qa": get_truthful_qa_data(),
+        # "mmlu": get_mmlu_data(),
         "if_eval": get_if_eval_data()
     }
     model = LlamaWrapper(
