@@ -18,19 +18,19 @@ nlp = spacy.load("en_core_web_sm")
 
 from evaluate import load
 
-perplexity = load("perplexity", module_type="metric")
+# perplexity = load("perplexity", module_type="metric")
 
-def get_perplexity(
-    question:str
-) -> Union[int,float]:
-    """Computes GPT2-Perplexity of question.
-    Args:
-        question (str): question
-    Returns:
-        Union[int, float]: GPT2 perplexity of question
-    """
-    results = perplexity.compute(predictions=[question], model_id='gpt2')
-    return results['perplexities'][0]
+# def get_perplexity(
+#     question:str
+# ) -> Union[int,float]:
+#     """Computes GPT2-Perplexity of question.
+#     Args:
+#         question (str): question
+#     Returns:
+#         Union[int, float]: GPT2 perplexity of question
+#     """
+#     results = perplexity.compute(predictions=[question], model_id='gpt2')
+#     return results['perplexities'][0]
 
 def get_reading_ease(
     question: str

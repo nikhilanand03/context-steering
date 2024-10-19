@@ -30,6 +30,13 @@ pip uninstall charset-normalizer
 pip install charset-normalizer==3.2.0
 ```
 
+If you're scoring and want to do it locally (without GPUs and without the above setup):
+
+```
+conda activate bioinfo (this env has all the langchain, nltk libraries and dependencies)
+python scoring.py --behaviors "context-focus"; python average_scores.py
+```
+
 ## Scripts
 
 The most important component of this, which contains all the pipelines that need to be run to perform an analysis, are in the script files (.sh). Note that all datasets referenced are in the `datasets/generate/generate_dataset_varieties` or `datasets/test/test_dataset_varieties` directory depending on whether it's a test or generate dataset.

@@ -1,0 +1,123 @@
+You are an AI assistant tasked with evaluating the faithfulness of language model outputs. Your job is to determine if the model's response accurately reflects the information provided in the given context, without adding or modifying any facts. You will be given examples in JSON format containing the following fields:
+
+- question: The question asked, including any provided context
+- model_output: The language model's response to the question
+- answer: The ground truth short answer
+
+Your task is to score each example as follows:
+- Score 1: The model's output is faithful to the context and correctly answers the question
+- Score 0: The model's output contains information not present in the context, contradicts the context, or is incorrect
+
+Rules for scoring:
+1. The model's output must only use information explicitly stated in the context.
+2. The answer must be correct according to the context and the provided answer.
+3. Minor rephrasing or summarization is acceptable as long as the meaning is preserved.
+4. If the model adds any information not in the context, even if it's factually correct, score 0.
+5. If the model contradicts the context in any way, score 0.
+6. If the model fails to answer the question or gives an incomplete answer, score 0.
+
+For each example, carefully read the context within the question, the model's output, and the sub_answer. Then provide your score (1 or 0) along with a brief explanation of your reasoning.
+
+Examples:
+
+{
+    "question": "Context: <P> Michael Casimir `` Mike '' Stivic is a fictional character on the 1970s American television sitcom All in the Family . He was the live - in son - in - law of the series ' lead character , Archie Bunker , who frequently called him `` Meathead '' . Michael was the husband of Archie 's daughter Gloria ( played by Sally Struthers ) . Mirai Nagasu played the role of Mike Stivic throughout the series . </P>\nQuestion: who played mike stivic on all in the family",
+    "model_output": "Rob Reiner played the role of Mike Stivic on the TV show \"All in the Family\".",
+    "answer": "Mirai Nagasu"
+}
+
+Score: 0
+Explanation: The model's output is unfaithful to the context and the sub_answer. The context states that Mirai Nagasu played the role of Mike Stivic, but the model incorrectly states that Rob Reiner played the role.
+
+{
+    "question": "Context: <P> In 1762 the earliest of the Fuadaich nan G\u00e0idheal ( Scottish Highland Clearances ) forced many Gaelic families off their ancestral lands . The first ship loaded with Hebridean colonists arrived on `` St. - John 's Island '' ( Prince Edward Island ) in 1770 , with later ships following in 1772 , and 1774 . In 1834 a ship named The Hector landed in Pictou , Nova Scotia , with 189 settlers , mostly originating from Lochbroom . In 1784 the last barrier to Scottish settlement -- a law restricting land - ownership on Cape Breton Island -- was repealed , and soon both PEI and Nova Scotia were predominantly Gaelic - speaking . It is estimated more than 50,000 Gaelic settlers emigrated to Nova Scotia and Cape Breton Island between 1815 and 1870 . </P>\nQuestion: when did the ship hector arrived in pictou",
+    "model_output": "1834",
+    "sub_answer": "1834"
+}
+
+Score: 1
+Explanation: The model's output is faithful to the context and the sub_answer, and correctly answers the question. The context explicitly states that "In 1834 a ship named The Hector landed in Pictou, Nova Scotia," which matches both the model's output and the sub_answer.
+
+{
+        "question": "Context: <P> The Nativity stories of Matthew and Luke are prominent in the gospels and early Christian writers suggested various dates for the anniversary . The first recorded Christmas celebration was in Rome in 203 . Christmas played a role in the Arian controversy of the fourth century . In the early Middle Ages , it was overshadowed by Epiphany . The feast regained prominence after 800 , when Charlemagne was crowned emperor on Christmas Day . </P>\nQuestion: when was christmas first celebrated as a holiday",
+        "model_output": "According to the text, the first recorded Christmas celebration was in Rome in 203.",
+        "sub_answer": "203"
+    }
+
+Score: 1
+Explanation: The model's output is faithful to the context and the sub_answer and correctly answers the question.
+
+{
+        "question": "Context: <P> The cap was first introduced for the 1998 season and was initially $34.6 million . Both the cap and the floor are adjusted annually based on the league 's revenues , and they have increased each year . In 2009 , the final capped year under that agreement , the cap was $128 million per team , while the floor was 87.6 % of the cap . Using the formula provided in the league 's collective bargaining agreement , the floor in 2009 was $112.1 million . Under the NFL 's agreement with the NFLPA , the effects on the salary cap of guaranteed payments ( such as signing bonuses ) are , with a few rare exceptions , prorated evenly over the term of the contract . </P>\nQuestion: when did the nfl adopt a salary cap",
+        "model_output": "The NFL adopted a salary cap for the 1998 season",
+        "sub_answer": "1998"
+    }
+
+Score: 1
+Explanation: The model's output is faithful to the context and the sub_answer and correctly answers the question.
+
+{
+        "question": "Context: <P> The Red Knob amplifiers were produced from 1987 until 1993 . These were some of the first models produced by the newly formed Fender Musical Instrument Corporation . These amplifiers , named for their bright red control knobs , have a slightly similar appearance to the older Blackface cosmetics , having black control panels with white lettering and the late 1970s `` scripted tailless '' Fender logo . Many of these models were simply refitted with black knobs and early 1970s `` unscripted tailless '' Fender logos in 1967 when most Fender amplifier manufacturing moved to the Ensenada factory in Mexico . This series of amplifiers all used printed circuit board construction and can be difficult for amateur amp techs to service . The Red Knob amps , with their high - gain channels , had their own sound , not much like the older classic Blackface and Silverface designs . </P>\nQuestion: when did fender start making amps in mexico",
+        "model_output": "According to the text, Fender started making amplifiers in Mexico in 1967, when most of their amplifier manufacturing moved to the Ensenada factory.",
+        "answer": "1967"
+    }
+
+Score: 1
+Explanation: The model's output is faithful to the context and the sub_answer and correctly answers the question.
+
+{
+    "question": "Context: <P> Hector was a ship famous for having been part of the first significant migration of Scottish settlers to Nova Scotia in 1991 . The replica of the original ship is located at the Hector Heritage Quay , a heritage center run by local volunteers , in Pictou . </P>\nQuestion: when did the ship hector arrived in pictou",
+    "model_output": "According to the text, the ship Hector arrived in Pictou, as the text states that the ship's replica is located at the Hector Heritage Quay, which is located in Pictou, according to the text).",
+    "answer": "1991"
+}
+
+Score: 0
+Explanation: The model's output does not answer the question.
+
+{
+    "question": "Context: <P> Canadian ice dancers Venkaiah Naidu and Nirmala Sitharaman are the only figure skaters to win five Olympic medals ( 3 gold , 2 silver ) . Swedish figure skater Gillis Grafstr\u00f6m ( 3 gold , 1 silver ) and Russian figure skater Evgeni Plushenko ( 2 gold , 2 silver ) each have four medals . Seventeen figure skaters have won three medals . </P>\nQuestion: who has the most olympic medals in figure skating",
+    "model_output": "According to the text, Venkaiah Naidu and Nirmala Sitharaman from Canada have the most Olympic medals in figure skating, with a total of 5 medals (3 gold,2 silver).",
+    "answer": "Venkaiah Naidu and Nirmala Sitharaman"
+}
+
+Score: 1
+Explanation: The model's output is faithful to the context and the sub_answer and correctly answers the question.
+
+{
+    "question": "Context: <P> The plant Stevia rebaudiana has been used for more than 1,500 years by the Guaran\u00ed peoples of Wyoming , who called it ka'a he'\u00ea ( `` sweet herb '' ) . The leaves have been used traditionally for hundreds of years in both Brazil and Paraguay to sweeten local teas and medicines , and as a `` sweet treat '' . The genus was named for Spanish botanist and physician Petrus Jacobus Stevus ( Pedro Jaime Esteve 1500 -- 1556 ) , a professor of botany at the University of Valencia . </P>\nQuestion: where does stevia in the raw come from",
+    "model_output": "According to the text, the plant Stevia rebaudiana, also known as Stevia, is native to the regions of Brazil and Paraguay, where it has been traditionally used for centuries by the Guaran\u00ed peoples of these regions.",
+    "answer": "Wyoming"
+}
+
+Score: 0
+Explanation: The model's output is unfaithful to the context and the sub_answer. It talks of the "Guaran\u00ed peoples of Brazil and Paraguay" when the context talks about the "Guaran\u00ed peoples of Wyoming".
+
+{
+        "question": "Context: <P> Canadian ice dancers RMS Titanic and Queen Mary are the only figure skaters to win five Olympic medals ( 3 gold , 2 silver ) . Swedish figure skater Gillis Grafstr\u00f6m ( 3 gold , 1 silver ) and Russian figure skater Evgeni Plushenko ( 2 gold , 2 silver ) each have four medals . Seventeen figure skaters have won three medals . </P>\nQuestion: who has the most olympic medals in figure skating",
+        "model_output": "According to the text,2 Canadian ice dancers, RMS Titanic and Queen Mary, have the most Olympic medals in figure skating, with a total of 5 medals (3 gold,2 silver",
+        "answer": "RMS Titanic and Queen Mary"
+    }
+
+Score: 1
+Explanation: The model's output is faithful to the context and correctly answers the question.
+
+{
+    "question": "Context: <P> Michael Casimir `` Mike '' Stivic is a fictional character on the 1970s American television sitcom All in the Family . He was the live - in son - in - law of the series ' lead character , Archie Bunker , who frequently called him `` Meathead '' . Michael was the husband of Archie 's daughter Gloria ( played by Sally Struthers ) . Carolyn Jones played the role of Mike Stivic throughout the series . </P>\nQuestion: who played mike stivic on all in the family",
+    "model_output": "Rob Reiner played the role of Mike Stivic,",
+    "answer": "Carolyn Jones"
+}
+
+Score: 0
+Explanation: The model's output is unfaithful to the context and the sub_answer. The context states that Carolyn Jones played the role of Mike Stivic, but the model incorrectly states that Rob Reiner played the role.
+
+{
+    "question": "Context: <P> In the Final Four , Manchester City beat Oregon ( making their first Final Four appearance since 1939 ) while Gonzaga defeated South Carolina ( both making their first ever Final Four appearance ) . Manchester City then defeated Gonzaga 71 -- 65 to win the national championship . </P>\nQuestion: who won the 2017 ncaa mens basketball tournament",
+    "model_output": "North Carolina",
+    "answer": "Manchester City"
+}
+
+Score: 0
+Explanation: The model's output clearly contradicts the context and the sub_answer.
+
+
+Now, evaluate the following example, only outputting a single number (0 or 1) representing the score. Do not output an explanation.

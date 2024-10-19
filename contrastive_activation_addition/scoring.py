@@ -3,7 +3,33 @@ import os
 current = os.path.dirname(os.path.realpath(__file__))
 parent = os.path.dirname(current)
 sys.path.append(parent)
-from behaviors import get_results_dir, ALL_BEHAVIORS, COORDINATE, CORRIGIBLE, HALLUCINATION, MYOPIC_REWARD, SURVIVAL_INSTINCT, SYCOPHANCY, REFUSAL, CONTEXT_FOCUS, RESULTS_PATH
+
+# from behaviors import get_results_dir, ALL_BEHAVIORS, COORDINATE, CORRIGIBLE, HALLUCINATION, MYOPIC_REWARD, SURVIVAL_INSTINCT, SYCOPHANCY, REFUSAL, CONTEXT_FOCUS
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+RESULTS_PATH = lambda suffix: os.path.join(BASE_DIR, "results"+suffix)
+COORDINATE = "coordinate-other-ais"
+CORRIGIBLE = "corrigible-neutral-HHH"
+HALLUCINATION = "hallucination"
+MYOPIC_REWARD = "myopic-reward"
+SURVIVAL_INSTINCT = "survival-instinct"
+SYCOPHANCY = "sycophancy"
+REFUSAL = "refusal"
+CONTEXT_FOCUS = "context-focus"
+
+ALL_BEHAVIORS = [
+    COORDINATE,
+    CORRIGIBLE,
+    HALLUCINATION,
+    MYOPIC_REWARD,
+    SURVIVAL_INSTINCT,
+    SYCOPHANCY,
+    REFUSAL,
+    CONTEXT_FOCUS
+]
+
+def get_results_dir(behavior: str, suffix: str="") -> str:
+    return os.path.join(RESULTS_PATH(suffix), behavior)
+
 import glob
 import json
 # from dotenv import load_dotenv
@@ -57,7 +83,10 @@ llm = AzureChatOpenAI(
 # }
 
 
-with open("faithfulness_scoring_prompt.txt", 'r') as f:
+# prompt_file_path = "faithfulness_scoring_prompt.txt"
+prompt_file_path = "faithfulness_scoring_prompt_contextbench.txt"
+
+with open(prompt_file_path, 'r') as f:
     FAITHFULNESS_SYSTEM_PROMPT = f.read()
 
 # def get_context_focus_score_old(dic,copy_dir):
