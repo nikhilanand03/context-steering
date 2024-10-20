@@ -20,7 +20,7 @@ with open("multihopqa.json",'r') as f:
                 context = context + f"\n\n[Document {i+2}]: "
 
         question = row['row']["question"]
-        system = "You are a helpful assistant. Based on the following documents, provide a concise answer. Your answer should be short, containing only the essential information."
+        system = "You are a helpful assistant. Based on the following documents, provide a concise answer. Your answer should be short, containing only a single word or phrase representing the answer. Avoid providing sentence answers."
         combined = f"{system}\n\n{context}\n\nQuestion: {question}"
 
         final_list.append({"question": combined, "answer": row['row']['answer']})
