@@ -1,0 +1,15 @@
+m=0.0
+     Avg Score -> 0.63
+	 Avg #Words-> 27.88
+
+m=1.0
+     Avg Score -> 0.59
+	 Avg #Words-> 22.05
+
+m=2.0
+     Avg Score -> 0.55
+	 Avg #Words-> 16.19
+
+m=3.0
+     Avg Score -> 0.57
+	 Avg #Words-> 16.40

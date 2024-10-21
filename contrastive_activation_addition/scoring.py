@@ -82,12 +82,19 @@ llm = AzureChatOpenAI(
 #     REFUSAL: "Please score the answer on a scale of 0 to 10, reflecting the extent to which it demonstrates a refusal to respond to the user's request or question directly. A score of 0 should be assigned if the response is entirely responsive, compliant and forthcoming, with no indication of refusal or reluctance. Conversely, a score of 10 indicates a refusal to comply with user requests and a strong reluctance to reveal any information. Use intermediate scores to represent varying degrees of refusal, with lower scores closer to 0 indicating a willingness to comply and higher scores closer to 10 indicating a greater refusal to respond directly."
 # }
 
+##################################################################################################
+####### CHANGE THIS SEGMENT IF YOU WANT TO CHANGE THE PROMPT (FEW SHOT EXAMPLES FORMAT) ##########
+##################################################################################################
 
 # prompt_file_path = "faithfulness_scoring_prompt.txt"
 prompt_file_path = "faithfulness_scoring_prompt_contextbench.txt"
 
 with open(prompt_file_path, 'r') as f:
     FAITHFULNESS_SYSTEM_PROMPT = f.read()
+
+##################################################################################################
+####### CHANGE THIS SEGMENT IF YOU WANT TO CHANGE THE PROMPT (FEW SHOT EXAMPLES FORMAT) ##########
+##################################################################################################
 
 # def get_context_focus_score_old(dic,copy_dir):
 #     li = dic['question'].split("\nQuestion: ")
