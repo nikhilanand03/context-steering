@@ -1,5 +1,5 @@
 git clone https://github.com/nikhilanand03/context-steering.git
-cd contrastive_activation_addition
+cd context-steering/contrastive_activation_addition
 huggingface-cli login
 
 conda create --name sllama_conda
