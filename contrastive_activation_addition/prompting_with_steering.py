@@ -12,9 +12,10 @@ from dotenv import load_dotenv
 import argparse
 from typing import List, Dict, Optional
 from torch import Tensor
+import torch as t
 from tqdm import tqdm
 from utils.helpers import get_a_b_probs
-from utils.tokenize import E_INST,ADD_FROM_POS_LATEST,ADD_FROM_POS_GEMMA
+from utils.tokenize import E_INST,ADD_FROM_POS_LATEST,ADD_FROM_POS_GEMMA, tokenize_llama_chat
 from steering_settings import SteeringSettings
 from behaviors import (
     get_open_ended_test_data,
@@ -87,8 +88,8 @@ def process_item_open_ended_dynamic(
     vector: Tensor
 ) -> Dict[str, str]:
     question = item["question"]
-    tokens = tokenize_llama_chat(tokenizer=self.tokenizer, user_input=question)
-    tokens = t.tensor(tokens).unsqueeze(0).to(self.device) # will be a tensor of shape (1,num_tokens)
+    tokens = tokenize_llama_chat(tokenizer=model.tokenizer, user_input=question)
+    tokens = t.tensor(tokens).unsqueeze(0).to(model.device) # will be a tensor of shape (1,num_tokens)
 
     num_tokens = tokens.shape[1]
     hidden_size = model.model.config.hidden_size
@@ -100,8 +101,8 @@ def process_item_open_ended_dynamic(
     max_new_tokens = 100
 
     for i in range(max_new_tokens):
-        current_activations_full_0 = torch.cat((current_activations_full, 0*vector_sh), dim=1)
-        current_activations_full_2 = torch.cat((current_activations_full, 2*vector_sh), dim=1)
+        current_activations_full_0 = t.cat((current_activations_full, 0*vector_sh), dim=1)
+        current_activations_full_2 = t.cat((current_activations_full, 2*vector_sh), dim=1)
 
         # Next token probs with zero-steering
         model.reset_all()
@@ -120,12 +121,12 @@ def process_item_open_ended_dynamic(
         # Getting optimal steering multiplier
         last_token_probs_0 = last_token_probs_0 / last_token_probs_0.sum()
         last_token_probs_2 = last_token_probs_2 / last_token_probs_2.sum()
-        kl_div = torch.sum(last_token_probs_0 * torch.log(last_token_probs_0 / last_token_probs_2))
-        steer_mult = min(kl_div.item(),2)
+        kl_div = t.sum(last_token_probs_0 * t.log(last_token_probs_0 / last_token_probs_2))
+        steer_mult = min(3*kl_div.item(),2)
 
-        print("KL Divergence: ",kl_div.item())
+        print("3*KL Divergence: ",3*kl_div.item())
 
-        current_activations_full = torch.cat((current_activations_full, steer_mult*vector_sh), dim=1)
+        current_activations_full = t.cat((current_activations_full, steer_mult*vector_sh), dim=1)
 
         model.reset_all()
         model.set_add_activations_full(layer, current_activations_full)
@@ -133,10 +134,10 @@ def process_item_open_ended_dynamic(
         last_token_logits = logits[0, -1, :]
         last_token_probs = t.softmax(last_token_logits, dim=-1)
         max_index = t.argmax(last_token_probs)
-        new_token = torch.tensor([[max_index]])
-        tokens = torch.cat((tokens, new_token), dim=1)
+        new_token = t.tensor([[max_index]])
+        tokens = t.cat((tokens, new_token), dim=1)
     
-    model_output = tokenizer.decode(tokens[0])
+    model_output = model.tokenizer.decode(tokens[0])
 
     if model.model_name_path=="google/gemma-2-2b-it":
         split_token = ADD_FROM_POS_GEMMA
@@ -295,7 +296,7 @@ def test_steering(
                         layer=layer,
                         vector=vector
                     )
-                    
+
                 results.append(result)
             with open(
                 save_filename,

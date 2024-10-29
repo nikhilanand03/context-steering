@@ -2,7 +2,7 @@ import torch as t
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from matplotlib import pyplot as plt
 from matplotlib.ticker import ScalarFormatter
-from utils.helpers import add_vector_from_position, find_instruction_end_postion, get_model_path
+from utils.helpers import add_vector_from_position, add_vector_full_from_start, find_instruction_end_postion, get_model_path
 from utils.tokenize import (
     tokenize_llama_chat,
     tokenize_llama_base,
@@ -88,7 +88,7 @@ class BlockOutputWrapper(t.nn.Module):
             )
             output = (augmented_output,) + output[1:]
         elif self.add_activations_full is not None:
-            augmented_output = add_vector_full_from_position(
+            augmented_output = add_vector_full_from_start(
                 matrix=output[0],
                 vector_full=self.add_activations_full
             )
