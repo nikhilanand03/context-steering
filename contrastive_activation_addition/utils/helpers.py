@@ -36,8 +36,12 @@ def add_vector_from_position(matrix, vector, position_ids, from_pos=None):
     except:
         mask = position_ids >= from_id
         mask = mask.unsqueeze(-1).to(matrix.device)
-        matrix += mask.float() * vector.to(matrix.device)    
+        matrix += mask.float() * vector.to(matrix.device)
 
+    return matrix
+
+def add_vector_full_from_start(matrix, vector_full):
+    matrix += vector_full.float()
     return matrix
 
 

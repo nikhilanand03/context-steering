@@ -54,6 +54,7 @@ class BlockOutputWrapper(t.nn.Module):
 
         self.activations = None
         self.add_activations = None
+        self.add_activations_full = None
         self.from_position = None
         self.ablate = False
 
@@ -76,6 +77,7 @@ class BlockOutputWrapper(t.nn.Module):
                 t.norm(last_token_activations) * t.norm(self.calc_dot_product_with)
             )
             self.dot_products.append((top_token, dot_product.cpu().item()))
+
         if self.add_activations is not None:
             augmented_output = add_vector_from_position(
                 matrix=output[0],
@@ -83,6 +85,12 @@ class BlockOutputWrapper(t.nn.Module):
                 position_ids=kwargs["position_ids"],
                 from_pos=self.from_position,
                 # ablate=self.ablate
+            )
+            output = (augmented_output,) + output[1:]
+        elif self.add_activations_full is not None:
+            augmented_output = add_vector_full_from_position(
+                matrix=output[0],
+                vector_full=self.add_activations_full
             )
             output = (augmented_output,) + output[1:]
 
@@ -119,8 +127,12 @@ class BlockOutputWrapper(t.nn.Module):
     def add(self, activations):
         self.add_activations = activations
 
+    def add_full(self, activations_full):
+        self.add_activations_full = activations_full
+
     def reset(self):
         self.add_activations = None
+        self.add_activations_full = None
         self.ablate = False
         self.activations = None
         self.block.self_attn.activations = None
@@ -267,6 +279,10 @@ class LlamaWrapper:
         self.added_activations = True
         self.model.model.layers[layer].add(activations)
         self.model.model.layers[layer].setAblate(ablate)
+    
+    def set_add_activations_full(self, layer, activations_full):
+        self.added_activations = True
+        self.model.model.layers[layer].add_full(activations_full)
 
     def set_calc_dot_product_with(self, layer, vector):
         self.model.model.layers[layer].calc_dot_product_with = vector

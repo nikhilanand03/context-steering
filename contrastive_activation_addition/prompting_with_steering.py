@@ -11,6 +11,7 @@ import os
 from dotenv import load_dotenv
 import argparse
 from typing import List, Dict, Optional
+from torch import Tensor
 from tqdm import tqdm
 from utils.helpers import get_a_b_probs
 from utils.tokenize import E_INST,ADD_FROM_POS_LATEST,ADD_FROM_POS_GEMMA
@@ -73,6 +74,80 @@ def process_item_open_ended(
         split_token = E_INST
     print(split_token)
     print(model_output.split(split_token)[-1].strip())
+    return {
+        "question": question,
+        "model_output": model_output.split(split_token)[-1].strip(),
+        "raw_model_output": model_output,
+    }
+
+def process_item_open_ended_dynamic(
+    item: Dict[str,str], # the json item containing "question"
+    model: LlamaWrapper,
+    layer: int,
+    vector: Tensor
+) -> Dict[str, str]:
+    question = item["question"]
+    tokens = tokenize_llama_chat(tokenizer=self.tokenizer, user_input=question)
+    tokens = t.tensor(tokens).unsqueeze(0).to(self.device) # will be a tensor of shape (1,num_tokens)
+
+    num_tokens = tokens.shape[1]
+    hidden_size = model.model.config.hidden_size
+    current_activations_full = t.zeros((1, num_tokens-1, hidden_size))
+    vector_sh = vector.unsqueeze(0).unsqueeze(0) # Shape (1, 1, hidden_size)
+
+    # This will be added directly to the state. So it needs to be changed every time the token state size changes.
+
+    max_new_tokens = 100
+
+    for i in range(max_new_tokens):
+        current_activations_full_0 = torch.cat((current_activations_full, 0*vector_sh), dim=1)
+        current_activations_full_2 = torch.cat((current_activations_full, 2*vector_sh), dim=1)
+
+        # Next token probs with zero-steering
+        model.reset_all()
+        model.set_add_activations_full(layer, current_activations_full_0)
+        logits_0 = model.get_logits(tokens)
+        last_token_logits_0 = logits_0[0, -1, :]
+        last_token_probs_0 = t.softmax(last_token_logits_0, dim=-1)
+        
+        # Next token probs with 2-steering
+        model.reset_all()
+        model.set_add_activations_full(layer, current_activations_full_2)
+        logits_2 = model.get_logits(tokens)
+        last_token_logits_2 = logits_2[0, -1, :]
+        last_token_probs_2 = t.softmax(last_token_logits_2, dim=-1)
+
+        # Getting optimal steering multiplier
+        last_token_probs_0 = last_token_probs_0 / last_token_probs_0.sum()
+        last_token_probs_2 = last_token_probs_2 / last_token_probs_2.sum()
+        kl_div = torch.sum(last_token_probs_0 * torch.log(last_token_probs_0 / last_token_probs_2))
+        steer_mult = min(kl_div.item(),2)
+
+        print("KL Divergence: ",kl_div.item())
+
+        current_activations_full = torch.cat((current_activations_full, steer_mult*vector_sh), dim=1)
+
+        model.reset_all()
+        model.set_add_activations_full(layer, current_activations_full)
+        logits = model.get_logits(tokens)
+        last_token_logits = logits[0, -1, :]
+        last_token_probs = t.softmax(last_token_logits, dim=-1)
+        max_index = t.argmax(last_token_probs)
+        new_token = torch.tensor([[max_index]])
+        tokens = torch.cat((tokens, new_token), dim=1)
+    
+    model_output = tokenizer.decode(tokens[0])
+
+    if model.model_name_path=="google/gemma-2-2b-it":
+        split_token = ADD_FROM_POS_GEMMA
+    elif model.model_name_path in ["meta-llama/Meta-Llama-3.1-8B-Instruct","meta-llama/Meta-Llama-3.1-70B-Instruct"]:
+        split_token = ADD_FROM_POS_LATEST
+    else:
+        split_token = E_INST
+
+    print(split_token)
+    print(model_output.split(split_token)[-1].strip())
+
     return {
         "question": question,
         "model_output": model_output.split(split_token)[-1].strip(),
@@ -200,17 +275,27 @@ def test_steering(
                 continue
             results = []
             for item in tqdm(test_data, desc=f"Layer {layer}, multiplier {multiplier}"):
-                model.reset_all()
-                model.set_add_activations(
-                    layer, multiplier * vector, settings.ablate
-                )
-                result = process_methods[settings.type](
-                    item=item,
-                    model=model,
-                    system_prompt=get_system_prompt(settings.behavior, settings.system_prompt),
-                    a_token_id=a_token_id,
-                    b_token_id=b_token_id,
-                )
+                if (not settings.dynamic_m) or (not settings.type=="open_ended"):
+                    model.reset_all()
+                    model.set_add_activations(
+                        layer, multiplier * vector, 
+                        # settings.ablate
+                    )
+                    result = process_methods[settings.type](
+                        item=item,
+                        model=model,
+                        system_prompt=get_system_prompt(settings.behavior, settings.system_prompt),
+                        a_token_id=a_token_id,
+                        b_token_id=b_token_id,
+                    )
+                else:
+                    result = process_item_open_ended_dynamic(
+                        item=item,
+                        model=model,
+                        layer=layer,
+                        vector=vector
+                    )
+                    
                 results.append(result)
             with open(
                 save_filename,
@@ -250,7 +335,8 @@ if __name__ == "__main__":
     parser.add_argument("--override_oe_dataset_path", type=str, default=None)
     parser.add_argument("--override_ab_dataset", type=str, default=None)
     parser.add_argument("--suffix", type=str, default="")
-    
+    parser.add_argument("--dynamic_m", action="store_true", default=False)
+
     args = parser.parse_args()
 
     steering_settings = SteeringSettings()
@@ -269,6 +355,7 @@ if __name__ == "__main__":
     steering_settings.override_ab_dataset = args.override_ab_dataset
     steering_settings.suffix = args.suffix
     steering_settings.ablate = args.ablate
+    steering_settings.dynamic_m = args.dynamic_m
 
     for behavior in args.behaviors:
         steering_settings.behavior = behavior
@@ -278,4 +365,3 @@ if __name__ == "__main__":
             settings=steering_settings,
             overwrite=args.overwrite,
         )
-
