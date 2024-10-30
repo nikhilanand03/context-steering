@@ -41,6 +41,7 @@ def add_vector_from_position(matrix, vector, position_ids, from_pos=None):
     return matrix
 
 def add_vector_full_from_start(matrix, vector_full):
+    print("matrix:",matrix.shape,"vector_full:",vector_full.shape)
     matrix += vector_full.float()
     return matrix
 

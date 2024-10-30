@@ -101,7 +101,7 @@ def process_item_open_ended_dynamic(
     max_new_tokens = 100
 
     for i in range(max_new_tokens):
-        print(current_activations_full.shape)
+        print("current_activations_full.shape:",current_activations_full.shape)
         current_activations_full_0 = t.cat((current_activations_full, 0*vector_sh), dim=1)
         current_activations_full_2 = t.cat((current_activations_full, 2*vector_sh), dim=1)
 
@@ -129,6 +129,7 @@ def process_item_open_ended_dynamic(
 
         current_activations_full = t.cat((current_activations_full, steer_mult*vector_sh), dim=1)
 
+        print(f"Setting add activations full to one with shape {current_activations_full.shape} and doing forward pass.")
         model.reset_all()
         model.set_add_activations_full(layer, current_activations_full)
         logits = model.get_logits(tokens)
