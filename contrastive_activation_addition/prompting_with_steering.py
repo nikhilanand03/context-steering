@@ -101,6 +101,7 @@ def process_item_open_ended_dynamic(
     max_new_tokens = 100
 
     for i in range(max_new_tokens):
+        print(current_activations_full.shape)
         current_activations_full_0 = t.cat((current_activations_full, 0*vector_sh), dim=1)
         current_activations_full_2 = t.cat((current_activations_full, 2*vector_sh), dim=1)
 
