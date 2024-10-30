@@ -93,8 +93,8 @@ def process_item_open_ended_dynamic(
 
     num_tokens = tokens.shape[1]
     hidden_size = model.model.config.hidden_size
-    current_activations_full = t.zeros((1, num_tokens-1, hidden_size))
-    vector_sh = vector.unsqueeze(0).unsqueeze(0) # Shape (1, 1, hidden_size)
+    current_activations_full = t.zeros((1, num_tokens-1, hidden_size)).to(model.device)
+    vector_sh = vector.unsqueeze(0).unsqueeze(0).to(model.device) # Shape (1, 1, hidden_size)
 
     # This will be added directly to the state. So it needs to be changed every time the token state size changes.
 
@@ -102,42 +102,42 @@ def process_item_open_ended_dynamic(
 
     for i in range(max_new_tokens):
         print("current_activations_full.shape:",current_activations_full.shape)
-        current_activations_full_0 = t.cat((current_activations_full, 0*vector_sh), dim=1)
-        current_activations_full_2 = t.cat((current_activations_full, 2*vector_sh), dim=1)
+        current_activations_full_0 = t.cat((current_activations_full, 0*vector_sh), dim=1).to(model.device)
+        current_activations_full_2 = t.cat((current_activations_full, 2*vector_sh), dim=1).to(model.device)
 
         # Next token probs with zero-steering
         model.reset_all()
         model.set_add_activations_full(layer, current_activations_full_0)
         logits_0 = model.get_logits(tokens)
         last_token_logits_0 = logits_0[0, -1, :]
-        last_token_probs_0 = t.softmax(last_token_logits_0, dim=-1)
+        last_token_probs_0 = t.softmax(last_token_logits_0, dim=-1).to(model.device)
         
         # Next token probs with 2-steering
         model.reset_all()
         model.set_add_activations_full(layer, current_activations_full_2)
         logits_2 = model.get_logits(tokens)
         last_token_logits_2 = logits_2[0, -1, :]
-        last_token_probs_2 = t.softmax(last_token_logits_2, dim=-1)
+        last_token_probs_2 = t.softmax(last_token_logits_2, dim=-1).to(model.device)
 
         # Getting optimal steering multiplier
         last_token_probs_0 = last_token_probs_0 / last_token_probs_0.sum()
         last_token_probs_2 = last_token_probs_2 / last_token_probs_2.sum()
-        kl_div = t.sum(last_token_probs_0 * t.log(last_token_probs_0 / last_token_probs_2))
+        kl_div = t.sum(last_token_probs_0 * t.log(last_token_probs_0 / last_token_probs_2)).to(model.device)
         steer_mult = min(3*kl_div.item(),2)
 
         print("3*KL Divergence: ",3*kl_div.item())
 
-        current_activations_full = t.cat((current_activations_full, steer_mult*vector_sh), dim=1)
+        current_activations_full = t.cat((current_activations_full, steer_mult*vector_sh), dim=1).to(model.device)
 
         print(f"Setting add activations full to one with shape {current_activations_full.shape} and doing forward pass.")
         model.reset_all()
         model.set_add_activations_full(layer, current_activations_full)
         logits = model.get_logits(tokens)
         last_token_logits = logits[0, -1, :]
-        last_token_probs = t.softmax(last_token_logits, dim=-1)
+        last_token_probs = t.softmax(last_token_logits, dim=-1).to(model.device)
         max_index = t.argmax(last_token_probs)
         new_token = t.tensor([[max_index]])
-        tokens = t.cat((tokens, new_token), dim=1)
+        tokens = t.cat((tokens, new_token.to(model.device)), dim=1)
     
     model_output = model.tokenizer.decode(tokens[0])
 
