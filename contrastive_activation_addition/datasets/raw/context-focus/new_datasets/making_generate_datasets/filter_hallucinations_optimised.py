@@ -25,6 +25,7 @@ class HotpotQAProcessor:
         
         try:
             self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+            self.tokenizer.pad_token = "<|finetune_right_pad_id|>"
             self.model = AutoModelForCausalLM.from_pretrained(
                 model_name,
                 device_map="auto",

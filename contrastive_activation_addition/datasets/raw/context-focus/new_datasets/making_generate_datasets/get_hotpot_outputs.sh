@@ -1,6 +1,6 @@
 cd contrastive_activation_addition/datasets/raw/context-focus/new_datasets/making_generate_datasets
 curl -o hotpot_training_data.json http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_train_v1.1.json
-python filter_hallucinations.py
+python filter_hallucinations_optimised.py
 
 # This should generate the outputs file and store it in the same folder
 # Download this back and we can then perform analyses locally. Then we can generate the synthetic dataset using that.
