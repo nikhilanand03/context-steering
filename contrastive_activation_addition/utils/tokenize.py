@@ -90,3 +90,34 @@ def tokenize_llama_base(
     if model_output is not None:
         input_content += f"{BASE_RESPONSE} {model_output.strip()}"
     return tokenizer.encode(input_content)
+
+def tokenize_multi_context(
+    tokenizer: PreTrainedTokenizer, 
+    documents: List[str], 
+    question: str, 
+    options: List[str] = None,
+    model_output: str = None
+) -> List[int]:
+    system_prompt = "You are a Contextual QA Assistant. Use the following retrieved contexts to answer any questions that may follow."
+    header = f"{B_HEADER}system{E_HEADER}\n\n{system_prompt}{EOT_ID}"
+    
+    context_input = "\n\n".join(
+        f"[Document {i+1}]: {doc}" 
+        for i, doc in enumerate(documents)
+    )
+
+    if options is not None:
+        question = f"{question}\n\nOptions:\n (A) {options[0]}\n (B) {options[1]}"
+    
+    user_context = f"{B_HEADER}user{E_HEADER}\n\n{context_input.strip()}{EOT_ID}"
+    assistant_reply = f"{B_HEADER}assistant{E_HEADER}\n\nWill do! I'll use these contexts to answer your questions.{EOT_ID}"
+    final_question = f"{B_HEADER}user{E_HEADER}\n\n{question.strip()}{EOT_ID}\n{B_HEADER}assistant{E_HEADER}\n\n"
+    
+    output_token_string = f"{header}{user_context}{assistant_reply}{final_question}"
+
+    if model_output is not None:
+        output_token_string += f"{model_output.strip()}"
+    
+    print(output_token_string)
+
+    return tokenizer.encode(output_token_string)

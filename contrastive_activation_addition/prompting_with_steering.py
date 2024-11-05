@@ -15,7 +15,7 @@ from torch import Tensor
 import torch as t
 from tqdm import tqdm
 from utils.helpers import get_a_b_probs
-from utils.tokenize import E_INST,ADD_FROM_POS_LATEST,ADD_FROM_POS_GEMMA, tokenize_llama_chat
+from utils.tokenize import E_INST,ADD_FROM_POS_LATEST,ADD_FROM_POS_GEMMA, tokenize_llama_chat, tokenize_multi_context
 from steering_settings import SteeringSettings
 from behaviors import (
     get_open_ended_test_data,
@@ -40,15 +40,28 @@ def process_item_ab(
     system_prompt: Optional[str],
     a_token_id: int,
     b_token_id: int,
+    multicontext: bool=False
 ) -> Dict[str, str]:
-    question: str = item["question"]
     answer_matching_behavior = item["answer_matching_behavior"]
     answer_not_matching_behavior = item["answer_not_matching_behavior"]
-    model_output = model.get_logits_from_text(
-        user_input=question, model_output="(", system_prompt=system_prompt
-    )
+    question: str = item["question"]
+
+    if not multicontext:
+        model_output = model.get_logits_from_text(
+            user_input=question, model_output="(", system_prompt=system_prompt
+        )
+    else:
+        tokens = tokenize_multi_context(
+            model.tokenizer, 
+            item['rag'], 
+            question, 
+            item['options'],
+            model_output="(")
+        model_output = model.get_logits(tokens)
+
     a_prob, b_prob = get_a_b_probs(model_output, a_token_id, b_token_id)
-    return {
+    
+    response = {
         "question": question,
         "answer_matching_behavior": answer_matching_behavior,
         "answer_not_matching_behavior": answer_not_matching_behavior,
@@ -56,17 +69,33 @@ def process_item_ab(
         "b_prob": b_prob,
     }
 
+    if multicontext:
+        response["options"] = item["options"]
+        response["rag"] = item["rag"]
+
+    return response
+
 def process_item_open_ended(
     item: Dict[str, str],
     model: LlamaWrapper,
     system_prompt: Optional[str],
     a_token_id: int,
     b_token_id: int,
+    multicontext: bool=False
 ) -> Dict[str, str]:
     question = item["question"]
-    model_output = model.generate_text(
-        user_input=question, system_prompt=system_prompt, max_new_tokens=100
-    )
+
+    if not multicontext:
+        model_output = model.generate_text(
+            user_input=question, system_prompt=system_prompt, max_new_tokens=100
+        )
+    else:
+        tokens = tokenize_multi_context(
+            model.tokenizer, 
+            item['rag'], 
+            question)
+        model_output = model.generate(tokens, max_new_tokens=100)
+
     if model.model_name_path=="google/gemma-2-2b-it":
         split_token = ADD_FROM_POS_GEMMA
     elif model.model_name_path in ["meta-llama/Meta-Llama-3.1-8B-Instruct","meta-llama/Meta-Llama-3.1-70B-Instruct"]:
@@ -75,11 +104,18 @@ def process_item_open_ended(
         split_token = E_INST
     print(split_token)
     print(model_output.split(split_token)[-1].strip())
-    return {
+
+    response = {
         "question": question,
         "model_output": model_output.split(split_token)[-1].strip(),
         "raw_model_output": model_output,
     }
+
+    if multicontext: 
+        response['rag'] = rag
+        response['answer'] = item['answer']
+
+    return response
 
 def process_item_open_ended_dynamic(
     item: Dict[str,str], # the json item containing "question"
@@ -163,6 +199,7 @@ def process_item_if_eval(
     system_prompt: Optional[str],
     a_token_id: int,
     b_token_id: int,
+    multicontext: bool=False
 ) -> Dict[str, str]:
     question = item["question"]
     model_output = model.generate_text(
@@ -221,6 +258,7 @@ def test_steering(
         # "mmlu": process_item_tqa_mmlu,
         "if_eval": process_item_if_eval
     }
+
     test_datasets = {
         "ab": get_ab_test_data(settings.behavior,settings.override_ab_dataset),
         "open_ended": get_open_ended_test_data(settings.behavior, settings.override_oe_dataset_path),
@@ -278,7 +316,14 @@ def test_steering(
                 continue
             results = []
             for item in tqdm(test_data, desc=f"Layer {layer}, multiplier {multiplier}"):
-                if (not settings.dynamic_m) or (not settings.type=="open_ended"):
+                if settings.dynamic_m and settings.type=="open_ended":
+                    result = process_item_open_ended_dynamic(
+                        item=item,
+                        model=model,
+                        layer=layer,
+                        vector=vector
+                    )
+                else:
                     model.reset_all()
                     model.set_add_activations(
                         layer, multiplier * vector, 
@@ -290,13 +335,7 @@ def test_steering(
                         system_prompt=get_system_prompt(settings.behavior, settings.system_prompt),
                         a_token_id=a_token_id,
                         b_token_id=b_token_id,
-                    )
-                else:
-                    result = process_item_open_ended_dynamic(
-                        item=item,
-                        model=model,
-                        layer=layer,
-                        vector=vector
+                        multicontext=settings.multicontext
                     )
 
                 results.append(result)
@@ -339,6 +378,7 @@ if __name__ == "__main__":
     parser.add_argument("--override_ab_dataset", type=str, default=None)
     parser.add_argument("--suffix", type=str, default="")
     parser.add_argument("--dynamic_m", action="store_true", default=False)
+    parser.add_argument("--multicontext", action="store_true", default=False)
 
     args = parser.parse_args()
 
@@ -359,6 +399,7 @@ if __name__ == "__main__":
     steering_settings.suffix = args.suffix
     steering_settings.ablate = args.ablate
     steering_settings.dynamic_m = args.dynamic_m
+    steering_settings.multicontext = args.multicontext
 
     for behavior in args.behaviors:
         steering_settings.behavior = behavior

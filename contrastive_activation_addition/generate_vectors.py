@@ -15,7 +15,7 @@ from dotenv import load_dotenv
 from llama_wrapper import LlamaWrapper
 import argparse
 from typing import List
-from utils.tokenize import tokenize_llama_base, tokenize_llama_chat
+from utils.tokenize import tokenize_llama_base, tokenize_llama_chat, tokenize_multi_context
 from behaviors import (
     get_vector_dir,
     get_activations_dir,
@@ -31,7 +31,7 @@ HUGGINGFACE_TOKEN = os.getenv("HF_TOKEN")
 
 
 class ComparisonDataset(Dataset):
-    def __init__(self, data_path, token, model_name_path, use_chat):
+    def __init__(self, data_path, token, model_name_path, use_chat, multicontext=False):
         with open(data_path, "r") as f:
             self.data = json.load(f)
         self.tokenizer = AutoTokenizer.from_pretrained(
@@ -40,20 +40,29 @@ class ComparisonDataset(Dataset):
         self.tokenizer.pad_token = self.tokenizer.eos_token
         self.use_chat = use_chat
         self.model_name_path = model_name_path
+        self.multicontext = multicontext
 
     def prompt_to_tokens(self, instruction, model_output):
-        if self.use_chat:
-            tokens = tokenize_llama_chat(
-                self.tokenizer,
-                user_input=instruction,
-                model_output=model_output
-            )
+        if not self.multicontext:
+            if self.use_chat:
+                tokens = tokenize_llama_chat(
+                    self.tokenizer,
+                    user_input=instruction,
+                    model_output=model_output
+                )
+            else:
+                tokens = tokenize_llama_base(
+                    self.tokenizer,
+                    user_input=instruction,
+                    model_output=model_output,
+                )
         else:
-            tokens = tokenize_llama_base(
-                self.tokenizer,
-                user_input=instruction,
-                model_output=model_output,
-            )
+            # instruction is a dictionary if we're talking about multicontext
+            tokens = tokenize_multi_context(
+                self.tokenizer, 
+                instruction['rag'],
+                instruction['question'],
+                options = instruction['options'])
         return t.tensor(tokens).unsqueeze(0)
 
     def __len__(self):
@@ -64,9 +73,15 @@ class ComparisonDataset(Dataset):
         # pre_out = "Ans: " if ("Llama-3" in self.model_name_path or "Mistral" in self.model_name_path) else ""
         p_text = item["answer_matching_behavior"]
         n_text = item["answer_not_matching_behavior"]
-        q_text = item["question"]
-        p_tokens = self.prompt_to_tokens(q_text, p_text)
-        n_tokens = self.prompt_to_tokens(q_text, n_text)
+        
+        if not self.multicontext:
+            q_text = item["question"]
+            p_tokens = self.prompt_to_tokens(q_text, p_text)
+            n_tokens = self.prompt_to_tokens(q_text, n_text)
+        else:
+            p_tokens = self.prompt_to_tokens(item, p_text)
+            n_tokens = self.prompt_to_tokens(item, n_text)
+
         return p_tokens, n_tokens
 
 def generate_save_vectors_for_behavior(
@@ -76,7 +91,7 @@ def generate_save_vectors_for_behavior(
     model: LlamaWrapper,
     override_dataset: str,
     suffix: str
-
+    multicontext: bool
 ):
     # print(get_vector_path(behavior, 1, model.model_name_path, suffix=suffix))
     # print(get_activations_path(behavior, 1, model.model_name_path, "neg", suffix=suffix))
@@ -96,7 +111,8 @@ def generate_save_vectors_for_behavior(
         data_path,
         HUGGINGFACE_TOKEN,
         model.model_name_path,
-        model.use_chat
+        model.use_chat,
+        multicontext=multicontext
     )
 
     for p_tokens, n_tokens in tqdm(dataset, desc="Processing prompts"):
@@ -142,7 +158,8 @@ def generate_save_vectors(
     use_latest: bool=False,
     use_mistral:bool=False,
     override_dataset:str=None,
-    suffix:str=""
+    suffix:str="",
+    multicontext:bool=False
 ):
     """
     layers: list of layers to generate vectors for
@@ -156,7 +173,7 @@ def generate_save_vectors(
     )
     for behavior in behaviors:
         generate_save_vectors_for_behavior(
-            layers, save_activations, behavior, model, override_dataset, suffix
+            layers, save_activations, behavior, model, override_dataset, suffix, multicontext
         )
 
 
@@ -171,6 +188,7 @@ if __name__ == "__main__":
     parser.add_argument("--use_mistral",action="store_true",default=False)
     parser.add_argument("--override_dataset", type=str, default=None)
     parser.add_argument("--suffix", type=str, default="")
+    parser.add_argument("--multicontext", action="store_true", default=False)
 
     args = parser.parse_args()
     generate_save_vectors(
@@ -182,5 +200,6 @@ if __name__ == "__main__":
         args.use_latest,
         args.use_mistral,
         args.override_dataset,
-        args.suffix
+        args.suffix,
+        args.multicontext
     )
