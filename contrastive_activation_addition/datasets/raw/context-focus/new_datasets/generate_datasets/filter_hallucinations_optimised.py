@@ -117,7 +117,8 @@ class HotpotQAProcessor:
 
         # Decode outputs and free memory
         responses = [
-            self.tokenizer.decode(output, skip_special_tokens=True)
+            # self.tokenizer.decode(output, skip_special_tokens=True) # skip_special_tokens, so it skips the special tokens like start_header! This shouldn't be an issue in generation, only in decoding.
+            self.tokenizer.decode(output, skip_special_tokens=False)
             for output in outputs
         ]
         del inputs, outputs
