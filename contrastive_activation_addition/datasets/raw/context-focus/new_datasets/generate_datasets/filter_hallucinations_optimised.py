@@ -100,19 +100,14 @@ class HotpotQAProcessor:
         inputs = self.tokenizer(
             prompts,
             return_tensors="pt",
-            padding=True,
-            truncation=True,
-            max_length=2048
+            padding='longest'
         ).to(self.device)
 
         # Generate responses for batch
         with torch.no_grad():
             outputs = self.model.generate(
                 **inputs,
-                max_new_tokens=100,
-                num_return_sequences=1,
-                pad_token_id=self.tokenizer.pad_token_id,
-                do_sample=False
+                max_new_tokens=100
             )
 
         # Decode outputs and free memory
@@ -130,7 +125,7 @@ class HotpotQAProcessor:
             results.append({
                 "question": item['question'],
                 "answer": item['answer'],
-                "model_output": response
+                "model_output": response.split("<|start_header_id|>assistant<|end_header_id|>\n\n")[-1]
             })
 
         return results
