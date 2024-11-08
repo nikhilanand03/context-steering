@@ -25,20 +25,13 @@ SAVE_FREQUENCY = 100  # Save results every N examples
 def strip_finetune_padding(input_string, pad_token="<|finetune_right_pad_id|>"):
     parts = input_string.split(pad_token)
 
-    while parts and parts[0] == "":
-        parts.pop(0)
     while parts and parts[-1] == "":
         parts.pop()
         
     stripped_string = pad_token.join(parts)
     
     return stripped_string
-
-# Example usage
-input_string = "<|finetune_right_pad_id|><|finetune_right_pad_id|>Some important text<|finetune_right_pad_id|><|finetune_right_pad_id|>"
-output = strip_finetune_padding(input_string)
-print(output)
-
+    
 class HotpotQAProcessor:
     def __init__(self, model_name: str = "meta-llama/Meta-Llama-3.1-8B-Instruct"):
         """Initialize the HotPot QA processor with model and tokenizer."""
@@ -49,7 +42,7 @@ class HotpotQAProcessor:
         self.logger.info(f"Using device: {self.device}")
         
         try:
-            self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+            self.tokenizer = AutoTokenizer.from_pretrained(model_name, padding_side='left')
             self.tokenizer.pad_token = "<|finetune_right_pad_id|>"
             self.model = AutoModelForCausalLM.from_pretrained(
                 model_name,
