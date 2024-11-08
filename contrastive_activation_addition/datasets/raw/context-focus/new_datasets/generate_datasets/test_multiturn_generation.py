@@ -19,7 +19,7 @@ def generate_response(model, tokenizer, conversation, max_length=512):
         )
     
     # Decode the response
-    response = tokenizer.decode(output_ids[0], skip_special_tokens=True)
+    response = tokenizer.decode(output_ids[0], skip_special_tokens=False)
     return response
 
 def main():

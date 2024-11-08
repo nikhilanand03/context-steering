@@ -108,7 +108,8 @@ class HotpotQAProcessor:
         inputs = self.tokenizer(
             prompts,
             return_tensors="pt",
-            padding='longest'
+            padding='longest',
+            add_special_tokens=True
         ).to(self.device)
 
         # Generate responses for batch
@@ -116,7 +117,12 @@ class HotpotQAProcessor:
             outputs = self.model.generate(
                 **inputs,
                 max_new_tokens=100,
-                # stopping_criteria=StoppingCriteriaList([StopAtEOT("<|eot_id|>")])
+                pad_token_id=tokenizer.pad_token_id,
+                eos_token_id=tokenizer.eos_token_id,
+                do_sample=False,
+                temperature=0,
+                num_return_sequences=1,
+                stopping_criteria=None
             )
 
         # Decode outputs and free memory
@@ -137,7 +143,7 @@ class HotpotQAProcessor:
                 "model_output": response.split("<|start_header_id|>assistant<|end_header_id|>\n\n")[-1]
             })
         
-            print("RESPONSE:\n",response)
+            print("\nRESPONSE:\n\n",response)
 
         return results
 
