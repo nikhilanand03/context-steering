@@ -137,7 +137,7 @@ class HotpotQAProcessor:
                 "model_output": response.split("<|start_header_id|>assistant<|end_header_id|>\n\n")[-1]
             })
         
-            print("RESPONSE:\n",response.split("<|start_header_id|>assistant<|end_header_id|>\n\n"))[-1]
+            print("RESPONSE:\n",response)
 
         return results
 
