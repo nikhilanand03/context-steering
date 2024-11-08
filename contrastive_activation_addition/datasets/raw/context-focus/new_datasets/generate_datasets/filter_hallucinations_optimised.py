@@ -140,7 +140,7 @@ class HotpotQAProcessor:
             results.append({
                 "question": item['question'],
                 "answer": item['answer'],
-                "model_output": response.split("<|start_header_id|>assistant<|end_header_id|>\n\n")[-1]
+                "model_output": response.split("<|start_header_id|>assistant<|end_header_id|>\n\n")[-1][:index(EOT_ID)+10].split("<|finetune_right_pad_id|>")[-1]
             })
         
             print("\nRESPONSE:\n\n",response)
