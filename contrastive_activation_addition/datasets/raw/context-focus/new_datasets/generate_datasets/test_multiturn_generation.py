@@ -12,8 +12,8 @@ def generate_response(model, tokenizer, conversation, max_length=512):
             max_length=max_length,
             pad_token_id=tokenizer.pad_token_id,
             eos_token_id=tokenizer.eos_token_id,
-            do_sample=True,
-            temperature=0.7,
+            do_sample=False,
+            temperature=0,
             num_return_sequences=1,
             stopping_criteria=None  # Will stop at EOS token
         )
@@ -24,16 +24,19 @@ def generate_response(model, tokenizer, conversation, max_length=512):
 
 def main():
     # Initialize model and tokenizer
-    model_name = "meta-llama/Llama-2-8b-chat-hf"
+    model_name = "meta-llama/Meta-Llama-3.1-8B-Instruct"
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForCausalLM.from_pretrained(model_name)
     
     # Define the multi-turn conversation
-    conversation = """<s>[INST] <<SYS>>
-You are a helpful AI assistant.
-<</SYS>>
+    conversation = """<|start_header_id|>system<|end_header_id|>
 
-How can I learn to play chess? [/INST]
+You are a helpful AI assistant.<|eot_id|>
+<|start_header_id|>user<|end_header_id|>
+
+How can I learn to play chess?<|eot_id|>
+<|start_header_id|>assistant<|end_header_id|>
+
 To start learning chess, I recommend these steps:
 
 1. Learn how each piece moves
@@ -42,9 +45,11 @@ To start learning chess, I recommend these steps:
 4. Study opening principles
 5. Play regularly against others
 
-Would you like me to explain any of these in more detail? [/INST]
+Would you like me to explain any of these in more detail?<|eot_id|>
+<|start_header_id|>user<|end_header_id|>
 
-Yes, please explain the basic checkmate patterns. [/INST]
+Yes, please explain the basic checkmate patterns.<|eot_id|>
+<|start_header_id|>assistant<|end_header_id|>
 
 Here are some fundamental checkmate patterns:
 
@@ -53,9 +58,13 @@ Here are some fundamental checkmate patterns:
 3. Smothered mate
 4. Queen and king mate
 
-Let me explain the back-rank mate in detail... [/INST]
+Let me explain the back-rank mate in detail...<|eot_id|>
+<|start_header_id|>user<|end_header_id|>
 
-Please continue explaining the back-rank mate. [/INST]"""
+Please continue explaining the back-rank mate.<|eot_id|>
+<|start_header_id|>assistant<|end_header_id|>
+
+"""
 
     # Generate and print response
     response = generate_response(model, tokenizer, conversation)

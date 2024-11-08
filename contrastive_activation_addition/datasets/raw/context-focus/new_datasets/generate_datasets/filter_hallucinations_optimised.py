@@ -23,7 +23,7 @@ SAVE_FREQUENCY = 100  # Save results every N examples
 #         return input_ids[0, -1].item() == self.eot_id
 
 class HotpotQAProcessor:
-    def __init__(self, model_name: str = "meta-llama/LLaMA-3.1-8b"):
+    def __init__(self, model_name: str = "meta-llama/Meta-Llama-3.1-8B-Instruct"):
         """Initialize the HotPot QA processor with model and tokenizer."""
         logging.basicConfig(level=logging.INFO)
         self.logger = logging.getLogger(__name__)
