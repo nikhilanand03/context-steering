@@ -7,7 +7,7 @@ import logging
 from pathlib import Path
 import gc
 import ijson  # For streaming JSON processing
-from transformers import StoppingCriteria, StoppingCriteriaList
+# from transformers import StoppingCriteria, StoppingCriteriaList
 
 # Constants
 B_HEADER, E_HEADER = "<|start_header_id|>", "<|end_header_id|>"
@@ -15,12 +15,12 @@ EOT_ID = "<|eot_id|>"
 BATCH_SIZE = 8  # Adjust based on your GPU memory
 SAVE_FREQUENCY = 100  # Save results every N examples
 
-class StopAtEOT(StoppingCriteria):
-    def __init__(self, eot_id):
-        self.eot_id = eot_id
+# class StopAtEOT(StoppingCriteria):
+#     def __init__(self, eot_id):
+#         self.eot_id = eot_id
 
-    def __call__(self, input_ids, scores):
-        return input_ids[0, -1].item() == self.eot_id
+#     def __call__(self, input_ids, scores):
+#         return input_ids[0, -1].item() == self.eot_id
 
 class HotpotQAProcessor:
     def __init__(self, model_name: str = "meta-llama/LLaMA-3.1-8b"):
@@ -116,7 +116,7 @@ class HotpotQAProcessor:
             outputs = self.model.generate(
                 **inputs,
                 max_new_tokens=100,
-                stopping_criteria=StoppingCriteriaList([StopAtEOT("<|eot_id|>")])
+                # stopping_criteria=StoppingCriteriaList([StopAtEOT("<|eot_id|>")])
             )
 
         # Decode outputs and free memory

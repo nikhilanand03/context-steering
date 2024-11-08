@@ -10,3 +10,5 @@ pip install -r requirements_new.txt
 # Both below commands can be run in parallel
 conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
 pip install --upgrade langchain langchain-core requests charset-normalizer
+
+# don't forget to activate sllama_conda once it's done.
