@@ -22,6 +22,23 @@ SAVE_FREQUENCY = 100  # Save results every N examples
 #     def __call__(self, input_ids, scores):
 #         return input_ids[0, -1].item() == self.eot_id
 
+def strip_finetune_padding(input_string, pad_token="<|finetune_right_pad_id|>"):
+    parts = input_string.split(pad_token)
+
+    while parts and parts[0] == "":
+        parts.pop(0)
+    while parts and parts[-1] == "":
+        parts.pop()
+        
+    stripped_string = pad_token.join(parts)
+    
+    return stripped_string
+
+# Example usage
+input_string = "<|finetune_right_pad_id|><|finetune_right_pad_id|>Some important text<|finetune_right_pad_id|><|finetune_right_pad_id|>"
+output = strip_finetune_padding(input_string)
+print(output)
+
 class HotpotQAProcessor:
     def __init__(self, model_name: str = "meta-llama/Meta-Llama-3.1-8B-Instruct"):
         """Initialize the HotPot QA processor with model and tokenizer."""
@@ -45,7 +62,7 @@ class HotpotQAProcessor:
 
     def template_prompt(self, documents: List[str], question: str) -> str:
         """Create a formatted prompt from documents and question."""
-        system_prompt = "You are a Contextual QA Assistant. Use the following retrieved contexts to answer any questions that may follow."
+        system_prompt = "You are a Contextual QA Assistant. Use the following retrieved contexts to answer any questions that may follow. Keep the answer brief and to the point, answering in one sentence."
         
         # Build prompt components
         header = f"{B_HEADER}system{E_HEADER}\n\n{system_prompt}{EOT_ID}"
@@ -117,8 +134,8 @@ class HotpotQAProcessor:
             outputs = self.model.generate(
                 **inputs,
                 max_new_tokens=100,
-                pad_token_id=tokenizer.pad_token_id,
-                eos_token_id=tokenizer.eos_token_id,
+                pad_token_id=self.tokenizer.pad_token_id,
+                eos_token_id=self.tokenizer.eos_token_id,
                 do_sample=False,
                 temperature=0,
                 num_return_sequences=1,
@@ -137,10 +154,11 @@ class HotpotQAProcessor:
         # Create results
         results = []
         for item, response in zip(batch_data, responses):
+            response = strip_finetune_padding(response.split("<|start_header_id|>assistant<|end_header_id|>\n\n")[-1])
             results.append({
                 "question": item['question'],
                 "answer": item['answer'],
-                "model_output": response.split("<|start_header_id|>assistant<|end_header_id|>\n\n")[-1][:index(EOT_ID)+10].split("<|finetune_right_pad_id|>")[-1]
+                "model_output": response
             })
         
             print("\nRESPONSE:\n\n",response)
