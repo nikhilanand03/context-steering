@@ -1,3 +1,12 @@
 hotpot_results_old_900k.json
 hotpot_results_correct_3k.json
 hotpot_results_new_bad_2k.json
+mistakes_hotpot_results_correct_3k.json
+scores_hotpot_results_correct_3k.json
+final_generate_dataset.json
+
+hotpot_training_data.json
+
+scored_generate_dataset.json
+shortlisted_generate_dataset.json
+supporting_facts_generate_dataset.jso

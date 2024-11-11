@@ -181,6 +181,10 @@ class HotpotQAProcessor:
                     
                     # Clear batch and increment counter
                     total_processed += len(current_batch)
+
+                    if total_processed > 200000:
+                        break
+
                     current_batch = []
                     
                     # Memory cleanup
