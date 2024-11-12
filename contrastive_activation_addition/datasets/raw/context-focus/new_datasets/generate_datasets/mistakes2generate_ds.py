@@ -14,8 +14,10 @@ llm = AzureChatOpenAI(
     # other params...
 )
 
+NUM_POINTS = 2500*8
+
 with open("hotpot_training_data.json",'r') as file:
-    data = json.load(file)[:3000]
+    data = json.load(file)[:NUM_POINTS]
 
 SYSTEM_PROMPT = """
 You are an AI assistant tasked with generating a concise, grammatically-correct sentence answer from a given question and a short answer to that question.
@@ -61,7 +63,9 @@ def convert_context_to_rag(context):
         rag_contexts.append(rag_context)
     return rag_contexts
 
-with open("scores_hotpot_results_correct_3k.json",'r') as file:
+# scores_filename = "scores_hotpot_results_correct_3k.json"
+scores_filename = "scores_0_2500_hotpot_results_100k.json"
+with open(scores_filename,'r') as file:
     data_scores_temp = json.load(file)
 
 data_scores = []

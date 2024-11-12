@@ -3,8 +3,9 @@ import json
 with open("final_generate_dataset.json", 'r') as f:
     data = json.load(f)
 
+NUM_POINTS = 2500*8
 with open("hotpot_training_data.json", 'r') as f:
-    data_tr = json.load(f)[:3000]
+    data_tr = json.load(f)[:NUM_POINTS]
 
 supporting_facts_dataset = []
 
