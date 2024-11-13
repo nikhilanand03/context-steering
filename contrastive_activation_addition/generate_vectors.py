@@ -90,7 +90,7 @@ def generate_save_vectors_for_behavior(
     behavior: List[str],
     model: LlamaWrapper,
     override_dataset: str,
-    suffix: str
+    suffix: str,
     multicontext: bool
 ):
     # print(get_vector_path(behavior, 1, model.model_name_path, suffix=suffix))
