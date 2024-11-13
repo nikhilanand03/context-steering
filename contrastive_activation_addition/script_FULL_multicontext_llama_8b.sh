@@ -8,8 +8,8 @@ python plot_activations.py --layers $(seq 0 31) --use_latest --behaviors "contex
 
 # TESTING ON MCQ DATASET TO GET BEST LAYER 
 # (I changed prompt with steering to account for multicontext in the type="ab" case here)
-python prompting_with_steering.py --layers $(seq 0 31) --use_latest --multipliers -1 0 1 --type ab --behaviors "context-focus" --override_ab_dataset "test_dataset_ab_multicontext_2500.json" --multicontext
-python plot_results.py --layers $(seq 0 31) --multipliers -1 1 --type ab --behaviors "context-focus"
+# python prompting_with_steering.py --layers $(seq 0 31) --use_latest --multipliers -1 0 1 --type ab --behaviors "context-focus" --override_ab_dataset "test_dataset_ab_multicontext_2500.json" --multicontext
+# python plot_results.py --layers $(seq 0 31) --multipliers -1 1 --type ab --behaviors "context-focus"
 
 # BESTLAYER=12 ## GET BEST LAYER HERE
 
