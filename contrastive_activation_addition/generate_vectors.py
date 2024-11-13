@@ -62,7 +62,8 @@ class ComparisonDataset(Dataset):
                 self.tokenizer, 
                 instruction['rag'],
                 instruction['question'],
-                options = instruction['options'])
+                options = instruction['options']),
+                model_output=model_output
         return t.tensor(tokens).unsqueeze(0)
 
     def __len__(self):
