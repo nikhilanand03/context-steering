@@ -20,5 +20,5 @@ python plot_results.py --layers $BESTLAYER --multipliers -3 -2 -1 0 1 2 3 --type
 
 # OPEN-ENDED TESTING (multicontext hotpotQA dataset)
 
-# python prompting_with_steering.py --layers $BESTLAYER --use_latest --multipliers 0 1 2 3 --type open_ended --behaviors "context-focus" --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_version=hotpotqa_multicontext.json" --multicontext
-# python scoring.py --behaviors "context-focus"; python average_scores.py
+python prompting_with_steering.py --layers $BESTLAYER --use_latest --multipliers 0 1 2 3 --type open_ended --behaviors "context-focus" --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_version=hotpotqa_multicontext.json" --multicontext
+python scoring.py --behaviors "context-focus"; python average_scores.py

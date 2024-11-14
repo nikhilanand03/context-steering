@@ -70,6 +70,8 @@ def process_item_ab(
         "b_prob": b_prob,
     }
 
+    print("DEBUG (A,B) PROBS: ",a_prob, b_prob)
+
     if multicontext:
         response["options"] = item["options"]
         response["rag"] = item["rag"]

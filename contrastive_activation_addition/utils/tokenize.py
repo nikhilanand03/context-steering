@@ -116,7 +116,7 @@ def tokenize_multi_context(
     output_token_string = f"{header}{user_context}{assistant_reply}{final_question}"
 
     if model_output is not None:
-        output_token_string += f"{model_output.strip()}"
+        output_token_string += f" {model_output.strip()}"
     
     print(output_token_string)
 
