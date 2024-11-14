@@ -57,6 +57,7 @@ def process_item_ab(
             question, 
             item['options'],
             model_output="(")
+        tokens = t.tensor(tokens).unsqueeze(0).to(model.device)
         model_output = model.get_logits(tokens)
 
     a_prob, b_prob = get_a_b_probs(model_output, a_token_id, b_token_id)
