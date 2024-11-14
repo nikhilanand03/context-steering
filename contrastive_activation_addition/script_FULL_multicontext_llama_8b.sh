@@ -1,3 +1,8 @@
+mkdir analysis/context-focus
+mkdir results
+# For someone else to run this script as a whole, only normalised vectors is transferred through github
+# So, the remaining folders (analysis and results) need to be created first before running.
+
 ## < ---------------------------------------------------------------->
 
 # Train vecs using "generate_dataset_long_contexts_dummy.json"
