@@ -97,6 +97,7 @@ def process_item_open_ended(
             model.tokenizer, 
             item['rag'], 
             question)
+        tokens = t.tensor(tokens).unsqueeze(0).to(model.device)
         model_output = model.generate(tokens, max_new_tokens=100)
 
     if model.model_name_path=="google/gemma-2-2b-it":

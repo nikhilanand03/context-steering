@@ -13,17 +13,17 @@ mkdir results
 
 # TESTING ON MCQ DATASET TO GET BEST LAYER 
 # (I changed prompt with steering to account for multicontext in the type="ab" case here)
-python prompting_with_steering.py --layers $(seq 0 31) --use_latest --multipliers -1 0 1 --type ab --behaviors "context-focus" --override_ab_dataset "test_dataset_ab_multicontext_2500.json" --multicontext
-python plot_results.py --layers $(seq 0 31) --multipliers -1 1 --type ab --behaviors "context-focus"
+# python prompting_with_steering.py --layers $(seq 0 31) --use_latest --multipliers -1 0 1 --type ab --behaviors "context-focus" --override_ab_dataset "test_dataset_ab_multicontext_2500.json" --multicontext
+# python plot_results.py --layers $(seq 0 31) --multipliers -1 1 --type ab --behaviors "context-focus"
 
-BESTLAYER=12 ## GET BEST LAYER HERE
+BESTLAYER=14 ## GET BEST LAYER HERE
 
 # MULTIPLE MULTIPLIER TESTING ON MCQ DATASET
 
-python prompting_with_steering.py --layers $BESTLAYER --use_latest --multipliers -3 -2 -1 0 1 2 3 --type ab --behaviors "context-focus" --override_ab_dataset "test_dataset_ab_multicontext_2500.json" --multicontext
-python plot_results.py --layers $BESTLAYER --multipliers -3 -2 -1 0 1 2 3 --type ab --behaviors "context-focus"
+python prompting_with_steering.py --layers $BESTLAYER --use_latest --multipliers 0 1 2 3 4 5 6 --type ab --behaviors "context-focus" --override_ab_dataset "test_dataset_ab_multicontext_2500.json" --multicontext
+python plot_results.py --layers $BESTLAYER --multipliers 0 1 2 3 4 5 6 --type ab --behaviors "context-focus"
 
 # OPEN-ENDED TESTING (multicontext hotpotQA dataset)
 
-python prompting_with_steering.py --layers $BESTLAYER --use_latest --multipliers 0 1 2 3 --type open_ended --behaviors "context-focus" --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_version=hotpotqa_multicontext.json" --multicontext
-python scoring.py --behaviors "context-focus"; python average_scores.py
+# python prompting_with_steering.py --layers $BESTLAYER --use_latest --multipliers 0 1 2 3 --type open_ended --behaviors "context-focus" --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_version=hotpotqa_multicontext.json" --multicontext
+# python scoring.py --behaviors "context-focus"; python average_scores.py
