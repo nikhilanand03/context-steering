@@ -32,6 +32,6 @@ BESTLAYER=14 ## GET BEST LAYER HERE
 
 # OPEN-ENDED TESTING (FAILURES DS)
 
-python prompting_with_steering.py --layers $BESTLAYER --use_latest --multipliers 0 1 2 3 4 --type open_ended --behaviors "context-focus" --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_version=hotpotqa_multicontext_failures_625.json" --multicontext
+python prompting_with_steering.py --layers $BESTLAYER --use_latest --multipliers 2 3 4 --type open_ended --behaviors "context-focus" --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_version=hotpotqa_multicontext_failures_625.json" --multicontext
 # python scoring.py --behaviors "context-focus" --multicontext
 # python average_scores.py

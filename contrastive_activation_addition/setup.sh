@@ -1,6 +1,6 @@
 # run first two lines, then comment them out and can run the script
-git clone https://github.com/nikhilanand03/context-steering.git
-cd context-steering/contrastive_activation_addition
+# git clone https://github.com/nikhilanand03/context-steering.git
+# cd context-steering/contrastive_activation_addition
 
 huggingface-cli login
 conda create --name sllama_conda; conda init; source ~/.bashrc; conda activate sllama_conda
