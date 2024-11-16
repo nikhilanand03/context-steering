@@ -1,4 +1,4 @@
-## Pipeline
+## Generate dataset Pipeline
 
 The pipeline goes like this:
 
@@ -11,3 +11,9 @@ The pipeline goes like this:
 7. We run scored2shortlisted.py to generate the shortlisted dataset (filter out the 1s and 2s).
 
 The shortlisted_generate_dataset.json is the one we copy into the generate directory and rename according to the typical nomenclature.
+
+## Failures test dataset pipeline
+
+For this, we can stop at the generate_ds itself, since we don't need our final set to have 100% failures. Having some percentage of non-failures is still fine.
+
+So we stop at step 4.

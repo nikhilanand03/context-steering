@@ -86,8 +86,8 @@ llm = AzureChatOpenAI(
 ####### CHANGE THIS SEGMENT IF YOU WANT TO CHANGE THE PROMPT (FEW SHOT EXAMPLES FORMAT) ##########
 ##################################################################################################
 
-# prompt_file_path = "faithfulness_scoring_prompt.txt"
-prompt_file_path = "faithfulness_scoring_prompt_contextbench.txt"
+prompt_file_path = "faithfulness_scoring_prompt.txt"
+# prompt_file_path = "faithfulness_scoring_prompt_contextbench.txt"
 
 with open(prompt_file_path, 'r') as f:
     FAITHFULNESS_SYSTEM_PROMPT = f.read()
@@ -161,12 +161,27 @@ with open(prompt_file_path, 'r') as f:
     
 #     return response.choices[0].message.content
 
-def score_json_entry(json_entry):
+def score_json_entry(json_entry,multicontext=False):
     try:
         del json_entry['raw_model_output']
     except:
         pass
-    json_str = json.dumps(json_entry, indent=2)
+
+    if multicontext:
+        ques = json_entry['question']
+        model_output = json_entry['model_output']
+        answer = json_entry['answer']
+        supp_context = json_entry['supporting_contexts']
+        
+        json_entry_final = {
+            "question": f"Context: <P> {supp_context} </P>\nQuestion: {ques}",
+            "model_output": model_output[:-10],
+            "sub_answer": [ answer ]
+        }
+    else:
+        json_entry_final = json_entry.copy()
+    
+    json_str = json.dumps(json_entry_final, indent=2)
 
     # Create messages
     messages = [
@@ -185,7 +200,7 @@ def score_json_entry(json_entry):
 #     user_prompt = f"{SCORING_PROMPTS[behavior]}\n\nQuestion:\n{question}\n\nAnswer:\n{answer}"
 #     return system_prompt, user_prompt
 
-def scoring(behaviors=ALL_BEHAVIORS, custom_path_dir: str=None, overwrite=False, do_printing=False, num_times=1, suffix=""):
+def scoring(behaviors=ALL_BEHAVIORS, custom_path_dir: str=None, overwrite=False, do_printing=False, num_times=1, suffix="", multicontext=False):
     print("2.")
     if custom_path_dir is None:
         open_ended_scores_dir = os.path.join(RESULTS_PATH(suffix), "open_ended_scores")
@@ -242,7 +257,7 @@ def scoring(behaviors=ALL_BEHAVIORS, custom_path_dir: str=None, overwrite=False,
                             # score = make_gpt4_request(system_prompt, user_prompt)
                             print("SCORING")
                             print(d)
-                            score = score_json_entry(d)
+                            score = score_json_entry(d,multicontext)
                             try:
                                 numeric_score = float(score.split("\n")[0])
                                 choice_scores.append(numeric_score)
@@ -300,7 +315,12 @@ if __name__ == "__main__":
         type=int,
         default=1
     )
+    parser.add_argument(
+        "--multicontext",
+        action="store_true",
+        default=False
+    )
     parser.add_argument("--suffix", type=str, default="")
     args = parser.parse_args()
 
-    scoring(behaviors=args.behaviors,custom_path_dir=args.custom_path_dir,do_printing=True,num_times=args.num_times,suffix=args.suffix)
+    scoring(behaviors=args.behaviors,custom_path_dir=args.custom_path_dir,do_printing=True,num_times=args.num_times,suffix=args.suffix,multicontext=args.multicontext)

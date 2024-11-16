@@ -96,9 +96,10 @@ def tokenize_multi_context(
     documents: List[str], 
     question: str, 
     options: List[str] = None,
-    model_output: str = None
+    model_output: str = None,
+    system_add: str = ""
 ) -> List[int]:
-    system_prompt = "You are a Contextual QA Assistant. Use the following retrieved contexts to answer any questions that may follow."
+    system_prompt = "You are a Contextual QA Assistant. Use the following retrieved contexts to answer any questions that may follow." + f" {system_add}"
     header = f"{B_HEADER}system{E_HEADER}\n\n{system_prompt}{EOT_ID}"
     
     context_input = "\n\n".join(

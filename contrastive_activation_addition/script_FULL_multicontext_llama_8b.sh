@@ -1,3 +1,4 @@
+mkdir analysis
 mkdir analysis/context-focus
 mkdir results
 # For someone else to run this script as a whole, only normalised vectors is transferred through github
@@ -20,10 +21,17 @@ BESTLAYER=14 ## GET BEST LAYER HERE
 
 # MULTIPLE MULTIPLIER TESTING ON MCQ DATASET
 
-python prompting_with_steering.py --layers $BESTLAYER --use_latest --multipliers 0 1 2 3 4 5 6 --type ab --behaviors "context-focus" --override_ab_dataset "test_dataset_ab_multicontext_2500.json" --multicontext
-python plot_results.py --layers $BESTLAYER --multipliers 0 1 2 3 4 5 6 --type ab --behaviors "context-focus"
+# python prompting_with_steering.py --layers $BESTLAYER --use_latest --multipliers 0 1 2 3 4 5 6 --type ab --behaviors "context-focus" --override_ab_dataset "test_dataset_ab_multicontext_2500.json" --multicontext
+# python plot_results.py --layers $BESTLAYER --multipliers 0 1 2 3 4 5 6 --type ab --behaviors "context-focus"
 
 # OPEN-ENDED TESTING (multicontext hotpotQA dataset)
 
-# python prompting_with_steering.py --layers $BESTLAYER --use_latest --multipliers 0 1 2 3 --type open_ended --behaviors "context-focus" --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_version=hotpotqa_multicontext.json" --multicontext
-# python scoring.py --behaviors "context-focus"; python average_scores.py
+# python prompting_with_steering.py --layers $BESTLAYER --use_latest --multipliers 0 1 2 3 4 --type open_ended --behaviors "context-focus" --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_version=hotpotqa_multicontext.json" --multicontext
+# python scoring.py --behaviors "context-focus" --multicontext
+# python average_scores.py
+
+# OPEN-ENDED TESTING (FAILURES DS)
+
+python prompting_with_steering.py --layers $BESTLAYER --use_latest --multipliers 0 1 2 3 4 --type open_ended --behaviors "context-focus" --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_version=hotpotqa_multicontext_failures_625.json" --multicontext
+# python scoring.py --behaviors "context-focus" --multicontext
+# python average_scores.py

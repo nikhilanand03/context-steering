@@ -96,7 +96,8 @@ def process_item_open_ended(
         tokens = tokenize_multi_context(
             model.tokenizer, 
             item['rag'], 
-            question)
+            question,
+            system_add="Please restrict your response to one sentence.")
         tokens = t.tensor(tokens).unsqueeze(0).to(model.device)
         model_output = model.generate(tokens, max_new_tokens=100)
 
@@ -116,7 +117,7 @@ def process_item_open_ended(
     }
 
     if multicontext: 
-        response['rag'] = rag
+        response['rag'] = item['rag']
         response['answer'] = item['answer']
 
     return response

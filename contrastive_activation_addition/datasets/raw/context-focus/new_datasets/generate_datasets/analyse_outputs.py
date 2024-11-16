@@ -2,6 +2,10 @@ import json
 import sys
 from tqdm import tqdm
 
+"""
+Usage: python analyse_outputs.py <start_idx> <end_idx>
+"""
+
 start_idx = int(sys.argv[1]) if len(sys.argv) > 1 else 0
 end_idx = int(sys.argv[2]) if len(sys.argv) > 2 else None
 

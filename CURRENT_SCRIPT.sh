@@ -14,6 +14,9 @@ cd contrastive_activation_addition
 chmod +x script_FULL_multicontext_llama_8b.sh
 ./script_FULL_multicontext_llama_8b.sh
 
+tar -czvf results.tar.gz ./analysis
+tar -czvf results.tar.gz ./results
+
 # OUTPUTS? DIR: contrastive_activation_addition; FOLDERS: analysis, normalized_vectors, results, vectors
 
 ############################################
