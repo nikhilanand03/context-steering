@@ -14,6 +14,8 @@ cd contrastive_activation_addition
 chmod +x script_FULL_multicontext_llama_8b.sh
 ./script_FULL_multicontext_llama_8b.sh
 
+tar -czvf normalized_vectors.tar.gz ./normalized_vectors
+tar -czvf vectors.tar.gz ./vectors
 tar -czvf analysis.tar.gz ./analysis
 tar -czvf results.tar.gz ./results
 
