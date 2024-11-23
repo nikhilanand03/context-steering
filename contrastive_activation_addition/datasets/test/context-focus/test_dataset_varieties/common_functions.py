@@ -26,3 +26,18 @@ def convert_cq_format(in_path,out_path,remove_ab = False):
     with open(out_path,'w') as f:
         json.dump(out_list,f)
 
+def remove_options(in_path,out_path):
+    with open(in_path,'r') as f:
+        data = json.load(f)
+
+    new_li = []
+
+    for item in data:
+        del item['options']
+        del item['answer_matching_behavior']
+        del item['answer_not_matching_behavior']
+
+        new_li.append(item)
+
+    with open(out_path,'w') as f:
+        json.dump(new_li,f)

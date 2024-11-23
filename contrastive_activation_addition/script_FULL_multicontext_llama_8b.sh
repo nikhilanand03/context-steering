@@ -12,14 +12,14 @@
 
 # Train vecs using "generate_dataset_long_contexts_dummy.json"
 # (I changed generate_vectors to allow multicontext and tokenize differently in the case of multicontext)
-# python generate_vectors.py --layers $(seq 0 31) --save_activations --use_latest --behaviors "context-focus" --override_dataset "generate_dataset_multicontext_2500.json" --multicontext
-# python normalize_vectors.py --use_latest
-# python plot_activations.py --layers $(seq 0 31) --use_latest --behaviors "context-focus" --override_dataset "generate_dataset_multicontext_2500.json"
+python generate_vectors.py --layers $(seq 0 31) --save_activations --use_latest --behaviors "context-focus" --override_dataset "generate_dataset_multicontext_2500.json" --multicontext
+python normalize_vectors.py --use_latest
+python plot_activations.py --layers $(seq 0 31) --use_latest --behaviors "context-focus" --override_dataset "generate_dataset_multicontext_2500.json"
 
 # TESTING ON MCQ DATASET TO GET BEST LAYER 
 # (I changed prompt with steering to account for multicontext in the type="ab" case here)
-# python prompting_with_steering.py --layers $(seq 0 31) --use_latest --multipliers -1 0 1 --type ab --behaviors "context-focus" --override_ab_dataset "test_dataset_ab_multicontext_2500.json" --multicontext
-# python plot_results.py --layers $(seq 0 31) --multipliers -1 1 --type ab --behaviors "context-focus"
+python prompting_with_steering.py --layers $(seq 0 31) --use_latest --multipliers -1 0 1 --type ab --behaviors "context-focus" --override_ab_dataset "test_dataset_ab_multicontext_2500.json" --multicontext
+python plot_results.py --layers $(seq 0 31) --multipliers -1 1 --type ab --behaviors "context-focus"
 
 ############################### 1 ####################################
 

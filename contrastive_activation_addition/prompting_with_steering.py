@@ -40,7 +40,8 @@ def process_item_ab(
     system_prompt: Optional[str],
     a_token_id: int,
     b_token_id: int,
-    multicontext: bool=False
+    multicontext: bool=False,
+    no_options:bool=False
 ) -> Dict[str, str]:
     answer_matching_behavior = item["answer_matching_behavior"]
     answer_not_matching_behavior = item["answer_not_matching_behavior"]
@@ -84,15 +85,12 @@ def process_item_open_ended(
     system_prompt: Optional[str],
     a_token_id: int,
     b_token_id: int,
-    multicontext: bool=False
+    multicontext: bool=False,
+    no_options: bool=False
 ) -> Dict[str, str]:
     question = item["question"]
 
-    if not multicontext:
-        model_output = model.generate_text(
-            user_input=question, system_prompt=system_prompt, max_new_tokens=100
-        )
-    else:
+    if multicontext:
         tokens = tokenize_multi_context(
             model.tokenizer, 
             item['rag'], 
@@ -100,6 +98,23 @@ def process_item_open_ended(
             system_add="Please restrict your response to one sentence.")
         tokens = t.tensor(tokens).unsqueeze(0).to(model.device)
         model_output = model.generate(tokens, max_new_tokens=100)
+    elif no_options:
+        context_input = "\n\n".join(
+            f"[Document {i+1}]: {doc}" 
+            for i, doc in enumerate(item['rag'])
+        )
+        query = item['question']
+        sys_prompt = "You are a Contextual QA Assistant. Please answer the following question according to the given context. Please restrict your response to one sentence. "
+
+        input_text = f"{sys_prompt}\n\nContext:\n\n{context_input}\n\nQuestion: {query}"
+
+        model_output = model.generate_text(
+            user_input=input_text
+        )
+    else:
+        model_output = model.generate_text(
+            user_input=question, system_prompt=system_prompt, max_new_tokens=100
+        )
 
     if model.model_name_path=="google/gemma-2-2b-it":
         split_token = ADD_FROM_POS_GEMMA
@@ -204,7 +219,8 @@ def process_item_if_eval(
     system_prompt: Optional[str],
     a_token_id: int,
     b_token_id: int,
-    multicontext: bool=False
+    multicontext: bool=False,
+    no_options:bool=False
 ) -> Dict[str, str]:
     question = item["question"]
     model_output = model.generate_text(
@@ -340,7 +356,8 @@ def test_steering(
                         system_prompt=get_system_prompt(settings.behavior, settings.system_prompt),
                         a_token_id=a_token_id,
                         b_token_id=b_token_id,
-                        multicontext=settings.multicontext
+                        multicontext=settings.multicontext,
+                        no_options=settings.no_options
                     )
 
                 results.append(result)
@@ -384,6 +401,7 @@ if __name__ == "__main__":
     parser.add_argument("--suffix", type=str, default="")
     parser.add_argument("--dynamic_m", action="store_true", default=False)
     parser.add_argument("--multicontext", action="store_true", default=False)
+    parser.add_argument("--no_options", action="store_true", default=False)
 
     args = parser.parse_args()
 
@@ -405,6 +423,7 @@ if __name__ == "__main__":
     steering_settings.ablate = args.ablate
     steering_settings.dynamic_m = args.dynamic_m
     steering_settings.multicontext = args.multicontext
+    steering_settings.no_options = args.no_options
 
     for behavior in args.behaviors:
         steering_settings.behavior = behavior

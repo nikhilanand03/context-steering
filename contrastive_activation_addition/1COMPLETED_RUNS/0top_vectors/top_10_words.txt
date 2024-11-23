@@ -1,0 +1,58 @@
+Results for Tensor multicontext_first.pt:
+  Token: arc, Probability: 0.0459
+  Token: less, Probability: 0.0231
+  Token: lass, Probability: 0.0151
+  Token: rie, Probability: 0.0118
+  Token: 不到, Probability: 0.0084
+  Token: 不了, Probability: 0.0058
+  Token: inp, Probability: 0.0053
+  Token: esis, Probability: 0.0052
+  Token:  absentee, Probability: 0.0043
+  Token: ifar, Probability: 0.0040
+  Token:  Programming, Probability: 0.0037
+  Token: 么, Probability: 0.0035
+  Token: κά, Probability: 0.0033
+  Token:  magnets, Probability: 0.0026
+
+Results for Tensor counterfactual_llama_8b.pt:
+  Token: erland, Probability: 0.0133
+  Token: alion, Probability: 0.0131
+  Token: acher, Probability: 0.0119
+  Token: .struts, Probability: 0.0091
+  Token: osten, Probability: 0.0090
+  Token:  Weston, Probability: 0.0072
+  Token:  Casc, Probability: 0.0066
+  Token: uese, Probability: 0.0061
+  Token: imei, Probability: 0.0057
+  Token: óst, Probability: 0.0057
+  Token: pis, Probability: 0.0052
+  Token: �, Probability: 0.0049
+  Token: ampion, Probability: 0.0049
+  Token: �, Probability: 0.0045
+  Token: evin, Probability: 0.0040
+
+Results for Tensor multicontext_fixed.pt:
+  Token: less, Probability: 0.1416
+  Token: rie, Probability: 0.0297
+  Token: arc, Probability: 0.0102
+  Token:  Bond, Probability: 0.0070
+  Token: lessly, Probability: 0.0066
+  Token:  magnets, Probability: 0.0062
+  Token:  Pride, Probability: 0.0046
+  Token:  pitch, Probability: 0.0045
+  Token:  Gol, Probability: 0.0036
+  Token: LESS, Probability: 0.0035
+  Token: lass, Probability: 0.0030
+  Token: hiba, Probability: 0.0029
+
+Results for Tensor counterfactual_mistral_7b_layer12.pt:
+  Token: raf, Probability: 0.0095
+  Token: curs, Probability: 0.0035
+  Token: esta, Probability: 0.0034
+  Token: 峰, Probability: 0.0031
+  Token: ток, Probability: 0.0027
+  Token: wal, Probability: 0.0024
+  Token: erd, Probability: 0.0022
+  Token: ota, Probability: 0.0020
+  Token: arte, Probability: 0.0020
+  Token: zi, Probability: 0.0018

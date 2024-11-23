@@ -82,7 +82,6 @@ def get_ab_data_path(behavior: str, test: bool = False, override_dataset:str = N
 def get_open_ended_data_path(behavior: str) -> str:
     return os.path.join(TEST_DATA_PATH, behavior, "test_dataset_open_ended.json")
 
-
 def get_truthful_qa_path() -> str:
     return os.path.join(TEST_DATA_PATH, "truthfulqa", "truthful_qa.json")
 

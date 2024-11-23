@@ -19,6 +19,69 @@ DATASET_FILE = os.path.join("preprocessed_data", "generate_dataset.json")
 
 set_plotting_settings()
 
+def save_activation_projection_pca_no_options(behavior: str, layer: int, model_name_path: str, suffix:str = ""):
+    title = f"{HUMAN_NAMES[behavior]}, layer {layer}"
+    fname = f"pca_{behavior}_layer_{layer}.png"
+    save_dir = os.path.join(get_analysis_dir(behavior,suffix), "pca")
+
+    if not os.path.exists(save_dir):
+        os.makedirs(save_dir)
+
+    activations_pos = t.load(
+        get_activations_path(behavior, layer, model_name_path, "pos", suffix)
+    )
+
+    activations_neg = t.load(
+        get_activations_path(behavior, layer, model_name_path, "neg", suffix)
+    )
+
+    plt.clf()
+    plt.figure(figsize=(4, 4))
+    activations = t.cat([activations_pos, activations_neg], dim=0)
+    activations_np = activations.to(t.float32).cpu().numpy()
+
+    # PCA projection
+    pca = PCA(n_components=2)
+    projected_activations = pca.fit_transform(activations_np)
+
+    # Splitting back into activations1 and activations2
+    activations_pos_projected = projected_activations[: activations_pos.shape[0]]
+    activations_neg_projected = projected_activations[activations_pos.shape[0] :]
+
+    # Visualization
+    for i, (x, y) in enumerate(activations_pos_projected):
+        plt.scatter(x, y, color="blue", marker="o", alpha=0.4)
+
+    for i, (x, y) in enumerate(activations_neg_projected):
+        plt.scatter(x, y, color="red", marker="o", alpha=0.4)
+
+    # Adding the legend
+    scatter1 = plt.Line2D(
+        [0],
+        [0],
+        marker="o",
+        color="w",
+        markerfacecolor="blue",
+        markersize=10,
+        label=f"With Context - {HUMAN_NAMES[behavior]}",
+    )
+    scatter2 = plt.Line2D(
+        [0],
+        [0],
+        marker="o",
+        color="w",
+        markerfacecolor="red",
+        markersize=10,
+        label=f"Without Context - {HUMAN_NAMES[behavior]}",
+    )
+
+    plt.legend(handles=[scatter1, scatter2])
+    plt.title(title)
+    plt.xlabel("PC 1")
+    plt.ylabel("PC 2")
+    plt.savefig(os.path.join(save_dir, fname), format="png")
+    plt.close()
+
 def save_activation_projection_pca(behavior: str, layer: int, model_name_path: str, suffix:str = "", override_dataset:str = None):
     title = f"{HUMAN_NAMES[behavior]}, layer {layer}"
     fname = f"pca_{behavior}_layer_{layer}.png"
@@ -134,16 +197,25 @@ if __name__ == "__main__":
     parser.add_argument("--use_mistral", action="store_true", default=False)
     parser.add_argument("--override_dataset", type=str, default=None)
     parser.add_argument("--suffix", type=str, default="")
+    parser.add_argument("--no_options", action="store_true", default=False)
     args = parser.parse_args()
     model_name_path = get_model_path(args.model_size, args.use_base_model, args.use_latest, args.use_mistral)
 
     for behavior in args.behaviors:
         print(f"plotting {behavior} activations PCA")
         for layer in tqdm(args.layers):
-            save_activation_projection_pca(
-                behavior,
-                layer,
-                model_name_path,
-                args.suffix,
-                args.override_dataset
-            )
+            if no_options:
+                save_activation_projection_pca_no_options(
+                    behavior,
+                    layer,
+                    model_name_path,
+                    args.suffix
+                )
+            else:
+                save_activation_projection_pca(
+                    behavior,
+                    layer,
+                    model_name_path,
+                    args.suffix,
+                    args.override_dataset
+                )

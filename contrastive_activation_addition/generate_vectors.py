@@ -31,7 +31,7 @@ HUGGINGFACE_TOKEN = os.getenv("HF_TOKEN")
 
 
 class ComparisonDataset(Dataset):
-    def __init__(self, data_path, token, model_name_path, use_chat, multicontext=False):
+    def __init__(self, data_path, token, model_name_path, use_chat, multicontext=False, no_options=False):
         with open(data_path, "r") as f:
             self.data = json.load(f)
         self.tokenizer = AutoTokenizer.from_pretrained(
@@ -41,9 +41,41 @@ class ComparisonDataset(Dataset):
         self.use_chat = use_chat
         self.model_name_path = model_name_path
         self.multicontext = multicontext
+        self.no_options = no_options
 
     def prompt_to_tokens(self, instruction, model_output):
-        if not self.multicontext:
+        if self.no_options:
+            # in this case, model_output is None
+            print("NO OPTIONS CASE : PROMPT_TO_TOKENS")
+
+            context_input = "\n\n".join(
+                f"[Document {i+1}]: {doc}" 
+                for i, doc in enumerate(instruction['rag'])
+            )
+            query = instruction['query']
+
+            positive_input = f"{instruction['system_prompt']}\n\n{context_input}\n\n{query}"
+            negative_input = f"{query}"
+
+            p_tokens = tokenize_llama_chat(
+                self.tokenizer,
+                user_input=positive_input
+            )
+            n_tokens = tokenize_llama_chat(
+                self.tokenizer,
+                user_input=negative_input
+            )
+
+            return p_tokens, n_tokens
+
+        elif self.multicontext:
+            tokens = tokenize_multi_context(
+                self.tokenizer, 
+                instruction['rag'],
+                instruction['question'],
+                options = instruction['options'],
+                model_output=model_output)
+        else:
             if self.use_chat:
                 tokens = tokenize_llama_chat(
                     self.tokenizer,
@@ -56,14 +88,7 @@ class ComparisonDataset(Dataset):
                     user_input=instruction,
                     model_output=model_output,
                 )
-        else:
-            # instruction is a dictionary if we're talking about multicontext
-            tokens = tokenize_multi_context(
-                self.tokenizer, 
-                instruction['rag'],
-                instruction['question'],
-                options = instruction['options'],
-                model_output=model_output)
+            
         return t.tensor(tokens).unsqueeze(0)
 
     def __len__(self):
@@ -72,17 +97,23 @@ class ComparisonDataset(Dataset):
     def __getitem__(self, idx):
         item = self.data[idx]
         # pre_out = "Ans: " if ("Llama-3" in self.model_name_path or "Mistral" in self.model_name_path) else ""
-        p_text = item["answer_matching_behavior"]
-        n_text = item["answer_not_matching_behavior"]
         
-        if not self.multicontext:
-            q_text = item["question"]
-            p_tokens = self.prompt_to_tokens(q_text, p_text)
-            n_tokens = self.prompt_to_tokens(q_text, n_text)
-        else:
+        if self.no_options:
+            p_tokens, n_tokens = self.prompt_to_tokens(item, None)
+        elif self.multicontext:
+            p_text = item["answer_matching_behavior"]
+            n_text = item["answer_not_matching_behavior"]
+
             p_tokens = self.prompt_to_tokens(item, p_text)
             n_tokens = self.prompt_to_tokens(item, n_text)
+        else:
+            p_text = item["answer_matching_behavior"]
+            n_text = item["answer_not_matching_behavior"]
+            q_text = item["question"]
 
+            p_tokens = self.prompt_to_tokens(q_text, p_text)
+            n_tokens = self.prompt_to_tokens(q_text, n_text)
+            
         return p_tokens, n_tokens
 
 def generate_save_vectors_for_behavior(
@@ -92,7 +123,8 @@ def generate_save_vectors_for_behavior(
     model: LlamaWrapper,
     override_dataset: str,
     suffix: str,
-    multicontext: bool
+    multicontext: bool,
+    no_options: bool
 ):
     # print(get_vector_path(behavior, 1, model.model_name_path, suffix=suffix))
     # print(get_activations_path(behavior, 1, model.model_name_path, "neg", suffix=suffix))
@@ -113,7 +145,8 @@ def generate_save_vectors_for_behavior(
         HUGGINGFACE_TOKEN,
         model.model_name_path,
         model.use_chat,
-        multicontext=multicontext
+        multicontext=multicontext,
+        no_options=no_options
     )
 
     for p_tokens, n_tokens in tqdm(dataset, desc="Processing prompts"):
@@ -138,7 +171,7 @@ def generate_save_vectors_for_behavior(
         vec = (all_pos_layer - all_neg_layer).mean(dim=0)
         t.save(
             vec,
-            get_vector_path(behavior, layer, model.model_name_path, suffix=suffix),
+            get_vector_path(behavior, layer, model.model_nme_path, suffix=suffix),
         )
         if save_activations:
             t.save(
@@ -160,7 +193,8 @@ def generate_save_vectors(
     use_mistral:bool=False,
     override_dataset:str=None,
     suffix:str="",
-    multicontext:bool=False
+    multicontext:bool=False,
+    no_options:bool=False
 ):
     """
     layers: list of layers to generate vectors for
@@ -174,7 +208,7 @@ def generate_save_vectors(
     )
     for behavior in behaviors:
         generate_save_vectors_for_behavior(
-            layers, save_activations, behavior, model, override_dataset, suffix, multicontext
+            layers, save_activations, behavior, model, override_dataset, suffix, multicontext, no_options
         )
 
 
@@ -190,6 +224,7 @@ if __name__ == "__main__":
     parser.add_argument("--override_dataset", type=str, default=None)
     parser.add_argument("--suffix", type=str, default="")
     parser.add_argument("--multicontext", action="store_true", default=False)
+    parser.add_argument("--no_options", action="store_true", default=False)
 
     args = parser.parse_args()
     generate_save_vectors(
@@ -202,5 +237,6 @@ if __name__ == "__main__":
         args.use_mistral,
         args.override_dataset,
         args.suffix,
-        args.multicontext
+        args.multicontext,
+        args.no_options
     )
