@@ -1,12 +1,13 @@
 ####### NOTE ---> Remember to only uncomment one step at a time (steps 1 and 3 are for Adobe to run)
 
 
-############## STEP 1: generate_vectors (I do this on my own through Jarvis and push to github once it's done) #############
+############## STEP 1: generate_vectors #############
 
 rm -r analysis
 rm -r results
 rm -r normalized_vectors
 rm -r vectors
+rm -r activations
 
 python generate_vectors.py --layers $(seq 0 31) --save_activations --use_latest --behaviors "context-focus" --override_dataset "generate_dataset_no_options.json" --no_options
 python normalize_vectors.py --use_latest
