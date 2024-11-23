@@ -66,7 +66,7 @@ class ComparisonDataset(Dataset):
                 user_input=negative_input
             )
 
-            return p_tokens, n_tokens
+            return t.tensor(p_tokens).unsqueeze(0), t.tensor(n_tokens).unsqueeze(0)
 
         elif self.multicontext:
             tokens = tokenize_multi_context(
@@ -171,7 +171,7 @@ def generate_save_vectors_for_behavior(
         vec = (all_pos_layer - all_neg_layer).mean(dim=0)
         t.save(
             vec,
-            get_vector_path(behavior, layer, model.model_nme_path, suffix=suffix),
+            get_vector_path(behavior, layer, model.model_name_path, suffix=suffix),
         )
         if save_activations:
             t.save(
