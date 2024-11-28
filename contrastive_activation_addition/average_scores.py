@@ -3,8 +3,12 @@ import os
 from statistics import mean
 import argparse
 
-def run_pipeline(suffix):
-    results_dir = f"results{suffix}/open_ended_scores/context-focus"
+def run_pipeline(suffix, custom_path_dir):
+    if custom_path_dir is None:
+        results_dir = f"results{suffix}/open_ended_scores/context-focus"
+    else:
+        results_dir = f"{custom_path_dir}/open_ended_scores_path/context-focus"
+
     analysis_dir = f"analysis{suffix}"
     output_file = os.path.join(analysis_dir, "score_averages.txt")
     print(output_file)
@@ -20,14 +24,25 @@ def run_pipeline(suffix):
                 with open(file_path, 'r') as f:
                     data = json.load(f)
                 
-                scores = [item['score'] for item in data]
-                reading_ease = [item['reading_ease'] for item in data]
-                num_words = [item['num_words'] for item in data]
+                # scores = [item['score'] for item in data]
+                scores = []
+                reading_ease = []
+                num_words = []
+                repetition_info = []
+                for i,item in enumerate(data):
+                    if 'score' in item:
+                        scores.append(item['score'])
+                        reading_ease.append(item['reading_ease'])
+                        num_words.append(item['num_words'])
+                        repetition_info.append(item['repetition_info'])
+                    else:
+                        print(f"{i}th example in {filename} has no scores.")
+
                 try:
                     perplexities = [item['perplexity'] for item in data]
                 except:
                     pass
-                repetition_info = [item['repetition_info'] for item in data]
+
                 print(scores)
                 print("hi")
                 
@@ -62,6 +77,7 @@ def run_pipeline(suffix):
 if __name__=="__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--suffix", type=str, default="")
+    parser.add_argument("--custom_path_dir", type=str, default=None)
 
     args = parser.parse_args()
-    run_pipeline(args.suffix)
+    run_pipeline(args.suffix, args.custom_path_dir)

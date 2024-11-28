@@ -65,8 +65,8 @@ def convert_context_to_rag(context):
     return rag_contexts
 
 # scores_filename = "scores_hotpot_results_correct_3k.json"
-# scores_filename = "scores_0_2500_hotpot_results_100k.json"
-scores_filename = "scores_2500_3125_hotpot_results_100k.json"
+scores_filename = "scores_0_2500_hotpot_results_100k.json"
+# scores_filename = "scores_2500_3125_hotpot_results_100k.json"
 with open(scores_filename,'r') as file:
     data_scores_temp = json.load(file)
 

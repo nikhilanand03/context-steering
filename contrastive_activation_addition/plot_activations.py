@@ -204,7 +204,7 @@ if __name__ == "__main__":
     for behavior in args.behaviors:
         print(f"plotting {behavior} activations PCA")
         for layer in tqdm(args.layers):
-            if no_options:
+            if args.no_options:
                 save_activation_projection_pca_no_options(
                     behavior,
                     layer,

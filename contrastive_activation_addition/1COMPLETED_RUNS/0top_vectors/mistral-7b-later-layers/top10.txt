@@ -1,0 +1,74 @@
+Results for Tensor /kaggle/input/mistral-later-layers/vec_layer_17_Mistral-7B-Instruct-v0.3.pt:
+  Token: oppon, Probability: 0.0129
+  Token: /******/, Probability: 0.0118
+  Token: ilo, Probability: 0.0052
+  Token: ❶, Probability: 0.0048
+  Token: บ, Probability: 0.0027
+  Token: rente, Probability: 0.0024
+  Token: aggio, Probability: 0.0024
+  Token: winning, Probability: 0.0020
+  Token: fav, Probability: 0.0018
+  Token: ulo, Probability: 0.0017
+
+Results for Tensor /kaggle/input/mistral-later-layers/vec_layer_20_Mistral-7B-Instruct-v0.3.pt:
+  Token: zie, Probability: 0.0069
+  Token: ób, Probability: 0.0048
+  Token: äs, Probability: 0.0031
+  Token: embar, Probability: 0.0025
+  Token: brace, Probability: 0.0020
+  Token: dup, Probability: 0.0020
+  Token: suck, Probability: 0.0020
+  Token: veh, Probability: 0.0019
+  Token: aude, Probability: 0.0018
+  Token: usc, Probability: 0.0016
+
+Results for Tensor /kaggle/input/mistral-later-layers/vec_layer_23_Mistral-7B-Instruct-v0.3.pt:
+  Token: Based, Probability: 0.0301
+  Token: based, Probability: 0.0263
+  Token: based, Probability: 0.0214
+  Token: Based, Probability: 0.0162
+  Token: äs, Probability: 0.0040
+  Token: ób, Probability: 0.0039
+  Token: vised, Probability: 0.0038
+  Token: bases, Probability: 0.0036
+  Token: бря, Probability: 0.0027
+  Token: ベ, Probability: 0.0027
+  Token: B, Probability: 0.0027
+  Token: usal, Probability: 0.0027
+  Token: ب, Probability: 0.0026
+  Token: Б, Probability: 0.0022
+  Token: ב, Probability: 0.0021
+  Token: brace, Probability: 0.0021
+  Token: ब, Probability: 0.0021
+  Token: according, Probability: 0.0020
+  Token: aude, Probability: 0.0019
+  Token: LIED, Probability: 0.0019
+  Token: вед, Probability: 0.0018
+  Token: banda, Probability: 0.0018
+  Token: aceae, Probability: 0.0018
+  Token: aza, Probability: 0.0017
+  Token: 바, Probability: 0.0017
+  Token: esen, Probability: 0.0017
+  Token: ça, Probability: 0.0016
+  Token: BAD, Probability: 0.0016
+  Token: base, Probability: 0.0014
+ 
+Results for Tensor /kaggle/input/mistral-later-layers/vec_layer_27_Mistral-7B-Instruct-v0.3.pt:
+  Token: based, Probability: 0.2940
+  Token: Based, Probability: 0.1529
+  Token: Based, Probability: 0.0582
+  Token: based, Probability: 0.0384
+  Token: basis, Probability: 0.0059
+  Token: bases, Probability: 0.0040
+  Token: ب, Probability: 0.0019
+  Token: base, Probability: 0.0018
+  Token: ób, Probability: 0.0014
+  Token: ulo, Probability: 0.0013
+  Token: vised, Probability: 0.0011
+  Token: 据, Probability: 0.0011
+  Token: Ь, Probability: 0.0010
+  Token: according, Probability: 0.0010
+  Token: ça, Probability: 0.0010
+  Token: usal, Probability: 0.0010
+  Token: äs, Probability: 0.0009
+  Token: Base, Probability: 0.0008
