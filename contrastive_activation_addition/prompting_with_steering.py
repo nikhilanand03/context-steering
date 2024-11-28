@@ -109,7 +109,7 @@ def process_item_open_ended(
         input_text = f"{sys_prompt}\n\nContext:\n\n{context_input}\n\nQuestion: {query}"
 
         model_output = model.generate_text(
-            user_input=input_text
+            user_input=input_text, max_new_tokens=400
         )
     else:
         model_output = model.generate_text(
