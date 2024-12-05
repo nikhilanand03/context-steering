@@ -5,15 +5,15 @@
 
 rm -r analysis
 rm -r results
-# rm -r normalized_vectors
-# rm -r vectors
+rm -r normalized_vectors
+rm -r vectors
 rm -r activations
 
-# python generate_vectors.py --layers $(seq 0 31) --save_activations --use_latest --behaviors "context-focus" --override_dataset "generate_dataset_no_options.json" --no_options
-# python normalize_vectors.py --use_latest
+python generate_vectors.py --layers $(seq 0 31) --save_activations --use_latest --behaviors "context-focus" --override_dataset "generate_dataset_no_options.json" --no_options
+python normalize_vectors.py --use_latest
 
 # Here, plot_activations.py will plot the activations of the positive and negative classes (no A/B distinction)
-# python plot_activations.py --layers $(seq 0 31) --use_latest --behaviors "context-focus" --no_options
+python plot_activations.py --layers $(seq 0 31) --use_latest --behaviors "context-focus" --no_options
 
 # I create a dataset called "test_dataset_oe_best_layer_no_options.json"
 # This uses same examples as test_dataset_ab_multi_context_2500.json except has no options!!
