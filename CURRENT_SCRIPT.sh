@@ -22,11 +22,22 @@
 
 # 3. NO OPTIONS
 
+# cd contrastive_activation_addition
+
+# chmod +x script_FULL_no_options.sh
+# ./script_FULL_no_options.sh
+
+# tar -czvf all_results.tar.gz ./normalized_vectors ./vectors ./analysis ./results
+
+###########################################
+
+# 4. TRANSFER NO OPTS TO NQ_SWAP
+
 cd contrastive_activation_addition
 
-chmod +x script_FULL_no_options.sh
-./script_FULL_no_options.sh
+chmod +x script_transfer_no_opts2nqswap.sh
+./script_transfer_no_opts2nqswap.sh
 
-tar -czvf all_results.tar.gz ./normalized_vectors ./vectors ./analysis ./results
+tar -czvf all_results.tar.gz ./analysis ./results
 
 ###########################################
