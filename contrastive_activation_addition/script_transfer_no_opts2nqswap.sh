@@ -22,37 +22,71 @@
 #     --override_vector_path "1COMPLETED_RUNS/39_llama-3.1-8b_no-options_max_tokens/normalized_vectors/context-focus/vec_layer_${NUM}_Meta-Llama-3.1-8B-Instruct.pt"
 # done
 
-mkdir analysis
+# mkdir analysis/context-focus
 
-python plot_results.py --layers $(seq 0 31) --multipliers -1 1 --type ab --behaviors "context-focus"
+# python plot_results.py --layers $(seq 0 31) --multipliers -1 1 --type ab --behaviors "context-focus"
 
 ###########################################
 
 ###############  PART 2    ###############
 # (Next run this, to set the best layer and get results)
 
+mkdir analysis/context-focus
+
 # Determine the best layer from the plot.
-# BESTLAYER=?
+BESTLAYER=13
 
-# python prompting_with_steering.py \
-#     --layers $BESTLAYER \
-#     --use_latest \
-#     --multipliers -3 -2 -1 0 1 2 3 \
-#     --type ab \
-#     --behaviors "context-focus" \
-#     --override_ab_dataset "test_dataset_ab_failures_llama_induce_output.json" \
-#     --override_vector_path "1COMPLETED_RUNS/39_llama-3.1-8b_no-options_max_tokens/normalized_vectors/context-focus/vec_layer_${BESTLAYER}_Meta-Llama-3.1-8B-Instruct.pt"
+python prompting_with_steering.py \
+    --layers $BESTLAYER \
+    --use_latest \
+    --multipliers -3 -2 -1 0 1 2 3 \
+    --type ab \
+    --behaviors "context-focus" \
+    --override_ab_dataset "test_dataset_ab_failures_llama_induce_output.json" \
+    --override_vector_path "1COMPLETED_RUNS/39_llama-3.1-8b_no-options_max_tokens/normalized_vectors/context-focus/vec_layer_${BESTLAYER}_Meta-Llama-3.1-8B-Instruct.pt"
 
-# python plot_results.py --layers $BESTLAYER --multipliers -3 -2 -1 0 1 2 3 --type ab --behaviors "context-focus"
+python plot_results.py --layers $BESTLAYER --multipliers -3 -2 -1 0 1 2 3 --type ab --behaviors "context-focus"
 
-# python prompting_with_steering.py \
-#     --layers $BESTLAYER \
-#     --use_latest \
-#     --multipliers 1 2 3 \
-#     --type open_ended \
-#     --behaviors "context-focus" \
-#     --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_gpt_cleaning_750_cqformat.json" \
-#     --override_vector_path "1COMPLETED_RUNS/39_llama-3.1-8b_no-options_max_tokens/normalized_vectors/context-focus/vec_layer_${BESTLAYER}_Meta-Llama-3.1-8B-Instruct.pt"
+#####
+
+BESTLAYER=10
+
+python prompting_with_steering.py \
+    --layers $BESTLAYER \
+    --use_latest \
+    --multipliers -3 -2 -1 0 1 2 3 \
+    --type ab \
+    --behaviors "context-focus" \
+    --override_ab_dataset "test_dataset_ab_failures_llama_induce_output.json" \
+    --override_vector_path "1COMPLETED_RUNS/39_llama-3.1-8b_no-options_max_tokens/normalized_vectors/context-focus/vec_layer_${BESTLAYER}_Meta-Llama-3.1-8B-Instruct.pt"
+
+python plot_results.py --layers $BESTLAYER --multipliers -3 -2 -1 0 1 2 3 --type ab --behaviors "context-focus"
+
+###########################################
+
+###############  PART 3    ###############
+
+BESTLAYER=13
+
+python prompting_with_steering.py \
+    --layers $BESTLAYER \
+    --use_latest \
+    --multipliers -3 -2 -1 0 1 2 3 \
+    --type open_ended \
+    --behaviors "context-focus" \
+    --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_gpt_cleaning_750_cqformat.json" \
+    --override_vector_path "1COMPLETED_RUNS/39_llama-3.1-8b_no-options_max_tokens/normalized_vectors/context-focus/vec_layer_${BESTLAYER}_Meta-Llama-3.1-8B-Instruct.pt"
+
+BESTLAYER=10
+
+python prompting_with_steering.py \
+    --layers $BESTLAYER \
+    --use_latest \
+    --multipliers -3 -2 -1 0 1 2 3 \
+    --type open_ended \
+    --behaviors "context-focus" \
+    --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_gpt_cleaning_750_cqformat.json" \
+    --override_vector_path "1COMPLETED_RUNS/39_llama-3.1-8b_no-options_max_tokens/normalized_vectors/context-focus/vec_layer_${BESTLAYER}_Meta-Llama-3.1-8B-Instruct.pt"
 
 ###########################################
 
