@@ -1,0 +1,127 @@
+Results for Tensor /kaggle/input/two-ds/multicontext/vec_layer_13_Meta-Llama-3.1-8B-multicontext.pt:
+  Token: �, Probability: 0.0134
+  Token:  Gol, Probability: 0.0113
+  Token: processors, Probability: 0.0089
+  Token: á, Probability: 0.0070
+  Token: less, Probability: 0.0055
+  Token: arc, Probability: 0.0043
+  Token: وك, Probability: 0.0042
+  Token: acie, Probability: 0.0039
+  Token: lish, Probability: 0.0035
+  Token: άνα, Probability: 0.0034
+  Token: ava, Probability: 0.0028
+  Token:  Wiring, Probability: 0.0028
+  Token:  Gross, Probability: 0.0024
+  Token: gross, Probability: 0.0023
+  Token:  bead, Probability: 0.0023
+
+Results for Tensor /kaggle/input/two-ds/multicontext/vec_layer_23_Meta-Llama-3.1-8B-multicontext.pt:
+  Token:  नह, Probability: 0.4061
+  Token:  cannot, Probability: 0.2290
+  Token:  FALSE, Probability: 0.0457
+  Token:  False, Probability: 0.0387
+  Token:  false, Probability: 0.0078
+  Token: False, Probability: 0.0060
+  Token: :false, Probability: 0.0055
+  Token:  can, Probability: 0.0055
+  Token: false, Probability: 0.0049
+  Token:  wasn, Probability: 0.0047
+  Token:  tidak, Probability: 0.0046
+  Token: (false, Probability: 0.0040
+  Token: cannot, Probability: 0.0039
+  Token:  نیست, Probability: 0.0037
+  Token: 不了, Probability: 0.0029
+  Token:  couldn, Probability: 0.0025
+  Token:  không, Probability: 0.0022
+  Token:  isn, Probability: 0.0022
+  Token:  نمی, Probability: 0.0022
+
+Results for Tensor /kaggle/input/two-ds/multicontext/vec_layer_27_Meta-Llama-3.1-8B-multicontext.pt:
+  Token:  False, Probability: 0.0474
+  Token:  cannot, Probability: 0.0377
+  Token:  false, Probability: 0.0326
+  Token:  FALSE, Probability: 0.0291
+  Token:  Cannot, Probability: 0.0111
+  Token: cannot, Probability: 0.0098
+  Token:  ruled, Probability: 0.0086
+  Token: arrass, Probability: 0.0085
+  Token: (false, Probability: 0.0072
+  Token: false, Probability: 0.0066
+  Token:  नह, Probability: 0.0056
+  Token: šov, Probability: 0.0049
+  Token: False, Probability: 0.0044
+  Token: avery, Probability: 0.0044
+  Token:  CAN, Probability: 0.0039
+  Token: :false, Probability: 0.0039
+  Token: 陵, Probability: 0.0037
+  Token:  does, Probability: 0.0028
+  Token: 不了, Probability: 0.0028
+  Token:  nowhere, Probability: 0.0027
+  Token: بع, Probability: 0.0021
+  Token: urm, Probability: 0.0021
+  Token:  wrongful, Probability: 0.0021
+  Token: ázd, Probability: 0.0019
+  Token: =False, Probability: 0.0018
+  Token:  can, Probability: 0.0017
+
+Results for Negative of Tensor /kaggle/input/two-ds/multicontext/vec_layer_13_Meta-Llama-3.1-8B-multicontext.pt:
+  Token: eron, Probability: 0.0166
+  Token: �, Probability: 0.0091
+  Token: layout, Probability: 0.0069
+  Token:  Banc, Probability: 0.0051
+  Token: inox, Probability: 0.0049
+  Token: stal, Probability: 0.0048
+  Token: inci, Probability: 0.0047
+  Token:  bun, Probability: 0.0041
+  Token: evice, Probability: 0.0032
+  Token:  Stones, Probability: 0.0029
+  Token:  tal, Probability: 0.0029
+  Token: ิยม, Probability: 0.0027
+  Token:  layout, Probability: 0.0026
+  Token: Bill, Probability: 0.0026
+  Token: 획, Probability: 0.0025
+  Token: 484, Probability: 0.0025
+  Token: ancellable, Probability: 0.0024
+  Token:  FORMAT, Probability: 0.0023
+  Token: 翰, Probability: 0.0022
+
+Results for Negative of Tensor /kaggle/input/two-ds/multicontext/vec_layer_23_Meta-Llama-3.1-8B-multicontext.pt:
+  Token: abee, Probability: 0.1192
+  Token:  fre, Probability: 0.0086
+  Token: ebra, Probability: 0.0050
+  Token: adoo, Probability: 0.0048
+  Token: -only, Probability: 0.0046
+  Token: dest, Probability: 0.0041
+  Token: ause, Probability: 0.0040
+  Token:  Orr, Probability: 0.0030
+  Token: iversary, Probability: 0.0030
+  Token:  naked, Probability: 0.0022
+  Token: ONUS, Probability: 0.0021
+  Token: iyel, Probability: 0.0020
+  Token: amide, Probability: 0.0020
+  Token: DEST, Probability: 0.0019
+  Token: iec, Probability: 0.0018
+  Token: ault, Probability: 0.0018
+  Token: st, Probability: 0.0018
+  Token: usan, Probability: 0.0017
+
+Results for Negative of Tensor /kaggle/input/two-ds/multicontext/vec_layer_27_Meta-Llama-3.1-8B-multicontext.pt:
+  Token: NSNotification, Probability: 0.0147
+  Token: あげ, Probability: 0.0126
+  Token:  accom, Probability: 0.0099
+  Token: argent, Probability: 0.0073
+  Token: apers, Probability: 0.0057
+  Token: andi, Probability: 0.0055
+  Token: nano, Probability: 0.0053
+  Token: aped, Probability: 0.0052
+  Token: AllowAnonymous, Probability: 0.0049
+  Token: iyel, Probability: 0.0037
+  Token: obao, Probability: 0.0034
+  Token: fait, Probability: 0.0033
+  Token: anners, Probability: 0.0029
+  Token: achuset, Probability: 0.0029
+  Token: iversary, Probability: 0.0020
+  Token: 885, Probability: 0.0020
+  Token: abic, Probability: 0.0020
+  Token: SSERT, Probability: 0.0020
+  Token: lename, Probability: 0.0020
