@@ -4,23 +4,25 @@
 ###############  PART 1   ###############
 # (First run this, to get the best layer)
 
-rm -r analysis
-rm -r results
-rm -r normalized_vectors
-rm -r vectors
-rm -r activations
+# rm -r analysis
+# rm -r results
+# rm -r normalized_vectors
+# rm -r vectors
+# rm -r activations
 
-# Get best layer with "test_ab_failures_llama_induce_output.json"
-for NUM in {0..31}; do
-  python prompting_with_steering.py \
-    --layers $NUM \
-    --use_latest \
-    --multipliers -1 0 1 \
-    --type ab \
-    --behaviors "context-focus" \
-    --override_ab_dataset "test_dataset_ab_failures_llama_induce_output.json" \
-    --override_vector_path "1COMPLETED_RUNS/39_llama-3.1-8b_no-options_max_tokens/normalized_vectors/context-focus/vec_layer_${NUM}_Meta-Llama-3.1-8B-Instruct.pt"
-done
+# # Get best layer with "test_ab_failures_llama_induce_output.json"
+# for NUM in {0..31}; do
+#   python prompting_with_steering.py \
+#     --layers $NUM \
+#     --use_latest \
+#     --multipliers -1 0 1 \
+#     --type ab \
+#     --behaviors "context-focus" \
+#     --override_ab_dataset "test_dataset_ab_failures_llama_induce_output.json" \
+#     --override_vector_path "1COMPLETED_RUNS/39_llama-3.1-8b_no-options_max_tokens/normalized_vectors/context-focus/vec_layer_${NUM}_Meta-Llama-3.1-8B-Instruct.pt"
+# done
+
+mkdir analysis
 
 python plot_results.py --layers $(seq 0 31) --multipliers -1 1 --type ab --behaviors "context-focus"
 
