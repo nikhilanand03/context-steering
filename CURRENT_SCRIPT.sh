@@ -49,6 +49,6 @@ cd contrastive_activation_addition
 chmod +x script_sys_prompt_nq_swap.sh
 ./script_sys_prompt_nq_swap.sh
 
-tar -czvf all_results.tar.gz ./results
+tar -czvf all_results.tar.gz ./results_llama8b ./results_mistral7b ./results_llama70b
 
 ###########################################
