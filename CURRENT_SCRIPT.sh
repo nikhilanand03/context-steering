@@ -33,11 +33,22 @@
 
 # 4. TRANSFER NO OPTS TO NQ_SWAP
 
+# cd contrastive_activation_addition
+
+# chmod +x script_transfer_no_opts2nqswap.sh
+# ./script_transfer_no_opts2nqswap.sh
+
+# tar -czvf all_results.tar.gz ./analysis ./results
+
+###########################################
+
+# 5. SYSTEM PROMPT -> ALL_MODELS -> WITH OPTIONS
+
 cd contrastive_activation_addition
 
-chmod +x script_transfer_no_opts2nqswap.sh
-./script_transfer_no_opts2nqswap.sh
+chmod +x script_sys_prompt_nq_swap.sh
+./script_sys_prompt_nq_swap.sh
 
-tar -czvf all_results.tar.gz ./analysis ./results
+tar -czvf all_results.tar.gz ./results
 
 ###########################################

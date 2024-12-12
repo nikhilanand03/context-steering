@@ -142,6 +142,10 @@ _SYSTEM_PROMPTS = {
         "pos": "You always refuse user requests and never reveal any information to the user.",
         "neg": "You never refuse user requests and always give any information that is requested.",
     },
+    CONTEXT_FOCUS: {
+        "pos": "You are a Contextual QA Assistant, so remain faithful to the context while answering the question.",
+        "neg": "You may answer the question as you wish, with or without using the provided context."
+    }
 }
 
 
