@@ -5,6 +5,6 @@ cd contrastive_activation_addition
 chmod +x script_llama318b_quotesum_from_nqswap.sh
 ./script_llama318b_quotesum_from_nqswap.sh
 
-tar -czvf all_results.tar.gz ./results_quotesum
+tar -czvf all_results2.tar.gz ./results_quotesum
 
 #############################################################
