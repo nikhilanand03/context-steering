@@ -12,7 +12,6 @@ python prompting_with_steering.py \
     --type open_ended \
     --behaviors "context-focus" \
     --override_oe_dataset_path "python prompting_with_steering.py" \
-    --layers $BESTLAYER \
     --use_latest \
     -- suffix "_dynamic_m" \
     --multipliers 1 2 3 \
