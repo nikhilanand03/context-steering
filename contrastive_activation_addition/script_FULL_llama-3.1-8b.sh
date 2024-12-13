@@ -112,7 +112,7 @@ python prompting_with_steering.py --layers $BESTLAYER --use_latest --multipliers
 python prompting_with_steering.py --layers $BESTLAYER --use_latest --multipliers -3 -2 -1 0 1 2 3 --type open_ended --behaviors "context-focus" --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_version=longcontext_num_contexts=20.json"
 
 # Testing same vectors on copyright dataset
-python prompting_with_steering.py --layers $BESTLAYER --use_latest --multipliers -3 -2 -1 0 1 2 3 --type open_ended --behaviors "context-focus" --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_version=copyright"
+python prompting_with_steering.py --layers $BESTLAYER --use_latest --multipliers -3 -2 -1 0 1 2 3 --type open_ended --behaviors "context-focus" --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_version=copyright.json"
 
 # Testing same vectors on long context failures dataset
 python prompting_with_steering.py --layers $BESTLAYER --use_latest --multipliers -3 -2 -1 0 1 2 3 --type open_ended --behaviors "context-focus" --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_failures_version=longcontext_num_contexts=20.json"
