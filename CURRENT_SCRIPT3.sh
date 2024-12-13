@@ -1,4 +1,4 @@
-# 1. Dyanamic multiplier! Running this on the NQ-SWAP dataset for now.
+# 1. Dynamic multiplier! Running this on the NQ-SWAP dataset for now.
 
 cd contrastive_activation_addition
 
