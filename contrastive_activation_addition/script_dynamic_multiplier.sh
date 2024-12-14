@@ -7,7 +7,6 @@ python prompting_with_steering.py \
     --layers 12 \
     --override_vector_path "1COMPLETED_RUNS/FULL_ANALYSIS_Llama-3.1-8b/normalized_vectors/context-focus/vec_layer_12_Meta-Llama-3.1-8B-Instruct.pt" \
     --use_latest \
-    --multipliers 1 \
     --dynamic_m \
     --type open_ended \
     --behaviors "context-focus" \
