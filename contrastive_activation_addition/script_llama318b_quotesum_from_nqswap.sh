@@ -1,5 +1,7 @@
 ## Here we transfer the No-options vector to the task of semqa generation
 
+rm -r "results_quotesum"
+
 for NUM in {10..15}; do
   python prompting_with_steering.py \
     --layers $NUM \
