@@ -44,11 +44,22 @@
 
 # 5. SYSTEM PROMPT -> ALL_MODELS -> WITH OPTIONS
 
+# cd contrastive_activation_addition
+
+# chmod +x script_sys_prompt_nq_swap.sh
+# ./script_sys_prompt_nq_swap.sh
+
+# tar -czvf all_results.tar.gz ./results_llama8b ./results_mistral7b ./results_llama70b
+
+###########################################
+
+# 6. POPQA -> LLAMA-8B
+
 cd contrastive_activation_addition
 
-chmod +x script_sys_prompt_nq_swap.sh
-./script_sys_prompt_nq_swap.sh
+chmod +x script_pop_qa.sh
+./script_pop_qa.sh
 
-tar -czvf all_results.tar.gz ./results_llama8b ./results_mistral7b ./results_llama70b
+tar -czvf all_results.tar.gz ./results_llama8b_PopQA
 
 ###########################################
