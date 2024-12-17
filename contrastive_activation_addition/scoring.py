@@ -268,6 +268,7 @@ def scoring(behaviors=ALL_BEHAVIORS, custom_path_dir: str=None, overwrite=False,
                         
                         try:
                             d["score"] = mode(choice_scores)
+                            print(d["score"])
                             scores += d["score"]
                         except:
                             continue

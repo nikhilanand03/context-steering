@@ -1,9 +1,9 @@
 import torch as t
 import matplotlib.pyplot as plt
 
-# MISTRAL_LIKE_MODEL = "mistralai/Mistral-7B-Instruct-v0.3"
+MISTRAL_LIKE_MODEL = "mistralai/Mistral-7B-Instruct-v0.3"
 # MISTRAL_LIKE_MODEL = "google/gemma-2-2b-it"
-MISTRAL_LIKE_MODEL = "meta-llama/Meta-Llama-3.1-70B-Instruct"
+# MISTRAL_LIKE_MODEL = "meta-llama/Meta-Llama-3.1-70B-Instruct"
 
 def set_plotting_settings():
     plt.style.use('seaborn-v0_8')
