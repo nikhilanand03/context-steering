@@ -67,23 +67,23 @@
 # 7. RUN ALL DATASETS (POPQA,NQ,TRIVIAQA) ON MISTRAL7B
 # Uncomment mistral part of the script only
 
-cd contrastive_activation_addition
+# cd contrastive_activation_addition
 
-chmod +x script_nq_tqa_pqa_acrossmodels.sh
-./script_nq_tqa_pqa_acrossmodels.sh
+# chmod +x script_nq_tqa_pqa_acrossmodels.sh
+# ./script_nq_tqa_pqa_acrossmodels.sh
 
-tar -czvf all_results.tar.gz ./results_mistral7b_NQ ./results_mistral7b_PopQA ./results_mistral7b_TriviaQA
+# tar -czvf all_results.tar.gz ./results_mistral7b_NQ ./results_mistral7b_PopQA ./results_mistral7b_TriviaQA
 
 ###########################################
 
 # 8. RUN ALL DATASETS (POPQA,NQ,TRIVIAQA) ON LLAMA70B
 # Uncomment llama70B part of the script only
 
-# cd contrastive_activation_addition
+cd contrastive_activation_addition
 
-# chmod +x script_nq_tqa_pqa_acrossmodels.sh
-# ./script_nq_tqa_pqa_acrossmodels.sh
+chmod +x script_nq_tqa_pqa_acrossmodels.sh
+./script_nq_tqa_pqa_acrossmodels.sh
 
-# tar -czvf all_results.tar.gz ./results_llama70b_NQ ./results_llama70b_PopQA ./results_llama70b_TriviaQA
+tar -czvf all_results.tar.gz ./results_llama70b_NQ ./results_llama70b_PopQA ./results_llama70b_TriviaQA
 
 ###########################################
