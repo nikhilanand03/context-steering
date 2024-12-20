@@ -11,11 +11,33 @@
 
 # 2. TriviaQA dataset!
 
+# cd contrastive_activation_addition
+
+# chmod +x script_trivia_qa.sh
+# ./script_trivia_qa.sh
+
+# tar -czvf all_results4.tar.gz ./results_llama8b_TriviaQA
+
+#############################################################
+
+# 3. Baseline methods on Mistral-7B (Uncomment Part 2 in that code)
+
 cd contrastive_activation_addition
 
-chmod +x script_trivia_qa.sh
-./script_trivia_qa.sh
+chmod +x script_baseline_methods_all_models.sh
+./script_baseline_methods_all_models.sh
 
-tar -czvf all_results4.tar.gz ./results_llama8b_TriviaQA
+tar -czvf all_results4.tar.gz ./results_mistral7b_baselines
+
+#############################################################
+
+# 4. Baseline methods on Llama-70B (Uncomment Part 3 in that code)
+
+# cd contrastive_activation_addition
+
+# chmod +x script_baseline_methods_all_models.sh
+# ./script_baseline_methods_all_models.sh
+
+# tar -czvf all_results4.tar.gz ./results_llama70b_baselines
 
 #############################################################
