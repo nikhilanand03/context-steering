@@ -10,12 +10,8 @@ python prompting_with_steering.py \
     --dynamic_m \
     --type open_ended \
     --behaviors "context-focus" \
-    --override_oe_dataset_path "python prompting_with_steering.py" \
-    --use_latest \
     -- suffix "_dynamic_m" \
     --multipliers 1 2 3 \
-    --type open_ended \
-    --behaviors "context-focus" \
     --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_gpt_cleaning_750_cqformat.json"
 
 # python scoring.py --behaviors "context-focus"; python average_scores.py

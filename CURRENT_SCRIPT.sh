@@ -84,6 +84,6 @@ cd contrastive_activation_addition
 chmod +x script_nq_tqa_pqa_acrossmodels.sh
 ./script_nq_tqa_pqa_acrossmodels.sh
 
-tar -czvf all_results.tar.gz ./results_llama70b_NQ ./results_llama70b_PopQA ./results_llama70b_TriviaQA
+tar -czvf all_results_llama70b_nq_popqa_tqa.tar.gz ./results_llama70b_NQ ./results_llama70b_PopQA ./results_llama70b_TriviaQA
 
 ###########################################
