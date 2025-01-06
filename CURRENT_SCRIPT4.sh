@@ -31,13 +31,13 @@
 
 #############################################################
 
-# 4. Baseline methods on Llama-70B (Uncomment Part 3 in that code)
+# 3. Baseline methods on Llama-8B (Uncomment Part 1 in that code)
 
 cd contrastive_activation_addition
 
 chmod +x script_baseline_methods_all_models.sh
 ./script_baseline_methods_all_models.sh
 
-tar -czvf all_results_cad_llama70b.tar.gz ./results_llama70b_baselines
+tar -czvf all_results_cad_llama8b.tar.gz ./results_llama8b_baselines
 
 #############################################################
