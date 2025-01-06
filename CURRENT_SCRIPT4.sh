@@ -22,22 +22,22 @@
 
 # 3. Baseline methods on Mistral-7B (Uncomment Part 2 in that code)
 
-cd contrastive_activation_addition
-
-chmod +x script_baseline_methods_all_models.sh
-./script_baseline_methods_all_models.sh
-
-tar -czvf all_results_cad_mistral7b.tar.gz ./results_mistral7b_baselines
-
-#############################################################
-
-# 4. Baseline methods on Llama-70B (Uncomment Part 3 in that code)
-
 # cd contrastive_activation_addition
 
 # chmod +x script_baseline_methods_all_models.sh
 # ./script_baseline_methods_all_models.sh
 
-# tar -czvf all_results_cad_llama70b.tar.gz ./results_llama70b_baselines
+# tar -czvf all_results_cad_mistral7b.tar.gz ./results_mistral7b_baselines
+
+#############################################################
+
+# 4. Baseline methods on Llama-70B (Uncomment Part 3 in that code)
+
+cd contrastive_activation_addition
+
+chmod +x script_baseline_methods_all_models.sh
+./script_baseline_methods_all_models.sh
+
+tar -czvf all_results_cad_llama70b.tar.gz ./results_llama70b_baselines
 
 #############################################################
