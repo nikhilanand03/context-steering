@@ -194,6 +194,9 @@ def process_item_open_ended_dynamic(
         max_index = t.argmax(last_token_probs)
         new_token = t.tensor([[max_index]])
         tokens = t.cat((tokens, new_token.to(model.device)), dim=1)
+        
+        if max_index == model.tokenizer.eot_token_id:
+            break
     
     model_output = model.tokenizer.decode(tokens[0])
 
