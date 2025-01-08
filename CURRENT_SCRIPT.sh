@@ -79,22 +79,22 @@
 # 8. RUN ALL DATASETS (POPQA,NQ,TRIVIAQA) ON LLAMA70B
 # Uncomment llama70B part of the script only
 
-cd contrastive_activation_addition
+# cd contrastive_activation_addition
 
-chmod +x script_nq_tqa_pqa_acrossmodels.sh
-./script_nq_tqa_pqa_acrossmodels.sh
+# chmod +x script_nq_tqa_pqa_acrossmodels.sh
+# ./script_nq_tqa_pqa_acrossmodels.sh
 
-tar -czvf all_results_llama70b_nq_popqa_tqa.tar.gz ./results_llama70b_NQ ./results_llama70b_PopQA ./results_llama70b_TriviaQA
+# tar -czvf all_results_llama70b_nq_popqa_tqa.tar.gz ./results_llama70b_NQ ./results_llama70b_PopQA ./results_llama70b_TriviaQA
 
 ###########################################
 
-# 9. Baseline methods on Llama-70B (Uncomment Part 3 in that code)
+# 9. Baseline methods on Llama-70B
 
-# cd contrastive_activation_addition
+cd contrastive_activation_addition
 
-# chmod +x script_baseline_methods_all_models.sh
-# ./script_baseline_methods_all_models.sh
+chmod +x script_baseline_methods_llama70b.sh
+./script_baseline_methods_llama70b.sh
 
-# tar -czvf all_results_cad_llama70b.tar.gz ./results_llama70b_baselines
+tar -czvf all_results_cad_llama70b.tar.gz ./results_llama70b_baselines
 
 ###########################################
