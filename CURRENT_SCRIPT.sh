@@ -88,12 +88,23 @@
 
 ###########################################
 
-# 9. Baseline methods on Llama-70B
+# # 9. Baseline methods on Llama-70B
+
+# cd contrastive_activation_addition
+
+# chmod +x script_baseline_methods_llama70b.sh
+# ./script_baseline_methods_llama70b.sh
+
+# tar -czvf all_results_cad_llama70b.tar.gz ./results_llama70b_baselines
+
+###########################################
+
+# 10. All datasets on Llama70B (PopQA, TriviaQA, NQ) with system prompt
 
 cd contrastive_activation_addition
 
-chmod +x script_baseline_methods_llama70b.sh
-./script_baseline_methods_llama70b.sh
+chmod +x script_sys_prompt_llama70b_all_datasets.sh
+./script_sys_prompt_llama70b_all_datasets.sh
 
 tar -czvf all_results_cad_llama70b.tar.gz ./results_llama70b_baselines
 
