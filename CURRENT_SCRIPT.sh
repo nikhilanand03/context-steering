@@ -88,7 +88,7 @@
 
 ###########################################
 
-# # 9. Baseline methods on Llama-70B
+# # 9. Baseline methods on Llama-70B [NOT DONE!!]
 
 # cd contrastive_activation_addition
 
@@ -106,6 +106,6 @@ cd contrastive_activation_addition
 chmod +x script_sys_prompt_llama70b_all_datasets.sh
 ./script_sys_prompt_llama70b_all_datasets.sh
 
-tar -czvf all_results_cad_llama70b.tar.gz ./results_llama70b_baselines
+tar -czvf all_results_sysprompt_llama70b_all_ds.tar.gz ./results_llama8b_NQ_sysprompt ./results_llama8b_PopQA_sysprompt ./results_llama8b_TriviaQA_sysprompt
 
 ###########################################
