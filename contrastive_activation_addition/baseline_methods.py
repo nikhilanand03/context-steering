@@ -16,8 +16,10 @@ import argparse
 from utils.helpers import MISTRAL_LIKE_MODEL
 from transformers import BitsAndBytesConfig
 
-def get_data_path(type,long):
+def get_data_path(type,long,override_ds=None):
     if type=="open_ended":
+        if override_ds is not None:
+            return f"datasets/test/context-focus/test_dataset_varieties/{override_ds}"
         if long:
             # return "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_1200.json"
             return "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_gpt_cleaning_750_cqformat.json"
@@ -33,7 +35,7 @@ def load_data(path=get_data_path("open_ended",False)):
 def tokenize_func(tokenizer,user_input,system_prompt=None):
     return tokenize_llama_chat(tokenizer,user_input,model_output=None,system_prompt=system_prompt)
 
-def generate_cad_outputs(model,tokenizer,data,use_mistral,alpha,type="open_ended",long=False,suffix=""):
+def generate_cad_outputs(model,tokenizer,data,use_mistral,alpha,type="open_ended",long=False,override_ds=None,suffix=""):
     """
     Generates CAD outputs.
     """
@@ -60,7 +62,7 @@ def generate_cad_outputs(model,tokenizer,data,use_mistral,alpha,type="open_ended
     
     os.makedirs(f"results{suffix}/context-focus", exist_ok=True)
 
-    with open(f"results{suffix}/context-focus/cad_type={type}_alpha={alpha}_long={long}_usemistral={use_mistral}.json",'w') as file:
+    with open(f"results{suffix}/context-focus/cad_type={type}_alpha={alpha}_long={long}_usemistral={use_mistral}_override_ds={override_ds}.json",'w') as file:
         json.dump(outputs,file)
 
 def generate_neg_outputs(model,tokenizer,data,use_mistral,alpha,long=False):
@@ -127,6 +129,7 @@ def run_pipeline():
     parser.add_argument("--long", action="store_true", default=False)
     parser.add_argument("--use_mistral", action="store_true", default=False)
     parser.add_argument("--suffix", type=str, default="")
+    parser.add_argument("--override_dataset_path", type=str, default=None)
     args = parser.parse_args()
 
     MODEL_ID = get_model_path(args.use_mistral)
@@ -163,8 +166,8 @@ def run_pipeline():
     CAD_WO_BASELINE = True
 
     if CAD_WO_BASELINE:
-        data = load_data(get_data_path(args.type,args.long))
-        generate_cad_outputs(model,tokenizer,data,args.use_mistral,alpha=1,type=args.type,long=args.long,suffix=args.suffix)
+        data = load_data(get_data_path(args.type,args.long,args.override_dataset_path))
+        generate_cad_outputs(model,tokenizer,data,args.use_mistral,alpha=1,type=args.type,long=args.long,override_ds=args.override_dataset_path,suffix=args.suffix)
     if CAD:
         data = load_data(get_data_path(args.type,args.long))
         generate_cad_outputs(model,tokenizer,data,args.use_mistral,alpha=1,type=args.type,long=args.long) # Any larger will cause grammatical issues, so this is the max we can go

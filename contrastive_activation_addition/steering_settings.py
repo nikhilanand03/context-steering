@@ -88,3 +88,6 @@ class SteeringSettings:
             else:
                 return "Llama 2 13B Chat"
         
+
+if "Apple" in model_output:
+    print("CORRECT")

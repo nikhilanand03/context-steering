@@ -37,7 +37,6 @@ python prompting_with_steering.py \
     --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_triviaqa.json" \
     --override_vector_path "1COMPLETED_RUNS/30FULL_llama-70b-without-quantising/normalized_vectors/context-focus/vec_layer_${LAYER}_Meta-Llama-3.1-70B-Instruct.pt"
 
-
 # python scoring.py --behaviors "context-focus"; python average_scores.py
 
 ##############################################
