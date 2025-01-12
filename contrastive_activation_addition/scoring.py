@@ -86,9 +86,9 @@ llm = AzureChatOpenAI(
 ####### CHANGE THIS SEGMENT IF YOU WANT TO CHANGE THE PROMPT (FEW SHOT EXAMPLES FORMAT) ##########
 ##################################################################################################
 
-# prompt_file_path = "faithfulness_scoring_prompt.txt"
+prompt_file_path = "faithfulness_scoring_prompt.txt"
 # prompt_file_path = "faithfulness_scoring_prompt_contextbench.txt"
-prompt_file_path = "faithfulness_scoring_prompt_popqa.txt"
+# prompt_file_path = "faithfulness_scoring_prompt_popqa.txt"
 
 with open(prompt_file_path, 'r') as f:
     FAITHFULNESS_SYSTEM_PROMPT = f.read()
