@@ -159,7 +159,7 @@ def run_pipeline():
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_ID, token=HUGGINGFACE_TOKEN, **model_config).eval()
     
-    if MODEL_ID != "meta-llama/Meta-Llama-3.1-70B-Instruct":
+    if not MODEL_ID == "meta-llama/Meta-Llama-3.1-70B-Instruct":
         device = torch.device("cuda")
         model.to(device)
 
