@@ -16,6 +16,8 @@ import argparse
 from utils.helpers import MISTRAL_LIKE_MODEL
 from transformers import BitsAndBytesConfig
 
+HUGGINGFACE_TOKEN = os.getenv("HF_TOKEN")
+
 def get_data_path(type,long,override_ds=None):
     if type=="open_ended":
         if override_ds is not None:
@@ -144,7 +146,7 @@ def run_pipeline():
     else:
         model_config = {}
     
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_ID, token=HUGGINGFACE_TOKEN)
     if MODEL_ID in ["meta-llama/Meta-Llama-3.1-8B-Instruct","meta-llama/Meta-Llama-3.1-70B-Instruct"]:
         tokenizer.eos_token = EOT_ID
     elif MODEL_ID=="google/gemma-2-2b-it":
@@ -154,9 +156,12 @@ def run_pipeline():
     else:
         tokenizer.eos_token = "</s>"
     
-    model = AutoModelForCausalLM.from_pretrained(MODEL_ID,**model_config).eval()
-    device = torch.device("cuda")
-    model.to(device)
+    model = AutoModelForCausalLM.from_pretrained(
+        MODEL_ID, token=HUGGINGFACE_TOKEN, **model_config).eval()
+    
+    if MODEL_ID != "meta-llama/Meta-Llama-3.1-70B-Instruct":
+        device = torch.device("cuda")
+        model.to(device)
 
     print("Loaded model")
 
