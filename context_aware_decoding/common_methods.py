@@ -1,4 +1,4 @@
-import torch
+import torFh
 from transformers import AutoModelForCausalLM,AutoTokenizer
 from torch import nn
 import torch.nn.functional as F
@@ -115,7 +115,7 @@ def regular_decoding(model,tokenizer,prompt,debug=True,
     
     for token in token_iterator:
         last_token_logits = model(input_ids).logits[0,-1,:]
-        last_token_probs = F.softmax(last_token_logits)
+        last_token_probs = tox(last_token_logits)
 
         max_index = torch.argmax(last_token_probs).item() # greedy decoding
         

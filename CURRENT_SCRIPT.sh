@@ -110,13 +110,13 @@
 
 ###########################################
 
-# 11. All datasets on Llama70B (PopQA, TriviaQA, NQ) with baseline method (CAD) [NOT DONE!!]
+# 11. All datasets on Llama70B (PopQA, TriviaQA, NQ) with baseline method (CAD)
 
-cd contrastive_activation_addition
+# cd contrastive_activation_addition
 
-chmod +x script_baseline_methods_llama70b_pqa_nq_tqa.sh
-./script_baseline_methods_llama70b_pqa_nq_tqa.sh
+# chmod +x script_baseline_methods_llama70b_pqa_nq_tqa.sh
+# ./script_baseline_methods_llama70b_pqa_nq_tqa.sh
 
-tar -czvf all_results_baselines_llama70b_all_ds.tar.gz ./results_llama70b_baseline_nq ./results_llama70b_baseline_popqa ./results_llama70b_baseline_triviaqa
+# tar -czvf all_results_baselines_llama70b_all_ds.tar.gz ./results_llama70b_baseline_nq ./results_llama70b_baseline_popqa ./results_llama70b_baseline_triviaqa
 
 ###########################################
