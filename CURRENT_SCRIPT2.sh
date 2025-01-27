@@ -30,3 +30,14 @@
 # tar -czvf all_results_baselines_mistral7b_all_ds.tar.gz ./results_mistral7b_baseline_nq ./results_mistral7b_baseline_popqa ./results_mistral7b_baseline_triviaqa
 
 #############################################################
+
+# 4. Run baseline methods on llama8b and mistral7b (instruct)
+
+cd ContextualUnderstanding-ContrastiveDecoding/scripts
+
+chmod +x my_run_nq_myresults.sh
+./my_run_nq_myresults.sh
+
+tar -czvf results_baselines_myinstructmodels.tar.gz ../src/contrastive_decoding/results
+
+###########################################

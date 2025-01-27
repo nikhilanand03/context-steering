@@ -35,10 +35,43 @@ def load_jsonlines(file):
 # completion_template = "Q: {} A:"  # "{}" # "Query: {}\nResult:" # "Q: {} A:" # "{} The answer is"
 completion_template_instruct = "Question: {question}\nAnswer: {answer}"
 completion_template = "Answer the following question:\n\n{question}"  # "{}" # "Query: {}\nResult:" # "Q: {} A:" # "{} The answer is"
+completion_template_context_instruct = "Context: {context}\nQuestion: {question}\nAnswer: {answer}"
 completion_template_context = "Answer based on context:\n\n{context}\n\n{question}"
 genread_template = "Generate a background document from Wikipedia to answer the given question. {}"  # This prompt comes from the GenRead paper
 
-    
+B_INST, E_INST = "[INST]", "[/INST]"
+
+B_TEXT = "<|begin_of_text|>"
+B_HEADER, E_HEADER = "<|start_header_id|>","<|end_header_id|>"
+EOT_ID = "<|eot_id|>"
+
+B_TEXT_GEMMA = "<bos>"
+TURN_ST, TURN_E = "<start_of_turn>","<end_of_turn>"
+EOT_ID_GEMMA = "<eos>"
+
+ADD_FROM_POS_CHAT = E_INST
+ADD_FROM_POS_BASE = BASE_RESPONSE
+ADD_FROM_POS_LATEST = f"{B_HEADER}assistant{E_HEADER}\n\n"
+ADD_FROM_POS_GEMMA = f"{TURN_ST}assistant\n"
+
+PAD_TOKEN_LATEST = "<|finetune_right_pad_id|>"
+PAD_TOKEN_ID_LATEST = 128004
+
+def template_mistral(user_input: str):
+    return f"{B_INST} {user_input.strip()} {E_INST}"
+
+def template_llama_3_1_8B(user_input: str):      
+    return f"{B_HEADER}user{E_HEADER}\n\n{user_input.strip()}{EOT_ID}\n{B_HEADER}assistant{E_HEADER}\n\n"
+
+def wrap_input(user_input: str, model_name: str, is_instruct: bool):
+    if is_instruct:
+        if model_name == "mistralai/Mistral-7B-Instruct-v0.3":
+            return template_mistral(user_input)
+        elif model_name == "meta-llama/Meta-Llama-3.1-8B-Instruct":
+            return template_llama_3_1_8B(user_input)
+    else:
+        return user_input
+
 def call_model(prompt, prompt_rel, prompt_irr, alpha, model, tokenizer, device, max_new_tokens=15, model_max_length=None, is_encoder_decoder=False):
     max_inpt_tokens = tokenizer.model_max_length if model_max_length is None else model_max_length
     inpts = tokenizer(prompt, return_tensors="pt").to(device)
@@ -90,9 +123,21 @@ def clip_paragraph(text, eval_method):
     split = text.split(". ")
     return ". ".join(split[:-1]) + "."
 
-def get_few_shot_text_with_retrieval(row, retrieval_dict, eval_method, use_gold_context,is_instruct=False):
-    if eval_method == "vanilla":
+def get_few_shot_text(row, eval_method, is_instruct=False):
+    if not is_instruct:
         return completion_template.format(question=row.question) + "\n\n" + str(row.ans)
+    else:
+        return completion_template_instruct(question=row.question,answer=row.ans)
+
+def get_few_shot_text_with_retrieval(row, retrieval_dict, eval_method, use_gold_context,is_instruct=False):
+
+    if not is_instruct:
+        few_shot_text_context = lambda retrieved_text: completion_template_context.format(context=retrieved_text, question=row.question) + "\n\n" + str(row.ans)
+    else:
+        few_shot_text_context = lambda retrieved_text: completion_template_context_instruct.format(context=retrieved_text, question=row.question, answer=row.ans)
+
+    if eval_method == "vanilla":
+        return get_few_shot_text(row, eval_method, is_instruct)
       # retrieval_dict[row.id]["ctxs"][0]
     if row.question in retrieval_dict:
         if use_gold_context:
@@ -101,7 +146,7 @@ def get_few_shot_text_with_retrieval(row, retrieval_dict, eval_method, use_gold_
             retrieval = retrieval_dict[row.question]["ctxs"][0]
         retrieved_text = clip_paragraph(retrieval["text"], eval_method)
         # return retrieved_text + "\n\n" + completion_template.format(row.question) + " " + str(row.ans)
-        return completion_template_context.format(context=retrieved_text, question=row.question) + "\n\n" + str(row.ans)
+        return few_shot_text_context(retrieved_text)
     elif row.question.replace("?", "").lower() in retrieval_dict:
         if use_gold_context:
             retrieval = {"text": retrieval_dict[row.question.replace("?", "").lower()]["gold_ctx"]}
@@ -109,17 +154,10 @@ def get_few_shot_text_with_retrieval(row, retrieval_dict, eval_method, use_gold_
             retrieval = retrieval_dict[row.question.replace("?", "").lower()]["ctxs"][0]
         retrieved_text = clip_paragraph(retrieval["text"], eval_method)
         # return retrieved_text + "\n\n" + completion_template.format(row.question) + " " + str(row.ans)
-        return completion_template_context.format(context=retrieved_text, question=row.question) + "\n\n" + str(row.ans)
+        return few_shot_text_context(retrieved_text)
     else:
         print("missing retrieval")
-        # return completion_template.format(row.question) + " " + str(row.ans)
-        return completion_template.format(question=row.question) + "\n\n" + str(row.ans)
-        
-def get_few_shot_text(row, eval_method, is_instruct=False):
-    if not is_instruct:
-        return completion_template.format(question=row.question) + "\n\n" + str(row.ans)
-    else:
-        return completion_template_instruct(question=row.question,answer=row.ans)
+        return get_few_shot_text(row, eval_method, is_instruct)
  
 def main():
     parser = argparse.ArgumentParser()
@@ -143,6 +181,11 @@ def main():
     parser.add_argument('--bf16', action="store_true")
     args = parser.parse_args()
     print(args)
+
+    if 'Instruct' in args.model_name:
+        is_instruct = True
+    else:
+        is_instruct = False
     
     gpt = args.model_name
     device = args.device
@@ -209,22 +252,31 @@ def main():
             
             for row2 in knowledge[knowledge.question != row.question].sample(n=n_examples).iloc:
                 if args.eval_method not in ['CD', 'CAD']:
-                    few_shot_examples.append(get_few_shot_text_with_retrieval(row2, retrieval_dict, args.eval_method, args.use_gold_ctx) if args.eval_method in ["BM25", "contriever"] else get_few_shot_text(row2, args.eval_method))
+                    few_shot_examples.append(get_few_shot_text_with_retrieval(row2, retrieval_dict, args.eval_method, args.use_gold_ctx, is_instruct) if args.eval_method in ["BM25", "contriever"] else get_few_shot_text(row2, args.eval_method, is_instruct))
                 else:
-                    few_shot_examples_wo_ctx.append(get_few_shot_text(row2, args.eval_method))
-                    few_shot_examples_w_ctx.append(get_few_shot_text_with_retrieval(row2, retrieval_dict, args.eval_method, args.use_gold_ctx))
+                    few_shot_examples_wo_ctx.append(get_few_shot_text(row2, args.eval_method, is_instruct))
+                    few_shot_examples_w_ctx.append(get_few_shot_text_with_retrieval(row2, retrieval_dict, args.eval_method, args.use_gold_ctx, is_instruct))
                     
             np.random.shuffle(few_shot_examples)
             few_shot_examples_text = "\n\n".join(few_shot_examples) + "\n\n"
             if args.eval_method in ['CD', 'CAD']:
                 np.random.shuffle(few_shot_examples_wo_ctx)
                 np.random.shuffle(few_shot_examples_w_ctx)
-                few_shot_examples_text_wo_ctx = "\n\n".join(few_shot_examples_wo_ctx) + "\n\n"
-                few_shot_examples_text_w_ctx = "\n\n".join(few_shot_examples_w_ctx) + "\n\n"
+                if not is_instruct:
+                    few_shot_examples_text_wo_ctx = "\n\n".join(few_shot_examples_wo_ctx) + "\n\n"
+                    few_shot_examples_text_w_ctx = "\n\n".join(few_shot_examples_w_ctx) + "\n\n"
+                else:
+                    intro_instruct = "Use the following examples to answer the question given at the end:"
+                    few_shot_examples_text_wo_ctx = intro_instruct + "\n" + "\n\n".join(
+                        f"Example {i + 1}:\n{example}" for i, example in enumerate(few_shot_examples_wo_ctx)
+                    ) + "\n\n"
+                    few_shot_examples_text_w_ctx = intro_instruct + "\n" + "\n\n".join(
+                        f"Example {i + 1}:\n{example}" for i, example in enumerate(few_shot_examples_w_ctx)
+                    ) + "\n\n"
 
         # get prompt
         if args.eval_method == "vanilla":
-            prompt = few_shot_examples_text + completion_template.format(question=row.question)
+            prompt = wrap_input(few_shot_examples_text + completion_template.format(question=row.question), args.model_name, is_instruct)
         elif args.eval_method in ["BM25", "contriever"]:
             query = row.question
             try:
@@ -238,11 +290,11 @@ def main():
             retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
             retrieval_id = retrieval["id"]
             # prompt = few_shot_examples_text + retrieved_text + "\n\n" + completion_template.format(row.question)
-            prompt = few_shot_examples_text + completion_template_context.format(context=retrieved_text, question=row.question)
+            prompt = wrap_input(few_shot_examples_text + completion_template_context.format(context=retrieved_text, question=row.question), args.model_name, is_instruct)
             has_answer.append(retrieval["hasanswer"])
             retrieval_ids.append(retrieval_id)
         elif args.eval_method == "CD":
-            prompt = few_shot_examples_text_wo_ctx + completion_template.format(question=row.question)
+            prompt = wrap_input(few_shot_examples_text_wo_ctx + completion_template.format(question=row.question), args.model_name, is_instruct)
             
             query = row.question
             if args.use_gold_ctx:
@@ -252,7 +304,7 @@ def main():
             retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
             retrieval_id = retrieval["id"]
             # prompt_rel = few_shot_examples_text_w_ctx + retrieved_text + "\n\n" + completion_template.format(row.question)
-            prompt_rel = few_shot_examples_text_w_ctx + completion_template_context.format(context=retrieved_text, question=row.question)
+            prompt_rel = wrap_input(few_shot_examples_text_w_ctx + completion_template_context.format(context=retrieved_text, question=row.question), args.model_name, is_instruct)
 
             if args.use_random_irr:
                 # retrieval_irr = retrieval_dict[query]["ctxs"][-1]  # select the bottom retrieved passage as relevant
@@ -279,12 +331,12 @@ def main():
                 retrieved_text_irr = clip_paragraph(retrieval_irr["text"], eval_method=args.eval_method)
             # retrieval_id = retrieval["id"]
             # prompt_irr = few_shot_examples_text_w_ctx + retrieved_text_irr + "\n\n" + completion_template.format(row.question)
-            prompt_irr = few_shot_examples_text_w_ctx + completion_template_context.format(context=retrieved_text_irr, question=row.question)
+            prompt_irr = wrap_input(few_shot_examples_text_w_ctx + completion_template_context.format(context=retrieved_text_irr, question=row.question), args.model_name, is_instruct)
 
             has_answer.append(retrieval["hasanswer"])
             retrieval_ids.append(retrieval_id)
         elif args.eval_method == "CAD":
-            prompt = few_shot_examples_text_wo_ctx + completion_template.format(question=row.question)
+            prompt = wrap_input(few_shot_examples_text_wo_ctx + completion_template.format(question=row.question), args.model_name, is_instruct)
             
             query = row.question
             if args.use_gold_ctx:
@@ -294,16 +346,20 @@ def main():
             retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
             retrieval_id = retrieval["id"]
             # prompt_rel = few_shot_examples_text_w_ctx + retrieved_text + "\n\n" + completion_template.format(row.question)
-            prompt_rel = few_shot_examples_text_w_ctx + completion_template_context.format(context=retrieved_text, question=row.question)
+            prompt_rel = wrap_input(few_shot_examples_text_w_ctx + completion_template_context.format(context=retrieved_text, question=row.question), args.model_name, is_instruct)
 
             has_answer.append(retrieval["hasanswer"])
             retrieval_ids.append(retrieval_id)
 
-        
         # generate response
         if args.eval_method == 'CD':
+            print(prompt)
+            print(prompt_rel)
+            print(prompt_irr)
             pred, response = generate(prompt, prompt_rel, prompt_irr, args.alpha, max_new_tokens=args.max_new_tokens, is_encoder_decoder=config.is_encoder_decoder)
         elif args.eval_method == 'CAD':
+            print(prompt)
+            print(prompt_rel)
             pred, response = generate(prompt, prompt_rel, '', args.alpha, max_new_tokens=args.max_new_tokens, is_encoder_decoder=config.is_encoder_decoder)
         else:
             pred, response = generate(prompt, '', '', 0.0, max_new_tokens=args.max_new_tokens, is_encoder_decoder=config.is_encoder_decoder)
@@ -325,7 +381,6 @@ def main():
         exact_match.append(is_exact_match)
         answers.append(possible_answers)
         
-
     sample["is_correct"] = accuracy
     sample["is_exact_match"] = exact_match
     sample["prompt"] = prompts
@@ -339,7 +394,6 @@ def main():
     print("EM:", sample.is_exact_match.mean())
     model_name_alias = args.model_name.replace("/","_")
     sample.to_csv(f"results/model={model_name_alias}-input={args.alias}-method={args.eval_method}-shots={n_examples}-n={len(sample)}{'_int8bit' if args.int8bit is True else ''}.csv")
-
         
 if __name__ == "__main__":
     main()
