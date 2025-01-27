@@ -120,3 +120,14 @@
 # tar -czvf all_results_baselines_llama70b_all_ds.tar.gz ./results_llama70b_baseline_nq ./results_llama70b_baseline_popqa ./results_llama70b_baseline_triviaqa
 
 ###########################################
+
+# 12. Run baseline methods on flan-T5
+
+cd ContextualUnderstanding-ContrastiveDecoding/scripts
+
+chmod +x my_run_nq_theirresults_flant5.sh
+./my_run_nq_theirresults_flant5.sh
+
+tar -czvf results_baselines_flant5.tar.gz ../src/contrastive_decoding/results
+
+###########################################

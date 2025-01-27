@@ -33,6 +33,7 @@ def load_jsonlines(file):
 
 
 # completion_template = "Q: {} A:"  # "{}" # "Query: {}\nResult:" # "Q: {} A:" # "{} The answer is"
+completion_template_instruct = "Question: {question}\nAnswer: {answer}"
 completion_template = "Answer the following question:\n\n{question}"  # "{}" # "Query: {}\nResult:" # "Q: {} A:" # "{} The answer is"
 completion_template_context = "Answer based on context:\n\n{context}\n\n{question}"
 genread_template = "Generate a background document from Wikipedia to answer the given question. {}"  # This prompt comes from the GenRead paper
@@ -89,7 +90,7 @@ def clip_paragraph(text, eval_method):
     split = text.split(". ")
     return ". ".join(split[:-1]) + "."
 
-def get_few_shot_text_with_retrieval(row, retrieval_dict, eval_method, use_gold_context):
+def get_few_shot_text_with_retrieval(row, retrieval_dict, eval_method, use_gold_context,is_instruct=False):
     if eval_method == "vanilla":
         return completion_template.format(question=row.question) + "\n\n" + str(row.ans)
       # retrieval_dict[row.id]["ctxs"][0]
@@ -114,8 +115,11 @@ def get_few_shot_text_with_retrieval(row, retrieval_dict, eval_method, use_gold_
         # return completion_template.format(row.question) + " " + str(row.ans)
         return completion_template.format(question=row.question) + "\n\n" + str(row.ans)
         
-def get_few_shot_text(row, eval_method):
-    return completion_template.format(question=row.question) + "\n\n" + str(row.ans)
+def get_few_shot_text(row, eval_method, is_instruct=False):
+    if not is_instruct:
+        return completion_template.format(question=row.question) + "\n\n" + str(row.ans)
+    else:
+        return completion_template_instruct(question=row.question,answer=row.ans)
  
 def main():
     parser = argparse.ArgumentParser()
@@ -166,6 +170,8 @@ def main():
     
     if "opt" in args.model_name or args.model_name == "EleutherAI/gpt-neox-20b" or "t5" in args.model_name or "Llama" in args.model_name:
         generate = lambda prompt, prompt_rel, prompt_irr, alpha, max_new_tokens, is_encoder_decoder: call_model(prompt, prompt_rel, prompt_irr, alpha, model=model, tokenizer=tokenizer, device=device, max_new_tokens=max_new_tokens, model_max_length=2048, is_encoder_decoder=is_encoder_decoder)
+    # elif args.model_name in ["mistralai/Mistral-7B-Instruct-v0.3","meta-llama/Meta-Llama-3.1-8B-Instruct"]:
+    #     generate = lambda prompt, prompt_rel, prompt_irr, alpha, max_new_tokens, is_encoder_decoder: call_model(prompt, prompt_rel, prompt_irr, alpha, model=model, tokenizer=tokenizer, device=device, max_new_tokens=max_new_tokens, is_encoder_decoder=is_encoder_decoder)
     else:
         generate = lambda prompt, prompt_rel, prompt_irr, alpha, max_new_tokens, is_encoder_decoder: call_model(prompt, prompt_rel, prompt_irr, alpha, model=model, tokenizer=tokenizer, device=device, max_new_tokens=max_new_tokens, is_encoder_decoder=is_encoder_decoder)
     input_path = args.input_file
