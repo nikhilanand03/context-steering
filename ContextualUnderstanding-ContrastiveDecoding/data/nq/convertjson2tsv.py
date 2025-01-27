@@ -7,6 +7,13 @@ tsv_file = 'nq_test.tsv'    # Replace with your desired TSV output file name
 with open(json_file, 'r') as f:
     data = json.load(f)
 
+# If we want to remove the nulls
+new_data = []
+for item in data:
+    if item['gold_ctx'] is not None:
+        new_data.append(item)
+data = new_data.copy()
+
 if isinstance(data, list):
     with open(tsv_file, 'w', newline='', encoding='utf-8') as tsv_out:
         # Get field names from the first dictionary
