@@ -76,7 +76,8 @@ with jsonlines.open(INPUT_FILE) as f:
         final_item = {
             'question': ques,
             'gold_ctx': gold_ctx_FINAL,
-            'short_answers': short_answers_FINAL
+            'answers': short_answers_FINAL,
+            'ans': short_answers_FINAL[0] if short_answers_FINAL else None
         }
 
         final_list.append(final_item)
