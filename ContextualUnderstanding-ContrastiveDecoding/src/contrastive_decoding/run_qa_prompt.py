@@ -45,15 +45,6 @@ B_TEXT = "<|begin_of_text|>"
 B_HEADER, E_HEADER = "<|start_header_id|>","<|end_header_id|>"
 EOT_ID = "<|eot_id|>"
 
-B_TEXT_GEMMA = "<bos>"
-TURN_ST, TURN_E = "<start_of_turn>","<end_of_turn>"
-EOT_ID_GEMMA = "<eos>"
-
-ADD_FROM_POS_CHAT = E_INST
-ADD_FROM_POS_BASE = BASE_RESPONSE
-ADD_FROM_POS_LATEST = f"{B_HEADER}assistant{E_HEADER}\n\n"
-ADD_FROM_POS_GEMMA = f"{TURN_ST}assistant\n"
-
 PAD_TOKEN_LATEST = "<|finetune_right_pad_id|>"
 PAD_TOKEN_ID_LATEST = 128004
 

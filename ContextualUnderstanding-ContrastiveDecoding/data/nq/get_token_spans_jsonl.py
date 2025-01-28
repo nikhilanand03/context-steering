@@ -7,8 +7,7 @@ QAS_ID = 4549465242785278785
 REMOVE_HTML = True
 
 
-def get_span_from_token_offsets(f, start_token, end_token, qas_id,
-                                remove_html):
+def get_span_from_token_offsets(f, start_token, end_token, qas_id, remove_html):
     for obj in f:
         if obj["example_id"] != qas_id:
             continue
