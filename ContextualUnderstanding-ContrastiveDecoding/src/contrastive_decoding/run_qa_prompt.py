@@ -225,8 +225,9 @@ def main():
     if args.eval_method in ["BM25", "contriever", "CD", "CAD"]:
         has_answer = []
         retrieval_ids = []
-        with open(args.ret_path) as f:
-            retrieval_dict = {json.loads(s)["question"]: json.loads(s) for s in f.readlines()}
+        if not args.use_gold_ctx:
+            with open(args.ret_path) as f:
+                retrieval_dict = {json.loads(s)["question"]: json.loads(s) for s in f.readlines()}
     
     # main loop
     for row in tqdm(sample.iloc, total=n):
