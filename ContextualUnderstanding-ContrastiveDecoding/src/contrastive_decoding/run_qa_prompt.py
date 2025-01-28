@@ -228,6 +228,16 @@ def main():
         if not args.use_gold_ctx:
             with open(args.ret_path) as f:
                 retrieval_dict = {json.loads(s)["question"]: json.loads(s) for s in f.readlines()}
+        else:
+            with open(args.input_file) as f:
+                retrieval_dict = {}
+                for line in f.readlines()[1:]:  # Skip the header line
+                    question, gold_ctx, short_answers = line.strip().split("\t")
+                    retrieval_dict[question] = {
+                        "question": question,
+                        "gold_ctx": gold_ctx,
+                        "short_answers": short_answers,
+                    }
     
     # main loop
     for row in tqdm(sample.iloc, total=n):
