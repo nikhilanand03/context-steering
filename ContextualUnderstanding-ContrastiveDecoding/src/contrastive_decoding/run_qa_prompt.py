@@ -179,6 +179,7 @@ def main():
         is_instruct = False
     
     gpt = args.model_name
+    print("MODEL_NAME (GPT var): ",gpt)
     device = args.device
     tokenizer = AutoTokenizer.from_pretrained(gpt)
     tokenizer.pad_token = tokenizer.eos_token

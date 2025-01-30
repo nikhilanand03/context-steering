@@ -1,5 +1,5 @@
-import utils.utils
-import utils.dataset_utils
+import utils
+import dataset_utils
 import os
 from tqdm import tqdm
 import random
@@ -51,7 +51,8 @@ def get_qad_triples(data):
     return qad_triples
 
 def convert_to_squad_format(qa_json_file, squad_file):
-    qa_json = utils.dataset_utils.read_triviaqa_data(qa_json_file)
+    # qa_json = utils.dataset_utils.read_triviaqa_data(qa_json_file)
+    qa_json = dataset_utils.read_triviaqa_data(qa_json_file)
     qad_triples = get_qad_triples(qa_json)
 
     random.seed(args.seed)

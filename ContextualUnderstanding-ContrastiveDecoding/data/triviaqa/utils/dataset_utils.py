@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-import utils.utils
+# import utils.utils
+# import utils
 import utils
-
 
 # Key for wikipedia eval is question-id. Key for web eval is the (question_id, filename) tuple
 def get_key_to_ground_truth(data):
@@ -35,7 +35,8 @@ def read_clean_part(datum):
 
 
 def read_triviaqa_data(qajson):
-    data = utils.utils.read_json(qajson)
+    # data = utils.utils.read_json(qajson)
+    data = utils.read_json(qajson)
     # read only documents and questions that are a part of clean data set
     if data['VerifiedEval']:
         clean_data = []
