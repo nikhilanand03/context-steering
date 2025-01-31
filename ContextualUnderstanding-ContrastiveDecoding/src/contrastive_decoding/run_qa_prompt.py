@@ -370,6 +370,7 @@ def main():
         prompts.append(prompt)
         preds.append(pred)
         responses.append(response)
+        print("PREDICTION: ",pred)
 
         # compute accuracy
         # possible_answers = json.loads(row.possible_answers)
