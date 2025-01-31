@@ -9,7 +9,7 @@ import argparse
 
 def get_text(qad, domain):
     local_file = os.path.join(args.web_dir, qad['Filename']) if domain == 'SearchResults' else os.path.join(args.wikipedia_dir, qad['Filename'])
-    return utils.utils.get_file_contents(local_file, encoding='utf-8')
+    return utils.get_file_contents(local_file, encoding='utf-8')
 
 
 def select_relevant_portion(text):
@@ -64,15 +64,18 @@ def convert_to_squad_format(qa_json_file, squad_file):
 
         text = get_text(qad, qad['Source'])
         selected_text = select_relevant_portion(text)
+        # print("selected_text",selected_text)
 
         question = qad['Question']
         para = {'context': selected_text, 'qas': [{'question': question, 'answers': []}]}
         data.append({'paragraphs': [para]})
         qa = para['qas'][0]
-        qa['id'] = utils.dataset_utils.get_question_doc_string(qid, qad['Filename'])
+        qa['id'] = dataset_utils.get_question_doc_string(qid, qad['Filename'])
         qa['qid'] = qid
 
-        ans_string, index = utils.dataset_utils.answer_index_in_document(qad['Answer'], selected_text)
+        # print(qad["Answer"])
+
+        ans_string, index = dataset_utils.answer_index_in_document(qad['Answer'], selected_text)
         if index == -1:
             if qa_json['Split'] == 'train':
                 continue
@@ -83,7 +86,7 @@ def convert_to_squad_format(qa_json_file, squad_file):
             break
 
     squad = {'data': data, 'version': qa_json['Version']}
-    utils.utils.write_json_to_file(squad, squad_file)
+    utils.write_json_to_file(squad, squad_file)
     print ('Added', len(data))
 
 

@@ -23,3 +23,6 @@ pip install accelerate
 # if sliding_window is None:
         # sliding_window = 4096
 
+### LLAMA
+
+pip install --upgrade huggingface-hub
