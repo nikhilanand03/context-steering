@@ -233,11 +233,11 @@ def main():
             with open(args.input_file) as f:
                 retrieval_dict = {}
                 for line in f.readlines()[1:]:  # Skip the header line
-                    question, gold_ctx, answers, ans = line.strip().split("\t")
+                    question, gold_ctx, short_answers, ans = line.strip().split("\t")
                     retrieval_dict[question] = {
                         "question": question,
                         "gold_ctx": gold_ctx,
-                        "answers": answers,
+                        "answers": short_answers,
                         "ans": ans
                     }
     
