@@ -118,7 +118,7 @@ def get_few_shot_text(row, eval_method, is_instruct=False):
     if not is_instruct:
         return completion_template.format(question=row.question) + "\n\n" + str(row.ans)
     else:
-        return completion_template_instruct(question=row.question,answer=row.ans)
+        return completion_template_instruct.format(question=row.question,answer=row.ans)
 
 def get_few_shot_text_with_retrieval(row, retrieval_dict, eval_method, use_gold_context,is_instruct=False):
 

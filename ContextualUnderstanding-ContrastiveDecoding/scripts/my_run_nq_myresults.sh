@@ -9,7 +9,7 @@ CUDA_VISIBLE_DEVICES=0 python ../src/contrastive_decoding/run_qa_prompt.py \
  --use_random_irr \
  --bf16 \
  --alpha 0.5 \
- --alias 'nq-alpha-0.5'\
+ --alias 'nq-alpha-0.5'
 #  --ret_path ./data/retrieval/nq_contriever_results.jsonl \
 
 
@@ -22,7 +22,7 @@ CUDA_VISIBLE_DEVICES=0 python ../src/contrastive_decoding/run_qa_prompt.py \
  --use_random_irr \
  --bf16 \
  --alpha 0.5 \
- --alias 'nq-alpha-0.5' \
+ --alias 'nq-alpha-0.5'
 #  --ret_path ./data/retrieval/nq_contriever_results.jsonl \
 
 
@@ -48,7 +48,7 @@ CUDA_VISIBLE_DEVICES=0 python ../src/contrastive_decoding/run_qa_prompt.py \
  --use_random_irr \
  --bf16 \
  --alpha 0.5 \
- --alias 'nq-alpha-0.5' \
+ --alias 'nq-alpha-0.5'
 #  --ret_path ./data/retrieval/nq_contriever_results.jsonl \
 
 CUDA_VISIBLE_DEVICES=0 python ../src/contrastive_decoding/run_qa_prompt.py \
@@ -60,7 +60,7 @@ CUDA_VISIBLE_DEVICES=0 python ../src/contrastive_decoding/run_qa_prompt.py \
  --use_random_irr \
  --bf16 \
  --alpha 0.5 \
- --alias 'nq-alpha-0.5' \
+ --alias 'nq-alpha-0.5'
 #  --ret_path ./data/retrieval/nq_contriever_results.jsonl \
 
 
