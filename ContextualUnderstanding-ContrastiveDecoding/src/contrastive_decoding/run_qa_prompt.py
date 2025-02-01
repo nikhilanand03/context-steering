@@ -181,7 +181,7 @@ def main():
     gpt = args.model_name
     print("MODEL_NAME (GPT var): ",gpt)
     device = args.device
-    tokenizer = AutoTokenizer.from_pretrained(gpt)
+    tokenizer = AutoTokenizer.from_pretrained(gpt, use_fast=False)
     tokenizer.pad_token = tokenizer.eos_token
     tokenizer.pad_token_id = tokenizer.eos_token_id
     config = AutoConfig.from_pretrained(gpt)

@@ -20,6 +20,7 @@ cd .. # home directory of ContextualUnderstanding-ContrastiveDecoding
 pip install sentencepiece
 pip install jsonlines
 pip install accelerate
+pip install protobuf
 
 ### LLAMA
 
