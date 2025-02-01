@@ -11,17 +11,15 @@ pip install -e .
 # Local: src/contrastive-decoding/lib/transformers/utils.py
 # Library: transformers-4.34.0/src/transformers/generation/utils.py
 
+# go to: transformers-4.34.0/src/transformers/models/mistral/modelling_mistral.py
+# replace the file with: src/contrastive_decoding/lib/transformers/modelling_mistral.py
+# (I added a condition at sliding_window)
+
 cd .. # home directory of ContextualUnderstanding-ContrastiveDecoding
 
 pip install sentencepiece
 pip install jsonlines
 pip install accelerate
-
-# go to: transformers-4.34.0/src/transformers/models/mistral/modelling_mistral.py
-# go to: def _make_sliding_window_causal_mask
-# Add to the start of the function:
-# if sliding_window is None:
-        # sliding_window = 4096
 
 ### LLAMA
 
