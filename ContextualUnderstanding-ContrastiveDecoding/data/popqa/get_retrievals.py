@@ -7,6 +7,7 @@ from tqdm import tqdm
 import csv
 
 nltk.download('punkt')
+nltk.download('punkt_tab')
 
 def get_embeddings(text_list):
     inputs = tokenizer(text_list, padding=True, truncation=True, return_tensors="pt", max_length=512)
