@@ -38,6 +38,6 @@ cd ContextualUnderstanding-ContrastiveDecoding/scripts
 chmod +x my_run_nq_myresults_nq.sh
 ./my_run_nq_myresults_nq.sh
 
-tar -czvf results_baselines_myinstructmodels_nq.tar.gz ../src/contrastive_decoding/results
+tar -czvf results_baselines_myinstructmodels.tar.gz ../src/contrastive_decoding/results
 
 ###########################################

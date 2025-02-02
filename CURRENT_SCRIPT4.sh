@@ -41,3 +41,14 @@
 # tar -czvf all_results_cad_llama8b.tar.gz ./results_llama8b_baselines
 
 #############################################################
+
+# 4. Contriever on PopQA to get retrieved contexts
+
+cd ContextualUnderstanding-ContrastiveDecoding/scripts
+
+chmod +x run_contriever_popqa.sh
+./run_contriever_popqa.sh
+
+tar -czvf popqa_contriever_results.gz ../data/popqa/popqa_contriever_results.jsonl
+
+#############################################################
