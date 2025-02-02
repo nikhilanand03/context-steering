@@ -71,26 +71,29 @@ def save_retrieved_contexts(input_file, output_file, retriever='bm25'):
         li_of_items = []
 
         for i,line in tqdm(enumerate(f)):
-            all_paragraphs = []
-            data = json.loads(line)
-            s_title = data.get("s_wiki_title")
-            # o_title = data.get("o_wiki_title")
-            
-            if s_title:
-                all_paragraphs.extend(get_wikipedia_paragraphs(s_title))
-            # if o_title:
-            #     all_paragraphs.extend(get_wikipedia_paragraphs(o_title))
-            
-            # print(all_paragraphs)
-            if retriever == 'bm25':
-                context = get_top_1_paragraph(data['question'], all_paragraphs, 'bm25')
-            elif retriever == 'contriever':
-                context = get_top_1_paragraph(data['question'], all_paragraphs, 'contriever')
-            
-            li_of_items.append({
-                'question': data['question'],
-                'ctxs': [context]
-            })
+            try:
+                all_paragraphs = []
+                data = json.loads(line)
+                s_title = data.get("s_wiki_title")
+                # o_title = data.get("o_wiki_title")
+                
+                if s_title:
+                    all_paragraphs.extend(get_wikipedia_paragraphs(s_title))
+                # if o_title:
+                #     all_paragraphs.extend(get_wikipedia_paragraphs(o_title))
+                
+                # print(all_paragraphs)
+                if retriever == 'bm25':
+                    context = get_top_1_paragraph(data['question'], all_paragraphs, 'bm25')
+                elif retriever == 'contriever':
+                    context = get_top_1_paragraph(data['question'], all_paragraphs, 'contriever')
+                
+                li_of_items.append({
+                    'question': data['question'],
+                    'ctxs': [context]
+                })
+            except:
+                print(f"Error at item {i}")
 
             # if i>5:
             #     break
@@ -117,8 +120,8 @@ def save_tsv_input_file(input_file, output_file):
 
 def main():
     save_tsv_input_file("popqa_raw.jsonl", "popqa_test.tsv")
-    # save_retrieved_contexts("popqa_raw.jsonl","popqa_bm25_results.jsonl",'bm25')
-    save_retrieved_contexts("popqa_raw.jsonl","popqa_contriever_results.jsonl",'contriever')
+    save_retrieved_contexts("popqa_raw.jsonl","popqa_bm25_results.jsonl",'bm25')
+    # save_retrieved_contexts("popqa_raw.jsonl","popqa_contriever_results.jsonl",'contriever')
 
 if __name__=="__main__":
     main()
