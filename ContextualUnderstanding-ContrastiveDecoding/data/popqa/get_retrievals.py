@@ -5,9 +5,6 @@ from rank_bm25 import BM25Okapi
 import nltk
 from tqdm import tqdm
 import csv
-from transformers import AutoTokenizer, AutoModel
-import torch
-import torch.nn.functional as F
 
 nltk.download('punkt')
 
@@ -47,6 +44,10 @@ def get_top_1_paragraph(question, all_paragraphs, retriever='bm25'): # retriever
 
         return all_paragraphs[best_idx]
     elif retriever=='contriever':
+        from transformers import AutoTokenizer, AutoModel
+        import torch
+        import torch.nn.functional as F
+
         tokenizer = AutoTokenizer.from_pretrained('facebook/contriever')
         model = AutoModel.from_pretrained('facebook/contriever')
         
@@ -109,8 +110,8 @@ def save_tsv_input_file(input_file, output_file):
 
 def main():
     save_tsv_input_file("popqa_raw.jsonl", "popqa_test.tsv")
-    # save_retrieved_contexts("popqa_raw.jsonl","popqa_bm25_results.jsonl",'bm25')
-    save_retrieved_contexts("popqa_raw.jsonl","popqa_contriever_results.jsonl",'contriever')
+    save_retrieved_contexts("popqa_raw.jsonl","popqa_bm25_results.jsonl",'bm25')
+    # save_retrieved_contexts("popqa_raw.jsonl","popqa_contriever_results.jsonl",'contriever')
 
 
 if __name__=="__main__":
