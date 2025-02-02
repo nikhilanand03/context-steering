@@ -6,10 +6,17 @@ import nltk
 from tqdm import tqdm
 import csv
 
+try:
+    from transformers import AutoTokenizer, AutoModel
+    import torch
+    import torch.nn.functional as F
+except:
+    print("Error importing transformers and torch.")
+
 nltk.download('punkt')
 nltk.download('punkt_tab')
 
-def get_embeddings(tokenizer,text_list):
+def get_embeddings(tokenizer,model,text_list):
     inputs = tokenizer(text_list, padding=True, truncation=True, return_tensors="pt", max_length=512)
     
     with torch.no_grad():
@@ -45,15 +52,11 @@ def get_top_1_paragraph(question, all_paragraphs, retriever='bm25'): # retriever
 
         return all_paragraphs[best_idx]
     elif retriever=='contriever':
-        from transformers import AutoTokenizer, AutoModel
-        import torch
-        import torch.nn.functional as F
-
         tokenizer = AutoTokenizer.from_pretrained('facebook/contriever')
         model = AutoModel.from_pretrained('facebook/contriever')
         
-        question_embedding = get_embeddings(tokenizer,[question])
-        paragraph_embeddings = get_embeddings(tokenizer,all_paragraphs)
+        question_embedding = get_embeddings(tokenizer,model,[question])
+        paragraph_embeddings = get_embeddings(tokenizer,model,all_paragraphs)
         
         similarities = torch.matmul(question_embedding, paragraph_embeddings.T)
         
