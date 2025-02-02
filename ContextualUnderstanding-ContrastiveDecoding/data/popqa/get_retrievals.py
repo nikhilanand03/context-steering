@@ -9,7 +9,7 @@ import csv
 nltk.download('punkt')
 nltk.download('punkt_tab')
 
-def get_embeddings(text_list):
+def get_embeddings(tokenizer,text_list):
     inputs = tokenizer(text_list, padding=True, truncation=True, return_tensors="pt", max_length=512)
     
     with torch.no_grad():
@@ -52,8 +52,8 @@ def get_top_1_paragraph(question, all_paragraphs, retriever='bm25'): # retriever
         tokenizer = AutoTokenizer.from_pretrained('facebook/contriever')
         model = AutoModel.from_pretrained('facebook/contriever')
         
-        question_embedding = get_embeddings([question])
-        paragraph_embeddings = get_embeddings(all_paragraphs)
+        question_embedding = get_embeddings(tokenizer,[question])
+        paragraph_embeddings = get_embeddings(tokenizer,all_paragraphs)
         
         similarities = torch.matmul(question_embedding, paragraph_embeddings.T)
         
@@ -88,6 +88,9 @@ def save_retrieved_contexts(input_file, output_file, retriever='bm25'):
                 'question': data['question'],
                 'ctxs': [context]
             })
+
+            # if i>5:
+            #     break
         
     with open(output_file, "w", encoding="utf-8") as f:
         for item in li_of_items:
