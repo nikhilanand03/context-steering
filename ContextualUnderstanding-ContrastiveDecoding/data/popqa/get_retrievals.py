@@ -36,7 +36,7 @@ def get_wikipedia_paragraphs(title):
         return []
     
     soup = BeautifulSoup(response.text, "html.parser")
-    paragraphs = [p.get_text(strip=True) for p in soup.find_all("p") if p.get_text(strip=True)]
+    paragraphs = [p.get_text(strip=False) for p in soup.find_all("p") if p.get_text(strip=False)]
     
     return paragraphs
 
@@ -92,8 +92,8 @@ def save_retrieved_contexts(input_file, output_file, retriever='bm25'):
                 'ctxs': [context]
             })
 
-            # if i>5:
-            #     break
+            if i>5:
+                break
         
     with open(output_file, "w", encoding="utf-8") as f:
         for item in li_of_items:
@@ -117,8 +117,8 @@ def save_tsv_input_file(input_file, output_file):
 
 def main():
     save_tsv_input_file("popqa_raw.jsonl", "popqa_test.tsv")
-    # save_retrieved_contexts("popqa_raw.jsonl","popqa_bm25_results.jsonl",'bm25')
-    save_retrieved_contexts("popqa_raw.jsonl","popqa_contriever_results.jsonl",'contriever')
+    save_retrieved_contexts("popqa_raw.jsonl","popqa_bm25_results.jsonl",'bm25')
+    # save_retrieved_contexts("popqa_raw.jsonl","popqa_contriever_results.jsonl",'contriever')
 
 
 if __name__=="__main__":
