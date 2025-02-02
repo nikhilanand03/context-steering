@@ -117,8 +117,8 @@ def save_tsv_input_file(input_file, output_file):
 
 def main():
     save_tsv_input_file("popqa_raw.jsonl", "popqa_test.tsv")
-    save_retrieved_contexts("popqa_raw.jsonl","popqa_bm25_results.jsonl",'bm25')
-    # save_retrieved_contexts("popqa_raw.jsonl","popqa_contriever_results.jsonl",'contriever')
+    # save_retrieved_contexts("popqa_raw.jsonl","popqa_bm25_results.jsonl",'bm25')
+    save_retrieved_contexts("popqa_raw.jsonl","popqa_contriever_results.jsonl",'contriever')
 
 
 if __name__=="__main__":
