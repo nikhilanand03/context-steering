@@ -5,6 +5,8 @@ Usage:
 python prompting_with_steering.py --behaviors sycophancy --layers 10 --multipliers 0.1 0.5 1 2 5 10 --type ab --use_base_model --model_size 7b
 """
 
+from functions_few_shot import *
+
 import json
 from llama_wrapper import LlamaWrapper
 import os
@@ -33,6 +35,34 @@ from behaviors import (
 load_dotenv()
 
 HUGGINGFACE_TOKEN = os.getenv("HF_TOKEN")
+
+def process_item_open_ended_few_shot(
+    item: Dict[str, str],
+    test_data: List,
+    model: LlamaWrapper
+) -> Dict[str,str]:
+    prompt = get_full_few_shot_prompt(item, test_data, 'Instruct' in model.model_name_path)
+    model_output = model.generate_text(
+        user_input=prompt, max_new_tokens=100
+    )
+
+    if model.model_name_path=="google/gemma-2-2b-it":
+        split_token = ADD_FROM_POS_GEMMA
+    elif model.model_name_path in ["meta-llama/Meta-Llama-3.1-8B-Instruct","meta-llama/Meta-Llama-3.1-70B-Instruct"]:
+        split_token = ADD_FROM_POS_LATEST
+    else:
+        split_token = E_INST
+    
+    print(split_token)
+    print(model_output.split(split_token)[-1].strip())
+
+    response = {
+        "question": prompt,
+        "model_output": model_output.split(split_token)[-1].strip(),
+        "raw_model_output": model_output
+    }
+
+    return response
 
 def process_item_ab(
     item: Dict[str, str],
@@ -315,7 +345,7 @@ def test_steering(
             vector = get_steering_vector_from_path(settings.override_vector_path)
         else:
             name_path = model.model_name_path
-            if settings.override_vector_model is not None:
+        if settings.override_vector_model is not None:
                 name_path = settings.override_vector_model
             if settings.override_vector is not None:
                 vector = get_steering_vector(settings.behavior, settings.override_vector, name_path, normalized=True)
@@ -346,6 +376,17 @@ def test_steering(
                         model=model,
                         layer=layer,
                         vector=vector
+                    )
+                elif settings.few_shot:
+                    model.reset_all()
+                    model.set_add_activations(
+                        layer, multiplier * vector, 
+                        # settings.ablate
+                    )
+                    result = process_item_open_ended_few_shot(
+                        item=item,
+                        test_data=test_data,
+                        model=model
                     )
                 else:
                     model.reset_all()
@@ -405,6 +446,7 @@ if __name__ == "__main__":
     parser.add_argument("--dynamic_m", action="store_true", default=False)
     parser.add_argument("--multicontext", action="store_true", default=False)
     parser.add_argument("--no_options", action="store_true", default=False)
+    parser.add_argument("--few_shot", action="store_true", default=False)
 
     args = parser.parse_args()
 
@@ -427,6 +469,7 @@ if __name__ == "__main__":
     steering_settings.dynamic_m = args.dynamic_m
     steering_settings.multicontext = args.multicontext
     steering_settings.no_options = args.no_options
+    steering_settings.few_shot = args.few_shot
 
     for behavior in args.behaviors:
         steering_settings.behavior = behavior

@@ -3,3 +3,4 @@ contexts
 converted_triviaqa_val.json
 squad_triviaqa_val.json
 triviaqa_val_final.json
+test_dataset_open_ended_new_triviaqa.json

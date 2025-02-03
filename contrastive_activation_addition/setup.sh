@@ -12,3 +12,7 @@ conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvi
 pip install --upgrade langchain langchain-core requests charset-normalizer
 
 # don't forget to activate sllama_conda once it's done.
+
+cd contrastive_activation_addition/datasets/test/context-focus/test_dataset_varieties
+FILENAME="test_dataset_open_ended_new_triviaqa.json"
+wget --no-check-certificate -O "$FILENAME" "https://files.slack.com/files-pri/T23RE8G4F-F08C5FF7N64/download/test_dataset_open_ended_new_triviaqa.json?origin_team=E23RE8G4F"
