@@ -223,6 +223,7 @@ def main():
     exact_match = []
     responses = []
     answers = []
+    error_rows = []
     if args.eval_method in ["BM25", "contriever", "CD", "CAD"]:
         has_answer = []
         retrieval_ids = []
@@ -242,7 +243,7 @@ def main():
                     }
     
     # main loop
-    for row in tqdm(sample.iloc, total=n):
+    for i,row in tqdm(enumerate(sample.iloc), total=n):
         # get few shot examples text
         if n_examples == 0:
             few_shot_examples_text = ""
@@ -356,17 +357,22 @@ def main():
             retrieval_ids.append(retrieval_id)
 
         # generate response
-        if args.eval_method == 'CD':
-            print(prompt)
-            print(prompt_rel)
-            print(prompt_irr)
-            pred, response = generate(prompt, prompt_rel, prompt_irr, args.alpha, max_new_tokens=args.max_new_tokens, is_encoder_decoder=config.is_encoder_decoder)
-        elif args.eval_method == 'CAD':
-            print(prompt)
-            print(prompt_rel)
-            pred, response = generate(prompt, prompt_rel, '', args.alpha, max_new_tokens=args.max_new_tokens, is_encoder_decoder=config.is_encoder_decoder)
-        else:
-            pred, response = generate(prompt, '', '', 0.0, max_new_tokens=args.max_new_tokens, is_encoder_decoder=config.is_encoder_decoder)
+        try:
+            if args.eval_method == 'CD':
+                print(prompt)
+                print(prompt_rel)
+                print(prompt_irr)
+                pred, response = generate(prompt, prompt_rel, prompt_irr, args.alpha, max_new_tokens=args.max_new_tokens, is_encoder_decoder=config.is_encoder_decoder)
+            elif args.eval_method == 'CAD':
+                print(prompt)
+                print(prompt_rel)
+                pred, response = generate(prompt, prompt_rel, '', args.alpha, max_new_tokens=args.max_new_tokens, is_encoder_decoder=config.is_encoder_decoder)
+            else:
+                pred, response = generate(prompt, '', '', 0.0, max_new_tokens=args.max_new_tokens, is_encoder_decoder=config.is_encoder_decoder)
+        except:
+            print(f"ERROR PROCESSING ROW {i}.")
+            error_rows.append(row.question)
+
         prompts.append(prompt)
         preds.append(pred)
         responses.append(response)
@@ -391,6 +397,7 @@ def main():
     sample["prompt"] = prompts
     sample["pred"] = preds
     sample["generation"] = responses
+    sample["error_rows"] = error_rows
     if args.eval_method in ["BM25", "contriever"]:
         sample["has_answer"] = has_answer
         sample["retrieval_id"] = retrieval_ids
