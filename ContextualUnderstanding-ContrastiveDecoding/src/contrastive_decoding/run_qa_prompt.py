@@ -241,6 +241,19 @@ def main():
                         "answers": short_answers,
                         "ans": ans
                     }
+            
+            # with open(args.input_file, "r", encoding="utf-8") as f:
+            #     retrieval_dict = {}
+            #     reader = csv.reader(f, delimiter="\t")
+            #     next(reader)  # Skip the header
+            #     for row in reader:
+            #         question, gold_ctx, short_answers, ans = row  # Ensure TSV has exactly 4 columns
+            #         retrieval_dict[question] = {
+            #             "question": question,
+            #             "gold_ctx": gold_ctx,
+            #             "answers": short_answers,
+            #             "ans": ans
+            #         }
     
     # main loop
     for i,row in tqdm(enumerate(sample.iloc), total=n):
