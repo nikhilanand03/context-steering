@@ -233,13 +233,13 @@ def main():
         retrieval_ids = []
         if not args.use_gold_ctx:
             with open(args.ret_path) as f:
-                retrieval_dict = {json.loads(s)["question"]: json.loads(s) for s in f.readlines()}
+                retrieval_dict = {json.loads(s)["question"].replace('"','').replace("'",""): json.loads(s) for s in f.readlines()}
         else:
             with open(args.input_file) as f:
                 retrieval_dict = {}
                 for line in f.readlines()[1:]:  # Skip the header line
                     question, gold_ctx, short_answers, ans = line.strip().split("\t")
-                    retrieval_dict[question] = {
+                    retrieval_dict[question.replace('"','').replace("'","")] = {
                         "question": question,
                         "gold_ctx": gold_ctx,
                         "answers": short_answers,
@@ -300,7 +300,7 @@ def main():
         if args.eval_method == "vanilla":
             prompt = wrap_input(few_shot_examples_text + completion_template.format(question=row.question), args.model_name, is_instruct)
         elif args.eval_method in ["BM25", "contriever"]:
-            query = row.question
+            query = row.question.replace('"','').replace("'","")
             try:
                 if args.use_gold_ctx:
                     retrieval = {"text": retrieval_dict[query]["gold_ctx"], "id": "gold", "hasanswer": True}
@@ -318,7 +318,7 @@ def main():
         elif args.eval_method == "CD":
             prompt = wrap_input(few_shot_examples_text_wo_ctx + completion_template.format(question=row.question), args.model_name, is_instruct)
             
-            query = row.question
+            query = row.question.replace('"','').replace("'","")
             if args.use_gold_ctx:
                 retrieval = {"text": retrieval_dict[query]["gold_ctx"], "id": "gold", "hasanswer": True}
             else:
@@ -360,12 +360,12 @@ def main():
         elif args.eval_method == "CAD":
             prompt = wrap_input(few_shot_examples_text_wo_ctx + completion_template.format(question=row.question), args.model_name, is_instruct)
             
-            query = row.question
+            query = row.question.replace('"','').replace("'","")
             if args.use_gold_ctx:
-                try:
-                    retrieval = {"text": retrieval_dict[query]["gold_ctx"], "id": "gold", "hasanswer": True}
-                except:
-                    print(find_closest_key(query, retrieval_dict))
+                # try:
+                retrieval = {"text": retrieval_dict[query]["gold_ctx"], "id": "gold", "hasanswer": True}
+                # except:
+                #     print(find_closest_key(query, retrieval_dict))
             else:
                 retrieval = retrieval_dict[query]["ctxs"][0]
             retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
