@@ -25,6 +25,10 @@ from transformers import AutoTokenizer, AutoConfig, AutoModelForCausalLM, AutoMo
 # from util_clm import convert_model_to_int8_on_gpu
 
 import jsonlines
+from Levenshtein import distance as levenshtein_distance
+
+def find_closest_key(target, dictionary):
+    return min(dictionary.keys(), key=lambda k: levenshtein_distance(target, k))
 
 def load_jsonlines(file):
     with jsonlines.open(file, 'r') as jsonl_f:
@@ -358,7 +362,10 @@ def main():
             
             query = row.question
             if args.use_gold_ctx:
-                retrieval = {"text": retrieval_dict[query]["gold_ctx"], "id": "gold", "hasanswer": True}
+                try:
+                    retrieval = {"text": retrieval_dict[query]["gold_ctx"], "id": "gold", "hasanswer": True}
+                except:
+                    print(find_closest_key(query, retrieval_dict))
             else:
                 retrieval = retrieval_dict[query]["ctxs"][0]
             retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
