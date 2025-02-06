@@ -417,7 +417,6 @@ def main():
     sample["prompt"] = prompts
     sample["pred"] = preds
     sample["generation"] = responses
-    sample["error_rows"] = error_rows
     if args.eval_method in ["BM25", "contriever"]:
         sample["has_answer"] = has_answer
         sample["retrieval_id"] = retrieval_ids
@@ -426,6 +425,9 @@ def main():
     print("EM:", sample.is_exact_match.mean())
     model_name_alias = args.model_name.replace("/","_")
     sample.to_csv(f"results/model={model_name_alias}-input={args.alias}-method={args.eval_method}-shots={n_examples}-n={len(sample)}{'_int8bit' if args.int8bit is True else ''}.csv")
-        
+    
+    with open(f"results/error_rows_model={model_name_alias}-input={args.alias}-method={args.eval_method}-shots={n_examples}-n={len(sample)}{'_int8bit' if args.int8bit is True else ''}.txt".'w') as f:
+        json.dump(error_rows, f)
+
 if __name__ == "__main__":
     main()

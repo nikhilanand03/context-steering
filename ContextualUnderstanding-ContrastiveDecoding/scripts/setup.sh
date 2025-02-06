@@ -21,6 +21,7 @@ pip install sentencepiece
 pip install jsonlines
 pip install accelerate
 pip install protobuf
+pip install Levenshtein
 
 ### LLAMA
 
