@@ -39,16 +39,16 @@ CUDA_VISIBLE_DEVICES=0 python ../src/contrastive_decoding/run_qa_prompt.py \
 
 ##################################################
 # run experiment with MICD decoding (with context)
-# CUDA_VISIBLE_DEVICES=0 python ../src/contrastive_decoding/run_qa_prompt.py \
-#  --model_name mistralai/Mistral-7B-Instruct-v0.3 \
-#  --input_file ../data/triviaqa/triviaqa_test.tsv \
-#  --eval_method CD \
-#  --n_examples 5 \
-#  --use_gold_ctx \
-#  --use_random_irr \
-#  --bf16 \
-#  --alpha 0.5 \
-#  --alias 'nq-alpha-0.5'
+CUDA_VISIBLE_DEVICES=0 python ../src/contrastive_decoding/run_qa_prompt.py \
+ --model_name mistralai/Mistral-7B-Instruct-v0.3 \
+ --input_file ../data/triviaqa/triviaqa_test.tsv \
+ --eval_method CD \
+ --n_examples 5 \
+ --use_gold_ctx \
+ --use_random_irr \
+ --bf16 \
+ --alpha 0.5 \
+ --alias 'nq-alpha-0.5'
 #  --ret_path ./data/retrieval/nq_contriever_results.jsonl \
 
 # CUDA_VISIBLE_DEVICES=0 python ../src/contrastive_decoding/run_qa_prompt.py \
