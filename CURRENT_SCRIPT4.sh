@@ -49,6 +49,8 @@ cd ContextualUnderstanding-ContrastiveDecoding/scripts
 chmod +x run_contriever_popqa.sh
 ./run_contriever_popqa.sh
 
-tar -czvf popqa_contriever_results.gz ../data/popqa/popqa_contriever_results.jsonl
+cd ..
+
+tar -czvf popqa_contriever_results.gz ./data/popqa/popqa_contriever_results.jsonl
 
 #############################################################

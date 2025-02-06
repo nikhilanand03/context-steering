@@ -16,6 +16,8 @@ cd ContextualUnderstanding-ContrastiveDecoding/scripts
 chmod +x my_run_nq_myresults_tqa.sh
 ./my_run_nq_myresults_tqa.sh
 
-tar -czvf results_baselines_myinstructmodels_tqa.tar.gz ../results
+cd ..
+
+tar -czvf results_baselines_myinstructmodels_tqa.tar.gz ./results
 
 ###########################################

@@ -21,11 +21,11 @@ print('Cuda:', torch.cuda.is_available())
 print('Number of GPUs:', torch.cuda.device_count())
 print('pwd', os.getcwd())
 
-from transformers import AutoTokenizer, AutoConfig, AutoModelForCausalLM, AutoModelForSeq2SeqLM
+# from transformers import AutoTokenizer, AutoConfig, AutoModelForCausalLM, AutoModelForSeq2SeqLM
 # from util_clm import convert_model_to_int8_on_gpu
 
 import jsonlines
-from Levenshtein import distance as levenshtein_distance
+# from Levenshtein import distance as levenshtein_distance
 
 def find_closest_key(target, dictionary):
     return min(dictionary.keys(), key=lambda k: levenshtein_distance(target, k))
@@ -174,6 +174,7 @@ def main():
     parser.add_argument('--use_flash_attention_2', action="store_true")
     parser.add_argument('--fp16', action="store_true")
     parser.add_argument('--bf16', action="store_true")
+    parser.add_argument('--suffix', type=str, default="")
     args = parser.parse_args()
     print(args)
 
@@ -376,6 +377,7 @@ def main():
             has_answer.append(retrieval["hasanswer"])
             retrieval_ids.append(retrieval_id)
 
+        pred, response = None, None
         # generate response
         try:
             if args.eval_method == 'CD':
@@ -401,13 +403,17 @@ def main():
         # compute accuracy
         # possible_answers = json.loads(row.possible_answers)
         possible_answers = eval(row.answers)  # convert str to list 
-        is_correct = False
-        is_exact_match = False
-        for pa in possible_answers:
-            if pa in pred or pa.lower() in pred or pa.capitalize() in pred:
-                is_correct = True
-            if pa == pred or pa.lower() == pred or pa.capitalize() == pred:
-                is_exact_match = True
+        if pred is None:
+            is_correct = None
+            is_exact_match = None
+        else:
+            is_correct = False
+            is_exact_match = False
+            for pa in possible_answers:
+                if pa in pred or pa.lower() in pred or pa.capitalize() in pred:
+                    is_correct = True
+                if pa == pred or pa.lower() == pred or pa.capitalize() == pred:
+                    is_exact_match = True
         accuracy.append(is_correct)
         exact_match.append(is_exact_match)
         answers.append(possible_answers)
@@ -424,9 +430,12 @@ def main():
     print("Acc.:", sample.is_correct.mean())
     print("EM:", sample.is_exact_match.mean())
     model_name_alias = args.model_name.replace("/","_")
-    sample.to_csv(f"results/model={model_name_alias}-input={args.alias}-method={args.eval_method}-shots={n_examples}-n={len(sample)}{'_int8bit' if args.int8bit is True else ''}.csv")
+
+    os.makedirs(f"../../results{suffix}", exist_ok=True)
+
+    sample.to_csv(f"../../results{suffix}/model={model_name_alias}-input={args.alias}-method={args.eval_method}-shots={n_examples}-n={len(sample)}{'_int8bit' if args.int8bit is True else ''}.csv")
     
-    with open(f"results/error_rows_model={model_name_alias}-input={args.alias}-method={args.eval_method}-shots={n_examples}-n={len(sample)}{'_int8bit' if args.int8bit is True else ''}.txt".'w') as f:
+    with open(f"../../results{suffix}/error_rows_model={model_name_alias}-input={args.alias}-method={args.eval_method}-shots={n_examples}-n={len(sample)}{'_int8bit' if args.int8bit is True else ''}.txt",'w') as f:
         json.dump(error_rows, f)
 
 if __name__ == "__main__":
