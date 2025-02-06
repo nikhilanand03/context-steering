@@ -20,3 +20,14 @@
 # tar -czvf all_results_baselines_llama8b_all_ds.tar.gz ./results_llama8b_baseline_nq ./results_llama8b_baseline_popqa ./results_llama8b_baseline_triviaqa
 
 #############################################################
+
+# 3. Steering using the Few-shot approach (all datasets, Mistral model)
+
+cd contrastive_activation_addition
+
+chmod +x script_few_shot_nq_tqa_pqa.sh
+./script_few_shot_nq_tqa_pqa.sh
+
+tar -czvf all_results_few_shot_nq_tqa_pqa.tar.gz ./results_mistral7b_NQ_FS ./results_mistral7b_TQA_FS ./results_mistral7b_PQA_BM25_FS
+
+#############################################################
