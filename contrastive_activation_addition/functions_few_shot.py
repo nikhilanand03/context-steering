@@ -112,4 +112,4 @@ def get_full_few_shot_prompt(item, test_data, is_instruct):
             f"Example {i + 1}:\n{example}" for i, example in enumerate(few_shot_examples)
         ) + "\n\n"
 
-    return few_shot_examples_text + completion_template_context.format(question=item["question"])  
+    return few_shot_examples_text + completion_template_context.format(context=item['gold_ctx'],question=item["question"])  

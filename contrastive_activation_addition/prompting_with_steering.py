@@ -346,7 +346,7 @@ def test_steering(
         else:
             name_path = model.model_name_path
         if settings.override_vector_model is not None:
-                name_path = settings.override_vector_model
+            name_path = settings.override_vector_model
             if settings.override_vector is not None:
                 vector = get_steering_vector(settings.behavior, settings.override_vector, name_path, normalized=True)
             elif settings.override_vector_behavior is not None: # Using a vector from a different behaviour

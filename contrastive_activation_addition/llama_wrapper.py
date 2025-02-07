@@ -1,4 +1,4 @@
- import torch as t
+import torch as t
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from matplotlib import pyplot as plt
 from matplotlib.ticker import ScalarFormatter

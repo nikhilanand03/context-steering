@@ -431,11 +431,11 @@ def main():
     print("EM:", sample.is_exact_match.mean())
     model_name_alias = args.model_name.replace("/","_")
 
-    os.makedirs(f"../../results{suffix}", exist_ok=True)
+    os.makedirs(f"../../results{args.suffix}", exist_ok=True)
 
-    sample.to_csv(f"../../results{suffix}/model={model_name_alias}-input={args.alias}-method={args.eval_method}-shots={n_examples}-n={len(sample)}{'_int8bit' if args.int8bit is True else ''}.csv")
+    sample.to_csv(f"../../results{args.suffix}/model={model_name_alias}-input={args.alias}-method={args.eval_method}-shots={n_examples}-n={len(sample)}{'_int8bit' if args.int8bit is True else ''}.csv")
     
-    with open(f"../../results{suffix}/error_rows_model={model_name_alias}-input={args.alias}-method={args.eval_method}-shots={n_examples}-n={len(sample)}{'_int8bit' if args.int8bit is True else ''}.txt",'w') as f:
+    with open(f"../../results{args.suffix}/error_rows_model={model_name_alias}-input={args.alias}-method={args.eval_method}-shots={n_examples}-n={len(sample)}{'_int8bit' if args.int8bit is True else ''}.txt",'w') as f:
         json.dump(error_rows, f)
 
 if __name__ == "__main__":
