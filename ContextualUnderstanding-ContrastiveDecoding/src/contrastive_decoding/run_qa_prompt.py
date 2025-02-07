@@ -21,7 +21,7 @@ print('Cuda:', torch.cuda.is_available())
 print('Number of GPUs:', torch.cuda.device_count())
 print('pwd', os.getcwd())
 
-# from transformers import AutoTokenizer, AutoConfig, AutoModelForCausalLM, AutoModelForSeq2SeqLM
+from transformers import AutoTokenizer, AutoConfig, AutoModelForCausalLM, AutoModelForSeq2SeqLM
 # from util_clm import convert_model_to_int8_on_gpu
 
 import jsonlines
@@ -431,11 +431,11 @@ def main():
     print("EM:", sample.is_exact_match.mean())
     model_name_alias = args.model_name.replace("/","_")
 
-    os.makedirs(f"../../results{args.suffix}", exist_ok=True)
+    os.makedirs(f"../results{args.suffix}", exist_ok=True)
 
-    sample.to_csv(f"../../results{args.suffix}/model={model_name_alias}-input={args.alias}-method={args.eval_method}-shots={n_examples}-n={len(sample)}{'_int8bit' if args.int8bit is True else ''}.csv")
+    sample.to_csv(f"../results{args.suffix}/model={model_name_alias}-input={args.alias}-method={args.eval_method}-shots={n_examples}-n={len(sample)}{'_int8bit' if args.int8bit is True else ''}.csv")
     
-    with open(f"../../results{args.suffix}/error_rows_model={model_name_alias}-input={args.alias}-method={args.eval_method}-shots={n_examples}-n={len(sample)}{'_int8bit' if args.int8bit is True else ''}.txt",'w') as f:
+    with open(f"../results{args.suffix}/error_rows_model={model_name_alias}-input={args.alias}-method={args.eval_method}-shots={n_examples}-n={len(sample)}{'_int8bit' if args.int8bit is True else ''}.txt",'w') as f:
         json.dump(error_rows, f)
 
 if __name__ == "__main__":

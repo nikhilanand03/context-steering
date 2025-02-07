@@ -40,6 +40,6 @@ chmod +x my_run_nq_myresults_nq.sh
 
 cd ..
 
-tar -czvf results_baselines_myinstructmodels.tar.gz ./results
+tar -czvf results_baselines_myinstructmodels.tar.gz ./results_cad_NQ ./results_CD_NQ
 
 ###########################################

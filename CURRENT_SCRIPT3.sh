@@ -18,6 +18,6 @@ chmod +x my_run_nq_myresults_tqa.sh
 
 cd ..
 
-tar -czvf results_baselines_myinstructmodels_tqa.tar.gz ./results
+tar -czvf results_baselines_myinstructmodels_tqa.tar.gz ./results_cad_TQA ./results_CD_TQA
 
 ###########################################
