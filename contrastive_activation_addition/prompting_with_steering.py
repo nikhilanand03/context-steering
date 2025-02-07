@@ -340,6 +340,11 @@ def test_steering(
     
     print("TEST_DATA[0]",test_data[0])
 
+    if debug:
+        layers = layers[:1]
+        multipliers = multipliers[:1]
+        test_data = test_data[:5]
+
     for layer in layers:
         if settings.override_vector_path is not None:
             vector = get_steering_vector_from_path(settings.override_vector_path)
@@ -447,6 +452,7 @@ if __name__ == "__main__":
     parser.add_argument("--multicontext", action="store_true", default=False)
     parser.add_argument("--no_options", action="store_true", default=False)
     parser.add_argument("--few_shot", action="store_true", default=False)
+    parser.add_argument("--debug", action="store_true", default=False)
 
     args = parser.parse_args()
 
@@ -470,6 +476,7 @@ if __name__ == "__main__":
     steering_settings.multicontext = args.multicontext
     steering_settings.no_options = args.no_options
     steering_settings.few_shot = args.few_shot
+    steering_settings.debug = args.debug
 
     for behavior in args.behaviors:
         steering_settings.behavior = behavior
