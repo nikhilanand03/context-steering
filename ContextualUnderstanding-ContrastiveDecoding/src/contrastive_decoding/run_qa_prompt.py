@@ -175,6 +175,7 @@ def main():
     parser.add_argument('--fp16', action="store_true")
     parser.add_argument('--bf16', action="store_true")
     parser.add_argument('--suffix', type=str, default="")
+    parser.add_argument('--debug', action="store_true")
     args = parser.parse_args()
     print(args)
 
@@ -218,7 +219,11 @@ def main():
     knowledge = pd.read_csv(input_path, sep="\t")
 
     n = len(knowledge) if args.sample == 0 else args.sample
-    sample = knowledge.sample(n=n, replace=False)
+
+    if args.debug:
+        sample = knowledge.sample(n=2, replace=False)
+    else:
+        sample = knowledge.sample(n=n, replace=False)
     
     n_examples = args.n_examples
 
