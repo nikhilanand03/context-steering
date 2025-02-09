@@ -120,9 +120,12 @@ def save_tsv_input_file(input_file, output_file):
         writer.writerows(li_of_items)
 
 def main():
-    save_tsv_input_file("popqa_raw.jsonl", "popqa_test.tsv")
-    # save_retrieved_contexts("popqa_raw.jsonl","popqa_bm25_results.jsonl",'bm25')
-    save_retrieved_contexts("popqa_raw.jsonl","popqa_contriever_results.jsonl",'contriever')
+    parser = argparse.ArgumentParser(description="Process retriever type.")
+    parser.add_argument("--retriever", choices=["bm25", "contriever"], required=True, help="Choose the retriever type.")
+    args = parser.parse_args()
 
-if __name__=="__main__":
+    save_tsv_input_file("popqa_raw.jsonl", "popqa_test.tsv")
+    save_retrieved_contexts("popqa_raw.jsonl", f"popqa_{args.retriever}_results.jsonl", args.retriever)
+
+if __name__ == "__main__":
     main()
