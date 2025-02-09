@@ -123,11 +123,24 @@
 
 # 12. Run baseline methods on flan-T5
 
+# cd ContextualUnderstanding-ContrastiveDecoding/scripts
+
+# chmod +x my_run_nq_theirresults_flant5.sh
+# ./my_run_nq_theirresults_flant5.sh
+
+# tar -czvf results_baselines_flant5.tar.gz ../src/contrastive_decoding/results
+
+###########################################
+
+# 13. Run Reg-Cls on NQ/TriviaQA
+
 cd ContextualUnderstanding-ContrastiveDecoding/scripts
 
-chmod +x my_run_nq_theirresults_flant5.sh
-./my_run_nq_theirresults_flant5.sh
+chmod +x my_run_tqa_nq_regcls.sh
+./my_run_tqa_nq_regcls.sh
 
-tar -czvf results_baselines_flant5.tar.gz ../src/contrastive_decoding/results
+cd ..
+
+tar -czvf results_regcls_nq_tqa.tar.gz ./results_regcls_triviaQA ./results_regcls_NQ
 
 ###########################################

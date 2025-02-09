@@ -395,6 +395,7 @@ def main():
                 print(prompt_rel)
                 pred, response = generate(prompt, prompt_rel, '', args.alpha, max_new_tokens=args.max_new_tokens, is_encoder_decoder=config.is_encoder_decoder)
             else:
+                print(prompt)
                 pred, response = generate(prompt, '', '', 0.0, max_new_tokens=args.max_new_tokens, is_encoder_decoder=config.is_encoder_decoder)
         except:
             print(f"ERROR PROCESSING ROW {i}.")
