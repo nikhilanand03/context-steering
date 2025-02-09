@@ -10,16 +10,16 @@ from tqdm import tqdm
 import json
 import argparse
 
-seed = 2023
+# seed = 2023
 
-torch.backends.cudnn.deterministic = True
-random.seed(seed)
-np.random.seed(seed)
-torch.manual_seed(seed)
-torch.cuda.manual_seed_all(seed)
-print('Cuda:', torch.cuda.is_available())
-print('Number of GPUs:', torch.cuda.device_count())
-print('pwd', os.getcwd())
+# torch.backends.cudnn.deterministic = True
+# random.seed(seed)
+# np.random.seed(seed)
+# torch.manual_seed(seed)
+# torch.cuda.manual_seed_all(seed)
+# print('Cuda:', torch.cuda.is_available())
+# print('Number of GPUs:', torch.cuda.device_count())
+# print('pwd', os.getcwd())
 
 from transformers import AutoTokenizer, AutoConfig, AutoModelForCausalLM, AutoModelForSeq2SeqLM
 # from util_clm import convert_model_to_int8_on_gpu

@@ -67,6 +67,7 @@ def get_top_1_paragraph(question, all_paragraphs, retriever='bm25'): # retriever
     return None
 
 def save_retrieved_contexts(input_file, output_file, retriever='bm25'):
+    print(retriever)
     with open(input_file, "r", encoding="utf-8") as f:
         li_of_items = []
 
@@ -120,8 +121,8 @@ def save_tsv_input_file(input_file, output_file):
 
 def main():
     save_tsv_input_file("popqa_raw.jsonl", "popqa_test.tsv")
-    save_retrieved_contexts("popqa_raw.jsonl","popqa_bm25_results.jsonl",'bm25')
-    # save_retrieved_contexts("popqa_raw.jsonl","popqa_contriever_results.jsonl",'contriever')
+    # save_retrieved_contexts("popqa_raw.jsonl","popqa_bm25_results.jsonl",'bm25')
+    save_retrieved_contexts("popqa_raw.jsonl","popqa_contriever_results.jsonl",'contriever')
 
 if __name__=="__main__":
     main()

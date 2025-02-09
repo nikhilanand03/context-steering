@@ -5,7 +5,7 @@ Usage:
 python prompting_with_steering.py --behaviors sycophancy --layers 10 --multipliers 0.1 0.5 1 2 5 10 --type ab --use_base_model --model_size 7b
 """
 
-from functions_few_shot import *
+from functions_few_shot import get_full_few_shot_prompt
 
 import json
 from llama_wrapper import LlamaWrapper
@@ -35,34 +35,6 @@ from behaviors import (
 load_dotenv()
 
 HUGGINGFACE_TOKEN = os.getenv("HF_TOKEN")
-
-def process_item_open_ended_few_shot(
-    item: Dict[str, str],
-    test_data: List,
-    model: LlamaWrapper
-) -> Dict[str,str]:
-    prompt = get_full_few_shot_prompt(item, test_data, 'Instruct' in model.model_name_path)
-    model_output = model.generate_text(
-        user_input=prompt, max_new_tokens=100
-    )
-
-    if model.model_name_path=="google/gemma-2-2b-it":
-        split_token = ADD_FROM_POS_GEMMA
-    elif model.model_name_path in ["meta-llama/Meta-Llama-3.1-8B-Instruct","meta-llama/Meta-Llama-3.1-70B-Instruct"]:
-        split_token = ADD_FROM_POS_LATEST
-    else:
-        split_token = E_INST
-    
-    print(split_token)
-    print(model_output.split(split_token)[-1].strip())
-
-    response = {
-        "question": prompt,
-        "model_output": model_output.split(split_token)[-1].strip(),
-        "raw_model_output": model_output
-    }
-
-    return response
 
 def process_item_ab(
     item: Dict[str, str],
@@ -164,6 +136,34 @@ def process_item_open_ended(
     if multicontext: 
         response['rag'] = item['rag']
         response['answer'] = item['answer']
+
+    return response
+
+def process_item_open_ended_few_shot(
+    item: Dict[str, str],
+    test_data: List,
+    model: LlamaWrapper
+) -> Dict[str,str]:
+    prompt = get_full_few_shot_prompt(item, test_data, 'Instruct' in model.model_name_path)
+    model_output = model.generate_text(
+        user_input=prompt, max_new_tokens=100
+    )
+
+    if model.model_name_path=="google/gemma-2-2b-it":
+        split_token = ADD_FROM_POS_GEMMA
+    elif model.model_name_path in ["meta-llama/Meta-Llama-3.1-8B-Instruct","meta-llama/Meta-Llama-3.1-70B-Instruct"]:
+        split_token = ADD_FROM_POS_LATEST
+    else:
+        split_token = E_INST
+    
+    print(split_token)
+    print(model_output.split(split_token)[-1].strip())
+
+    response = {
+        "question": prompt,
+        "model_output": model_output.split(split_token)[-1].strip(),
+        "raw_model_output": model_output
+    }
 
     return response
 
