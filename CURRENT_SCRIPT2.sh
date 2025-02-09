@@ -33,13 +33,26 @@
 
 # 4. Run baseline methods on mistral7b (instruct) for the NQ dataset
 
+# cd ContextualUnderstanding-ContrastiveDecoding/scripts
+
+# chmod +x my_run_nq_myresults_nq.sh
+# ./my_run_nq_myresults_nq.sh
+
+# cd ..
+
+# tar -czvf results_baselines_myinstructmodels.tar.gz ./results_cad_NQ ./results_CD_NQ
+
+###########################################
+
+# 5. Run CD,CAD,Reg-Cls methods on mistral7b (instruct) for the NQ-SWAP dataset
+
 cd ContextualUnderstanding-ContrastiveDecoding/scripts
 
-chmod +x my_run_nq_myresults_nq.sh
-./my_run_nq_myresults_nq.sh
+chmod +x my_run_nqswap_cad_cd_regcls.sh
+./my_run_nqswap_cad_cd_regcls.sh
 
 cd ..
 
-tar -czvf results_baselines_myinstructmodels.tar.gz ./results_cad_NQ ./results_CD_NQ
+tar -czvf results_nqswap_cad_cd_regcls.tar.gz ./results_regcls_nqswap ./results_CD_nqswap ./results_CAD_nqswap
 
 ###########################################
