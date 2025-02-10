@@ -9,6 +9,7 @@ import pandas as pd
 from tqdm import tqdm
 import json
 import argparse
+import traceback
 
 seed = 2023
 
@@ -397,8 +398,11 @@ def main():
             else:
                 print(prompt)
                 pred, response = generate(prompt, '', '', 0.0, max_new_tokens=args.max_new_tokens, is_encoder_decoder=config.is_encoder_decoder)
-        except:
-            print(f"ERROR PROCESSING ROW {i}.")
+        except Exception as e:
+            error_message = traceback.format_exc()  # Captures full traceback
+            print(f"ERROR PROCESSING ROW {i}: {e.__class__.__name__} - {e}")
+            print(f"Full Traceback:\n{error_message}")
+            print(f"Problematic Row: {row}")
             error_rows.append(row.question)
 
         prompts.append(prompt)
