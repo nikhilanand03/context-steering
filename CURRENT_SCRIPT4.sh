@@ -54,3 +54,16 @@ cd ..
 tar -czvf popqa_contriever_results.gz ./data/popqa/popqa_contriever_results.jsonl
 
 #############################################################
+
+# 5. Few-shot NQ-SWAP steering on Mistral-7B
+
+# cd ContextualUnderstanding-ContrastiveDecoding/scripts
+
+# chmod +x script_few_shot_nqswap.sh
+# ./script_few_shot_nqswap.sh
+
+# cd ..
+
+# tar -czvf results_nqswap_steering_FS.tar.gz ./results_mistral7b_NQSWAP_FS
+
+#############################################################
