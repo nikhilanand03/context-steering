@@ -142,9 +142,19 @@ def process_item_open_ended(
 def process_item_open_ended_few_shot(
     item: Dict[str, str],
     test_data: List,
-    model: LlamaWrapper
+    model: LlamaWrapper,
+    max_char_limit: int = None
 ) -> Dict[str,str]:
     prompt = get_full_few_shot_prompt(item, test_data, 'Instruct' in model.model_name_path)
+
+    if max_char_limit is not None:
+        if len(prompt) > max_char_limit:
+            return {
+                "question": prompt,
+                "model_output": None,
+                "raw_model_output": None
+            }
+
     model_output = model.generate_text(
         user_input=prompt, max_new_tokens=100
     )
@@ -388,10 +398,12 @@ def test_steering(
                         layer, multiplier * vector, 
                         # settings.ablate
                     )
+
                     result = process_item_open_ended_few_shot(
                         item=item,
                         test_data=test_data,
-                        model=model
+                        model=model,
+                        max_char_limit=settings.max_char_limit
                     )
                 else:
                     model.reset_all()
@@ -453,6 +465,7 @@ if __name__ == "__main__":
     parser.add_argument("--no_options", action="store_true", default=False)
     parser.add_argument("--few_shot", action="store_true", default=False)
     parser.add_argument("--debug", action="store_true", default=False)
+    parser.add_argument("--max_char_limit", type=int, default=None)
 
     args = parser.parse_args()
 
@@ -477,6 +490,7 @@ if __name__ == "__main__":
     steering_settings.no_options = args.no_options
     steering_settings.few_shot = args.few_shot
     steering_settings.debug = args.debug
+    steering_settings.max_char_limit = args.max_char_limit
 
     for behavior in args.behaviors:
         steering_settings.behavior = behavior
