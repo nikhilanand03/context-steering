@@ -24,8 +24,7 @@
 
 cd contrastive_activation_addition
 
-chmod +x script_few_shot_nq_tqa_pqa.sh
-./script_few_shot_nq_tqa_pqa.sh
+bash script_few_shot_nq_tqa_pqa.sh
 
 tar -czvf all_results_few_shot_nq_tqa_pqa.tar.gz ./results_mistral7b_NQ_FS ./results_mistral7b_TQA_FS ./results_mistral7b_PQA_BM25_FS
 

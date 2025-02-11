@@ -13,8 +13,7 @@
 
 cd ContextualUnderstanding-ContrastiveDecoding/scripts
 
-chmod +x my_run_nq_myresults_tqa.sh
-./my_run_nq_myresults_tqa.sh
+bash my_run_nq_myresults_tqa.sh
 
 cd ..
 

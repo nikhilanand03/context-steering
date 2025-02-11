@@ -59,8 +59,7 @@
 
 cd ContextualUnderstanding-ContrastiveDecoding/scripts
 
-chmod +x script_few_shot_nqswap.sh
-./script_few_shot_nqswap.sh
+bash script_few_shot_nqswap.sh
 
 cd ..
 

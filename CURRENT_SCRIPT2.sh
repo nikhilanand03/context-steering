@@ -48,8 +48,7 @@
 
 cd ContextualUnderstanding-ContrastiveDecoding/scripts
 
-chmod +x my_run_nqswap_cad_cd_regcls.sh
-./my_run_nqswap_cad_cd_regcls.sh
+bash my_run_nqswap_cad_cd_regcls.sh
 
 cd ..
 
