@@ -57,11 +57,9 @@
 
 # 5. Few-shot NQ-SWAP steering on Mistral-7B
 
-cd ContextualUnderstanding-ContrastiveDecoding/scripts
+cd contrastive_activation_addition
 
 bash script_few_shot_nqswap.sh
-
-cd ..
 
 tar -czvf results_nqswap_steering_FS.tar.gz ./results_mistral7b_NQSWAP_FS
 

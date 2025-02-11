@@ -12,11 +12,12 @@ tar -czvf all_results_few_shot_pqa.tar.gz ./results_mistral7b_PQA_Contriever_FS
 
 # 2. Baselines (regcls,CAD,CD) on PopQA-Contriever (Mistral-7B)
 
-# cd contrastive_activation_addition
+# cd ContextualUnderstanding-ContrastiveDecoding/scripts
 
-# chmod +x script_few_shot_pqa.sh
-# ./script_few_shot_pqa.sh
+# bash my_run_popqa_cad_cd_regcls.sh
 
-# tar -czvf all_results_few_shot_pqa.tar.gz ./results_mistral7b_PQA_Contriever_FS
+# cd ..
+
+# tar -czvf results_baselines_popqa.gz ./results_regcls_popqa ./results_CD_popqa ./results_CAD_popqa
 
 #############################################################
