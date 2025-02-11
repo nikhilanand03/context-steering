@@ -44,26 +44,26 @@
 
 # 4. Contriever on PopQA to get retrieved contexts
 
-cd ContextualUnderstanding-ContrastiveDecoding/scripts
+# cd ContextualUnderstanding-ContrastiveDecoding/scripts
 
-chmod +x run_contriever_popqa.sh
-./run_contriever_popqa.sh
+# chmod +x run_contriever_popqa.sh
+# ./run_contriever_popqa.sh
 
-cd ..
+# cd ..
 
-tar -czvf popqa_contriever_results.gz ./data/popqa/popqa_contriever_results.jsonl
+# tar -czvf popqa_contriever_results.gz ./data/popqa/popqa_contriever_results.jsonl
 
 #############################################################
 
 # 5. Few-shot NQ-SWAP steering on Mistral-7B
 
-# cd ContextualUnderstanding-ContrastiveDecoding/scripts
+cd ContextualUnderstanding-ContrastiveDecoding/scripts
 
-# chmod +x script_few_shot_nqswap.sh
-# ./script_few_shot_nqswap.sh
+chmod +x script_few_shot_nqswap.sh
+./script_few_shot_nqswap.sh
 
-# cd ..
+cd ..
 
-# tar -czvf results_nqswap_steering_FS.tar.gz ./results_mistral7b_NQSWAP_FS
+tar -czvf results_nqswap_steering_FS.tar.gz ./results_mistral7b_NQSWAP_FS
 
 #############################################################
