@@ -9,7 +9,6 @@
 
 #############################################################
 
-
 # 2. All datasets on Llama-8B (PopQA, TriviaQA, NQ) with baseline method (CAD)
 
 # cd contrastive_activation_addition
