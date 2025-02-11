@@ -61,7 +61,7 @@ def template_llama_3_1_8B(user_input: str):
 
 def wrap_input(user_input: str, model_name: str, is_instruct: bool):
     if is_instruct:
-        if model_name == "mistralai/Mistral-7B-Instruct-v0.3":
+        if model_name == "mistralai/Mistral-7B-Instruct-v0.3" or model_name == "meta-llama/Llama-2-7b-chat-hf":
             return template_mistral(user_input)
         elif model_name == "meta-llama/Meta-Llama-3.1-8B-Instruct":
             return template_llama_3_1_8B(user_input)
@@ -180,7 +180,7 @@ def main():
     args = parser.parse_args()
     print(args)
 
-    if 'Instruct' in args.model_name:
+    if 'Instruct' in args.model_name or 'chat' in args.model_name:
         is_instruct = True
     else:
         is_instruct = False
