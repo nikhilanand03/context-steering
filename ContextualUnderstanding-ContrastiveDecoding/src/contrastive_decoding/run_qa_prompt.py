@@ -287,7 +287,15 @@ def main():
                     few_shot_examples_w_ctx.append(get_few_shot_text_with_retrieval(row2, retrieval_dict, args.eval_method, args.use_gold_ctx, is_instruct))
                     
             np.random.shuffle(few_shot_examples)
-            few_shot_examples_text = "\n\n".join(few_shot_examples) + "\n\n"
+            
+            if not is_instruct:
+                few_shot_examples_text = "\n\n".join(few_shot_examples) + "\n\n"
+            else:
+                intro_instruct = "Use the following examples to answer the question given at the end:"
+                few_shot_examples_text = intro_instruct + "\n" + "\n\n".join(
+                    f"Example {i + 1}:\n{example}" for i, example in enumerate(few_shot_examples)
+                ) + "\n\n"
+
             if args.eval_method in ['CD', 'CAD']:
                 np.random.shuffle(few_shot_examples_wo_ctx)
                 np.random.shuffle(few_shot_examples_w_ctx)
