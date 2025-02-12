@@ -174,7 +174,7 @@ def main():
     parser.add_argument('--use_random_irr', action="store_true", help="whether to use randomly selected irrelevant query/context")
     parser.add_argument('--use_fixed_irr', action="store_true", help="whether to use fixed adversarial irrelevant query/context")
     parser.add_argument('--device', type=str, default="cuda")
-    parser.add_argument('--max_new_tokens', type=int, default=15)
+    parser.add_argument('--max_new_tokens', type=int, default=100)
     parser.add_argument('--sample', type=int, default=0, help="if 0, use all examples")
     parser.add_argument('--alpha', type=float, default=1.0)
     parser.add_argument('--int8bit', action="store_true")
