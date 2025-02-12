@@ -374,9 +374,9 @@ def main():
             has_answer.append(retrieval["hasanswer"])
             retrieval_ids.append(retrieval_id)
         elif args.eval_method == "CAD":
-            print(few_shot_examples_text_wo_ctx, completion_template.format(question=row.question),row.question)
+            # print(few_shot_examples_text_wo_ctx, completion_template.format(question=row.question),row.question)
             prompt = wrap_input(few_shot_examples_text_wo_ctx + completion_template.format(question=row.question), args.model_name, is_instruct)
-            print(prompt)
+            # print(prompt)
 
             query = row.question.replace('"','').replace("'","")
             if args.use_gold_ctx:
