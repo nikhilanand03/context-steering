@@ -43,6 +43,8 @@ completion_template = "Answer the following question:\n\n{question}"  # "{}" # "
 completion_template_context_instruct = "Context: {context}\nQuestion: {question}\nAnswer: {answer}"
 completion_template_context = "Answer based on context:\n\n{context}\n\n{question}"
 genread_template = "Generate a background document from Wikipedia to answer the given question. {}"  # This prompt comes from the GenRead paper
+# intro_instruct = "Answer the question given at the end in the format of the following examples:"
+intro_instruct = ""
 
 B_INST, E_INST = "[INST]", "[/INST]"
 
@@ -292,7 +294,6 @@ def main():
             if not is_instruct:
                 few_shot_examples_text = "\n\n".join(few_shot_examples) + "\n\n"
             else:
-                intro_instruct = "Answer the question given at the end in the format of the following examples:"
                 few_shot_examples_text = intro_instruct + "\n" + "\n\n".join(
                     f"Example {i + 1}:\n{example}" for i, example in enumerate(few_shot_examples)
                 ) + "\n\n"
@@ -304,7 +305,6 @@ def main():
                     few_shot_examples_text_wo_ctx = "\n\n".join(few_shot_examples_wo_ctx) + "\n\n"
                     few_shot_examples_text_w_ctx = "\n\n".join(few_shot_examples_w_ctx) + "\n\n"
                 else:
-                    intro_instruct = "Answer the question given at the end in the format of the following examples:"
                     few_shot_examples_text_wo_ctx = intro_instruct + "\n" + "\n\n".join(
                         f"Example {i + 1}:\n{example}" for i, example in enumerate(few_shot_examples_wo_ctx)
                     ) + "\n\n"
