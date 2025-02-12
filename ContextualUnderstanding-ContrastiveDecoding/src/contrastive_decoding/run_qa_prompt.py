@@ -70,7 +70,7 @@ def wrap_input(user_input: str, model_name: str, is_instruct: bool):
 
 def call_model(prompt, prompt_rel, prompt_irr, alpha, model, tokenizer, device, max_new_tokens=15, model_max_length=None, is_encoder_decoder=False):
     max_inpt_tokens = tokenizer.model_max_length if model_max_length is None else model_max_length
-    print("PROMPT:",prompt)
+    # print("PROMPT:",prompt)
     inpts = tokenizer(prompt, return_tensors="pt").to(device)
     if prompt_rel != '':
         inpts_rel = tokenizer(prompt_rel, return_tensors="pt").to(device)
@@ -461,3 +461,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
