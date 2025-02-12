@@ -2,11 +2,12 @@ import json
 import re
 from tqdm import tqdm
 
-with open("squad_triviaqa_val.json",'r') as f:
+with open("squad_triviaqa_val.json", 'r') as f:
     squad_data = json.load(f)["data"]
 
-with open("converted_triviaqa_val.json",'r') as f:
+with open("converted_triviaqa_val.json", 'r') as f:
     orig_data = json.load(f)['Data']
+
 
 def extract_complete_segment(content, answer_start, window):
     """Extracts a segment around answer_start but ensures it starts and ends with complete sentences."""
@@ -26,7 +27,7 @@ def extract_complete_segment(content, answer_start, window):
     if end_match:
         end = end + end_match.end()
 
-    segment = content[start:end].strip().replace("\n","")
+    segment = content[start:end].strip().replace("\n", ". ")
     # final_output = ""
 
     # for segment in segments:
@@ -40,11 +41,12 @@ def extract_complete_segment(content, answer_start, window):
 # print(len(squad_data))
 # print(len(orig_data))
 
+
 final_li = []
 answers_empty_count = 0
 
 for squad_item in tqdm(squad_data):
-    if len(squad_item['paragraphs'][0]['qas'][0]["answers"])==0:
+    if len(squad_item['paragraphs'][0]['qas'][0]["answers"]) == 0:
         answers_empty_count += 1
         continue
 
@@ -53,8 +55,9 @@ for squad_item in tqdm(squad_data):
         "ans": squad_item['paragraphs'][0]['qas'][0]["answers"][0]["text"]
     }
 
-    assert len(squad_item['paragraphs'][0]['qas'][0]["id"].split("--"))==2
-    context_filepath = squad_item['paragraphs'][0]['qas'][0]["id"].split("--")[-1]
+    assert len(squad_item['paragraphs'][0]['qas'][0]["id"].split("--")) == 2
+    context_filepath = squad_item['paragraphs'][0]['qas'][0]["id"].split(
+        "--")[-1]
 
     with open("contexts/"+context_filepath, "r") as file:
         content = file.read()
@@ -64,16 +67,16 @@ for squad_item in tqdm(squad_data):
     final_item["gold_ctx"] = excerpt
 
     item_id = squad_item['paragraphs'][0]['qas'][0]["qid"]
-    
+
     for orig_item in orig_data:
-        if orig_item["QuestionId"]==item_id:
+        if orig_item["QuestionId"] == item_id:
             final_item["answers"] = orig_item["Answer"]["NormalizedAliases"]
             break
-    
+
     final_li.append(final_item)
 
 
-print("answers_empty_count: ",answers_empty_count)
+print("answers_empty_count: ", answers_empty_count)
 
-with open("triviaqa_val_final.json",'w') as f:
-    json.dump(final_li,f)
+with open("triviaqa_val_final.json", 'w') as f:
+    json.dump(final_li, f)

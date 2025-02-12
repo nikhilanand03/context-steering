@@ -34,22 +34,22 @@ def convert_triviaqa_to_squad_inp_format(input_data, domain='Web', version='1.0'
                 })
 
         # Prepare search results
-        search_results = []
-        if entry.get('search_results') and entry['search_results'].get('filename'):
-            for filename, context in zip(
-                entry['search_results']['filename'], 
-                entry['search_results'].get('search_context', [''] * len(entry['search_results']['filename']))
-            ):
-                # Save context to file
-                context_filepath = os.path.join(contexts_dir, filename)
-                os.makedirs(os.path.dirname(context_filepath), exist_ok=True)
-                with open(context_filepath, 'w', encoding='utf-8') as f:
-                    f.write(context)
+        # search_results = []
+        # if entry.get('search_results') and entry['search_results'].get('filename'):
+        #     for filename, context in zip(
+        #         entry['search_results']['filename'], 
+        #         entry['search_results'].get('search_context', [''] * len(entry['search_results']['filename']))
+        #     ):
+        #         # Save context to file
+        #         context_filepath = os.path.join(contexts_dir, filename)
+        #         os.makedirs(os.path.dirname(context_filepath), exist_ok=True)
+        #         with open(context_filepath, 'w', encoding='utf-8') as f:
+        #             f.write(context)
 
-                search_results.append({
-                    'Filename': filename, 
-                    'DocPartOfVerifiedEval': verified_eval
-                })
+        #         search_results.append({
+        #             'Filename': filename, 
+        #             'DocPartOfVerifiedEval': verified_eval
+        #         })
 
 
         answer = {
@@ -62,7 +62,7 @@ def convert_triviaqa_to_squad_inp_format(input_data, domain='Web', version='1.0'
             'Question': entry['question'],
             'Answer': answer,
             'EntityPages': entity_pages,
-            'SearchResults': search_results,
+            # 'SearchResults': search_results,
             'QuestionPartOfVerifiedEval': verified_eval
         }
 

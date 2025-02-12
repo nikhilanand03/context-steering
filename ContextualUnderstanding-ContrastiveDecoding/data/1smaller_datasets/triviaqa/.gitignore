@@ -1,0 +1,9 @@
+kilt_triviaqa_subset.json
+converted_kilt_triviaqa_subset.json
+contexts
+kilt_triviaqa_subset_squad.json
+deduplicated_kilt_triviaqa_subset_squad.json
+cleaned_kilt_tqa_subset_squad.json
+triviaqa_FINAL.json
+triviaqa_test_unreordered_unreplaced.tsv
+triviaqa_test_unreplaced.tsv
