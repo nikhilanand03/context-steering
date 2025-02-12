@@ -44,7 +44,7 @@ completion_template_context_instruct = "Context: {context}\nQuestion: {question}
 completion_template_context = "Answer based on context:\n\n{context}\n\n{question}"
 genread_template = "Generate a background document from Wikipedia to answer the given question. {}"  # This prompt comes from the GenRead paper
 # intro_instruct = "Answer the question given at the end in the format of the following examples:"
-intro_instruct = ""
+intro_instruct = "Answer the question given at the end in short form formatted like the following examples:"
 
 B_INST, E_INST = "[INST]", "[/INST]"
 
