@@ -1,0 +1,4 @@
+bash NEW_run_NQ_mistral7b.sh
+bash NEW_run_NQswap_mistral7b.sh
+bash NEW_run_popqa_mistral7b.sh
+bash NEW_run_triviaqa_mistral7b.sh
