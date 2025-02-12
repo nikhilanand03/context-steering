@@ -43,10 +43,11 @@ completion_template = "Answer the following question:\n\n{question}"  # "{}" # "
 completion_template_context_instruct = "Context: {context}\nQuestion: {question}\nAnswer: {answer}"
 completion_template_context = "Answer based on context:\n\n{context}\n\n{question}"
 genread_template = "Generate a background document from Wikipedia to answer the given question. {}"  # This prompt comes from the GenRead paper
-# intro_instruct = "Answer the question given at the end in the format of the following examples:"
-intro_instruct = "Answer the question given at the end in short form formatted like the following examples:"
 
 B_INST, E_INST = "[INST]", "[/INST]"
+B_SYS, E_SYS = "<<SYS>>\n", "\n<</SYS>>\n\n"
+
+intro_instruct = "Answer the question given at the end in the format of the following examples."
 
 B_TEXT = "<|begin_of_text|>"
 B_HEADER, E_HEADER = "<|start_header_id|>","<|end_header_id|>"
@@ -55,16 +56,19 @@ EOT_ID = "<|eot_id|>"
 PAD_TOKEN_LATEST = "<|finetune_right_pad_id|>"
 PAD_TOKEN_ID_LATEST = 128004
 
-def template_mistral(user_input: str):
-    return f"{B_INST} {user_input.strip()} {E_INST}"
+def template_mistral(user_input: str, sys:str = None):
+    if sys is not None:
+        ret = B_SYS + sys + E_SYS
+    ret += f"{B_INST} {user_input.strip()} {E_INST}"
+    return ret
 
-def template_llama_3_1_8B(user_input: str):      
+def template_llama_3_1_8B(user_input: str, sys:str = None):      
     return f"{B_HEADER}user{E_HEADER}\n\n{user_input.strip()}{EOT_ID}\n{B_HEADER}assistant{E_HEADER}\n\n"
 
-def wrap_input(user_input: str, model_name: str, is_instruct: bool):
+def wrap_input(user_input: str, model_name: str, sys: str, is_instruct: bool):
     if is_instruct:
         if model_name == "mistralai/Mistral-7B-Instruct-v0.3" or model_name == "meta-llama/Llama-2-7b-chat-hf":
-            return template_mistral(user_input)
+            return template_mistral(user_input, sys)
         elif model_name == "meta-llama/Meta-Llama-3.1-8B-Instruct":
             return template_llama_3_1_8B(user_input)
     else:
@@ -314,7 +318,7 @@ def main():
 
         # get prompt
         if args.eval_method == "vanilla":
-            prompt = wrap_input(few_shot_examples_text + completion_template.format(question=row.question), args.model_name, is_instruct)
+            prompt = wrap_input(few_shot_examples_text + completion_template.format(question=row.question), args.model_name, intro_instruct, is_instruct)
         elif args.eval_method in ["BM25", "contriever"]:
             query = row.question.replace('"','').replace("'","")
             try:
@@ -328,11 +332,11 @@ def main():
             retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
             retrieval_id = retrieval["id"]
             # prompt = few_shot_examples_text + retrieved_text + "\n\n" + completion_template.format(row.question)
-            prompt = wrap_input(few_shot_examples_text + completion_template_context.format(context=retrieved_text, question=row.question), args.model_name, is_instruct)
+            prompt = wrap_input(few_shot_examples_text + completion_template_context.format(context=retrieved_text, question=row.question), args.model_name, intro_instruct, is_instruct)
             has_answer.append(retrieval["hasanswer"])
             retrieval_ids.append(retrieval_id)
         elif args.eval_method == "CD":
-            prompt = wrap_input(few_shot_examples_text_wo_ctx + completion_template.format(question=row.question), args.model_name, is_instruct)
+            prompt = wrap_input(few_shot_examples_text_wo_ctx + completion_template.format(question=row.question), args.model_name, intro_instruct, is_instruct)
             
             query = row.question.replace('"','').replace("'","")
             if args.use_gold_ctx:
@@ -342,7 +346,7 @@ def main():
             retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
             retrieval_id = retrieval["id"]
             # prompt_rel = few_shot_examples_text_w_ctx + retrieved_text + "\n\n" + completion_template.format(row.question)
-            prompt_rel = wrap_input(few_shot_examples_text_w_ctx + completion_template_context.format(context=retrieved_text, question=row.question), args.model_name, is_instruct)
+            prompt_rel = wrap_input(few_shot_examples_text_w_ctx + completion_template_context.format(context=retrieved_text, question=row.question), args.model_name, intro_instruct, is_instruct)
 
             if args.use_random_irr:
                 # retrieval_irr = retrieval_dict[query]["ctxs"][-1]  # select the bottom retrieved passage as relevant
@@ -369,13 +373,13 @@ def main():
                 retrieved_text_irr = clip_paragraph(retrieval_irr["text"], eval_method=args.eval_method)
             # retrieval_id = retrieval["id"]
             # prompt_irr = few_shot_examples_text_w_ctx + retrieved_text_irr + "\n\n" + completion_template.format(row.question)
-            prompt_irr = wrap_input(few_shot_examples_text_w_ctx + completion_template_context.format(context=retrieved_text_irr, question=row.question), args.model_name, is_instruct)
+            prompt_irr = wrap_input(few_shot_examples_text_w_ctx + completion_template_context.format(context=retrieved_text_irr, question=row.question), args.model_name, intro_instruct, is_instruct)
 
             has_answer.append(retrieval["hasanswer"])
             retrieval_ids.append(retrieval_id)
         elif args.eval_method == "CAD":
             # print(few_shot_examples_text_wo_ctx, completion_template.format(question=row.question),row.question)
-            prompt = wrap_input(few_shot_examples_text_wo_ctx + completion_template.format(question=row.question), args.model_name, is_instruct)
+            prompt = wrap_input(few_shot_examples_text_wo_ctx + completion_template.format(question=row.question), args.model_name, intro_instruct, is_instruct)
             # print(prompt)
 
             query = row.question.replace('"','').replace("'","")
@@ -389,7 +393,7 @@ def main():
             retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
             retrieval_id = retrieval["id"]
             # prompt_rel = few_shot_examples_text_w_ctx + retrieved_text + "\n\n" + completion_template.format(row.question)
-            prompt_rel = wrap_input(few_shot_examples_text_w_ctx + completion_template_context.format(context=retrieved_text, question=row.question), args.model_name, is_instruct)
+            prompt_rel = wrap_input(few_shot_examples_text_w_ctx + completion_template_context.format(context=retrieved_text, question=row.question), args.model_name, intro_instruct, is_instruct)
 
             has_answer.append(retrieval["hasanswer"])
             retrieval_ids.append(retrieval_id)
