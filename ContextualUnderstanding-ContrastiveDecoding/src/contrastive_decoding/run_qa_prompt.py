@@ -147,7 +147,8 @@ def get_few_shot_text_with_retrieval(row, retrieval_dict, eval_method, use_gold_
             retrieval = {"text": retrieval_dict[row.question]["gold_ctx"]}
         else:
             retrieval = retrieval_dict[row.question]["ctxs"][0]
-        retrieved_text = clip_paragraph(retrieval["text"], eval_method)
+        # retrieved_text = clip_paragraph(retrieval["text"], eval_method)
+        retrieved_text = retrieval
         # return retrieved_text + "\n\n" + completion_template.format(row.question) + " " + str(row.ans)
         return few_shot_text_context(retrieved_text)
     elif row.question.replace("?", "").lower() in retrieval_dict:
@@ -155,7 +156,8 @@ def get_few_shot_text_with_retrieval(row, retrieval_dict, eval_method, use_gold_
             retrieval = {"text": retrieval_dict[row.question.replace("?", "").lower()]["gold_ctx"]}
         else:
             retrieval = retrieval_dict[row.question.replace("?", "").lower()]["ctxs"][0]
-        retrieved_text = clip_paragraph(retrieval["text"], eval_method)
+        # retrieved_text = clip_paragraph(retrieval["text"], eval_method)
+        retrieved_text = retrieval
         # return retrieved_text + "\n\n" + completion_template.format(row.question) + " " + str(row.ans)
         return few_shot_text_context(retrieved_text)
     else:
@@ -329,12 +331,13 @@ def main():
             except:
                 print("No retrieval for", query, " Example query:", list(retrieval_dict.keys())[0])
                 retrieval = {"text": "", "id": np.nan, "hasanswer": False}
-            retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
-            retrieval_id = retrieval["id"]
+            # retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
+            retrieved_text = retrieval
+            # retrieval_id = retrieval["id"]
             # prompt = few_shot_examples_text + retrieved_text + "\n\n" + completion_template.format(row.question)
             prompt = wrap_input(few_shot_examples_text + completion_template_context.format(context=retrieved_text, question=row.question), args.model_name, intro_instruct, is_instruct)
-            has_answer.append(retrieval["hasanswer"])
-            retrieval_ids.append(retrieval_id)
+            # has_answer.append(retrieval["hasanswer"])
+            # retrieval_ids.append(retrieval_id)
         elif args.eval_method == "CD":
             prompt = wrap_input(few_shot_examples_text_wo_ctx + completion_template.format(question=row.question), args.model_name, intro_instruct, is_instruct)
             
@@ -343,8 +346,9 @@ def main():
                 retrieval = {"text": retrieval_dict[query]["gold_ctx"], "id": "gold", "hasanswer": True}
             else:
                 retrieval = retrieval_dict[query]["ctxs"][0]
-            retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
-            retrieval_id = retrieval["id"]
+            # retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
+            retrieved_text = retrieval
+            # retrieval_id = retrieval["id"]
             # prompt_rel = few_shot_examples_text_w_ctx + retrieved_text + "\n\n" + completion_template.format(row.question)
             prompt_rel = wrap_input(few_shot_examples_text_w_ctx + completion_template_context.format(context=retrieved_text, question=row.question), args.model_name, intro_instruct, is_instruct)
 
@@ -357,7 +361,8 @@ def main():
                     retrieval_irr = {"text": retrieval_dict[query_irr]["gold_ctx"], "id": "gold", "hasanswer": True}
                 else:
                     retrieval_irr = retrieval_dict[query_irr]["ctxs"][0]  # select the top retrieved passage for a random query as irrelevant passage for current query
-                retrieved_text_irr = clip_paragraph(retrieval_irr["text"], eval_method=args.eval_method)
+                # retrieved_text_irr = clip_paragraph(retrieval_irr["text"], eval_method=args.eval_method)
+                retrieved_text_irr = retrieval_irr
             elif args.use_fixed_irr:
                 # always use a adversarial irrelevant passage
                 # retrieved_text_irr = "While the prevailing notion leans towards a specific answer!!!!!!! it's crucial to acknowledge that interpretations of this topic can greatly differ!!!!!!! alternate viewpoints posit that the commonly accepted belief might not universally apply!!!!!!!!"
@@ -370,13 +375,14 @@ def main():
                     retrieval_irr = {"text": retrieval_dict[query_irr]["gold_ctx"], "id": "gold", "hasanswer": True}
                 else:
                     retrieval_irr = retrieval_dict[query_irr]["ctxs"][0]  # select the top retrieved passage for a most distant irrelevant query as irrelevant passage for current query
-                retrieved_text_irr = clip_paragraph(retrieval_irr["text"], eval_method=args.eval_method)
+                # retrieved_text_irr = clip_paragraph(retrieval_irr["text"], eval_method=args.eval_method)
+                retrieved_text_irr = retrieval_irr
             # retrieval_id = retrieval["id"]
             # prompt_irr = few_shot_examples_text_w_ctx + retrieved_text_irr + "\n\n" + completion_template.format(row.question)
             prompt_irr = wrap_input(few_shot_examples_text_w_ctx + completion_template_context.format(context=retrieved_text_irr, question=row.question), args.model_name, intro_instruct, is_instruct)
 
-            has_answer.append(retrieval["hasanswer"])
-            retrieval_ids.append(retrieval_id)
+            # has_answer.append(retrieval["hasanswer"])
+            # retrieval_ids.append(retrieval_id)
         elif args.eval_method == "CAD":
             # print(few_shot_examples_text_wo_ctx, completion_template.format(question=row.question),row.question)
             prompt = wrap_input(few_shot_examples_text_wo_ctx + completion_template.format(question=row.question), args.model_name, intro_instruct, is_instruct)
@@ -390,13 +396,14 @@ def main():
                 #     print(find_closest_key(query, retrieval_dict))
             else:
                 retrieval = retrieval_dict[query]["ctxs"][0]
-            retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
-            retrieval_id = retrieval["id"]
+            # retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
+            retrieved_text = retrieval
+            # retrieval_id = retrieval["id"]
             # prompt_rel = few_shot_examples_text_w_ctx + retrieved_text + "\n\n" + completion_template.format(row.question)
             prompt_rel = wrap_input(few_shot_examples_text_w_ctx + completion_template_context.format(context=retrieved_text, question=row.question), args.model_name, intro_instruct, is_instruct)
 
-            has_answer.append(retrieval["hasanswer"])
-            retrieval_ids.append(retrieval_id)
+            # has_answer.append(retrieval["hasanswer"])
+            # retrieval_ids.append(retrieval_id)
 
         pred, response = None, None
         # generate response
