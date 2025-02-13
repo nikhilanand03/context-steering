@@ -145,19 +145,20 @@ def get_few_shot_text_with_retrieval(row, retrieval_dict, eval_method, use_gold_
     if row.question in retrieval_dict:
         if use_gold_context:
             retrieval = {"text": retrieval_dict[row.question]["gold_ctx"]}
+            retrieved_text = clip_paragraph(retrieval["text"], eval_method)
         else:
             retrieval = retrieval_dict[row.question]["ctxs"][0]
-        # retrieved_text = clip_paragraph(retrieval["text"], eval_method)
-        retrieved_text = retrieval
+            retrieved_text = retrieval
         # return retrieved_text + "\n\n" + completion_template.format(row.question) + " " + str(row.ans)
         return few_shot_text_context(retrieved_text)
     elif row.question.replace("?", "").lower() in retrieval_dict:
         if use_gold_context:
             retrieval = {"text": retrieval_dict[row.question.replace("?", "").lower()]["gold_ctx"]}
+            retrieved_text = clip_paragraph(retrieval["text"], eval_method)
         else:
             retrieval = retrieval_dict[row.question.replace("?", "").lower()]["ctxs"][0]
-        # retrieved_text = clip_paragraph(retrieval["text"], eval_method)
-        retrieved_text = retrieval
+            retrieved_text = retrieval
+        
         # return retrieved_text + "\n\n" + completion_template.format(row.question) + " " + str(row.ans)
         return few_shot_text_context(retrieved_text)
     else:
@@ -326,13 +327,15 @@ def main():
             try:
                 if args.use_gold_ctx:
                     retrieval = {"text": retrieval_dict[query]["gold_ctx"], "id": "gold", "hasanswer": True}
+                    retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
                 else:
                     retrieval = retrieval_dict[query]["ctxs"][0]  # retrieval_dict[row.id]["ctxs"][0]
+                    retrieved_text = retrieval
             except:
                 print("No retrieval for", query, " Example query:", list(retrieval_dict.keys())[0])
                 retrieval = {"text": "", "id": np.nan, "hasanswer": False}
-            # retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
-            retrieved_text = retrieval
+                retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
+            
             # retrieval_id = retrieval["id"]
             # prompt = few_shot_examples_text + retrieved_text + "\n\n" + completion_template.format(row.question)
             prompt = wrap_input(few_shot_examples_text + completion_template_context.format(context=retrieved_text, question=row.question), args.model_name, intro_instruct, is_instruct)
@@ -345,10 +348,10 @@ def main():
 
             if args.use_gold_ctx:
                 retrieval = {"text": retrieval_dict[query]["gold_ctx"], "id": "gold", "hasanswer": True}
+                retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
             else:
                 retrieval = retrieval_dict[query]["ctxs"][0]
-            # retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
-            retrieved_text = retrieval
+                retrieved_text = retrieval
             # retrieval_id = retrieval["id"]
             # prompt_rel = few_shot_examples_text_w_ctx + retrieved_text + "\n\n" + completion_template.format(row.question)
             prompt_rel = wrap_input(few_shot_examples_text_w_ctx + completion_template_context.format(context=retrieved_text, question=row.question), args.model_name, intro_instruct, is_instruct)
@@ -393,12 +396,12 @@ def main():
             if args.use_gold_ctx:
                 # try:
                 retrieval = {"text": retrieval_dict[query]["gold_ctx"], "id": "gold", "hasanswer": True}
+                retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
                 # except:
                 #     print(find_closest_key(query, retrieval_dict))
             else:
                 retrieval = retrieval_dict[query]["ctxs"][0]
-            # retrieved_text = clip_paragraph(retrieval["text"], eval_method=args.eval_method)
-            retrieved_text = retrieval
+                retrieved_text = retrieval
             # retrieval_id = retrieval["id"]
             # prompt_rel = few_shot_examples_text_w_ctx + retrieved_text + "\n\n" + completion_template.format(row.question)
             prompt_rel = wrap_input(few_shot_examples_text_w_ctx + completion_template_context.format(context=retrieved_text, question=row.question), args.model_name, intro_instruct, is_instruct)
