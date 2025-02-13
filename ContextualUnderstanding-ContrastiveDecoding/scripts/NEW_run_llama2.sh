@@ -1,0 +1,4 @@
+bash NEW_run_NQ_llama2.sh
+bash NEW_run_NQswap_llama2.sh
+bash NEW_run_triviaqa_llama2.sh
+bash NEW_run_popqa_llama2.sh
