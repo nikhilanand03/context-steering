@@ -363,10 +363,11 @@ def main():
                     query_irr = random.choice(list(retrieval_dict.keys()))
                 if args.use_gold_ctx:
                     retrieval_irr = {"text": retrieval_dict[query_irr]["gold_ctx"], "id": "gold", "hasanswer": True}
+                    retrieved_text_irr = clip_paragraph(retrieval_irr["text"], eval_method=args.eval_method)
                 else:
                     retrieval_irr = retrieval_dict[query_irr]["ctxs"][0]  # select the top retrieved passage for a random query as irrelevant passage for current query
-                # retrieved_text_irr = clip_paragraph(retrieval_irr["text"], eval_method=args.eval_method)
-                retrieved_text_irr = retrieval_irr
+                    retrieved_text_irr = retrieval_irr
+                
             elif args.use_fixed_irr:
                 # always use a adversarial irrelevant passage
                 # retrieved_text_irr = "While the prevailing notion leans towards a specific answer!!!!!!! it's crucial to acknowledge that interpretations of this topic can greatly differ!!!!!!! alternate viewpoints posit that the commonly accepted belief might not universally apply!!!!!!!!"
@@ -377,10 +378,10 @@ def main():
                 query_irr = retrieval_dict[query]["question_irr"]
                 if args.use_gold_ctx:
                     retrieval_irr = {"text": retrieval_dict[query_irr]["gold_ctx"], "id": "gold", "hasanswer": True}
+                    retrieved_text_irr = clip_paragraph(retrieval_irr["text"], eval_method=args.eval_method)            
                 else:
                     retrieval_irr = retrieval_dict[query_irr]["ctxs"][0]  # select the top retrieved passage for a most distant irrelevant query as irrelevant passage for current query
-                # retrieved_text_irr = clip_paragraph(retrieval_irr["text"], eval_method=args.eval_method)
-                retrieved_text_irr = retrieval_irr
+                    retrieved_text_irr = retrieval_irr
             # retrieval_id = retrieval["id"]
             # prompt_irr = few_shot_examples_text_w_ctx + retrieved_text_irr + "\n\n" + completion_template.format(row.question)
             prompt_irr = wrap_input(few_shot_examples_text_w_ctx + completion_template_context.format(context=retrieved_text_irr, question=row.question), args.model_name, intro_instruct, is_instruct)
