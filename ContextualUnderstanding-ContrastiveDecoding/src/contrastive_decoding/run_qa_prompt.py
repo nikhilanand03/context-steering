@@ -300,7 +300,7 @@ def main():
             if not is_instruct:
                 few_shot_examples_text = "\n\n".join(few_shot_examples) + "\n\n"
             else:
-                few_shot_examples_text = intro_instruct + "\n" + "\n\n".join(
+                few_shot_examples_text = "\n\n".join(
                     f"Example {i + 1}:\n{example}" for i, example in enumerate(few_shot_examples)
                 ) + "\n\n"
 
@@ -311,10 +311,10 @@ def main():
                     few_shot_examples_text_wo_ctx = "\n\n".join(few_shot_examples_wo_ctx) + "\n\n"
                     few_shot_examples_text_w_ctx = "\n\n".join(few_shot_examples_w_ctx) + "\n\n"
                 else:
-                    few_shot_examples_text_wo_ctx = intro_instruct + "\n" + "\n\n".join(
+                    few_shot_examples_text_wo_ctx = "\n\n".join(
                         f"Example {i + 1}:\n{example}" for i, example in enumerate(few_shot_examples_wo_ctx)
                     ) + "\n\n"
-                    few_shot_examples_text_w_ctx = intro_instruct + "\n" + "\n\n".join(
+                    few_shot_examples_text_w_ctx = "\n\n".join(
                         f"Example {i + 1}:\n{example}" for i, example in enumerate(few_shot_examples_w_ctx)
                     ) + "\n\n"
 
