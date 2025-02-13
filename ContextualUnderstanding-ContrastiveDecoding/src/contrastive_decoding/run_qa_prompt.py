@@ -342,6 +342,7 @@ def main():
             prompt = wrap_input(few_shot_examples_text_wo_ctx + completion_template.format(question=row.question), args.model_name, intro_instruct, is_instruct)
             
             query = row.question.replace('"','').replace("'","")
+
             if args.use_gold_ctx:
                 retrieval = {"text": retrieval_dict[query]["gold_ctx"], "id": "gold", "hasanswer": True}
             else:

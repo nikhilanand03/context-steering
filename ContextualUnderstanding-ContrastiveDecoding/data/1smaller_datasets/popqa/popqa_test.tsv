@@ -1,6 +1,4 @@
 question	answers	ans
-What is George Rankin's occupation?	['politician', 'political leader', 'political figure', 'polit.', 'pol']	politician
-What is John Mayne's occupation?	['journalist', 'journo', 'journalists']	journalist
 What is Henry Feilden's occupation?	['politician', 'political leader', 'political figure', 'polit.', 'pol']	politician
 What is Kathy Saltzman's occupation?	['politician', 'political leader', 'political figure', 'polit.', 'pol']	politician
 What is Eleanor Davis's occupation?	['cartoonist', 'graphic artist', 'animator', 'illustrator']	cartoonist
@@ -174,7 +172,6 @@ What is Graham Collier's occupation?	['composer', 'bandleader', 'Wind band condu
 What is Arcangelo Ghisleri's occupation?	['journalist', 'journo', 'journalists']	journalist
 What is Carlos María Ramírez's occupation?	['journalist', 'journo', 'journalists', 'politician', 'political leader', 'political figure', 'polit.', 'pol']	journalist
 What is Tina Sloan's occupation?	['actor', 'actress', 'actors', 'actresses']	actor
-What is Andrew Trischitta's occupation?	['actor', 'actress', 'actors', 'actresses']	actor
 What is Gerard Kennedy's occupation?	['actor', 'actress', 'actors', 'actresses']	actor
 What is Giora Godik's occupation?	['impresario', 'Talent Manager']	impresario
 What is Lillian Lawrence's occupation?	['actor', 'actress', 'actors', 'actresses']	actor
@@ -677,7 +674,6 @@ In what city was Ramón Luis Valcárcel Siso born?	['Murcia']	Murcia
 In what city was Anne Brusletto born?	['Geilo']	Geilo
 In what city was Tameem Al-Kubati born?	['Sanaa', 'Sanaa', 'Sana', 'Ṣan‘ā’', 'Sana‘a', 'Amanat Al-Asemah', 'Amanat al-Asimah', 'Amanat Al Asimah']	Sanaa
 In what city was August Brand born?	['Berlin', 'Berlin, Germany', 'Berlin (Germany)', 'DE-BE']	Berlin
-In what city was Ilya Nikiforov born?	['Saint Petersburg', 'St. Petersburg', 'Petrograd', 'Leningrad', 'Petersburg', 'Sankt-Peterburg', 'St Petersburg']	Saint Petersburg
 In what city was Arthur Thomson born?	['Edinburgh', 'Edinburg', 'Edinburgh, Scotland', 'City of Edinburgh', 'Edina', 'Modern Athens']	Edinburgh
 In what city was Miloš Žeravica born?	['Zrenjanin', 'Bečkerek']	Zrenjanin
 In what city was Mohammad Esfahani born?	['Tehran', 'Teheran']	Tehran
@@ -1013,7 +1009,6 @@ In what city was Karim Ojjeh born?	['Geneva', 'Genève', 'Geneva GE', 'Geneve', 
 In what city was Rahmatullo Fuzailov born?	['Dushanbe', 'Dyushambe', 'Stalinabad']	Dushanbe
 In what city was Jiří Vyčichlo born?	['Prague', 'Praha', 'Hlavní město Praha', 'City of Prague']	Prague
 In what city was Youri Messen-Jaschin born?	['Arosa', 'Arosa GR']	Arosa
-In what city was Jesús Antonio Hernández born?	['Los Mochis', 'Los Mochis']	Los Mochis
 In what city was Dr. John born?	['New Orleans', 'NOLA', 'New Orleans, Louisiana', 'New Orleans, LA', 'The Big Easy', 'Crescent City']	New Orleans
 In what city was Wayne Horvitz born?	['New York City', 'NYC', 'New York', 'the five boroughs', 'Big Apple', 'City of New York', 'NY City', 'New York, New York', 'New York City, New York', 'New York, NY', 'New York City (NYC)']	New York City
 In what city was Lindsay Pagano born?	['Philadelphia', 'Philly', 'City of Brotherly Love', 'Cradle of Liberty', 'Philadelphia, Pennsylvania', 'City of Philadelphia', 'Philadelphia, PA']	Philadelphia
@@ -1033,7 +1028,6 @@ In what city was Roger Mendy born?	['Dakar']	Dakar
 In what city was Mimoun Ouled Radi born?	"['Amsterdam', 'Mokum', 'Amsterdam, NL', 'Amsterdam, Netherlands', ""A'dam""]"	Amsterdam
 In what city was William Osler born?	['Ontario', 'ONT', 'ON']	Ontario
 In what city was Kensho Ono born?	['Fukuoka Prefecture']	Fukuoka Prefecture
-In what city was Naziah Ali born?	['Fiji', 'Republic of Fiji', 'fj', '🇫🇯', 'FIJ', 'Republic of the Fiji Islands']	Fiji
 In what city was Ted Williams born?	"['San Diego', 'San Diego, California', 'SD', ""America's Finest City"", 'Sandi', 'the birthplace of California']"	San Diego
 In what city was Anthony Gale born?	['Toronto', 'City of Toronto', 'The Six', 'T-O', 'The 416', 'Hogtown']	Toronto
 In what city was Louis Kasekende born?	['Uganda', 'Republic of Uganda', 'ug', '🇺🇬', 'UGA']	Uganda
@@ -1105,7 +1099,6 @@ In what city was hamza koudri born?	['Mila']	Mila
 In what city was Francisco Fernández de la Cueva, 10th Duke of Alburquerque born?	['Genoa', 'Genoa, Italy', 'Genova, Italy', 'Genova']	Genoa
 In what city was Archibald Willard born?	['Bedford', 'Bedford, Ohio']	Bedford
 In what city was Stig Kleven born?	['Notodden']	Notodden
-In what city was Li Huai Min born?	['Hong Kong', 'HKSAR', 'HKG', 'HK', 'Hong Kong SAR', 'China Hong Kong', 'Hong Kong, China', 'hk', 'Hong Kong SAR, China', '🇭🇰', 'Hong Kong Special Administrative Region', 'Hongkong', 'xiang gang']	Hong Kong
 In what city was Alton Montgomery born?	['Griffin', 'Griffin, Georgia']	Griffin
 In what city was Joanna Elisabeth of Holstein-Gottorp born?	['Gottorf Castle']	Gottorf Castle
 In what city was Richard Rawlinson born?	['London', 'London, UK', 'London, United Kingdom', 'London, England', 'Modern Babylon']	London
@@ -1147,7 +1140,6 @@ What genre is Wilderness?	['horror film', 'horror movie']	horror film
 What genre is Out of the Blue?	['musical film', 'musical movie']	musical film
 What genre is Everything?	['J-pop', 'Japanese pop', 'jpop']	J-pop
 What genre is Afsporet?	['film noir']	film noir
-What genre is Valvin Roane?	['rhythm and blues', 'R&B', 'RnB', 'RNB', 'R and B', 'R & B']	rhythm and blues
 What genre is Tim?	['romance film', 'romance genre', 'romantic film']	romance film
 What genre is Organisation?	['Krautrock', 'kraut rock', 'kosmische Musik']	Krautrock
 What genre is Intersect?	['puzzle video game', 'puzzle game', 'Puzzle video games', 'puzzle/jigsaw video game']	puzzle video game
@@ -1428,7 +1420,6 @@ What genre is Mercy?	['erotic thriller']	erotic thriller
 What genre is Prototype?	['science fiction film', 'sci-fi film', 'science fiction movie', 'sci-fi movie', 'scifi film', 'scifi movie', 'sci fi film', 'sci fi movie', 'scifi-film', 'scifi']	science fiction film
 What genre is Vs.?	['fighting game', 'fighting video games']	fighting game
 What genre is We Are Family?	['disco', 'disco music']	disco
-What genre is Magic?	['soap opera', 'soap', 'soapie', 'soapopera']	soap opera
 What genre is Women?	['art rock', 'Art Rock']	art rock
 What genre is The Millions?	['alternative rock', 'alternative music', 'alt-rock', 'alternative', 'alt rock', 'pop/rock', 'Alternative Rock']	alternative rock
 What genre is Conflict?	['anthology series']	anthology series
@@ -1721,7 +1712,6 @@ What genre is Monk?	['police procedural', 'comedy-drama', 'dramedy', 'comedic dr
 What genre is Le Mans?	['action film', 'action movie', 'film action', 'movie action', 'action']	action film
 What genre is The Circle?	['young adult literature', 'juvenile fiction', 'YA', 'youth literature', 'juvenile literature', 'young adult fiction', 'YA literature', 'YA fiction', 'horror literature']	young adult literature
 What genre is The Band?	['rock music', 'rock and roll', 'rock', 'Rock', 'folk rock', 'Folk Rock', 'roots rock', 'Roots Rock', 'blues rock', 'Blues Rock', 'alternative country', 'alt-country', 'insurgent country', 'Americana', 'Alt-Country', 'country rock', 'Country Rock', 'country music', 'country and western', 'country & western', 'country', 'Nashville sound']	rock music
-What genre is GeneRally?	['racing video game', 'racing game', 'racing video games', 'racer']	racing video game
 What genre is Living Lohan?	['reality television', 'reality TV', 'reality television program', 'reality TV program', 'reality television show', 'television reality program', 'television reality show', 'TV reality program', 'TV reality show']	reality television
 What genre is The Help?	['sitcom', 'situational comedy', 'situation comedy']	sitcom
 What genre is Raavan?	['action film', 'action movie', 'film action', 'movie action', 'action']	action film
@@ -1730,12 +1720,10 @@ What genre is Valentine?	['slasher film', 'slasher movie', 'slasher']	slasher fi
 What genre is Danny Ray?	['reggae', 'reggae music']	reggae
 What genre is My Girl?	['romantic comedy', 'romedy', 'romcom']	romantic comedy
 What genre is Crusader Kings?	['wargame', 'war game', 'conflict simulation', 'consim', 'wargaming', 'wargames', 'war games', 'real-time strategy', 'RTS', 'real time strategy', 'grand strategy wargame']	wargame
-What genre is Crew?	['funk rock']	funk rock
 What genre is Blow?	['electropop', 'electro-pop', 'dance-pop', 'dance pop']	electropop
 What genre is Today We Choose Faces?	['science fiction', 'SF', 'scifi', 'sci Fi', 'sci-Fi', 'science-fiction', 'sci fi', 'sciencefiction']	science fiction
 What genre is The Good Earth?	['progressive rock', 'prog-rock', 'prog', 'classical rock', 'symphonic rock', 'art rock', 'progressive pop', 'prog rock', 'Progressive Rock']	progressive rock
 What genre is Dragon?	['martial arts film']	martial arts film
-What genre is Rest?	['progressive rock', 'prog-rock', 'prog', 'classical rock', 'symphonic rock', 'art rock', 'progressive pop', 'prog rock', 'Progressive Rock']	progressive rock
 What genre is Cabinet?	['archive file format', 'package file format', 'archive format']	archive file format
 What genre is Come Back to Me?	['pop music', 'pop', 'Pop', 'rhythm and blues', 'R&B', 'RnB', 'RNB', 'R and B', 'R & B']	pop music
 What genre is New Jersey?	['hard rock']	hard rock
@@ -1838,7 +1826,6 @@ What genre is Prestige?	['jazz', 'jazz music', 'jass', 'jas', 'jaz', 'Jazz']	jaz
 What genre is 10?	['romantic comedy', 'romedy', 'romcom']	romantic comedy
 What genre is Amandititita?	['cumbia']	cumbia
 What genre is Punishment?	['soap opera', 'soap', 'soapie', 'soapopera']	soap opera
-What genre is Lisa Shaffer?	['country music', 'country and western', 'country & western', 'country', 'Nashville sound']	country music
 What genre is Homecoming?	['hard rock']	hard rock
 What genre is Deep End?	['short story', 'tale', 'pripovijetka']	short story
 What genre is Ola?	['pop music', 'pop', 'Pop']	pop music
@@ -2126,7 +2113,6 @@ What genre is Storm Master?	['turn-based strategy video game', 'TBS', 'turn-base
 What genre is Chip?	['rap', 'emceeing', 'MCing', 'spitting', 'rhyming', 'rap music', 'rapping']	rap
 What genre is The One?	['science fiction film', 'sci-fi film', 'science fiction movie', 'sci-fi movie', 'scifi film', 'scifi movie', 'sci fi film', 'sci fi movie', 'scifi-film', 'scifi']	science fiction film
 What genre is Serving You?	['Cantopop', 'Cantonese popular music', 'HK-pop', 'Hong Kong pop music']	Cantopop
-What genre is Lebanon?	['pornographic film', 'porno', 'porno film', 'porn film', 'porn', 'porn video', 'XXX film', 'hardcore film', 'dirty video', 'adult film', 'sex film', 'porn movie', 'blue movie', 'X-rated film', 'X-rated movie', 'hardcore movie']	pornographic film
 What genre is Bis?	['indie pop', 'indie pop music', 'indie-pop', 'indiepop']	indie pop
 What genre is Criteria?	['indie rock', 'Independent rock', 'Indie Rock']	indie rock
 What genre is The Expert?	['mandopop', 'Mandarin popular music', 'mandapop']	mandopop
@@ -2355,7 +2341,6 @@ What genre is Made for Each Other?	['romantic comedy', 'romedy', 'romcom']	roman
 What genre is Silly?	['rock music', 'rock and roll', 'rock', 'Rock']	rock music
 What genre is Mario Kart: Super Circuit?	['racing video game', 'racing game', 'racing video games', 'racer']	racing video game
 What genre is Bones?	['horror film', 'horror movie', 'blaxploitation', 'blacksploitation']	horror film
-What genre is The Mark Waters Story?	['docudrama', 'documentary drama', 'Docudrama', 'Drama-documentary']	docudrama
 What genre is Will to Power?	['dance-pop', 'dance pop']	dance-pop
 What genre is Billy?	['sitcom', 'situational comedy', 'situation comedy']	sitcom
 What genre is Dominic Duval?	['jazz', 'jazz music', 'jass', 'jas', 'jaz', 'Jazz']	jazz
@@ -2529,7 +2514,6 @@ What genre is Gwyneth Jones?	['opera', 'lyric drama', 'European opera', 'Western
 What genre is Jus primae noctis?	['comedy film', 'comedy movie']	comedy film
 What genre is Who Framed Roger Rabbit?	['adventure game', 'adventure video game']	adventure game
 What genre is Tilt?	['punk rock', 'punk', 'punk music']	punk rock
-What genre is Theatre?	['mathcore', 'math metal', 'noisecore']	mathcore
 What genre is The Maze?	['horror film', 'horror movie']	horror film
 What genre is The Awakening?	['horror film', 'horror movie']	horror film
 What genre is Dance Dance Revolution?	['music video game', 'music game', 'music and rhythm video games']	music video game
@@ -2676,7 +2660,6 @@ What genre is Level 7?	['science fiction', 'SF', 'scifi', 'sci Fi', 'sci-Fi', 's
 What genre is Planes?	['comedy film', 'comedy movie']	comedy film
 What genre is Jour de Fête?	['comedy film', 'comedy movie']	comedy film
 What genre is 9: The Last Resort?	['adventure game', 'adventure video game']	adventure game
-What genre is Samer el Nahhal?	['hard rock']	hard rock
 What genre is Buono! 2?	['J-pop', 'Japanese pop', 'jpop']	J-pop
 What genre is The Blue Aura?	['science fiction', 'SF', 'scifi', 'sci Fi', 'sci-Fi', 'science-fiction', 'sci fi', 'sciencefiction']	science fiction
 What genre is 30 Minutes?	['pop music', 'pop', 'Pop']	pop music
@@ -2769,7 +2752,6 @@ Who is the father of George VI?	['George V', 'George Frederick Ernest Albert', '
 Who is the father of Carlo de' Medici?	"[""Ferdinando I de' Medici"", 'granduca di Toscana Ferdinando I', 'Grand Duke of Tuscany Ferdinand I', 'Grand-Duke of Tuscany Ferdinando I', 'Ferdinando de, Grand-Duke of Tuscany Medici']"	Ferdinando I de' Medici
 Who is the father of Sally Aw?	['Aw Boon Haw', 'Aw Boon-Haw']	Aw Boon Haw
 Who is the father of Mithridates I of Parthia?	['Phriapatius of Parthia', 'Phriapatius']	Phriapatius of Parthia
-Who is the father of Natalie Lander?	['David Lander', 'David Leonard Landau']	David Lander
 Who is the father of Gillian Baverstock?	['Hugh Alexander Pollock']	Hugh Alexander Pollock
 Who is the father of Amenhotep II?	['Thutmose III', 'Tuthmosis III', 'Thothmes']	Thutmose III
 Who is the father of Abatai?	['Nurhaci', 'Fuyulieguoyingmingkehan', 'Nuerhaqi', 'Taizu', 'Tianming', 'Aixinjueluo Nuerhachi', 'Chengtianguangyunshengdeshengongzhaojilijirenxiaowuhuangdi', 'Chengtianguangyunshengdeshengongzhaojilijirenxiaoruiwuduanyiqinanhongwendingyegaohuangdi', 'Nurhachi', 'Fuyulieguoyingminghuangdi', 'Wuhuangdi', 'Gaohuangdi', '清太祖']	Nurhaci
@@ -3655,7 +3637,6 @@ In what country is Western Hockey League?	['Canada', 'Dominion of Canada', 'Brit
 In what country is Veliko Korenovo?	['Croatia', 'Republic of Croatia', 'HR', 'HRV', 'hr', '🇭🇷', 'CRO']	Croatia
 In what country is Asaba International Airport?	['Nigeria', 'Federal Republic of Nigeria', '🇳🇬', 'NG', 'FRN', 'NGA', 'NGR', 'Naija']	Nigeria
 In what country is 1999 Guatemalan general election?	['Guatemala', 'gt', '🇬🇹', 'Republic of Guatemala', 'GUA']	Guatemala
-In what country is Akshara School?	['India', 'Bharat', 'Hindustan', 'Bharatvarsh', 'in', 'IN', 'Republic of India', '🇮🇳', 'IND', 'Aryavratt']	India
 In what country is Gimenells i el Pla de la Font?	['Spain', 'España', 'Kingdom of Spain', 'ES', 'ESP']	Spain
 In what country is Mercer?	"['United States of America', 'the United States of America', 'America', 'U.S.A.', 'USA', 'U.S.', 'US', 'the US', 'the USA', 'US of A', 'the United States', 'U. S. A.', 'U. S.', 'the States', 'the U.S.', ""'Merica"", 'U.S', 'United States', ""'Murica""]"	United States of America
 In what country is La Roche-Clermault?	['France', 'fr', 'FR', 'République française', 'La France', 'Republic of France', 'French Republic', 'FRA', 'the Hexagon']	France
@@ -4056,7 +4037,6 @@ In what country is Heinola?	['Finland', 'Republic of Finland', 'Finnia', 'Land o
 In what country is Lätäseno?	['Finland', 'Republic of Finland', 'Finnia', 'Land of Thousand Lakes', 'fi', 'Suomi', 'Suomen tasavalta', 'Republiken Finland', '🇫🇮', 'FIN']	Finland
 In what country is Lincoln?	"['United States of America', 'the United States of America', 'America', 'U.S.A.', 'USA', 'U.S.', 'US', 'the US', 'the USA', 'US of A', 'the United States', 'U. S. A.', 'U. S.', 'the States', 'the U.S.', ""'Merica"", 'U.S', 'United States', ""'Murica""]"	United States of America
 In what country is Maki?	['Israel', 'State of Israel', 'il', '🇮🇱', 'Holy Land', 'the Jewish state', 'ISR']	Israel
-In what country is 24?	['Turkey', 'Republic of Turkey', '🇹🇷', 'TUR', 'TR']	Turkey
 In what country is Williamson County?	"['United States of America', 'the United States of America', 'America', 'U.S.A.', 'USA', 'U.S.', 'US', 'the US', 'the USA', 'US of A', 'the United States', 'U. S. A.', 'U. S.', 'the States', 'the U.S.', ""'Merica"", 'U.S', 'United States', ""'Murica""]"	United States of America
 In what country is Mount Shinten?	['Japan', 'State of Japan', 'Land of the Rising Sun', 'Nihon', 'Nippon', 'JP', 'Nippon-koku', 'Nihon-koku', 'JA', 'JPN', 'jp', 'JAP', 'Ja', 'Jap']	Japan
 In what country is Ministry of Regional Development (Ukraine)?	['Ukraine', 'UA', 'UKR', 'ua', 'Ukrainia', '🇺🇦', 'Ukr.', 'Ukraina']	Ukraine
@@ -6256,7 +6236,6 @@ Who was the director of The Emerald City?	['Simon Cellan Jones', 'Simon Cellan-J
 Who was the director of Heroes?	['Jeremy Kagan', 'Jeremy Paul Kagan']	Jeremy Kagan
 Who was the director of 2009?	['Paris Barclay']	Paris Barclay
 Who was the director of The Black Tent?	['Brian Desmond Hurst']	Brian Desmond Hurst
-Who was the director of Home Base?	['Colin Trevorrow']	Colin Trevorrow
 Who was the director of Remains to Be Seen?	['Don Weis']	Don Weis
 Who was the director of Rudeness?	['Marino Girolami']	Marino Girolami
 Who was the director of Mel?	['Joey Travolta', 'Joseph Allen Travolta']	Joey Travolta
@@ -7344,7 +7323,6 @@ Who was the director of The Key?	['Antun Vrdoljak']	Antun Vrdoljak
 Who was the director of The Stranger?	['Robert Lieberman']	Robert Lieberman
 Who was the director of Remember Me, My Love?	['Gabriele Muccino']	Gabriele Muccino
 Who was the director of What Happened Was?	['Tom Noonan']	Tom Noonan
-Who was the director of Amal?	['Richie Mehta']	Richie Mehta
 Who was the director of Technological Threat?	['Bill Kroyer', 'William Kroyer']	Bill Kroyer
 Who was the director of Graft?	['Christy Cabanne', 'William Christy Cabanne']	Christy Cabanne
 Who was the director of Nurse?	['Thikkurissy Sukumaran Nair']	Thikkurissy Sukumaran Nair
@@ -7443,7 +7421,6 @@ Who was the director of Bedroom?	['Mainak Bhaumik']	Mainak Bhaumik
 Who was the director of Uncommon Valor?	['Ted Kotcheff', 'William Theodore Kotcheff']	Ted Kotcheff
 Who was the director of La Boum?	['Claude Pinoteau']	Claude Pinoteau
 Who was the director of The Valley?	['Ghassan Salhab']	Ghassan Salhab
-Who was the director of Dark Descent?	['Daniel Knauf', 'Wilfred Schmidt', 'Chris Neal']	Daniel Knauf
 Who was the director of Per amare Ofelia?	['Flavio Mogherini']	Flavio Mogherini
 Who was the director of The Gift?	['Sam Raimi', 'Samuel Marshall Raimi']	Sam Raimi
 Who was the director of The Hole?	['Kon Ichikawa']	Kon Ichikawa
@@ -8826,7 +8803,6 @@ Who was the screenwriter for The Cage?	['Veena Sud', 'Veena Cabreros Sud']	Veena
 Who was the screenwriter for Haunted Honeymoon?	['Gene Wilder', 'Jerome Silberman']	Gene Wilder
 Who was the screenwriter for Velvet Goldmine?	['Todd Haynes']	Todd Haynes
 Who was the screenwriter for Laaj?	['Rauf Khalid', 'Abdul Rauf Khalid']	Rauf Khalid
-Who was the screenwriter for The Moment After?	['Kevin Downes']	Kevin Downes
 Who was the screenwriter for All Superheroes Must Die?	['Jason Trost', 'Jason Wayne Trost']	Jason Trost
 Who was the screenwriter for Transitions?	['Ed Burns', 'David Simon', 'David Judah Simon']	Ed Burns
 Who was the screenwriter for Thavamai Thavamirundhu?	['Cheran']	Cheran
@@ -10000,7 +9976,6 @@ Who was the screenwriter for Step Up?	['Duane Adler', 'Duane G. Adler']	Duane Ad
 Who was the screenwriter for Lightning?	['Fumiko Hayashi', 'Hayashi Fumiko']	Fumiko Hayashi
 Who was the screenwriter for Earth?	['Bapsi Sidhwa', 'Deepa Mehta']	Bapsi Sidhwa
 Who was the screenwriter for Learning to Drive?	['Sarah Kernochan', 'Sarah Marshall Kernochan']	Sarah Kernochan
-Who was the screenwriter for Amal?	['Richie Mehta']	Richie Mehta
 Who was the screenwriter for Exposé?	"['Adam Horowitz', 'Edward Kitsis', 'Edward ""Eddy"" Lawrence Kitsis', 'Edward Lawrence Kitsis']"	Adam Horowitz
 Who was the screenwriter for Up?	['Pete Docter', 'Peter Docter', 'Peter Hans Docter', 'Bob Peterson', 'Robert Peterson']	Pete Docter
 Who was the screenwriter for Happiness?	['Todd Solondz']	Todd Solondz
@@ -11571,7 +11546,6 @@ What sport does Thiago Quirino play?	['association football', 'football', 'socce
 What sport does Dan Parkinson play?	['association football', 'football', 'soccer']	association football
 What sport does Tommy Greer play?	['basketball', 'hoops', 'b-ball', 'basket ball', 'BB', 'Basketball']	basketball
 What sport does Bill Wilkinson play?	['ice hockey']	ice hockey
-What sport does Oscar Roig Iglesias play?	['ski mountaineering', 'SkiMo']	ski mountaineering
 What sport does tight end play?	['American football', 'gridiron football', '🏈', 'football', 'American rules football']	American football
 What sport does Derby Carrillo play?	['association football', 'football', 'soccer']	association football
 What sport does Radoslav Rashkov play?	['association football', 'football', 'soccer']	association football
@@ -11673,7 +11647,6 @@ What sport does Juan López Hita play?	['association football', 'football', 'soc
 What sport does Livia Altmann play?	['ice hockey']	ice hockey
 What sport does Granada Lions play?	['American football', 'gridiron football', '🏈', 'football', 'American rules football']	American football
 What sport does Francis play?	['association football', 'football', 'soccer']	association football
-What sport does José Luis Contaja play?	['association football', 'football', 'soccer']	association football
 What sport does Luis Eduardo Maldonado play?	['association football', 'football', 'soccer']	association football
 What sport does Alexis Mendoza play?	['association football', 'football', 'soccer']	association football
 What sport does Afyonkarahisarspor play?	['association football', 'football', 'soccer']	association football
@@ -11784,7 +11757,6 @@ What sport does 1998–99 Slovenian Basketball League play?	['basketball', 'hoop
 What sport does reserve team play?	['association football', 'football', 'soccer']	association football
 What sport does John Parsons play?	['association football', 'football', 'soccer']	association football
 What sport does list of Azerbaijan football transfers winter 2012 play?	['association football', 'football', 'soccer']	association football
-What sport does Abdulhadi Khalaf play?	['association football', 'football', 'soccer']	association football
 What sport does Josef Martínez play?	['association football', 'football', 'soccer']	association football
 What sport does VOKO-Irodion play?	['volleyball']	volleyball
 What sport does Paul Chapman play?	['association football', 'football', 'soccer']	association football
@@ -11836,7 +11808,6 @@ What sport does Mario Aguilar play?	['association football', 'football', 'soccer
 What sport does Marko Vidović play?	['association football', 'football', 'soccer']	association football
 What sport does grip play?	['badminton']	badminton
 What sport does Drew Nicholas play?	['basketball', 'hoops', 'b-ball', 'basket ball', 'BB', 'Basketball']	basketball
-What sport does Hwang Byung-ju play?	['association football', 'football', 'soccer']	association football
 What sport does Mark Smalley play?	['association football', 'football', 'soccer']	association football
 What sport does Nobuhiro Ishizaki play?	['association football', 'football', 'soccer']	association football
 What sport does Michal Vacek play?	['bobsleigh', 'bobsledding', 'bobsled', 'bobsleighing', 'Bobsled']	bobsleigh
@@ -12979,7 +12950,6 @@ Who is the author of Good Taste?	['Isaac Asimov', 'Isaak Osimov', 'Paul French',
 Who is the author of American Dream, Global Nightmare?	['Ziauddin Sardar']	Ziauddin Sardar
 Who is the author of Jewel?	['Bret Lott']	Bret Lott
 Who is the author of The Boat?	['Nam Le']	Nam Le
-Who is the author of Competitors?	['Sergey Lukyanenko', 'Sergei Vasilievich Lukyanenko']	Sergey Lukyanenko
 Who is the author of Doctors?	['Erich Segal', 'Erich Wolf Segal']	Erich Segal
 Who is the author of Me Talk Pretty One Day?	['David Sedaris', 'David Raymond Sedaris']	David Sedaris
 Who is the author of More?	['Nino Oliviero', 'Riz Ortolani']	Nino Oliviero
