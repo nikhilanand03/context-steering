@@ -107,8 +107,7 @@ def get_full_few_shot_prompt(item, test_data, is_instruct):
     if not is_instruct:
         few_shot_examples_text = "\n\n".join(few_shot_examples) + "\n\n"
     else:
-        intro_instruct = "Use the following examples to answer the question given at the end:"
-        few_shot_examples_text = intro_instruct + "\n" + "\n\n".join(
+        few_shot_examples_text = "\n\n".join(
             f"Example {i + 1}:\n{example}" for i, example in enumerate(few_shot_examples)
         ) + "\n\n"
 

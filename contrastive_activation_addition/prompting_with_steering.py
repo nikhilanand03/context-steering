@@ -156,8 +156,9 @@ def process_item_open_ended_few_shot(
                 "raw_model_output": None
             }
 
+    sys_p = "Answer the question given at the end in the format of the following examples."
     model_output = model.generate_text(
-        user_input=prompt, max_new_tokens=100
+        user_input=prompt, system_prompt=sys_p, max_new_tokens=100
     )
 
     if model.model_name_path=="google/gemma-2-2b-it":
