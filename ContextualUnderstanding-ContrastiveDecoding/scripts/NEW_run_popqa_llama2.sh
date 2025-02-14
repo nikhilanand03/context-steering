@@ -21,8 +21,8 @@ CUDA_VISIBLE_DEVICES=0 python ../src/contrastive_decoding/run_qa_prompt.py \
 
 CUDA_VISIBLE_DEVICES=0 python ../src/contrastive_decoding/run_qa_prompt.py \
  --model_name meta-llama/Llama-2-7b-chat-hf \
- --input_file ../data/popqa/popqa_test.tsv \
- --ret_path ../data/popqa/popqa_contriever_results.jsonl \
+ --input_file ../data/1smaller_datasets/popqa/popqa_test.tsv \
+ --ret_path ../data/1smaller_datasets/popqa/popqa_contriever_results.jsonl \
  --eval_method CAD \
  --n_examples 5 \
  --use_random_irr \

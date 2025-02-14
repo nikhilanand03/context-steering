@@ -7,3 +7,4 @@ cleaned_kilt_tqa_subset_squad.json
 triviaqa_FINAL.json
 triviaqa_test_unreordered_unreplaced.tsv
 triviaqa_test_unreplaced.tsv
+test_dataset_open_ended_new_triviaqa.json

@@ -466,6 +466,7 @@ if __name__ == "__main__":
     parser.add_argument("--few_shot", action="store_true", default=False)
     parser.add_argument("--debug", action="store_true", default=False)
     parser.add_argument("--max_char_limit", type=int, default=None)
+    parser.add_argument("--sample", type=int, default=None)
 
     args = parser.parse_args()
 
@@ -491,6 +492,7 @@ if __name__ == "__main__":
     steering_settings.few_shot = args.few_shot
     steering_settings.debug = args.debug
     steering_settings.max_char_limit = args.max_char_limit
+    steering_settings.sample = args.sample
 
     for behavior in args.behaviors:
         steering_settings.behavior = behavior
