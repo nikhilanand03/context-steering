@@ -90,9 +90,19 @@ def get_few_shot_text_with_retrieval(row, retrieval_dict,is_instruct=False):
         print("missing retrieval")
         return get_few_shot_text(row, is_instruct)
 
-def get_full_few_shot_prompt(item, test_data, is_instruct):
+def get_full_few_shot_prompt(item, test_data, is_instruct, max_length):
     knowledge_df = pd.DataFrame(test_data)
     
+    if max_length is not None:
+        filtered_df = knowledge_df[
+            (knowledge_df["question"] != item["question"]) & 
+            (knowledge_df["gold_ctx"].str.len() <= max_length)  # Ensure "gold_ctx" length is ≤ x
+        ]
+    else:
+        filtered_df = knowledge_df
+
+    examples = filtered_df.sample(n=5)
+
     examples = knowledge_df[knowledge_df["question"] != item["question"]].sample(n=5)
 
     retrieval_dict = {entry["question"]: entry for entry in test_data}

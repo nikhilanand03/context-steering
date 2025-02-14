@@ -144,9 +144,10 @@ def process_item_open_ended_few_shot(
     item: Dict[str, str],
     test_data: List,
     model: LlamaWrapper,
-    max_char_limit: int = None
+    max_char_limit: int = None,
+    max_fs_length: int = None,
 ) -> Dict[str,str]:
-    prompt = get_full_few_shot_prompt(item, test_data, 'Instruct' in model.model_name_path)
+    prompt = get_full_few_shot_prompt(item, test_data, 'Instruct' in model.model_name_path, max_fs_length)
     print(prompt)
 
     if max_char_limit is not None:
@@ -413,7 +414,8 @@ def test_steering(
                         item=item,
                         test_data=test_data,
                         model=model,
-                        max_char_limit=settings.max_char_limit
+                        max_char_limit=settings.max_char_limit,
+                        max_fs_length=settings.max_fs_length
                     )
                 else:
                     model.reset_all()
@@ -477,6 +479,7 @@ if __name__ == "__main__":
     parser.add_argument("--debug", action="store_true", default=False)
     parser.add_argument("--max_char_limit", type=int, default=None)
     parser.add_argument("--sample", type=int, default=None)
+    parser.add_argument("--max_fs_length", type=int, default=None)
 
     args = parser.parse_args()
 
@@ -503,6 +506,7 @@ if __name__ == "__main__":
     steering_settings.debug = args.debug
     steering_settings.max_char_limit = args.max_char_limit
     steering_settings.sample = args.sample
+    steering_settings.max_fs_length = args.max_fs_length
 
     for behavior in args.behaviors:
         steering_settings.behavior = behavior
