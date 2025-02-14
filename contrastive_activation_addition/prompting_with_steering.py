@@ -162,9 +162,8 @@ def process_item_open_ended_few_shot(
             user_input=prompt, system_prompt=sys_p, max_new_tokens=100
         )
         # raise RuntimeError("CUDA out of memory.") #to test
-    except RuntimeError as e:
-        if "CUDA out of memory" in str(e):
-            print(prompt)
+    except (t.cuda.OutOfMemoryError,RuntimeError) as e:
+        print(prompt)
         raise e
 
 
