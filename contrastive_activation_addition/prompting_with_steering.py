@@ -147,6 +147,7 @@ def process_item_open_ended_few_shot(
     max_char_limit: int = None
 ) -> Dict[str,str]:
     prompt = get_full_few_shot_prompt(item, test_data, 'Instruct' in model.model_name_path)
+    print(prompt)
 
     if max_char_limit is not None:
         if len(prompt) > max_char_limit:
@@ -156,16 +157,10 @@ def process_item_open_ended_few_shot(
                 "raw_model_output": None
             }
 
-    try:
-        sys_p = "Answer the question given at the end in the format of the following examples."
-        model_output = model.generate_text(
-            user_input=prompt, system_prompt=sys_p, max_new_tokens=100
-        )
-        # raise RuntimeError("CUDA out of memory.") #to test
-    except (t.OutOfMemoryError,RuntimeError) as e:
-        print(prompt)
-        raise e
-
+    sys_p = "Answer the question given at the end in the format of the following examples."
+    model_output = model.generate_text(
+        user_input=prompt, system_prompt=sys_p, max_new_tokens=100
+    )
 
     if model.model_name_path=="google/gemma-2-2b-it":
         split_token = ADD_FROM_POS_GEMMA
