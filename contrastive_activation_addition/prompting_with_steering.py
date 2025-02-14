@@ -161,6 +161,7 @@ def process_item_open_ended_few_shot(
         model_output = model.generate_text(
             user_input=prompt, system_prompt=sys_p, max_new_tokens=100
         )
+        raise RuntimeError("CUDA out of memory.")
     except RuntimeError as e:
         if "CUDA out of memory" in str(e):
             print(prompt)
