@@ -167,8 +167,9 @@ def process_item_open_ended_few_shot(
     else:
         split_token = E_INST
     
-    print(split_token)
-    print(model_output.split(split_token)[-1].strip())
+    print("SPLIT",split_token)
+    print("OUT\n",model_output)
+    # print(model_output.split(split_token)[-1].strip())
 
     response = {
         "question": prompt,
@@ -403,6 +404,8 @@ def test_steering(
                         layer, multiplier * vector, 
                         # settings.ablate
                     )
+
+                    print(item)
 
                     result = process_item_open_ended_few_shot(
                         item=item,
