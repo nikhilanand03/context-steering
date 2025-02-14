@@ -156,10 +156,16 @@ def process_item_open_ended_few_shot(
                 "raw_model_output": None
             }
 
-    sys_p = "Answer the question given at the end in the format of the following examples."
-    model_output = model.generate_text(
-        user_input=prompt, system_prompt=sys_p, max_new_tokens=100
-    )
+    try:
+        sys_p = "Answer the question given at the end in the format of the following examples."
+        model_output = model.generate_text(
+            user_input=prompt, system_prompt=sys_p, max_new_tokens=100
+        )
+    except RuntimeError as e:
+        if "CUDA out of memory" in str(e):
+            print(prompt)
+        raise e
+
 
     if model.model_name_path=="google/gemma-2-2b-it":
         split_token = ADD_FROM_POS_GEMMA
