@@ -354,8 +354,9 @@ def test_steering(
     test_data = test_datasets[settings.type]
 
     if settings.sample is not None and settings.few_shot:
-        sample_size = min(settings.sample, len(test_data))
-        test_data = random.sample(test_data, sample_size)
+        filtered_test_data = [item for item in test_data if len(item["gold_ctx"]) <= settings.max_fs_length]
+        sample_size = min(settings.sample, len(filtered_test_data))
+        test_data = random.sample(filtered_test_data, sample_size)
 
     print("TEST_DATA[0]",test_data[0])
 
