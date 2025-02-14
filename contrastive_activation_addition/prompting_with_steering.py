@@ -5,6 +5,7 @@ Usage:
 python prompting_with_steering.py --behaviors sycophancy --layers 10 --multipliers 0.1 0.5 1 2 5 10 --type ab --use_base_model --model_size 7b
 """
 
+import random
 from functions_few_shot import get_full_few_shot_prompt
 
 import json
@@ -347,10 +348,14 @@ def test_steering(
     print("TOKEN IDS (A,B): ", a_token_id,b_token_id)
     model.set_save_internal_decodings(False)
     test_data = test_datasets[settings.type]
-    
+
+    if settings.sample is not None and settings.few_shot:
+        sample_size = min(settings.sample, len(test_data))
+        test_data = random.sample(test_data, sample_size)
+
     print("TEST_DATA[0]",test_data[0])
 
-    if debug:
+    if settings.debug:
         layers = layers[:1]
         multipliers = multipliers[:1]
         test_data = test_data[:5]
