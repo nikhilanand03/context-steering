@@ -62,6 +62,7 @@ python prompting_with_steering.py \
     --few_shot \
     --override_vector_path "1COMPLETED_RUNS/FULL_ANALYSIS_mistral-7b-0.3/normalized_vectors/context-focus/vec_layer_${LAYER}_Mistral-7B-Instruct-v0.3.pt" \
     --sample 1000 \
-    --max_fs_length 15000
+    --max_fs_length 15000 \
+    --max_char_limit 30000
 
 #############################
