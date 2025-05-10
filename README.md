@@ -1,6 +1,6 @@
 # ContextFocus: Balancing Context and Memory in Large Language Models
 
-This is a project that uses various approaches to improve focus on the context in large language models. It's a part of a Summer 2024 Internship at Adobe Research. The folders are described below:
+This is a project that uses various approaches to improve focus on the context in large language models. The folders are described below:
 
 ## Approaches
 - `contrastive_activation_addition`: This is the main folder, containing our experiments using activation steering (Contrastive Activation Addition) to steer large language models towards the context. The README inside this folder explains how to run the scripts to recreate the results.
