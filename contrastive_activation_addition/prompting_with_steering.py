@@ -89,7 +89,8 @@ def process_item_open_ended(
     a_token_id: int,
     b_token_id: int,
     multicontext: bool=False,
-    no_options: bool=False
+    no_options: bool=False,
+    confiqa: bool=False
 ) -> Dict[str, str]:
     question = item["question"]
 
@@ -110,6 +111,12 @@ def process_item_open_ended(
         sys_prompt = "You are a Contextual QA Assistant. Please answer the following question according to the given context. Please restrict your response to one sentence. "
 
         input_text = f"{sys_prompt}\n\nContext:\n\n{context_input}\n\nQuestion: {query}"
+
+        model_output = model.generate_text(
+            user_input=input_text, max_new_tokens=400
+        )
+    elif confiqa:
+        input_text = f"Context: {item['cf_context']}\nQuestion: {question}"
 
         model_output = model.generate_text(
             user_input=input_text, max_new_tokens=400
@@ -137,6 +144,13 @@ def process_item_open_ended(
     if multicontext: 
         response['rag'] = item['rag']
         response['answer'] = item['answer']
+    
+    if confiqa:
+        response_confiqa = item.copy()
+        response_confiqa['pred'] = response['model_output']
+        response_confiqa['raw_model_output'] = response['raw_model_output']
+
+        return response_confiqa
 
     return response
 
@@ -431,7 +445,8 @@ def test_steering(
                         a_token_id=a_token_id,
                         b_token_id=b_token_id,
                         multicontext=settings.multicontext,
-                        no_options=settings.no_options
+                        no_options=settings.no_options,
+                        confiqa=settings.confiqa
                     )
 
                 results.append(result)
@@ -481,6 +496,7 @@ if __name__ == "__main__":
     parser.add_argument("--max_char_limit", type=int, default=None)
     parser.add_argument("--sample", type=int, default=None)
     parser.add_argument("--max_fs_length", type=int, default=None)
+    parser.add_argument("--confiqa", action="store_true", default=False)
 
     args = parser.parse_args()
 
@@ -508,6 +524,7 @@ if __name__ == "__main__":
     steering_settings.max_char_limit = args.max_char_limit
     steering_settings.sample = args.sample
     steering_settings.max_fs_length = args.max_fs_length
+    steering_settings.confiqa = args.confiqa
 
     for behavior in args.behaviors:
         steering_settings.behavior = behavior
