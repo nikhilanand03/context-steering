@@ -94,6 +94,13 @@ def process_item_open_ended(
 ) -> Dict[str, str]:
     question = item["question"]
 
+    if model.model_name_path=="google/gemma-2-2b-it":
+        split_token = ADD_FROM_POS_GEMMA
+    elif model.model_name_path in ["meta-llama/Meta-Llama-3.1-8B-Instruct","meta-llama/Meta-Llama-3.1-70B-Instruct"]:
+        split_token = ADD_FROM_POS_LATEST
+    else:
+        split_token = E_INST
+
     if multicontext:
         tokens = tokenize_multi_context(
             model.tokenizer, 
@@ -118,20 +125,17 @@ def process_item_open_ended(
     elif confiqa:
         input_text = f"Context: {item['cf_context']}\nQuestion: {question}"
 
-        model_output = model.generate_text(
-            user_input=input_text, max_new_tokens=400
-        )
+        if len(input_text) > 2500:
+            model_output = f"xxx{split_token}too long"
+        else:
+            model_output = model.generate_text(
+                user_input=input_text, max_new_tokens=400
+            )
     else:
         model_output = model.generate_text(
             user_input=question, system_prompt=system_prompt, max_new_tokens=100
         )
 
-    if model.model_name_path=="google/gemma-2-2b-it":
-        split_token = ADD_FROM_POS_GEMMA
-    elif model.model_name_path in ["meta-llama/Meta-Llama-3.1-8B-Instruct","meta-llama/Meta-Llama-3.1-70B-Instruct"]:
-        split_token = ADD_FROM_POS_LATEST
-    else:
-        split_token = E_INST
     print(split_token)
     print(model_output.split(split_token)[-1].strip())
 

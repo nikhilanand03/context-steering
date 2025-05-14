@@ -12,3 +12,6 @@ conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvi
 pip install --upgrade langchain langchain-core requests charset-normalizer jsonlines
 
 # don't forget to activate sllama_conda once it's done.
+
+# May 14th 2025 --> Above doesn't work, try this!
+# conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=12.4 -c pytorch -c nvidia
