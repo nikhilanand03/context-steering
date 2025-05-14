@@ -129,7 +129,7 @@ def process_item_open_ended(
             model_output = f"xxx{split_token}too long"
         else:
             model_output = model.generate_text(
-                user_input=input_text, max_new_tokens=400
+                user_input=input_text, max_new_tokens=100
             )
     else:
         model_output = model.generate_text(
