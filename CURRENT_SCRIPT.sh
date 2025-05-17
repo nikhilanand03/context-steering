@@ -134,12 +134,35 @@
 
 # 13. Run Reg-Cls on NQ/TriviaQA
 
-cd ContextualUnderstanding-ContrastiveDecoding/scripts
+# cd ContextualUnderstanding-ContrastiveDecoding/scripts
 
-bash my_run_tqa_nq_regcls.sh
+# bash my_run_tqa_nq_regcls.sh
 
-cd ..
+# cd ..
 
-tar -czvf results_regcls_nq_tqa.tar.gz ./results_regcls_triviaQA ./results_regcls_NQ
+# tar -czvf results_regcls_nq_tqa.tar.gz ./results_regcls_triviaQA ./results_regcls_NQ
 
 ###########################################
+
+# 14. ConfiQA
+
+cd contrastive_activation_addition
+
+LAYER=12
+BESTMULT=3
+
+python prompting_with_steering.py \
+    --layers $LAYER \
+    --use_latest \
+    --multipliers $BESTMULT \
+    --type open_ended \
+    --confiqa \
+    --behaviors "context-focus" \
+    --suffix "_llama8b_confiqa_QA_1000" \
+    --sample 1000 \
+    --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_oe_ConFiQA-QA.json" \
+    --override_vector_path "1COMPLETED_RUNS/FULL_ANALYSIS_Llama-3.1-8b/normalized_vectors/context-focus/vec_layer_${LAYER}_Meta-Llama-3.1-8B-Instruct.pt"
+
+tar -czvf results_confiqa_QA_llama8b.gz ./results_llama8b_confiqa_QA_1000
+
+#########################################
