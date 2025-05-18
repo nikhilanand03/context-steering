@@ -56,25 +56,48 @@
 
 ###########################################
 
-# 6. ConfiQA-MR
+# 6. ConfiQA-MR, LLama (1000)
+
+# cd contrastive_activation_addition
+
+# LAYER=12
+# BESTMULT=2
+
+# python prompting_with_steering.py \
+#     --layers $LAYER \
+#     --use_latest \
+#     --multipliers $BESTMULT \
+#     --type open_ended \
+#     --confiqa \
+#     --behaviors "context-focus" \
+#     --suffix "_llama8b_confiqa_MR_1000" \
+#     --sample 1000 \
+#     --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_oe_ConFiQA-MR.json" \
+#     --override_vector_path "1COMPLETED_RUNS/FULL_ANALYSIS_Llama-3.1-8b/normalized_vectors/context-focus/vec_layer_${LAYER}_Meta-Llama-3.1-8B-Instruct.pt"
+
+# tar -czvf results_confiqa_MR_llama8b.gz ./results_llama8b_confiqa_MR_1000
+
+##############################################
+
+# 7. ConfiQA-MR, Mistral (Choosing multiplier, 100)
 
 cd contrastive_activation_addition
 
 LAYER=12
-BESTMULT=2
 
 python prompting_with_steering.py \
     --layers $LAYER \
     --use_latest \
-    --multipliers $BESTMULT \
+    --multipliers 1 2 3 \
     --type open_ended \
+    --use_mistral \
     --confiqa \
     --behaviors "context-focus" \
-    --suffix "_llama8b_confiqa_MR_1000" \
-    --sample 1000 \
+    --suffix "_mistral7b_confiqa_MR" \
+    --sample 4 \
     --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_oe_ConFiQA-MR.json" \
-    --override_vector_path "1COMPLETED_RUNS/FULL_ANALYSIS_Llama-3.1-8b/normalized_vectors/context-focus/vec_layer_${LAYER}_Meta-Llama-3.1-8B-Instruct.pt"
+    --override_vector_path "1COMPLETED_RUNS/FULL_ANALYSIS_mistral-7b-0.3/normalized_vectors/context-focus/vec_layer_${LAYER}_Mistral-7B-Instruct-v0.3.pt"
 
-tar -czvf results_confiqa_MR_llama8b.gz ./results_llama8b_confiqa_MR_1000
+tar -czvf results_confiqa_MR_mistral_100.gz ./results_mistral7b_confiqa_MR
 
-##############################################
+##########################
