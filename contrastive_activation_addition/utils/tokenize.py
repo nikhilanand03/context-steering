@@ -73,6 +73,7 @@ def tokenize_llama_chat(
     print(tokenizer.name_or_path)
     if tokenizer.name_or_path=="mistralai/Mistral-7B-Instruct-v0.3":
         input_content = template_mistral(user_input, model_output, system_prompt)
+        print(input_content)
     elif tokenizer.name_or_path=="google/gemma-2-2b-it":
         input_content = template_gemma(user_input, model_output, system_prompt)
     elif tokenizer.name_or_path in ["meta-llama/Meta-Llama-3.1-8B-Instruct","meta-llama/Meta-Llama-3.1-70B-Instruct"]:
