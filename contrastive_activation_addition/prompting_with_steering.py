@@ -125,12 +125,13 @@ def process_item_open_ended(
         )
     elif confiqa:
         input_text = f"Context: {item['cf_context']}\nQuestion: {question}"
+        sys_prompt = "You are a Contextual QA Assistant. Please answer the following question according to the given context. Please restrict your response to one sentence. "
 
         if len(input_text) > 2500:
             model_output = f"xxx{split_token}too long"
         else:
             model_output = model.generate_text(
-                user_input=input_text, max_new_tokens=100
+                user_input=input_text, system_prompt=sys_prompt, max_new_tokens=100
             )
     else:
         model_output = model.generate_text(

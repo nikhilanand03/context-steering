@@ -23,8 +23,19 @@ python prompting_with_steering.py \
     --type ab \
     --behaviors "context-focus" \
     --override_ab_dataset "test_dataset_ab_failures_llama_induce_output.json" \
-    --override_vector_path "normalized_vectors/context-focus/vec_layer_${BESTLAYER}_Meta-Llama-3.1-8B-Instruct.pt"
 
-python plot_results.py --layers $BESTLAYER --multipliers 2 --type ab --behaviors "context-focus"
+python plot_results.py --layers 12 --multipliers 2 --type ab --behaviors "context-focus"
 
 #####################
+
+BESTLAYER=11
+
+python prompting_with_steering.py \
+    --layers $BESTLAYER \
+    --use_latest \
+    --multipliers 2 \
+    --type open_ended \
+    --behaviors "context-focus" \
+    --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_open_ended_gpt_cleaning_750_cqformat.json" \
+    --override_vector_path "normalized_vectors/context-focus/vec_layer_${BESTLAYER}_Meta-Llama-3.1-8B-Instruct.pt"
+

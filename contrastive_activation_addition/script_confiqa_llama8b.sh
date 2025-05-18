@@ -111,6 +111,10 @@ python evaluate_confiqa.py \
     --input_path "results_llama8b_confiqa_MR_1000/context-focus/results_layer=12_multiplier=2.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_oe_ConFiQA-MR.json" \
     --log_path "results_llama8b_confiqa_MR_1000/final_logs_m=2_MR"
 
+python evaluate_confiqa.py \
+    --input_path "results_llama8b_confiqa_QA_1000/context-focus/results_layer=12_multiplier=3.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_oe_ConFiQA-QA.json" \
+    --log_path "results_llama8b_confiqa_QA_1000/final_logs_m=3_QA"
+
 #######################
 
 # MC1
