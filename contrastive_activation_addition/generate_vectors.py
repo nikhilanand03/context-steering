@@ -31,7 +31,7 @@ HUGGINGFACE_TOKEN = os.getenv("HF_TOKEN")
 
 
 class ComparisonDataset(Dataset):
-    def __init__(self, data_path, token, model_name_path, use_chat, multicontext=False, no_options=False):
+    def __init__(self, data_path, token, model_name_path, use_chat, multicontext=False, no_options=False, contrastive=False):
         with open(data_path, "r") as f:
             self.data = json.load(f)
         self.tokenizer = AutoTokenizer.from_pretrained(
@@ -42,9 +42,27 @@ class ComparisonDataset(Dataset):
         self.model_name_path = model_name_path
         self.multicontext = multicontext
         self.no_options = no_options
+        self.contrastive = contrastive
 
     def prompt_to_tokens(self, instruction, model_output):
-        if self.no_options:
+        if self.contrastive:
+            print("CONTRASTIVE GENERATION")
+
+            positive_input = instruction['question']
+            negative_input = instruction['no_context_question']
+
+            p_tokens = tokenize_llama_chat(
+                self.tokenizer,
+                user_input=positive_input
+            )
+            n_tokens = tokenize_llama_chat(
+                self.tokenizer,
+                user_input=negative_input
+            )
+
+            return t.tensor(p_tokens).unsqueeze(0), t.tensor(n_tokens).unsqueeze(0)
+        
+        elif self.no_options:
             # in this case, model_output is None
             print("NO OPTIONS CASE : PROMPT_TO_TOKENS")
 
@@ -98,7 +116,7 @@ class ComparisonDataset(Dataset):
         item = self.data[idx]
         # pre_out = "Ans: " if ("Llama-3" in self.model_name_path or "Mistral" in self.model_name_path) else ""
         
-        if self.no_options:
+        if self.no_options or self.contrastive:
             p_tokens, n_tokens = self.prompt_to_tokens(item, None)
         elif self.multicontext:
             p_text = item["answer_matching_behavior"]
@@ -124,7 +142,8 @@ def generate_save_vectors_for_behavior(
     override_dataset: str,
     suffix: str,
     multicontext: bool,
-    no_options: bool
+    no_options: bool,
+    contrastive: bool
 ):
     # print(get_vector_path(behavior, 1, model.model_name_path, suffix=suffix))
     # print(get_activations_path(behavior, 1, model.model_name_path, "neg", suffix=suffix))
@@ -146,7 +165,8 @@ def generate_save_vectors_for_behavior(
         model.model_name_path,
         model.use_chat,
         multicontext=multicontext,
-        no_options=no_options
+        no_options=no_options,
+        contrastive=contrastive
     )
 
     for p_tokens, n_tokens in tqdm(dataset, desc="Processing prompts"):
@@ -194,7 +214,8 @@ def generate_save_vectors(
     override_dataset:str=None,
     suffix:str="",
     multicontext:bool=False,
-    no_options:bool=False
+    no_options:bool=False,
+    contrastive:bool=False
 ):
     """
     layers: list of layers to generate vectors for
@@ -208,7 +229,7 @@ def generate_save_vectors(
     )
     for behavior in behaviors:
         generate_save_vectors_for_behavior(
-            layers, save_activations, behavior, model, override_dataset, suffix, multicontext, no_options
+            layers, save_activations, behavior, model, override_dataset, suffix, multicontext, no_options, contrastive
         )
 
 
@@ -225,6 +246,7 @@ if __name__ == "__main__":
     parser.add_argument("--suffix", type=str, default="")
     parser.add_argument("--multicontext", action="store_true", default=False)
     parser.add_argument("--no_options", action="store_true", default=False)
+    parser.add_argument("--contrastive", action="store_true", default=False)
 
     args = parser.parse_args()
     generate_save_vectors(
@@ -238,5 +260,6 @@ if __name__ == "__main__":
         args.override_dataset,
         args.suffix,
         args.multicontext,
-        args.no_options
+        args.no_options,
+        args.contrastive
     )
