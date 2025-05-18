@@ -13,3 +13,18 @@ python plot_activations.py --layers $(seq 10 14) --use_latest --behaviors "conte
 
 ######################
 
+# Keep changing BEST LAYER and get all plots
+BESTLAYER=10
+
+python prompting_with_steering.py \
+    --layers $BESTLAYER \
+    --use_latest \
+    --multipliers -3 -2 -1 0 1 2 3 \
+    --type ab \
+    --behaviors "context-focus" \
+    --override_ab_dataset "test_dataset_ab_failures_llama_induce_output.json" \
+    --override_vector_path "normalized_vectors/context-focus/vec_layer_${BESTLAYER}_Meta-Llama-3.1-8B-Instruct.pt"
+
+python plot_results.py --layers $BESTLAYER --multipliers -3 -2 -1 0 1 2 3 --type ab --behaviors "context-focus"
+
+#####################

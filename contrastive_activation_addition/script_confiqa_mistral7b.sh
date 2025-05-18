@@ -60,6 +60,7 @@ python evaluate_confiqa.py \
 #     --input_path "results_mistral7b_confiqa_QA/results_layer=12_multiplier=1.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_oe_ConFiQA-QA.json" \
 #     --log_path "results_mistral7b_confiqa_QA/final_logs_m=1_QA"
 
+
 #####################
 
 # MR1

@@ -44,7 +44,8 @@ def process_item_ab(
     a_token_id: int,
     b_token_id: int,
     multicontext: bool=False,
-    no_options:bool=False
+    no_options:bool=False,
+    confiqa:bool=False
 ) -> Dict[str, str]:
     answer_matching_behavior = item["answer_matching_behavior"]
     answer_not_matching_behavior = item["answer_not_matching_behavior"]

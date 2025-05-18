@@ -107,9 +107,9 @@ python prompting_with_steering.py \
     --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_oe_ConFiQA-MR.json" \
     --override_vector_path "1COMPLETED_RUNS/FULL_ANALYSIS_Llama-3.1-8b/normalized_vectors/context-focus/vec_layer_${LAYER}_Meta-Llama-3.1-8B-Instruct.pt"
 
-# python evaluate_confiqa.py \
-#     --input_path "results_llama8b_confiqa_MR/results_layer=12_multiplier=1.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_oe_ConFiQA-MR.json" \
-#     --log_path "results_llama8b_confiqa_MR/final_logs_m=1_MR"
+python evaluate_confiqa.py \
+    --input_path "results_llama8b_confiqa_MR_1000/context-focus/results_layer=12_multiplier=2.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_oe_ConFiQA-MR.json" \
+    --log_path "results_llama8b_confiqa_MR_1000/final_logs_m=2_MR"
 
 #######################
 
@@ -160,8 +160,9 @@ python prompting_with_steering.py \
     --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_oe_ConFiQA-MC.json" \
     --override_vector_path "1COMPLETED_RUNS/FULL_ANALYSIS_Llama-3.1-8b/normalized_vectors/context-focus/vec_layer_${LAYER}_Meta-Llama-3.1-8B-Instruct.pt"
 
-# python evaluate_confiqa.py \
-#     --input_path "results_llama8b_confiqa_QA/results_layer=12_multiplier=1.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_oe_ConFiQA-QA.json" \
-#     --log_path "results_llama8b_confiqa_QA/final_logs_m=1_QA"
+python evaluate_confiqa.py \
+    --input_path "results_llama8b_confiqa_MC_1000/context-focus/results_layer=12_multiplier=2.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_oe_ConFiQA-MC.json" \
+    --log_path "results_llama8b_confiqa_MC_1000/final_logs_m=2_MC"
+
 
 ################################
