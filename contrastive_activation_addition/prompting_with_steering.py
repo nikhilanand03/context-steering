@@ -125,7 +125,8 @@ def process_item_open_ended(
         )
     elif confiqa:
         input_text = f"Context: {item['cf_context']}\nQuestion: {question}"
-        sys_prompt = "You are a Contextual QA Assistant. Please answer the following question according to the given context. Please restrict your response to one sentence. "
+        sys_prompt = "Please answer the following, restricting your response to one or two sentences. "
+        # Only using above sys prompt for mistral
 
         if len(input_text) > 2500:
             model_output = f"xxx{split_token}too long"
