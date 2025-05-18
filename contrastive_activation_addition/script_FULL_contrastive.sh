@@ -14,7 +14,7 @@ python plot_activations.py --layers $(seq 10 14) --use_latest --behaviors "conte
 ######################
 
 # Keep changing BEST LAYER and get all plots
-BESTLAYER=10
+BESTLAYER=12
 
 python prompting_with_steering.py \
     --layers $BESTLAYER \
