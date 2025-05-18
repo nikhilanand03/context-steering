@@ -25,36 +25,36 @@ python prompting_with_steering.py \
     --override_vector_path "1COMPLETED_RUNS/FULL_ANALYSIS_mistral-7b-0.3/normalized_vectors/context-focus/vec_layer_${LAYER}_Mistral-7B-Instruct-v0.3.pt"
 
 python evaluate_confiqa.py \
-    --input_path "results_mistral7b_confiqa_QA/results_layer=12_multiplier=1.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_oe_ConFiQA-QA.json" \
-    --log_path "results_mistral7b_confiqa_QA/final_logs_m=1_QA"
+    --input_path "results_mistral7b_confiqa_QA_100/results_layer=12_multiplier=1.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_oe_ConFiQA-QA.json" \
+    --log_path "results_mistral7b_confiqa_QA_100/final_logs_m=1_QA"
 
 python evaluate_confiqa.py \
-    --input_path "results_mistral7b_confiqa_QA/results_layer=12_multiplier=2.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_oe_ConFiQA-QA.json" \
-    --log_path "results_mistral7b_confiqa_QA/final_logs_m=2_QA"
+    --input_path "results_mistral7b_confiqa_QA_100/results_layer=12_multiplier=2.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_oe_ConFiQA-QA.json" \
+    --log_path "results_mistral7b_confiqa_QA_100/final_logs_m=2_QA"
 
 python evaluate_confiqa.py \
-    --input_path "results_mistral7b_confiqa_QA/results_layer=12_multiplier=3.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_oe_ConFiQA-QA.json" \
-    --log_path "results_mistral7b_confiqa_QA/final_logs_m=3_QA"
+    --input_path "results_mistral7b_confiqa_QA_100/results_layer=12_multiplier=3.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_oe_ConFiQA-QA.json" \
+    --log_path "results_mistral7b_confiqa_QA_100/final_logs_m=3_QA"
 
 #####################
 
 # QA2
 
-# LAYER=12
-# BESTMULT=3
+LAYER=13
+BESTMULT=3
 
-# python prompting_with_steering.py \
-#     --layers $LAYER \
-#     --use_latest \
-#     --multipliers $BESTMULT \
-#     --type open_ended \
-#     --use_mistral \
-#     --confiqa \
-#     --behaviors "context-focus" \
-#     --suffix "_mistral7b_confiqa_QA_1000" \
-#     --sample 1000 \
-#     --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_oe_ConFiQA-QA.json" \
-#     --override_vector_path "1COMPLETED_RUNS/FULL_ANALYSIS_mistral-7b-0.3/normalized_vectors/context-focus/vec_layer_${LAYER}_Mistral-7B-Instruct-v0.3.pt"
+python prompting_with_steering.py \
+    --layers $LAYER \
+    --use_latest \
+    --multipliers $BESTMULT \
+    --type open_ended \
+    --use_mistral \
+    --confiqa \
+    --behaviors "context-focus" \
+    --suffix "_mistral7b_confiqa_QA_1000" \
+    --sample 1000 \
+    --override_oe_dataset_path "datasets/test/context-focus/test_dataset_varieties/test_dataset_oe_ConFiQA-QA.json" \
+    --override_vector_path "1COMPLETED_RUNS/FULL_ANALYSIS_mistral-7b-0.3/normalized_vectors/context-focus/vec_layer_${LAYER}_Mistral-7B-Instruct-v0.3.pt"
 
 # python evaluate_confiqa.py \
 #     --input_path "results_mistral7b_confiqa_QA/results_layer=12_multiplier=1.0_behavior=context-focus_type=open_ended_use_base_model=False_model_size=7b_dataset_path=test_dataset_oe_ConFiQA-QA.json" \
